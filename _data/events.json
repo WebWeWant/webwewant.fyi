@@ -1,0 +1,22 @@
+[{
+    "title": "Beyond Tellerrand",
+    "url": "https://beyondtellerrand.com/events/berlin-2019",
+    "location": "Berlin, Germany",
+    "start_date": "2019-11-04T00:00:00.000Z",
+    "end_date": "2019-11-07T06:00:00.000Z"
+  },
+  {
+    "title": "Smashing Conference",
+    "url": "https://smashingconf.com/toronto-2019/",
+    "location": "Toronto, Canada",
+    "start_date": "2019-06-25T00:00:00.000Z",
+    "end_date": "2019-06-26T06:00:00.000Z"
+  },
+  {
+    "title": "An Event Apart",
+    "url": "https://aneventapart.com/event/washington-dc-2019",
+    "location": "Washington DC, USA",
+    "start_date": "2019-07-29T00:00:00.000Z",
+    "end_date": "2019-07-31T06:00:00.000Z"
+  }
+]

@@ -6,9 +6,11 @@
   {% set css %}
     {% include "assets/css/inline.css" %}
   {% endset %}
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap&subset=latin-ext" rel="stylesheet">
   <style>{{ css | cssmin | safe }}</style>
   {% set js %}
     {% include "assets/js/inline.js" %}
   {% endset %}
   <script>{{ js | jsmin | safe }}</script>
+  {% include "components/icons.html" %}
 </head>

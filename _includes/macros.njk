@@ -1,0 +1,66 @@
+{% macro event( tag, title, location, date, url ) %}
+  <{{ tag }} class="event">
+    <a class="event__title" href="{{ url }}">{{ title }}</a>
+    <time class="event__timing" datetieme="{{ date | machineDate }}">{{ date | readableDate }}</time>
+    <b class="event__location">{{ location }}</b>
+  </{{tag}}>
+{% endmacro %}
+
+{% macro label( text, name ) %}
+  <label class="question__label" for="field-{{ name }}">{{ text }}</label>
+{% endmacro %}
+
+{% macro field( type, name, data ) %}
+  <input class="question__field"
+         type="{{ type }}"
+         name="{{ name }}"
+         id="field-{{ name }}"
+         {% if data.required %}required aria-required="true"{% endif %}
+         {% if data.placeholder %}placeholder="{{ data.placeholder }}"{% endif %}
+         {% if data.pattern %}pattern="{{ data.pattern }}"{% endif %}
+         {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
+         {% if data.description %}autocomplete="{{ data.autocomplete }}"{% endif %}
+         {% if data.autocorrect %}autocorrect="{{ data.autocorrect }}"{% endif %}
+         {% if data.autocapitalize %}autocapitalize="{{ data.autocapitalize }}"{% endif %}
+         >
+  {% if data.description %}
+    <em class="question__description" id="description-{{ name }}">{{ data.description }}</em>
+  {% endif %}
+{% endmacro %}
+
+{% macro confirm( text, name, data ) %}
+  <label for="field-{{ name }}" class="question--confirm">
+    <input class="question__field question__field--confirm"
+          type="checkbox"
+          name="{{ name }}"
+          id="field-{{ name }}"
+          value="1"
+          {% if data.required %}required aria-required="true"{% endif %}
+          >
+    {{ text }}
+  </label>
+{% endmacro %}
+
+{% macro select( name, options, data ) %}
+  <select id="field-{{ name }}"
+          name="{{ name }}"
+          {% if data.required %}required aria-required="true"{% endif %}
+          {% if data.multiple %}multiple{% endif %}
+          >
+    {% for option in options %}
+      <option>{{ option }}</option>
+    {% endfor %}
+  </select>
+{% endmacro %}
+
+{% macro textarea( name, data ) %}
+  <textarea id="field-{{ name }}"
+            name="{{ name }}"
+            rows="10"
+            {% if data.required %}required aria-required="true"{% endif %}
+            ></textarea>
+{% endmacro %}
+
+{% macro button( text ) %}
+  <button type="submit">{{ text }}</button>
+{% endmacro %}

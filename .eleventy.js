@@ -8,12 +8,20 @@ module.exports = function(eleventyConfig) {
 
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", dateObj => {
+    if ( ! (dateObj instanceof Date) )
+    {
+      dateObj = new Date(dateObj);
+    }
     return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
   });
 
   // Date formatting (machine readable)
   eleventyConfig.addFilter("machineDate", dateObj => {
-    return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
+    if ( ! (dateObj instanceof Date) )
+    {
+      dateObj = new Date(dateObj);
+    }
+    return DateTime.fromJSDate(dateObj).toISO();
   });
 
   // Minify CSS
@@ -44,6 +52,52 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+  // limit filter
+  eleventyConfig.addNunjucksFilter("limit", function(array, limit) {
+    return array.slice(0, limit);
+  });
+
+  eleventyConfig.addFilter("future_events", function(events) {
+    return events.filter( event => new Date(event.start_date) >= new Date() );
+  });
+
+  // eleventyConfig.addFilter("by_start_date", function(events, dir) {
+  //   return events.sort( (a,b) => {
+  //     a = new Date(a.start_date);
+  //     b = new Date(b.start_date);
+  //     if ( dir == "asc" )
+  //     {
+  //       return a < b ? -1 : ( a > b ? 1 : 0 );
+  //     }
+  //     else
+  //     {
+  //       return a > b ? -1 : ( a < b ? 1 : 0 );
+  //     }
+  //   });
+  // });
+
+  eleventyConfig.addFilter("toString", function(collection, separator, props) {
+    var ret = [],
+        i = collection.length;
+    while ( i-- )
+    {
+      let str = [],
+          j = props.length;
+      while ( j-- )
+      {
+        let text = collection[i][props[j]];
+        if ( props[j].indexOf("date") > -1 )
+        {
+          text = new Date( text );
+          text = DateTime.fromJSDate(text).toFormat("dd LLL yyyy")
+        }
+        str.unshift( text );
+      }
+      ret.unshift( str.join( separator ) );
+    }
+    return ret;
+  });
+
   // only content in the `posts/` directory
   eleventyConfig.addCollection("posts", function(collection) {
     return collection.getAllSorted().filter(function(item) {
@@ -53,6 +107,7 @@ module.exports = function(eleventyConfig) {
 
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("static/img");
+  eleventyConfig.addPassthroughCopy("manifest.json");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("_includes/assets/");
 

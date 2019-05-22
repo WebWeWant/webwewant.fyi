@@ -1,0 +1,37 @@
+{% from "macros.njk" import label, field, confirm, select, textarea, button %}
+
+<section id="submit">
+  <h2>We’re listening…</h2>
+  <p>We’d love for you to send us your problems. We will use your submission to evaluate it for inclusion at a future event and we may also choose to publish it on this site.</p>
+  <p>At each event, we’ll provide enough time for a handful of people to present their problems to the audience. If chosen, you will have about 5 minutes to make your pitch to the judges and the audience. You will be on stage and can put together a pitch deck if you want or you can freestyle it. That’s up to you.</p>
+
+  <form>
+    <ol class="questions">
+      <li class="question">
+        {{ label("What’s your name?", "name") }}
+        {{ field( "text", "name", { required: true, placeholder: "Katherine Johnson" } ) }}
+        <p class="question__addendum">
+          {{ confirm("Please keep my full name private", "privacy") }}
+        </p>
+      </li>
+      <li class="question">
+        {{ label("Where can we email you?", "email") }}
+        {{ field( "email", "email", { required: true, placeholder: "katherine@johnson.tld", description: "We will only use your email address to contact you if you are selected to participate in an event and we will not retain your email address beyond that period of time." } ) }}
+      </li>
+      <li class="question">
+        {% set upcoming_events = events | future_events | by_start_date("asc") | toString( " - ", ["title", "start_date"]) %}
+        {{ label("What event are you interested in participating in?", "events") }}
+        {{ select( "events", upcoming_events, { required: true, placeholder: "katherine@johnson.tld", description: "We will only use your email address to contact you if you are selected to participate in an event and we will not retain your email address beyond that period of time." } ) }}
+      </li>
+      <li class="question">
+        {{ label("Please introduce the problem in just a few words.", "problem") }}
+        {{ field( "text", "title", { required: true, placeholder: "I cannot do X" } ) }}
+      </li>
+      <li class="question">
+        {{ label("Now go into a little more detail about the problem. How is it impacting your work? Do you currently have a workaround for it?", "problem") }}
+        {{ textarea( "text", "detail", { required: true } ) }}
+      </li>
+    </ol>
+    {{ button("Send it in") }}
+  </form>
+</section>

@@ -1,9 +1,9 @@
 {
-  "title": "Eleventy Netlify Boilerplate",
-  "url": "https://eleventy-netlify-boilerplate.netlify.com",
+  "title": "The Web We Want",
+  "url": "https://webwewant.fyi",
   "author": {
-    "name": "Dan Urbanowicz",
-    "email": "dan.urbanowicz@gmail.com",
-    "github": "https://github.com/danurbanowicz"
+    "name": "Aaron Gustafson",
+    "email": "aaron@easy-designs.net",
+    "github": "https://github.com/aarongustafson"
   }
 }
