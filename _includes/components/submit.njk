@@ -19,7 +19,7 @@
         {{ field( "email", "email", { required: true, placeholder: "katherine@johnson.tld", description: "We will only use your email address to contact you if you are selected to participate in an event and we will not retain your email address beyond that period of time." } ) }}
       </li>
       <li class="question">
-        {% set upcoming_events = events | future_events | by_start_date("asc") | toString( " - ", ["title", "start_date"]) %}
+        {% set upcoming_events = events | future_events | sort(attribute="start_date") | toString( " - ", ["title", "start_date"]) %}
         {{ label("What event are you interested in participating in?", "events") }}
         {{ select( "events", upcoming_events, { required: true, placeholder: "katherine@johnson.tld", description: "We will only use your email address to contact you if you are selected to participate in an event and we will not retain your email address beyond that period of time." } ) }}
       </li>
