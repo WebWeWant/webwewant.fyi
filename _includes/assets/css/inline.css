@@ -214,9 +214,16 @@ a[rel="tag"]:last-child {
   margin: 0;
   padding: 0;
   list-style: none;
+  perspective: 1000;
 }
 .question {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  transition: transform .25s;
+  transform-origin: 50% 50%;
+}
+.question:focus-within {
+  font-smoothing: subpixel-antialiased;
+  transform: scale3d(1.01, 1.01, 1);
 }
 .question__addendum,
 .question__description {
@@ -269,10 +276,23 @@ button {
   font-size: 1rem;
   font-family: inherit;
   padding: .5em 3em;
+  transform: translateX(0) translateY(0);
+  box-shadow: none;
+  transition: transform .25s, box-shadow .25s, background-color .5s;
 }
 button:hover,
 button:focus {
   background-color: #005e22;
+  background-color: #005e22;
+  transform: translateX(-2px) translateY(-2px);
+  box-shadow: 2px 2px 5px #666;
+  outline: 0;
+}
+button:hover:active,
+button:focus:active {
+  transform: translateX(0) translateY(0);
+  box-shadow: none;
+  transition: background-color .5s;
 }
 
 @media screen and (min-width:768px) {
