@@ -313,3 +313,7 @@ button:focus {
   font-size: .875rem;
   margin: 0;
 }
+
+[hidden] {
+  display: none;
+}
