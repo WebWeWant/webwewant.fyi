@@ -303,3 +303,13 @@ button:focus {
   letter-spacing: .01rem;
   text-transform: uppercase;
 }
+
+[aria-current] {
+  font-weight: 600;
+}
+
+.problem__meta {
+  font-style: italic;
+  font-size: .875rem;
+  margin: 0;
+}

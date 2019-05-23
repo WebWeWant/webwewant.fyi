@@ -131,6 +131,13 @@ module.exports = function(eleventyConfig) {
     return events.filter( event => new Date(event.end_date) >= new Date() );
   });
 
+  eleventyConfig.addCollection("problems", function(collection) {
+    // get unsorted items
+    return collection.getAll().filter( item => {
+      return item.inputPath.indexOf("problems/") > -1;
+    });
+  });
+
   // eleventyConfig.addFilter("by_start_date", function(events, dir) {
   //   return events.sort( (a,b) => {
   //     a = new Date(a.start_date);
@@ -159,7 +166,7 @@ module.exports = function(eleventyConfig) {
         if ( props[j].indexOf("date") > -1 )
         {
           text = new Date( text );
-          text = DateTime.fromJSDate(text).toFormat("dd LLL yyyy")
+          text = DateTime.fromJSDate(text).toFormat("dd LLL yyyy");
         }
         str.unshift( text );
       }

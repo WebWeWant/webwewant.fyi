@@ -1,7 +1,7 @@
 ---
 layout: layouts/home.njk
 title: The Web We Want
-date: 2018-01-01T00:00:00.000Z
+date: 2019-01-01T00:00:00.000Z
 permalink: /
 navtitle: Home
 tags:

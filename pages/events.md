@@ -1,7 +1,7 @@
 ---
 layout: layouts/events.njk
 title: Events
-date: 2018-12-31T00:00:00.000Z
+date: 2019-01-03T00:00:00.000Z
 permalink: /events/
 navtitle: Events
 tags:
