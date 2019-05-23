@@ -1,6 +1,6 @@
 ---
 layout: layouts/problems.njk
-title: Problems
+title: Problems Identified by the Community
 date: 2019-01-02T00:00:00.000Z
 permalink: /problems/
 navtitle: Problems
