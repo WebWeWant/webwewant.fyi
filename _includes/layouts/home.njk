@@ -5,10 +5,19 @@ section: home
 
 {{ layoutContent | safe }}
 
-{% include 'components/upcoming.njk' %}
+{% from "macros.njk" import event %}
+
+{% set upcoming_events = events | future_events | sort(attribute="start_date") | limit(3) %}
+{% if upcoming_events.length > 0 %}
+  <section id="upcoming">
+    <h2>Upcoming Events</h2>
+    
+    <ul class="events">
+    {% for e in upcoming_events %}
+      {{ event( 'li', e.title, e.url, e.start_date, e.end_date, e.location ) }}
+    {% endfor %}
+    </ul>
+  </section>
+{% endif %}
 
 {% include 'components/submit.njk' %}
-
-{% include 'components/eventroll.njk' %}
-
-

@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+section: problems
+---
+
+<h1>{{ title }}</h1>
+<p>
+  <small>
+    <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by {{ submitter }}
+  </small>
+</p>
+
+{{ layoutContent | safe }}

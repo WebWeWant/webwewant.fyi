@@ -14,6 +14,7 @@ colors:
 
 *, *:before, *:after {
   box-sizing: border-box;
+  transition: color .5s, background-color .5s;
 }
 
 html,
@@ -27,6 +28,10 @@ body {
 
   padding: 0;
   margin: 0;
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -63,7 +68,9 @@ a[href]:visited {
 main {
   padding: 1em 1em 2em;
   margin: 1em auto;
+  width: 100%;
   max-width: 80ch;
+  flex: 1;
 }
 
 main * + * {
@@ -107,6 +114,7 @@ ul {
 header {
   padding: 2em 1em 0;
   margin: 0 auto;
+  width: 100%;
   max-width: 555px; /* logo width */
 }
 #logo {
@@ -162,21 +170,14 @@ footer p {
   margin: 0 auto;
   padding: 1em;
 }
-footer small {
-  margin: 0;
+footer small + small {
+  margin-top: .75rem;
 }
 
-/* Posts List */
-article {
-  margin-bottom: 1em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #eee;
-  border-bottom: 1px solid var(--white);
-}
 
-main > section > article > * {
-  margin-top: 0;
-  margin-bottom: .5em;
+/* Sections */
+section {
+  margin-top: 2rem;
 }
 
 /* Post Tags */
@@ -208,17 +209,12 @@ a[rel="tag"]:last-child {
   margin-right: 0;
 }
 
-/* Contact Form */
-form {
-  padding: 2em 0;
-}
-
+/* Form */
 .questions {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 .question {
   margin-bottom: 1rem;
 }
@@ -227,20 +223,18 @@ form {
   display: block;
   margin-top: .3rem;
 }
-
 .question__description {
   font-size: .875rem;
   line-height: 1.25;
 }
-
 label {
   display: block;
   font-weight: 600;
 }
-
 input,
 textarea,
 select {
+  background-color: #fff;
   font-size: 1rem;
   font-family: inherit;
   border: 1px solid #003d16;
@@ -248,7 +242,11 @@ select {
   padding: .25em .5em;
   width: 100%;
 }
-
+input:focus,
+select:focus,
+textarea:focus {
+  background-color: #ffffeb;
+}
 label input {
   width: auto;
 }
@@ -285,7 +283,8 @@ button:focus {
 
 .events {
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-template-columns: repeat( auto-fit, minmax( 250px, 1fr) );
+  column-gap: 1rem;
 }
 @supports (display:grid) {
   .event {
@@ -293,7 +292,7 @@ button:focus {
   }
 }
 .event__title,
-.event_timing,
+.event__timing,
 .event__location {
   font-weight: 400;
   display: block;

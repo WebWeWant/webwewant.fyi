@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+section: problems
+permalink: /problems/index.html
+---
+<h1>{{ title }}</h1>
+
+{{ layoutContent | safe }}
+
+{% set problems = collections.problems %}
+{% if problems.length > 0 %}
+<ul class="problems">
+  {%- for problem in problems -%}
+    <li class="problem">
+      <a class="problem__title" href="/problems/{{ loop.index0 }}">{{ problem.title }}</a>
+      <p class="problem__meta">{{ problem.author }}</p>
+    </li>
+  {%- endfor -%}
+</ul>
+{% else %}
+  <p>No one has submitted a problem yet. <a href="/#submit">Wanna be the first?</a></p>
+{% endif %}

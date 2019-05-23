@@ -24,6 +24,72 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toISO();
   });
 
+  // HTML date range
+  eleventyConfig.addShortcode("DateRange", ( string, html ) => {
+    let [start, end] = string.split("|");
+    start = new Date(start);
+    end = new Date(end);
+    let s_yr = start.getFullYear(),
+        s_mo = start.getMonth() + 1,
+        s_dy = start.getDate(),
+        s_dt,
+        e_yr = end.getFullYear(),
+        e_mo = end.getMonth() + 1,
+        e_dy = end.getDate(),
+        e_dt,
+        template = '<time datetime="DATETIME">DISPLAY</time>';
+    
+    switch (true)
+    {
+      // same date
+      case ( s_dy == e_dy && s_mo == e_mo && s_yr == e_yr ):
+        s_dt	= DateTime.fromJSDate(start).toISO();
+        start = DateTime.fromJSDate(start).toFormat("dd LLL yyyy");
+        end   = false;
+        break;
+      // month & year match
+      case ( s_mo == e_mo && s_yr == e_yr ):
+        s_dt	= DateTime.fromJSDate(start).toISO();
+        start = DateTime.fromJSDate(start).toFormat("dd");
+        e_dt	= DateTime.fromJSDate(end).toISO();
+        end   = DateTime.fromJSDate(end).toFormat("dd LLL yyyy");
+        break;
+      // years match
+      case s_yr == e_yr:
+        s_dt	= DateTime.fromJSDate(start).toISO();
+        start = DateTime.fromJSDate(start).toFormat("dd LLL");
+        e_dt	= DateTime.fromJSDate(end).toISO();
+        end   = DateTime.fromJSDate(end).toFormat("dd LLL yyyy");
+        break;
+      // nothing matches
+      default:
+        s_dt	= DateTime.fromJSDate(start).toISO();
+        start = DateTime.fromJSDate(start).toFormat("dd LLL yyyy");
+        e_dt	= DateTime.fromJSDate(end).toISO();
+        end   = DateTime.fromJSDate(end).toFormat("dd LLL yyyy");
+        break;
+    }
+
+    if ( html )
+    {
+      string = template.replace("DATETIME", s_dt).replace("DISPLAY", start);
+      if ( end )
+      {
+        string += "–" + template.replace("DATETIME", e_dt).replace("DISPLAY", end);
+      }
+    }
+    else
+    {
+      string = start;
+      if ( end )
+      {
+        string += "–" + end;
+      }
+    }
+
+    return `${string}`;
+  });
+
   // Minify CSS
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
@@ -57,8 +123,12 @@ module.exports = function(eleventyConfig) {
     return array.slice(0, limit);
   });
 
+  eleventyConfig.addFilter("past_events", function(events) {
+    return events.filter( event => new Date(event.end_date) <= new Date() );
+  });
+
   eleventyConfig.addFilter("future_events", function(events) {
-    return events.filter( event => new Date(event.start_date) >= new Date() );
+    return events.filter( event => new Date(event.end_date) >= new Date() );
   });
 
   // eleventyConfig.addFilter("by_start_date", function(events, dir) {

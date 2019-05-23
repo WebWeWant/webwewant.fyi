@@ -1,7 +1,7 @@
 ---
 title: About us
 date: 2019-01-01T00:00:00.000Z
-permalink: /about/index.html
+permalink: /about/
 navtitle: About
 tags:
   - nav

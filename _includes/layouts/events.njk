@@ -1,0 +1,34 @@
+---
+layout: layouts/base.njk
+section: events
+---
+
+<h1>{{ title }}</h1>
+
+{{ layoutContent | safe }}
+
+{% from "macros.njk" import event %}
+
+{% set upcoming_events = events | future_events | sort(attribute="start_date") %}
+{% if upcoming_events.length > 0 %}
+  <section id="upcoming">
+    <h2>Upcoming Events</h2>
+    <ul class="events">
+      {% for e in upcoming_events %}
+        {{ event( 'li', e.title, e.url, e.start_date, e.end_date, e.location ) }}
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
+
+{% set past_events = events | past_events | sort(attribute="start_date") | reverse %}
+{% if past_events.length > 0 %}
+  <section id="past">
+    <h2>Past Events</h2>
+    <ul class="events">
+      {% for e in past_events %}
+        {{ event( 'li', e.title, e.url, e.start_date, e.end_date, e.location ) }}
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
