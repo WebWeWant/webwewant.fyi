@@ -5,7 +5,7 @@
   <p>We’d love for you to send us your problems. We will use your submission to evaluate it for inclusion at a future event and we may also choose to publish it on this site.</p>
   <p>At each event, we’ll provide enough time for a handful of people to present their problems to the audience. If chosen, you will have about 5 minutes to make your pitch to the judges and the audience. You will be on stage and can put together a pitch deck if you want or you can freestyle it. That’s up to you.</p>
 
-  <form>
+  <form name="problems" method="POST" data-netlify="true" action="/submitted/">
     <ol class="questions">
       <li class="question">
         {{ label("What’s your name?", "name") }}
