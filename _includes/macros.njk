@@ -52,6 +52,9 @@
     {% for option in options %}
       <option>{{ option }}</option>
     {% endfor %}
+    {% for option in data.options %}
+      <option>{{ option }}</option>
+    {% endfor %}
   </select>
 {% endmacro %}
 

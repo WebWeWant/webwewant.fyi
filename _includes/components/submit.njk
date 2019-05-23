@@ -21,7 +21,7 @@
       <li class="question">
         {% set upcoming_events = events | future_events | sort(attribute="start_date") | toString( " - ", ["title", "location"]) %}
         {{ label("What event are you interested in participating in?", "events") }}
-        {{ select( "events", upcoming_events, { required: true } ) }}
+        {{ select( "events", upcoming_events, { required: true, options: ["I’m not interested in participating in an event"] } ) }}
       </li>
       <li class="question">
         {{ label("Please introduce the problem in just a few words.", "title") }}
