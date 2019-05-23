@@ -24,12 +24,12 @@
         {{ select( "events", upcoming_events, { required: true } ) }}
       </li>
       <li class="question">
-        {{ label("Please introduce the problem in just a few words.", "problem") }}
+        {{ label("Please introduce the problem in just a few words.", "title") }}
         {{ field( "text", "title", { required: true, placeholder: "I cannot do X" } ) }}
       </li>
       <li class="question">
-        {{ label("Now go into a little more detail about the problem. How is it impacting your work? Do you currently have a workaround for it?", "problem") }}
-        {{ textarea( "text", "detail", { required: true } ) }}
+        {{ label("Now go into a little more detail about the problem. How is it impacting your work? Do you currently have a workaround for it?", "detail") }}
+        {{ textarea( "detail", { required: true } ) }}
       </li>
     </ol>
     {{ button("Send it in") }}
