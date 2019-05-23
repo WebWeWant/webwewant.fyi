@@ -20,8 +20,9 @@
          {% if data.placeholder %}placeholder="{{ data.placeholder }}"{% endif %}
          {% if data.pattern %}pattern="{{ data.pattern }}"{% endif %}
          {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
-         {% if data.description %}autocomplete="{{ data.autocomplete }}"{% endif %}
+         {% if data.autocomplete %}autocomplete="{{ data.autocomplete }}"{% endif %}
          {% if data.autocorrect %}autocorrect="{{ data.autocorrect }}"{% endif %}
+         {% if data.spellcheck %}spellcheck="{{ data.spellcheck }}"{% endif %}
          {% if data.autocapitalize %}autocapitalize="{{ data.autocapitalize }}"{% endif %}
          >
   {% if data.description %}
@@ -59,6 +60,9 @@
             name="{{ name }}"
             rows="10"
             {% if data.required %}required aria-required="true"{% endif %}
+            {% if data.autocorrect %}autocorrect="{{ data.autocorrect }}"{% endif %}
+            {% if data.spellcheck %}spellcheck="{{ data.spellcheck }}"{% endif %}
+            {% if data.autocapitalize %}autocapitalize="{{ data.autocapitalize }}"{% endif %}
             ></textarea>
 {% endmacro %}
 

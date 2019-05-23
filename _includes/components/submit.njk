@@ -9,7 +9,7 @@
     <ol class="questions">
       <li class="question">
         {{ label("What’s your name?", "name") }}
-        {{ field( "text", "name", { required: true, placeholder: "Katherine Johnson", autocomplete: "name" } ) }}
+        {{ field( "text", "name", { required: true, placeholder: "Katherine Johnson", autocomplete: "name", autocorrect: "off", autocapitalize: "off" } ) }}
         <p class="question__addendum">
           {{ confirm("Please keep my full name private", "privacy") }}
         </p>
@@ -25,11 +25,11 @@
       </li>
       <li class="question">
         {{ label("Please introduce the problem in just a few words.", "title") }}
-        {{ field( "text", "title", { required: true, placeholder: "I cannot do X" } ) }}
+        {{ field( "text", "title", { required: true, placeholder: "I cannot do X", autocapitalize: "sentences", spellcheck: "true" } ) }}
       </li>
       <li class="question">
         {{ label("Now go into a little more detail about the problem. How is it impacting your work? Do you currently have a workaround for it?", "detail") }}
-        {{ textarea( "detail", { required: true } ) }}
+        {{ textarea( "detail", { required: true, autocapitalize: "sentences", spellcheck: "true" } ) }}
       </li>
       <li hidden>
         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
