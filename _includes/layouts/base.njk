@@ -7,7 +7,9 @@
 
     <header>
       <a id="logo" href="{{ '/' | url }}">
-        {% include "assets/svg/logo.svg" %}
+        <div class="logo-container">
+          {% include "assets/svg/logo.svg" %}
+        </div>
       </a>
       {% include "components/nav.njk" %}
     </header>
