@@ -280,7 +280,7 @@ a[rel="tag"]:last-child {
   transform-origin: 50% 50%;
 }
 .question:focus-within {
-  transform: scale3d(1.01, 1.01, 1);
+  transform: scale(1.01);
 }
 .question__addendum,
 .question__description {
