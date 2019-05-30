@@ -77,9 +77,12 @@ main {
   background: rgba(255, 255, 255, 0.8);
   padding: 2em 1em;
   margin: 0 auto;
-  width: 100%;
-  max-width: 80ch;
   flex: 1;
+}
+@media screen and (min-width: 80ch) {
+  main {
+    max-width: 80ch;
+  }
 }
 
 main * + * {
@@ -117,9 +120,11 @@ small {
 /* Header */
 header {
   margin: 0 auto;
+  width: 100%;
   max-width: 80ch;
 }
 #logo {
+  display: block;
   padding: 2em 1em 0;
   margin: 0 auto;
   width: 100%;
@@ -151,56 +156,9 @@ header {
 nav ul {
   font-size: 1.5rem;
   list-style: none;
-  display: flex;
   margin: 1rem auto 0;
   padding: 0;
   text-align: center;
-}
-nav li {  
-  position: relative;
-}
-nav li::before,
-nav li::after,
-nav a::before {
-  background: rgba(255, 255, 255, 0);
-  content: "";
-  position: absolute;
-  animation-fill-mode: forwards;
-}
-nav li:hover::before,
-nav li:hover::after,
-nav a:hover::before {
-  background: rgba(255, 255, 255, 1);
-}
-nav li::before {
-  bottom: 0;
-  left: 0;
-  width: 1px;
-  height: 0;
-  transition: height .25s;
-}
-nav li::after {
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  transition: width .5s .25s;
-}
-nav li a::before {
-  top: 1px;
-  right: 0;
-  width: 1px;
-  height: 0;
-  transition: height .25s .75s;
-}
-nav li:hover::before {
-  height: calc( 100% - 1px );
-}
-nav li:hover::after {
-  width: 100%;
-}
-nav a:hover::before {
-  height: calc( 100% - 1px );
 }
 nav a {
   display: block;
@@ -214,6 +172,58 @@ nav a {
 }
 [aria-current] {
   background: rgba(255, 255, 255, 0.8);
+}
+@media screen and (min-width: 36em) {
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  nav li {  
+    position: relative;
+  }
+  nav li::before,
+  nav li::after,
+  nav a::before {
+    background: rgba(255, 255, 255, 0);
+    content: "";
+    position: absolute;
+    animation-fill-mode: forwards;
+  }
+  nav li:hover::before,
+  nav li:hover::after,
+  nav a:hover::before {
+    background: rgba(255, 255, 255, 1);
+  }
+  nav li::before {
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 0;
+    transition: height .25s;
+  }
+  nav li::after {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    transition: width .5s .25s;
+  }
+  nav li a::before {
+    top: 1px;
+    right: 0;
+    width: 1px;
+    height: 0;
+    transition: height .25s .75s;
+  }
+  nav li:hover::before {
+    height: calc( 100% - 1px );
+  }
+  nav li:hover::after {
+    width: 100%;
+  }
+  nav a:hover::before {
+    height: calc( 100% - 1px );
+  }
 }
 
 
@@ -365,11 +375,12 @@ button:focus:active {
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax( 250px, 1fr) );
   column-gap: 1rem;
+  row-gap: 1rem;
   list-style: none;
   padding: 0;
   margin-left: 0;
 }
-@supports (display:grid) {
+@supports (display: grid) {
   .event {
     margin-top: 0;
   }
