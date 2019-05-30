@@ -204,13 +204,16 @@ nav a:hover::before {
 }
 nav a {
   display: block;
-  text-decoration: none;
   padding: .25em 1em 1px;
   margin: 0;
+
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 [aria-current] {
   background: rgba(255, 255, 255, 0.8);
-  font-weight: 600;
 }
 
 
