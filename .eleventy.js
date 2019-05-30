@@ -2,6 +2,7 @@ const { DateTime } = require("luxon");
 const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-es");
 const htmlmin = require("html-minifier");
+const widont = require("widont");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
@@ -90,6 +91,12 @@ module.exports = function(eleventyConfig) {
     return `${string}`;
   });
 
+  // Widont
+  eleventyConfig.addFilter("widont", function(text) {
+    return widont( text );
+  });
+
+  
   // Minify CSS
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
@@ -111,8 +118,10 @@ module.exports = function(eleventyConfig) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
-        collapseWhitespace: true
+        collapseWhitespace: true,
+        collapseBooleanAttributes: true
       });
+      minified = minified.replace('\u00a0', '<b class="shy">\u00a0</b>');
       return minified;
     }
     return content;
@@ -173,6 +182,11 @@ module.exports = function(eleventyConfig) {
       ret.unshift( str.join( separator ) );
     }
     return ret;
+  });
+
+  eleventyConfig.addFilter("getDirectory", function(url) {
+    url = url.split('/');
+    return url[1];
   });
 
   // only content in the `posts/` directory

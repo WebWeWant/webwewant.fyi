@@ -2,8 +2,29 @@
 layout: layouts/base.njk
 section: contact
 ---
-<h1>{{ title }}</h1>
+<h1>{{ title | widont  }}</h1>
 
 {{ layoutContent | safe }}
 
-{% include "components/form.njk" %}
+{% from "macros.njk" import label, field, textarea, button %}
+
+<form name="problems" method="POST" data-netlify="true" action="/thanks/" netlify-honeypot="bot-field">
+  <ol class="questions">
+    <li class="question">
+      {{ label("How should we address you?", "name") }}
+      {{ field( "text", "name", { required: true, placeholder: "Katherine Johnson", autocomplete: "name", autocorrect: "off", autocapitalize: "off" } ) }}
+    </li>
+    <li class="question">
+      {{ label("What’s your email address?", "email") }}
+      {{ field( "email", "email", { required: true, placeholder: "katherine@johnson.tld", autocomplete: "email" } ) }}
+    </li>
+    <li class="question">
+      {{ label("What’s on your mind?", "message") }}
+      {{ textarea( "message", { required: true, autocapitalize: "sentences", spellcheck: "true" } ) }}
+    </li>
+    <li hidden>
+      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+    </li>
+  </ol>
+  {{ button("Send in your message") }}
+</form>

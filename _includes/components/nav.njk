@@ -1,9 +1,11 @@
 <nav>
   <ul>
-  {%- for nav in collections.nav | sort(attribute="date") -%}
+  {% set current_directory = page.url | getDirectory %}
+  {% for nav in collections.nav | sort(attribute="date") %}
+    {% set nav_directory = nav.url | getDirectory %}
     <li>
-      <a href="{{ nav.url | url }}"{% if nav.url == page.url %} aria-current="page"{% endif %}>{{ nav.data.navtitle }}</a>
+      <a href="{{ nav.url | url }}"{% if current_directory == nav_directory %} aria-current="page"{% endif %}>{{ nav.data.navtitle }}</a>
     </li>
-  {%- endfor -%}
+  {% endfor %}
   </ul>
 </nav>

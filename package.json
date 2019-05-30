@@ -25,7 +25,8 @@
     "@11ty/eleventy": "^0.8.2",
     "luxon": "^1.12.1",
     "markdown-it": "^8.4.2",
-    "markdown-it-anchor": "^5.0.2"
+    "markdown-it-anchor": "^5.0.2",
+    "widont": "^0.3.2"
   },
   "dependencies": {
     "clean-css": "^4.2.1",
