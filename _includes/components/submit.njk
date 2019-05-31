@@ -29,7 +29,7 @@
       </li>
       <li class="question">
         {{ label("Now go into a little more detail about the problem. How is it impacting your work? Do you currently have a workaround for it?", "detail") }}
-        {{ textarea( "detail", { required: true, autocapitalize: "sentences", spellcheck: "true" } ) }}
+        {{ textarea( "detail", { required: true, autocapitalize: "sentences", spellcheck: "true", description: "Please note that we may end up rewriting your problem before posting it to this site." } ) }}
       </li>
       <li hidden>
         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
