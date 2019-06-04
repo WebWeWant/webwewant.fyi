@@ -4,12 +4,22 @@
 
 ## What is it?
 
+If you build websites, you inevitably run into problems. Maybe there’s no way to achieve an aspect of your design using CSS. Or maybe there’s a device feature you really wish you could tap into using JavaScript. Or perhaps the in-browser DevTools don’t give you a key insight you need to do your job. We want to hear about it!
+
+## Adding Events
+
+You can add events by editing [the `events.json` file](./_data/events.json).
+
+## Adding Problems
+
+You can add new "problems" by creating a new markdown file in [the `problems` directory](./problems/). Feel free to duplicate an existing problem and use that as a template.
+
 ## Local development
 
 ### 1. Clone this repository:
 
 ```
-git clone https://github.com/aarongustafson/webwewant.fyi.git webwewant.fyi
+git clone https://github.com/WebWeWant/webwewant.fyi.git webwewant.fyi
 ```
 
 
