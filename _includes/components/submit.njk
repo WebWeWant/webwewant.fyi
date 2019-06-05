@@ -2,8 +2,8 @@
 
 <section id="submit">
   <h2>We’re listening…</h2>
-  <p>We’d love for you to send us your problems. We will use your submission to evaluate it for inclusion at a future event and we may also choose to publish it on this site.</p>
-  <p>At each event, we’ll provide enough time for a handful of people to present their problems to the audience. If chosen, you will have about 5 minutes to make your pitch to the judges and the audience. You will be on stage and can put together a pitch deck if you want or you can freestyle it. That’s up to you.</p>
+  <p>We’d love to know what tools you want to add to your web dev toolbox. We’ll evaluate all submissions for inclusion on this site and you may get chosen to present your ask at a future event.</p>
+  <p>At each event, we’ll provide enough time for a handful of people to present their "wants" to the audience. If chosen, you’ll have about 5 minutes to make your pitch to the judges and the audience. You will be on stage and can put together a pitch deck if you want or you can freestyle it. That’s up to you.</p>
 
   <form name="problems" method="POST" data-netlify="true" action="/submitted/" netlify-honeypot="bot-field">
     <ol class="questions">
@@ -24,11 +24,11 @@
         {{ select( "events", upcoming_events, { required: true, options: ["I’m not interested in participating in an event"] } ) }}
       </li>
       <li class="question">
-        {{ label("Please introduce the problem in just a few words.", "title") }}
-        {{ field( "text", "title", { required: true, placeholder: "I cannot do X", autocapitalize: "sentences", spellcheck: "true" } ) }}
+        {{ label("What do you want?", "title") }}
+        {{ field( "text", "title", { required: true, placeholder: "I want…", autocapitalize: "sentences", spellcheck: "true" } ) }}
       </li>
       <li class="question">
-        {{ label("Now go into a little more detail about the problem. How is it impacting your work? Do you currently have a workaround for it?", "detail") }}
+        {{ label("Now go into a little more detail. How is lack of this impacting your work? How do you currently work around this limitation?", "detail") }}
         {{ textarea( "detail", { required: true, autocapitalize: "sentences", spellcheck: "true", description: "Please note that we may end up rewriting your problem before posting it to this site." } ) }}
       </li>
       <li hidden>

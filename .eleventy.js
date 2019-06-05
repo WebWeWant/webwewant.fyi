@@ -140,10 +140,10 @@ module.exports = function(eleventyConfig) {
     return events.filter( event => new Date(event.end_date) >= new Date() );
   });
 
-  eleventyConfig.addCollection("problems", function(collection) {
+  eleventyConfig.addCollection("wants", function(collection) {
     // get unsorted items
     return collection.getAll().filter( item => {
-      return item.inputPath.indexOf("problems/") > -1;
+      return item.inputPath.indexOf("wants/") > -1;
     });
   });
 

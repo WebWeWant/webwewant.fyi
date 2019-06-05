@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+section: wants
+permalink: /wants/index.html
+---
+
+<h1>{{ title | widont }}</h1>
+
+{{ layoutContent | safe }}
+
+{% set wants = collections.wants %}
+{% if wants.length > 0 %}
+<ul class="wants">
+  {% for want in wants %}
+    <li class="want">
+      <h2><a class="want__title" href="{{ want.url }}">{{ want.data.title | widont }}</a></h2>
+      <p class="want__meta">Submitted by {{ want.data.submitter }}</p>
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+  <p>No one has submitted a want yet. <a href="/#submit">Wanna be the first?</a></p>
+{% endif %}

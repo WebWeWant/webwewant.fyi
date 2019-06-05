@@ -12,4 +12,4 @@ If you build websites, you inevitably run into problems. Maybe there’s no way 
 
 We started this project to collect your feedback about the current state of the web and to give you a voice to help shape what the future of web. To kick things off, we’re traveling to conferences and meetups across the world to give you a chance to pitch us on why we (as a community) need to go solve a particular problem or deficiency you’ve encountered in the web platform, developer tooling, or other areas. The most compelling problems—as judged by a panel of experts and the audience—will win awesome prizes too!
 
-Have a problem to share? [Send it in](#submit)
+Is there something you want? [Send it in](#submit)

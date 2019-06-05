@@ -398,24 +398,24 @@ button:focus:active {
   text-transform: uppercase;
 }
 
-.problems {
+.wants {
   list-style: none;
   padding: 0;
   margin-left: 0;
 }
-.problem + .problem {
+.want + .want {
   margin-top: 2rem;
   border-top: 1px solid #005e22;
   padding-top: 1rem;
 }
-.problem__meta {
+.want__meta {
   font-style: italic;
   font-size: .875rem;
 }
-.problem__title {
+.want__title {
   font-size: 2.125rem;
 }
-h1.problem__title {
+h1.want__title {
   font-size: 2.875rem;
 }
 
