@@ -7,7 +7,7 @@
 <link rel="canonical" href="{{ pkg.homepage }}{{ page.url }}">
 <meta property="og:url" content="{{ pkg.homepage }}{{ page.url }}">
 <meta property="og:site_name" content="{{ pkg.title }}">
-<meta property="og:image" content="{{ pkg.homepage }}/static/img/icon.png">
+<meta property="og:image" content="{{ pkg.homepage }}/static/img/og-icon.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@webwewantfyi">
 <meta name="twitter:creator" content="@webwewantfyi">
@@ -20,13 +20,13 @@
   },
   "@type": "WebSite",
   "url": "{{ pkg.homepage }}",
-  "image": "{{ pkg.homepage }}/static/img/icon.png",
+  "image": "{{ pkg.homepage }}/static/img/og-icon.png",
   "headline": "{{ title or renderData.title or metadata.title }}",
   "publisher": {
     "@type": "Organization",
     "logo":{
       "@type": "ImageObject",
-      "url": "{{ pkg.homepage }}/static/img/icon.png"
+      "url": "{{ pkg.homepage }}/static/img/og-icon.png"
     },
     "name": "{{ pkg.title }}"
   },
