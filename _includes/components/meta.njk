@@ -1,13 +1,18 @@
-<title>{{ title or renderData.title or metadata.title }} ⇥ {{ pkg.title }}</title>
-<meta property="og:title" content="{{ title or renderData.title or metadata.title }}">
+{% set page_title %}{{ title or renderData.title or metadata.title }}{% endset %}
+{% set page_description %}{{ description or pkg.description }}{% endset %}
+{% set canonical %}{{ pkg.homepage }}{{ page.url }}{% endset %}
+{% set og_image %}{{ pkg.homepage }}/static/img/og-icon.png{% endset %}
+
+<title>{{ page_title }}{% if page_title != pkg.title %} ⇥ {{ pkg.title }}{% endif %}</title>
+<meta property="og:title" content="{{ page_title }}">
 <meta name="author" content="{{ pkg.author.name }}">
 <meta property="og:locale" content="en_US">
-<meta name="description" content="{{ description or pkg.description }}">
-<meta property="og:description" content="{{ description or pkg.description }}">
-<link rel="canonical" href="{{ pkg.homepage }}{{ page.url }}">
-<meta property="og:url" content="{{ pkg.homepage }}{{ page.url }}">
+<meta name="description" content="{{ page_description }}">
+<meta property="og:description" content="{{ page_description }}">
+<link rel="canonical" href="{{ canonical }}">
+<meta property="og:url" content="{{ canonical }}">
 <meta property="og:site_name" content="{{ pkg.title }}">
-<meta property="og:image" content="{{ pkg.homepage }}/static/img/og-icon.png">
+<meta property="og:image" content="{{ og_image }}">
 <meta property="og:image:alt" content="Web We Want icon">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -15,20 +20,20 @@
 <meta name="twitter:creator" content="@webwewantfyi">
 <script type="application/ld+json">{
   "name": "{{ title }}",
-  "description":"{{ description or pkg.description }}",
+  "description":"{{ page_description }}",
   "author": {
     "@type": "Person",
     "name": "{{ pkg.author.name }}"
   },
   "@type": "WebSite",
-  "url": "{{ pkg.homepage }}",
-  "image": "{{ pkg.homepage }}/static/img/og-icon.png",
-  "headline": "{{ title or renderData.title or metadata.title }}",
+  "url": "{{ canonical }}",
+  "image": "{{ og_image }}",
+  "headline": "{{ page_title }}",
   "publisher": {
     "@type": "Organization",
     "logo":{
       "@type": "ImageObject",
-      "url": "{{ pkg.homepage }}/static/img/og-icon.png"
+      "url": "{{ og_image }}"
     },
     "name": "{{ pkg.title }}"
   },
