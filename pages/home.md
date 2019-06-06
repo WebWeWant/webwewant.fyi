@@ -1,6 +1,7 @@
 ---
 layout: layouts/home.njk
 title: The Web We Want
+description: If you build websites, you inevitably run into problems. We want to hear about it!
 date: 2019-01-01T00:00:00.000Z
 permalink: /
 navtitle: Home

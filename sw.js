@@ -30,6 +30,8 @@ const version = "v1:", // be sure to update
 
       // Never cache
       ignore = [
+        'thanks',
+        'submitted',
         'chrome-extension'
       ],
 

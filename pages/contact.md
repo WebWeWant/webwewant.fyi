@@ -1,6 +1,7 @@
 ---
 layout: layouts/contact.njk
 title: Contact Us
+description: Have a question? Need help with something? Drop us a line.
 date: 2019-01-04T00:00:00.000Z
 permalink: /contact/
 ---

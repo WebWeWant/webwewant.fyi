@@ -1,5 +1,6 @@
 ---
 title: About us
+description: "The Web We Want is a collective effort by browser makers to understand where the dev community would like us to invest our energy."
 date: 2019-01-04T00:00:00.000Z
 permalink: /about/
 navtitle: About
