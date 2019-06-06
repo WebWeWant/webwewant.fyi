@@ -1,7 +1,8 @@
 {
   "name": "webwewant-fyi",
-  "version": "1.0.0",
+  "title": "The Web We Want",
   "description": "A project to gather informaiton about what you need to realize your vision for the web.",
+  "version": "1.0.0",
   "scripts": {
     "build": "npx eleventy",
     "watch": "npx eleventy --watch",

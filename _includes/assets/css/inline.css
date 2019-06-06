@@ -78,6 +78,7 @@ main {
   padding: 2em 1em;
   margin: 0 auto;
   flex: 1;
+  width: 100%;
 }
 @media screen and (min-width: 80ch) {
   main {

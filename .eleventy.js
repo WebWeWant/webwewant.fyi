@@ -127,6 +127,15 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+  // Minify JS output
+  eleventyConfig.addTransform("jsmin", function(content, outputPath) {
+    if (outputPath.indexOf(".js") > -1) {
+      let minified = UglifyJS.minify(content);
+      return minified;
+    }
+    return content;
+  });
+
   // limit filter
   eleventyConfig.addNunjucksFilter("limit", function(array, limit) {
     return array.slice(0, limit);
@@ -197,6 +206,7 @@ module.exports = function(eleventyConfig) {
   });
 
   // Don't process folders with static assets e.g. images
+  eleventyConfig.addPassthroughCopy("sw.js");
   eleventyConfig.addPassthroughCopy("static/img");
   eleventyConfig.addPassthroughCopy("manifest.json");
   eleventyConfig.addPassthroughCopy("admin");

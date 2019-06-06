@@ -1,0 +1,81 @@
+---
+layout: layouts/base.njk
+section: offline
+---
+
+<h1>{{ title | widont  }}</h1>
+
+{{ layoutContent | safe }}
+
+<template style="display:none" id="cached-link" data-proofer-ignore>
+  <article class="entry entry--excerpt entry--posts">
+    <header class="entry__header">
+      <h3 class="entry__title entry-title"><a rel="bookmark"></a></h3>
+    </header>
+    <div class="entry__content entry__content--excerpt entry-content"></div>
+  </article>
+</template>
+
+<style media="screen">
+  .entry--excerpt {
+    margin-top: 1rem;
+  }
+  .entry__content--excerpt {
+    margin-top: 0;
+  }
+  .entry__content--excerpt p {
+    font-size: 1.1rem;
+    margin-top: .3rem;
+  }
+</style>
+
+<script>
+  (function( window, document ){
+
+    var sw_version = "v1:",
+        $h2 = document.createElement( "h2" ),
+        $p = document.createElement( "p" ),
+        $template = document.getElementById( "cached-link" ),
+        $document = document.querySelector( "main" ),
+        displayed = 0;
+
+    $h2.classList.add( "subsection__header" );
+
+    $document.querySelector('p').innerHTML += " Hold tight. We may have something in the cache for you…";
+
+    caches.open( sw_version + "pages" )
+      .then( cache => {
+        cache.keys()
+          .then( keys => {
+            if ( keys.length )
+            {
+              var $header = $h2.cloneNode();
+              $header.innerText = "Pages Available Offline";
+              $document.appendChild( $header );
+              keys.forEach( insertOfflineLink );
+            }
+          })
+      });
+
+      function insertOfflineLink( request )
+      {
+        var data = JSON.parse( localStorage.getItem( request.url ) ),
+            $tpl = $template.cloneNode(true),
+            $df = $tpl.content,
+            $link = $df.querySelector( "a" );
+        if ( data )
+        {
+          $link.href = request.url;
+          $link.innerText = data.title;
+          $df.querySelector( ".entry__content--excerpt" ).innerHTML = "<p>" + data.description + "</p>";
+          $document.appendChild( $df );
+          displayed++;
+          if ( displayed == 1 )
+          {
+            $document.querySelector('p').innerHTML = "Here’s what we found in your cache that you <em>can</em> view offline.";
+          }
+        }
+      }
+
+  }( this, this.document ));
+</script>
