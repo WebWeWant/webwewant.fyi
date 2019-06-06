@@ -65,14 +65,18 @@ section: offline
             $link = $df.querySelector( "a" );
         if ( data )
         {
-          $link.href = request.url;
-          $link.innerText = data.title;
-          $df.querySelector( ".entry__content--excerpt" ).innerHTML = "<p>" + data.description + "</p>";
-          $document.appendChild( $df );
-          displayed++;
-          if ( displayed == 1 )
+          if ( request.url.indexOf('offline') < 0  )
           {
-            $document.querySelector('p').innerHTML = "Here’s what we found in your cache that you <em>can</em> view offline.";
+            
+            $link.href = request.url;
+            $link.innerText = data.title;
+            $df.querySelector( ".entry__content--excerpt" ).innerHTML = "<p>" + data.description + "</p>";
+            $document.appendChild( $df );
+            displayed++;
+            if ( displayed == 1 )
+            {
+              $document.querySelector('p').innerHTML = "Here’s what we found in your cache that you <em>can</em> view offline.";
+            }
           }
         }
       }
