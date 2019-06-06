@@ -1,6 +1,6 @@
 ---
 layout: layouts/wants.njk
-title: What You Want
+title: What We Want
 date: 2019-01-02T00:00:00.000Z
 permalink: /wants/
 navtitle: Wants
