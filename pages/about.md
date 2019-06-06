@@ -11,5 +11,6 @@ The Web We Want is a collective effort by browser makers to understand where the
 
 ## Team
 
-* [Aaron Gustafson](https://twitter.com/aarongustafson) (Microsoft Edge) — Project Founder
 * [Stephanie Drescher](https://twitter.com/seaotta) (Microsoft Edge) — Designer
+* [Aaron Gustafson](https://twitter.com/aarongustafson) (Microsoft Edge) — Project Founder
+* [Chris Wilson](https://twitter.com/cwilso) (Google Chrome)
