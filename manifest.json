@@ -1,40 +1,69 @@
 {
   "name": "The Web We Want",
+  "short_name": "WWW.fyi",
+  "description": "If you build websites, you inevitably run into problems. Maybe there’s no way to achieve an aspect of your design using CSS. Or maybe there’s a device feature you really wish you could tap into using JavaScript. Or perhaps the in-browser DevTools don’t give you a key insight you need to do your job. We want to hear about it!",
+  "background_color": "#cef6da",
+  "display": "minimal-ui",
+  "start_url": "/",
   "icons": [{
-      "src": "\/android-icon-36x36.png",
+      "src": "/static/img/icon.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/static/img/android-icon-36x36.png",
       "sizes": "36x36",
-      "type": "image\/png",
+      "type": "image/png",
       "density": "0.75"
     },
     {
-      "src": "\/android-icon-48x48.png",
+      "src": "/static/img/android-icon-48x48.png",
       "sizes": "48x48",
-      "type": "image\/png",
+      "type": "image/png",
       "density": "1.0"
     },
     {
-      "src": "\/android-icon-72x72.png",
+      "src": "/static/img/android-icon-72x72.png",
       "sizes": "72x72",
-      "type": "image\/png",
+      "type": "image/png",
       "density": "1.5"
     },
     {
-      "src": "\/android-icon-96x96.png",
+      "src": "/static/img/android-icon-96x96.png",
       "sizes": "96x96",
-      "type": "image\/png",
+      "type": "image/png",
       "density": "2.0"
     },
     {
-      "src": "\/android-icon-144x144.png",
+      "src": "/static/img/android-icon-144x144.png",
       "sizes": "144x144",
-      "type": "image\/png",
+      "type": "image/png",
       "density": "3.0"
     },
     {
-      "src": "\/android-icon-192x192.png",
+      "src": "/static/img/android-icon-192x192.png",
       "sizes": "192x192",
-      "type": "image\/png",
+      "type": "image/png",
       "density": "4.0"
+    }
+  ],
+  "shortcuts": [{
+      "name": "Home",
+      "description": "Go to the Homepage",
+      "url": "/"
+    }, {
+      "name": "Share Your Want",
+      "description": "Whart do you want to see on the web?",
+      "url": "/#submit"
+    },
+    {
+      "name": "Wants",
+      "description": "See a list of all wants",
+      "url": "/wants/"
+    },
+    {
+      "name": "Events",
+      "description": "See what events we’ll be discussing wants at",
+      "url": "/events/"
     }
   ]
 }

@@ -1,18 +1,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>{{ title or renderData.title or metadata.title }}</title>
-  <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap&subset=latin-ext" as="style" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap&subset=latin-ext" rel="stylesheet">
   {% set css %}
     {% include "assets/css/inline.css" %}
   {% endset %}
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap&subset=latin-ext" rel="stylesheet">
   <style>{{ css | cssmin | safe }}</style>
-  {% set js %}
-    {% include "assets/js/inline.js" %}
-  {% endset %}
-  <script>{{ js | jsmin | safe }}</script>
-  {% include "components/icons.html" %}
+  
+  {# commenting out the netlify stuff
+    <link rel="preload" href="https://identity.netlify.com/v1/netlify-identity-widget.js" as="script" crossorigin>
+    <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    {% set js %}
+      {% include "assets/js/inline.js" %}
+    {% endset %}
+    <script>{{ js | jsmin | safe }}</script>
+  #}
+  
+  {% include "components/app.html" %}
+  
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="MobileOptimized" content="width">
   <meta name="HandheldFriendly" content="true">
