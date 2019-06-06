@@ -1,7 +1,7 @@
-{% macro event( tag, title, url, start_date, end_date, location ) %}
+{% macro event( tag, title, url, start_date, end_date, zone, location ) %}
   <{{ tag }} class="event">
     <a class="event__title" href="{{ url }}">{{ title | widont }}</a>
-    {% set dates %}{{ start_date }}{% if end_date %}|{{ end_date }}{% endif %}{% endset %}
+    {% set dates %}{{ start_date }}|{{ end_date }}|{{ zone }}{% endset %}
     <b class="event__timing">{% DateRange dates, "time" %}</b>
     <b class="event__location">{{ location }}</b>
   </{{tag}}>

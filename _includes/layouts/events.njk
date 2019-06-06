@@ -15,7 +15,7 @@ section: events
     <h2>Upcoming Events</h2>
     <ul class="events">
       {% for e in upcoming_events %}
-        {{ event( 'li', e.title, e.url, e.start_date, e.end_date, e.location ) }}
+        {{ event( 'li', e.title, e.url, e.start_date, e.end_date, e.zone, e.location ) }}
       {% endfor %}
     </ul>
   </section>
@@ -27,7 +27,7 @@ section: events
     <h2>Past Events</h2>
     <ul class="events">
       {% for e in past_events %}
-        {{ event( 'li', e.title, e.url, e.start_date, e.end_date, e.location ) }}
+        {{ event( 'li', e.title, e.url, e.start_date, e.end_date, e.zone, e.location ) }}
       {% endfor %}
     </ul>
   </section>

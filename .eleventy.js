@@ -1,4 +1,4 @@
-const { DateTime } = require("luxon");
+const { DateTime, Zone } = require("luxon");
 const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-es");
 const htmlmin = require("html-minifier");
@@ -8,66 +8,61 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
   // Date formatting (human readable)
-  eleventyConfig.addFilter("readableDate", dateObj => {
-    if ( ! (dateObj instanceof Date) )
-    {
-      dateObj = new Date(dateObj);
-    }
-    return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
+  eleventyConfig.addFilter("readableDate", date => {
+    return DateTime.fromISO(date).toFormat("dd LLL yyyy");
   });
 
   // Date formatting (machine readable)
-  eleventyConfig.addFilter("machineDate", dateObj => {
-    if ( ! (dateObj instanceof Date) )
-    {
-      dateObj = new Date(dateObj);
-    }
-    return DateTime.fromJSDate(dateObj).toISO();
+  eleventyConfig.addFilter("machineDate", date => {
+    return DateTime.fromISO(date).toISO();
   });
 
   // HTML date range
   eleventyConfig.addShortcode("DateRange", ( string, html ) => {
-    let [start, end] = string.split("|");
-    start = new Date(start);
-    end = new Date(end);
-    let s_yr = start.getFullYear(),
-        s_mo = start.getMonth() + 1,
-        s_dy = start.getDate(),
+    let [start, end, IANA_zone] = string.split("|");
+
+    start = DateTime.fromISO( start, { zone:  IANA_zone });
+    end = DateTime.fromISO( end, { zone:  IANA_zone });
+
+    let s_yr = start.year,
+        s_mo = start.month,
+        s_dy = start.day,
         s_dt,
-        e_yr = end.getFullYear(),
-        e_mo = end.getMonth() + 1,
-        e_dy = end.getDate(),
+        e_yr = end.year,
+        e_mo = end.month,
+        e_dy = end.day,
         e_dt,
         template = '<time datetime="DATETIME">DISPLAY</time>';
+    
     
     switch (true)
     {
       // same date
       case ( s_dy == e_dy && s_mo == e_mo && s_yr == e_yr ):
-        s_dt	= DateTime.fromJSDate(start).toISO();
-        start = DateTime.fromJSDate(start).toFormat("dd LLL yyyy");
+        s_dt	= start.toISO();
+        start = start.toFormat("dd LLL yyyy");
         end   = false;
         break;
       // month & year match
       case ( s_mo == e_mo && s_yr == e_yr ):
-        s_dt	= DateTime.fromJSDate(start).toISO();
-        start = DateTime.fromJSDate(start).toFormat("dd");
-        e_dt	= DateTime.fromJSDate(end).toISO();
-        end   = DateTime.fromJSDate(end).toFormat("dd LLL yyyy");
+        s_dt	= start.toISO();
+        start = start.toFormat("dd");
+        e_dt	= end.toISO();
+        end   = end.toFormat("dd LLL yyyy");
         break;
       // years match
       case s_yr == e_yr:
-        s_dt	= DateTime.fromJSDate(start).toISO();
-        start = DateTime.fromJSDate(start).toFormat("dd LLL");
-        e_dt	= DateTime.fromJSDate(end).toISO();
-        end   = DateTime.fromJSDate(end).toFormat("dd LLL yyyy");
+        s_dt	= start.toISO();
+        start = start.toFormat("dd LLL");
+        e_dt	= end.toISO();
+        end   = start.toFormat("dd LLL yyyy");
         break;
       // nothing matches
       default:
-        s_dt	= DateTime.fromJSDate(start).toISO();
-        start = DateTime.fromJSDate(start).toFormat("dd LLL yyyy");
-        e_dt	= DateTime.fromJSDate(end).toISO();
-        end   = DateTime.fromJSDate(end).toFormat("dd LLL yyyy");
+        s_dt	= start.toISO();
+        start = start.toFormat("dd LLL yyyy");
+        e_dt	= end.toISO();
+        end   = end.toFormat("dd LLL yyyy");
         break;
     }
 
