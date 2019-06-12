@@ -21,6 +21,11 @@
 #   Define which paths this specific [[headers]] block will cover.
 #   for = "/*"
 
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+  Content-Type = "application/json; charset=utf-8"
+
 #[headers.values]
 #   X-Frame-Options = "DENY"
 #   X-XSS-Protection = "1; mode=block"
