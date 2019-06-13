@@ -10,6 +10,11 @@
     X-Content-Type-Options = "nosniff"
 
 [[headers]]
+  for = "/"
+  [headers.values]
+  Cache-Control = "no-cache"
+
+[[headers]]
   for = "/*.html"
   [headers.values]
   Cache-Control = "no-cache"
@@ -18,7 +23,7 @@
   for = "/site.webmanifest"
   [headers.values]
   Content-Type = "application/manifest+json; charset=utf-8"
-  Cache-Control = "max-age=31536000, immutable"
+  Cache-Control = "no-cache"
 
 [[headers]]
   for = "/*.png"
