@@ -203,7 +203,7 @@ module.exports = function(eleventyConfig) {
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("sw.js");
   eleventyConfig.addPassthroughCopy("static/img");
-  eleventyConfig.addPassthroughCopy("manifest.json");
+  eleventyConfig.addPassthroughCopy("site.webmanifest");
   eleventyConfig.addPassthroughCopy("admin");
   // eleventyConfig.addPassthroughCopy("_includes/assets/");
 
