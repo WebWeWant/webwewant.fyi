@@ -12,20 +12,20 @@
 [[headers]]
   for = "/"
   [headers.values]
-  Cache-Control = "no-cache"
+    Cache-Control = "no-cache"
 
 [[headers]]
   for = "/*.html"
   [headers.values]
-  Cache-Control = "no-cache"
+    Cache-Control = "no-cache"
 
 [[headers]]
   for = "/site.webmanifest"
   [headers.values]
-  Content-Type = "application/manifest+json; charset=utf-8"
-  Cache-Control = "no-cache"
+    Content-Type = "application/manifest+json; charset=utf-8"
+    Cache-Control = "no-cache"
 
 [[headers]]
   for = "/*.png"
   [headers.values]
-  Cache-Control = "max-age=31536000, immutable"
+    Cache-Control = "max-age=31536000, immutable"
