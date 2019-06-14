@@ -16,3 +16,5 @@ The Web We Want is a collective effort by browser makers to understand where the
 * [Stephanie Drescher](https://twitter.com/seaotta) (Microsoft) — Designer
 * [Aaron Gustafson](https://twitter.com/aarongustafson) (Microsoft) — Project Founder
 * [Chris Wilson](https://twitter.com/cwilso) (Google, W3C)
+
+Interested in getting involved? [Reach out!](/contact)
