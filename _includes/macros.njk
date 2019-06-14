@@ -1,8 +1,8 @@
 {% macro event( tag, title, url, start_date, end_date, zone, location ) %}
   <{{ tag }} class="event">
-    <a class="event__title" href="{{ url }}">{{ title | widont }}</a>
+    <a class="event__title" href="{{ url }}">{{ title | widont }}</a><br>
     {% set dates %}{{ start_date }}|{{ end_date }}|{{ zone }}{% endset %}
-    <b class="event__timing">{% DateRange dates, "time" %}</b>
+    <b class="event__timing">{% DateRange dates, "time" %}</b><br>
     <b class="event__location">{{ location }}</b>
   </{{tag}}>
 {% endmacro %}
@@ -12,20 +12,22 @@
 {% endmacro %}
 
 {% macro field( type, name, data ) %}
+  <br>
   <input class="question__field"
-         type="{{ type }}"
-         name="{{ name }}"
-         id="field-{{ name }}"
-         {% if data.required %}required aria-required="true"{% endif %}
-         {% if data.placeholder %}placeholder="{{ data.placeholder }}"{% endif %}
-         {% if data.pattern %}pattern="{{ data.pattern }}"{% endif %}
-         {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
-         {% if data.autocomplete %}autocomplete="{{ data.autocomplete }}"{% endif %}
-         {% if data.autocorrect %}autocorrect="{{ data.autocorrect }}"{% endif %}
-         {% if data.spellcheck %}spellcheck="{{ data.spellcheck }}"{% endif %}
-         {% if data.autocapitalize %}autocapitalize="{{ data.autocapitalize }}"{% endif %}
-         >
+        type="{{ type }}"
+        name="{{ name }}"
+        id="field-{{ name }}"
+        {% if data.required %}required aria-required="true"{% endif %}
+        {% if data.placeholder %}placeholder="{{ data.placeholder }}"{% endif %}
+        {% if data.pattern %}pattern="{{ data.pattern }}"{% endif %}
+        {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
+        {% if data.autocomplete %}autocomplete="{{ data.autocomplete }}"{% endif %}
+        {% if data.autocorrect %}autocorrect="{{ data.autocorrect }}"{% endif %}
+        {% if data.spellcheck %}spellcheck="{{ data.spellcheck }}"{% endif %}
+        {% if data.autocapitalize %}autocapitalize="{{ data.autocapitalize }}"{% endif %}
+        >
   {% if data.description %}
+    <br>
     <em class="question__description" id="description-{{ name }}">{{ data.description }}</em>
   {% endif %}
 {% endmacro %}
@@ -44,6 +46,7 @@
 {% endmacro %}
 
 {% macro select( name, options, data ) %}
+  <br>
   <select id="field-{{ name }}"
           name="{{ name }}"
           {% if data.required %}required aria-required="true"{% endif %}
@@ -59,9 +62,11 @@
 {% endmacro %}
 
 {% macro textarea( name, data ) %}
+  <br>
   <textarea id="field-{{ name }}"
             name="{{ name }}"
             rows="10"
+            cols="100"
             {% if data.required %}required aria-required="true"{% endif %}
             {% if data.autocorrect %}autocorrect="{{ data.autocorrect }}"{% endif %}
             {% if data.spellcheck %}spellcheck="{{ data.spellcheck }}"{% endif %}
@@ -69,6 +74,7 @@
             {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
             ></textarea>
   {% if data.description %}
+    <br>
     <em class="question__description" id="description-{{ name }}">{{ data.description }}</em>
   {% endif %}
 {% endmacro %}
