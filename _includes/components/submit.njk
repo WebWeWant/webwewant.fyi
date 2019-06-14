@@ -10,9 +10,9 @@
       <li class="question">
         {{ label("What’s your name?", "name") }}
         {{ field( "text", "name", { required: true, placeholder: "Katherine Johnson", autocomplete: "name", autocorrect: "off", autocapitalize: "off" } ) }}
-        <p class="question__addendum">
+        <div class="question__addendum">
           {{ confirm("Please keep my full name private", "privacy") }}
-        </p>
+        </div>
       </li>
       <li class="question">
         {{ label("Where can we email you?", "email") }}
