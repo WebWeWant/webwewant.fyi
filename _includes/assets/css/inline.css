@@ -311,6 +311,9 @@ label {
   display: block;
   font-weight: 600;
 }
+form br {
+  display: none;
+}
 input,
 textarea,
 select {
@@ -387,6 +390,9 @@ button:focus:active {
   .event {
     margin-top: 0;
   }
+}
+.event br {
+  display: none;
 }
 .event__title,
 .event__timing,
