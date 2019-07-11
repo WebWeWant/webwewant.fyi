@@ -10,9 +10,9 @@ If you build websites, you inevitably run into problems. Maybe there’s no way 
 
 You can add events by editing [the `events.json` file](./_data/events.json).
 
-## Adding Problems
+## Adding Wants
 
-You can add new "problems" by creating a new markdown file in [the `problems` directory](./problems/). Feel free to duplicate an existing problem and use that as a template.
+You can add a new "Want" by creating a new markdown file in [the `wants` directory](./wants/). Feel free to duplicate an existing Want and use that as a template.
 
 ## Local development
 
