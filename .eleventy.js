@@ -9,12 +9,12 @@ module.exports = function(eleventyConfig) {
 
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", date => {
-    return DateTime.fromISO(date).toFormat("dd LLL yyyy");
+    return DateTime.fromJSDate(date).toFormat("dd LLL yyyy");
   });
 
   // Date formatting (machine readable)
   eleventyConfig.addFilter("machineDate", date => {
-    return DateTime.fromISO(date).toISO();
+    return DateTime.fromJSDate(date).toISO();
   });
 
   // HTML date range
