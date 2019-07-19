@@ -1,5 +1,4 @@
-[
-  {
+[{
     "title": "An Event Apart",
     "url": "https://aneventapart.com/event/washington-dc-2019",
     "location": "Washington DC, USA",
@@ -38,5 +37,13 @@
     "start_date": "2020-04-21T08:00:00",
     "end_date": "2020-04-22T18:00:00",
     "zone": "America/Los_Angeles"
+  },
+  {
+    "title": "View Source",
+    "url": "https://2019.viewsourceconf.org/",
+    "location": "Amsterdam, Netherlands",
+    "start_date": "2019-09-30T08:00:00",
+    "end_date": "2019-10-01T18:00:00",
+    "zone": "Europe/Amsterdam"
   }
 ]
