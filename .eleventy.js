@@ -1,4 +1,4 @@
-const { DateTime, Zone } = require("luxon");
+const { DateTime } = require("luxon");
 const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-es");
 const htmlmin = require("html-minifier");
@@ -26,7 +26,7 @@ module.exports = function(eleventyConfig) {
 
     let s_yr = start.year,
         s_mo = start.month,
-        s_dy = start.day,
+        s_dy = start.day, 
         s_dt,
         e_yr = end.year,
         e_mo = end.month,
@@ -55,7 +55,7 @@ module.exports = function(eleventyConfig) {
         s_dt	= start.toISO();
         start = start.toFormat("dd LLL");
         e_dt	= end.toISO();
-        end   = start.toFormat("dd LLL yyyy");
+        end   = end.toFormat("dd LLL yyyy");
         break;
       // nothing matches
       default:
