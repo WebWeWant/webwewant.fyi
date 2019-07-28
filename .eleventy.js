@@ -3,6 +3,11 @@ const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-es");
 const htmlmin = require("html-minifier");
 const widont = require("widont");
+const md = require("markdown-it")({
+  html: true,
+  linkify: true,
+  typographer: true,
+});
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
@@ -15,6 +20,12 @@ module.exports = function(eleventyConfig) {
   // Date formatting (machine readable)
   eleventyConfig.addFilter("machineDate", date => {
     return DateTime.fromJSDate(date).toISO();
+  });
+
+  // Markdownify
+  eleventyConfig.addFilter("markdownify", text => {
+    console.log(text, md.renderInline( text ), `${md.renderInline( text )}`);
+    return md.renderInline( text );
   });
 
   // HTML date range
@@ -88,7 +99,7 @@ module.exports = function(eleventyConfig) {
 
   // Widont
   eleventyConfig.addFilter("widont", function(text) {
-    return widont( text );
+    return `${widont( text )}`;
   });
 
   
