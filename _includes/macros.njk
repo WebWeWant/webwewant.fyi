@@ -51,6 +51,7 @@
           name="{{ name }}"
           {% if data.required %}required aria-required="true"{% endif %}
           {% if data.multiple %}multiple{% endif %}
+          {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
           >
     {% for option in options %}
       <option>{{ option }}</option>
@@ -59,6 +60,10 @@
       <option>{{ option }}</option>
     {% endfor %}
   </select>
+  {% if data.description %}
+    <br>
+    <em class="question__description" id="description-{{ name }}">{{ data.description }}</em>
+  {% endif %}
 {% endmacro %}
 
 {% macro textarea( name, data ) %}
