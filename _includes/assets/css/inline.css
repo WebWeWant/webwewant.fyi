@@ -302,15 +302,22 @@ a[rel="tag"]:last-child {
   grid-template: "prev page next";
   grid-gap: 1rem;
   align-items: center;
+  grid-auto-columns: 1fr;
+}
+.pagination strong {
+  grid-area: page;
+  justify-self: center;
 }
 .pagination a {
   padding: 0;
 }
 .pagination a[rel=prev] {
   grid-area: prev;
+  justify-self: start;
 }
 .pagination a[rel=next] {
   grid-area: next;
+  justify-self: end;
 }
 
 /* Form */
