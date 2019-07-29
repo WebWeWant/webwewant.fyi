@@ -68,6 +68,15 @@ code {
   line-height: 1.5;
 }
 
+code {
+  background: #ebebeb;
+  padding: 0 .25em;
+  border: 1px solid #999;
+  border-radius: .15em;
+  font-size: 1.25em;
+  color: #333;
+}
+
 a[href],
 a[href]:visited {
   color: #005e22;
