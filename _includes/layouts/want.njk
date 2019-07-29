@@ -3,7 +3,7 @@ layout: layouts/base.njk
 section: problems
 ---
 
-<h1 class="problem__title">{{ title | widont }}</h1>
+<h1 class="problem__title">{{ title | markdownify | widont | safe }}</h1>
 <p>
   <small>
     <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by {{ submitter }}
@@ -16,4 +16,4 @@ section: problems
 
 <hr>
 
-<p><a href="/problems/">← Return to problem list</a></p>
+<p><a href="/wants/">← See other wants</a></p>

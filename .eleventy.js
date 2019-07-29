@@ -24,7 +24,6 @@ module.exports = function(eleventyConfig) {
 
   // Markdownify
   eleventyConfig.addFilter("markdownify", text => {
-    console.log(text, md.renderInline( text ), `${md.renderInline( text )}`);
     return md.renderInline( text );
   });
 

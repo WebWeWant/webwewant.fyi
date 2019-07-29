@@ -13,7 +13,7 @@ permalink: /wants/index.html
 <ul class="wants">
   {% for want in wants %}
     <li class="want">
-      <h2><a class="want__title" href="{{ want.url }}">{{ want.data.title | widont }}</a></h2>
+      <h2><a class="want__title" href="{{ want.url }}">{{ want.data.title | markdownify | widont | safe }}</a></h2>
       <p class="want__meta">Submitted by {{ want.data.submitter }}</p>
     </li>
   {% endfor %}
