@@ -1,14 +1,17 @@
 ---
 layout: layouts/base.njk
 section: wants
-permalink: /wants/index.html
+permalink: "/wants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}{% else %}index{% endif %}.html"
+pagination:
+  data: collections.wants
+  size: 5
+  alias: wants
 ---
 
 <h1>{{ title | widont }}</h1>
 
 {{ layoutContent | safe }}
 
-{% set wants = collections.wants %}
 {% if wants.length > 0 %}
 <ul class="wants">
   {% for want in wants %}
@@ -18,6 +21,13 @@ permalink: /wants/index.html
     </li>
   {% endfor %}
 </ul>
+
+<nav class="pagination" aria-label="Pages">
+  <strong>Page {{ pagination.pageNumber + 1 }}&nbsp;of&nbsp;{{ pagination.hrefs.length }}</strong>
+  {% if pagination.previousPageHref %}<a href="{{ pagination.previousPageHref }}" rel="prev">← Previous Page</a>{% endif %}
+  {% if pagination.nextPageHref %}<a href="{{ pagination.nextPageHref }}" rel="next">Next Page →</a>{% endif %}
+</nav>
+
 {% else %}
   <p>No one has submitted a want yet. <a href="/#submit">Wanna be the first?</a></p>
 {% endif %}

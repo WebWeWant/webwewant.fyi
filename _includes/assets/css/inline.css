@@ -292,6 +292,27 @@ a[rel="tag"]:last-child {
   margin-right: 0;
 }
 
+/* Pagination */
+.pagination {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #005e22;
+
+  display: grid;
+  grid-template: "prev page next";
+  grid-gap: 1rem;
+  align-items: center;
+}
+.pagination a {
+  padding: 0;
+}
+.pagination a[rel=prev] {
+  grid-area: prev;
+}
+.pagination a[rel=next] {
+  grid-area: next;
+}
+
 /* Form */
 .questions {
   margin: 0;
