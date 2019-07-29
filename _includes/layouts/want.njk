@@ -12,8 +12,11 @@ section: problems
 
 {{ layoutContent | safe }}
 
-<p><b>Tagged:</b> {{ tags | join(", ") }}</p>
+<dl class="tags">
+  <dt>Tagged</dt>
+  <dd>{{ tags | join(", ") }}</dd>
+</dl>
 
-<hr>
-
-<p><a href="/wants/">← See other wants</a></p>
+<div class="pagination">
+  <p><a href="/wants/">← See other wants</a></p>
+</div>

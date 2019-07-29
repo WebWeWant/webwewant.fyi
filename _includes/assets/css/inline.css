@@ -239,6 +239,18 @@ nav a {
 }
 
 
+/* Tags */
+.tags > * {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.tags dt {
+  font-weight: bold;
+}
+.tags dt::after {
+  content: ": ";
+}
 
 /* Footer */
 footer {
