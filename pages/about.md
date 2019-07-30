@@ -18,3 +18,7 @@ The Web We Want is a collective effort by browser makers to understand where the
 * [Chris Wilson](https://twitter.com/cwilso) (Google, W3C)
 
 Interested in getting involved? [Reach out!](/contact)
+
+## Sponsors
+
+<img src="/static/img/netlify.svg" alt="Netlify" style="height: 32px; vertical-align: bottom;"> host this lovely site
