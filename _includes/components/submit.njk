@@ -2,8 +2,8 @@
 
 <section id="submit">
   <h2>We’re listening…</h2>
-  <p>We’d love to know what tools you want to add to your web dev toolbox. We’ll evaluate all submissions for inclusion on this site and you may get chosen to present your ask at a future event.</p>
-  <p>At each event, we’ll provide enough time for a handful of people to present their "wants" to the audience. If chosen, you’ll have about 5 minutes to make your pitch to the judges and the audience. You will be on stage and can put together a pitch deck if you want or you can freestyle it. That’s up to you.</p>
+  <p>We’d love to know what tools you want to add to your web dev toolbox. We’ll evaluate all submissions for inclusion on this site and we may reach out to ask that you present your “want” at a future event.</p>
+  <p>We reserve the right to accept or reject any submissions. Any rude or inappropriate submissions will be rejected outright.</p>
 
   <form name="problems" method="POST" data-netlify="true" action="/submitted/" netlify-honeypot="bot-field">
     <ol class="questions">
@@ -16,12 +16,12 @@
       </li>
       <li class="question">
         {{ label("Where can we email you?", "email") }}
-        {{ field( "email", "email", { required: true, placeholder: "katherine@johnson.tld", autocomplete: "email", description: "We will only use your email address to contact you if you are selected to participate in an event and we will not retain your email address beyond that period of time." } ) }}
+        {{ field( "email", "email", { required: true, placeholder: "katherine@johnson.tld", autocomplete: "email", description: "We will only use this information to contact you when your want is published and reach out if we select you to participate in an event. We will not retain your email address beyond that period of time." } ) }}
       </li>
       <li class="question">
         {% set upcoming_events = events | future_events | sort(attribute="start_date") | toString( " - ", ["title", "location"]) %}
         {{ label("If you are already attending one of the events we’ll be at, would you consider presenting your idea in person?", "events") }}
-        {{ select( "events", upcoming_events, { required: true, options_before: ["I’m not interested in participating at an event"], description: "Note: If you are not already planning to attend the event, it is unlikely we will be able to get you a ticket. That said, if you might qualify for an attendee scholarship, contact us and we will try to help you if we can." } ) }}
+        {{ select( "events", upcoming_events, { required: true, options_before: ["I’m not interested in participating at an event"], description: "If you are not already planning to attend the event, it is unlikely we will be able to get you a ticket. That said, if you might qualify for an attendee scholarship, contact us and we will try to help you if we can." } ) }}
       </li>
       <li class="question">
         {{ label("What do you want?", "title") }}
@@ -36,6 +36,6 @@
       </li>
     </ol>
     {{ button("Send it in") }}
-    <p><em>You can ask us to remove your personal information from this site or our form submission database at any time. We can also retroactively remove your full name from any submissions. Just <a href="/contact/">drop us a line</a>.</em></p>
+    <p><em>Note: You can ask us to remove your personal information from this site or our form submission database at any time. We can also retroactively remove your full name from any submissions. Just <a href="/contact/">drop us a line</a>.</em></p>
   </form>
 </section>

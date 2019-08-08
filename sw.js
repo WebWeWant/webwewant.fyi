@@ -75,7 +75,10 @@ self.addEventListener( "activate", event => {
         ); // end promise
       }) // end then
   ); // end event
+
+  
 });
+
 addEventListener("message", messageEvent => {
   if (messageEvent.data == "clean up")
   {
@@ -200,7 +203,7 @@ self.addEventListener( "fetch", event => {
             requestIsLikelyForHTML( url ) )
   {
   
-  event.respondWith(
+    event.respondWith(
       // check the cache first
       caches.match( request )
         .then( cached_result => {
@@ -366,16 +369,15 @@ function saveToCache( cache_name, request, response )
 
 function refreshCachedCopy( the_request, cache_name )
 {
+  console.log("Refreshing the cached copy of", the_request);
   fetch( the_request )
     .then( the_response => {
       caches.open( cache_name )
         .then( the_cache => {
+          console.log("Response received, caching now.");
           return the_cache.put( the_request, the_response );
         });
-    })
-    .catch(
-      respondWithOfflinePage
-    );
+    });
 }
 
 function shouldBeIgnored( url )
