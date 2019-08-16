@@ -11,7 +11,7 @@ pagination:
   addAllPagesToCollections: true
 layout: layouts/base.njk
 renderData:
-  title: Wants Tagged “{{ tag }}”
+  title: Wants Tagged “{{ tag | unslug | fixNames }}”
 permalink: /wants/tagged/{{ tag }}/
 ---
 {% from "macros.njk" import paginate %}
