@@ -90,3 +90,11 @@
 {% macro button( text ) %}
   <button type="submit">{{ text }}</button>
 {% endmacro %}
+
+{% macro paginate( what, pagination ) %}
+  <nav class="pagination" aria-label="Pages">
+    <strong>{{ what }} {{ pagination.pageNumber + 1 }}&nbsp;of&nbsp;{{ pagination.hrefs.length }}</strong>
+    {% if pagination.previousPageHref %}<a href="{{ pagination.previousPageHref }}" rel="prev">← Previous {{ what }}</a>{% endif %}
+    {% if pagination.nextPageHref %}<a href="{{ pagination.nextPageHref }}" rel="next">Next {{ what }} →</a>{% endif %}
+  </nav>
+{% endmacro %}

@@ -7,27 +7,15 @@ pagination:
   size: 5
   alias: wants
 ---
+{% from "macros.njk" import paginate %}
 
 <h1>{{ title | widont }}</h1>
 
 {{ layoutContent | safe }}
 
 {% if wants.length > 0 %}
-<ul class="wants">
-  {% for want in wants %}
-    <li class="want">
-      <h2><a class="want__title" href="{{ want.url }}">{{ want.data.title | markdownify | widont | safe }}</a></h2>
-      <p class="want__meta">Submitted by {{ want.data.submitter }}</p>
-    </li>
-  {% endfor %}
-</ul>
-
-<nav class="pagination" aria-label="Pages">
-  <strong>Page {{ pagination.pageNumber + 1 }}&nbsp;of&nbsp;{{ pagination.hrefs.length }}</strong>
-  {% if pagination.previousPageHref %}<a href="{{ pagination.previousPageHref }}" rel="prev">← Previous Page</a>{% endif %}
-  {% if pagination.nextPageHref %}<a href="{{ pagination.nextPageHref }}" rel="next">Next Page →</a>{% endif %}
-</nav>
-
+  {% include "components/wants.njk" %}
+  {{ paginate( "Page", pagination ) }}
 {% else %}
   <p>No one has submitted a want yet. <a href="/#submit">Wanna be the first?</a></p>
 {% endif %}
