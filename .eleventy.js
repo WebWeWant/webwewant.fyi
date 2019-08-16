@@ -27,6 +27,39 @@ module.exports = function(eleventyConfig) {
     return md.renderInline( text );
   });
 
+  // unSluggify
+  eleventyConfig.addFilter("unslug", text => {
+    text = text.charAt(0).toUpperCase() + text.slice(1);
+    return text.replace(/-/g, ' ');
+  });
+
+  // Fix proper nouns
+  eleventyConfig.addFilter("fixNames", text => {
+    let test = text.toLowerCase(),
+        acronyms = [ "html", "css", "svg" ],
+        camel_case = [ "JavaScript", "DevTools", "WebDriver" ],
+        i, proper_name;
+    
+    if ( acronyms.indexOf( test ) > -1 )
+    {
+      return text.toUpperCase();
+    }
+    else
+    {
+      for ( i in camel_case )
+      {
+        proper_name = camel_case[i];
+        console.log(proper_name, test);
+        if ( proper_name.toLowerCase() == test )
+        {
+          return proper_name;
+        }
+      }
+    }
+    return text;
+  });
+
+
   // HTML date range
   eleventyConfig.addShortcode("DateRange", ( string, html ) => {
     let [start, end, IANA_zone] = string.split("|");

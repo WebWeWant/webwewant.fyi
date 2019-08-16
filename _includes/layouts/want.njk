@@ -14,7 +14,11 @@ section: problems
 
 <dl class="tags">
   <dt>Tagged</dt>
-  <dd>{{ tags | join(", ") }}</dd>
+  <dd>
+  {% for tag in tags %}
+    <a href="/wants/tagged/{{ tag }}">{{ tag | unslug | fixNames }}</a>
+  {% endfor %}
+  </dd>
 </dl>
 
 <div class="pagination">

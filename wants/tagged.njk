@@ -16,9 +16,9 @@ permalink: /wants/tagged/{{ tag }}/
 ---
 {% from "macros.njk" import paginate %}
 
-<h1>Tagged “{{ tag }}”</h1>
+<h1>Tagged “{{ tag | unslug | fixNames }}”</h1>
 
 {% set wants = collections[ tag ] %}
 {% include "components/wants.njk" %}
 
-{{ paginate( "Tag", pagination ) }}
+{# {{ paginate( "Tag", pagination ) }} #}
