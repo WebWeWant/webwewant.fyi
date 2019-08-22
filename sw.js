@@ -197,12 +197,36 @@ self.addEventListener( "fetch", event => {
       })
     );
   }
+  
+  // Wants
+  else if ( /wants/.test( url ) )
+  {
+    event.respondWith(
+      fetch( request )
+        .then( response => {
+          const copy = response.clone();
+          event.waitUntil(
+            saveToCache( sw_caches.pages.name, request, copy )
+          ); // end waitUntil
+          return response;
+        })
+        // fallback to offline page
+        .catch(
+          caches.match( request )
+            .then( cached_result => {
+              return cached_result;
+            })
+            .catch(
+              respondWithOfflinePage
+            )
+        )
+    );
+  }
 
-  // HTML
+  // Other HTML
   else if ( request.headers.get("Accept").includes("text/html") ||
             requestIsLikelyForHTML( url ) )
   {
-  
     event.respondWith(
       // check the cache first
       caches.match( request )
