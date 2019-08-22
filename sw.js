@@ -393,12 +393,10 @@ function saveToCache( cache_name, request, response )
 
 function refreshCachedCopy( the_request, cache_name )
 {
-  console.log("Refreshing the cached copy of", the_request);
   fetch( the_request )
     .then( the_response => {
       caches.open( cache_name )
         .then( the_cache => {
-          console.log("Response received, caching now.");
           return the_cache.put( the_request, the_response );
         });
     });
