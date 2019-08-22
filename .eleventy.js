@@ -49,7 +49,6 @@ module.exports = function(eleventyConfig) {
       for ( i in camel_case )
       {
         proper_name = camel_case[i];
-        console.log(proper_name, test);
         if ( proper_name.toLowerCase() == test )
         {
           return proper_name;
