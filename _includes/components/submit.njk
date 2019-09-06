@@ -21,7 +21,7 @@
       <li class="question">
         {% set upcoming_events = events | future_events | sort(attribute="start_date") | toString( " - ", ["title", "location"]) %}
         {{ label("If you are already attending one of the events we’ll be at, would you consider presenting your idea in person?", "events") }}
-        {{ select( "events", upcoming_events, { required: true, options_before: ["I’m not interested in participating at an event"], description: "If you are not already planning to attend the event, it is unlikely we will be able to get you a ticket. That said, if you might qualify for an attendee scholarship, contact us and we will try to help you if we can." } ) }}
+        {{ select( "events", upcoming_events, { required: true, options_before: ["I’m not attending an event, but am open to my submission being shared at one", "I’m not interested in having my submission shared at an event"], description: "If you are not already planning to attend the event, it is unlikely we will be able to get you a ticket. That said, if you might qualify for an attendee scholarship, contact us and we will try to help you if we can." } ) }}
       </li>
       <li class="question">
         {{ label("What do you want?", "title") }}

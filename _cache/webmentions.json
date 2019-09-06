@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2019-08-31T00:16:21.745Z",
+  "lastFetched": "2019-09-06T23:01:29.256Z",
   "children": [
     {
       "type": "entry",
@@ -117,6 +117,64 @@
         "text": "The Web We Want webwewant.fyi/wants/"
       },
       "mention-of": "https://webwewant.fyi/wants/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Aliggator UA",
+        "photo": "https://webmention.io/avatar/abs.twimg.com/0e6b2cd70aa5b35dec24ca4e1e63f8963f0118736d9ec3bba77e3a8c99a27bc2.png",
+        "url": "https://twitter.com/ZvirUa"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1167585982096429061#favorited-by-3056661006",
+      "published": null,
+      "wm-received": "2019-09-06T17:54:14Z",
+      "wm-id": 685203,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1167585982096429061/3056661006",
+      "wm-target": "https://webwewant.fyi/wants/12/",
+      "like-of": "https://webwewant.fyi/wants/12/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jan Kühle",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/45aaa8bc241e369c3b647dc6d8387a7cefd10139249555749ae45dd56fbab09c.jpg",
+        "url": "https://twitter.com/frigus02"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1167585982096429061#favorited-by-871269940111736832",
+      "published": null,
+      "wm-received": "2019-08-31T09:38:48Z",
+      "wm-id": 680903,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1167585982096429061/871269940111736832",
+      "wm-target": "https://webwewant.fyi/wants/12/",
+      "like-of": "https://webwewant.fyi/wants/12/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Mozilla Hacks",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/2c2a1feb14caf6fda0e1cafc3075264f932e195e76b61fb97e1fe4dc953e1d45.png",
+        "url": "https://twitter.com/mozhacks"
+      },
+      "url": "https://twitter.com/mozhacks/status/1167587440418181120",
+      "published": "2019-08-30T23:58:33+00:00",
+      "wm-received": "2019-08-31T00:31:41Z",
+      "wm-id": 680664,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1167587440418181120",
+      "wm-target": "https://webwewant.fyi/wants/12/",
+      "content": {
+        "html": "<a href=\"https://twitter.com/search?q=%23a11y\">#a11y</a> FTW!\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/12/\"></a>",
+        "text": "#a11y FTW!"
+      },
+      "mention-of": "https://webwewant.fyi/wants/12/",
       "wm-property": "mention-of",
       "wm-private": false
     }
