@@ -4,7 +4,7 @@ section: wants
 permalink: "/wants/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}{% else %}index{% endif %}.html"
 pagination:
   data: collections.wants
-  size: 5
+  size: 10
   alias: wants
 ---
 {% from "macros.njk" import paginate %}
