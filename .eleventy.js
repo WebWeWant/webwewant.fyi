@@ -232,7 +232,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter('votesForWant', (webmentions, url) => {
-    const allowedTypes = ['like-of', 'bookmark-of'];
+    const allowedTypes = ['like-of', 'bookmark-of', 'mention-of'];
 
     return webmentions
       .filter(entry => entry['wm-target'] === url)

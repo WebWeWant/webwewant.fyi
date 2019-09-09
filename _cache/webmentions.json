@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2019-09-06T23:01:29.256Z",
+  "lastFetched": "2019-09-09T19:06:32.291Z",
   "children": [
     {
       "type": "entry",
@@ -176,6 +176,72 @@
       },
       "mention-of": "https://webwewant.fyi/wants/12/",
       "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Aaron Gustafson",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ccecfe0f8e7fe60a7d2fa1f0524b3e73449fd5bdf62eacb7d9c3298360ca316f.jpg",
+        "url": "https://twitter.com/AaronGustafson"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1171121500444717057",
+      "published": "2019-09-09T18:01:38+00:00",
+      "wm-received": "2019-09-09T18:02:11Z",
+      "wm-id": 687005,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1171121500444717057",
+      "wm-target": "https://webwewant.fyi/wants/68/",
+      "content": {
+        "html": "Anything that helps with reduced test cases would be most welcome, so I dig this idea on <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>: I want to be able to visually-isolate an element in DevTools <a href=\"https://webwewant.fyi/wants/68/\">webwewant.fyi/wants/68/</a>",
+        "text": "Anything that helps with reduced test cases would be most welcome, so I dig this idea on @webwewantfyi: I want to be able to visually-isolate an element in DevTools webwewant.fyi/wants/68/"
+      },
+      "mention-of": "https://webwewant.fyi/wants/68/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Adrian Roselli 🗯",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/2802f5da6057132df9da7f04acee0dc3b93167f1f8b23230a15c6b138cf8acb1.jpeg",
+        "url": "https://twitter.com/aardrian"
+      },
+      "url": "https://twitter.com/aardrian/status/1171066413219536896",
+      "published": "2019-09-09T14:22:44+00:00",
+      "wm-received": "2019-09-09T14:24:10Z",
+      "wm-id": 686889,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1171066413219536896",
+      "wm-target": "https://webwewant.fyi/wants/32/",
+      "content": {
+        "html": "While surfing Web We Want, found this request to essentially disable RWD: <a href=\"https://webwewant.fyi/wants/32/\">webwewant.fyi/wants/32/</a>\n\nFrom 6 years ago, how devs can do that: <a href=\"http://adrianroselli.com/2013/01/letting-mobile-users-see-desktop-view.html\">adrianroselli.com/2013/01/lettin…</a>\n\nParticularly for users who start task on one device, finish on another.",
+        "text": "While surfing Web We Want, found this request to essentially disable RWD: webwewant.fyi/wants/32/\n\nFrom 6 years ago, how devs can do that: adrianroselli.com/2013/01/lettin…\n\nParticularly for users who start task on one device, finish on another."
+      },
+      "mention-of": "https://webwewant.fyi/wants/32/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Adrian Roselli 🗯",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/2802f5da6057132df9da7f04acee0dc3b93167f1f8b23230a15c6b138cf8acb1.jpeg",
+        "url": "https://twitter.com/aardrian"
+      },
+      "url": "https://twitter.com/aardrian/status/1171120519393021952",
+      "published": "2019-09-09T17:57:44+00:00",
+      "wm-received": "2019-09-09T19:01:53Z",
+      "wm-id": 687040,
+      "wm-source": "https://brid-gy.appspot.com/comment/twitter/AaronGustafson/1171120243684433920/1171120519393021952",
+      "wm-target": "https://webwewant.fyi/wants/64/",
+      "content": {
+        "html": "Ace. Thanks. Broken build process or does my name now flag all the filters?\n<a class=\"u-mention\" href=\"https://twitter.com/AaronGustafson\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/webwewantfyi\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/64/\"></a>\n<a class=\"u-mention\" href=\"https://www.aaron-gustafson.com/\"></a>",
+        "text": "Ace. Thanks. Broken build process or does my name now flag all the filters?"
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/64/",
+      "wm-property": "in-reply-to",
       "wm-private": false
     }
   ]

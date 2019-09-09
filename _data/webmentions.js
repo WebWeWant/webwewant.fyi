@@ -1,14 +1,14 @@
-const fs = require('fs')
-const fetch = require('node-fetch')
-const unionBy = require('lodash/unionBy')
-const metadata = require('./metadata.json')
+const fs = require('fs');
+const fetch = require('node-fetch');
+const unionBy = require('lodash/unionBy');
+const metadata = require('./metadata.json');
 
 // Load .env variables with dotenv
-require('dotenv').config()
+require('dotenv').config();
 
 // Configuration Parameters
-const CACHE_DIR = '_cache'
-const API_ORIGIN = 'https://webmention.io/api/mentions.jf2'
+const CACHE_DIR = '_cache';
+const API_ORIGIN = 'https://webmention.io/api/mentions.jf2';
 const TOKEN = process.env.WEBMENTION_IO_TOKEN;
 
 async function fetchWebmentions(since) {
@@ -31,11 +31,11 @@ async function fetchWebmentions(since) {
 
   let url = `${API_ORIGIN}?domain=${domain}&token=${TOKEN}`;
   if (since) {
-    url += `&per-page=100&&since=${since}`;
+    url += `&per-page=100&since=${since}`;
   } else {
     url += `&per-page=999`;
   }
-
+  
   const response = await fetch(url);
   if (response.ok) {
     const feed = await response.json();
