@@ -34,17 +34,20 @@ collections:
       - { label: "Tags", name: "tags", widget: "hidden", default: "nav" }
       - { label: "Body", name: "body", widget: "markdown" }
   # Events
-  - name: "files"
-    label: "Files"
+  - name: "data"
+    label: "Data Files"
     files:
-      - label: "Event List"
+      - label: "Events"
         name: "events"
         file: "_data/events.json"
-        widget: list
         fields:
-          - { label: "Event Name", name: title, widget: string }
-          - { label: "URL", name: url, widget: string }
-          - { label: "Location", name: location, widget: string }
-          - { label: "Start Date", name: "start_date", widget: "datetime" }
-          - { label: "End Date", name: "end_date", widget: "datetime" }
-          - { label: "IANA Time Zone", name: "zone", widget: "list" }
+          - label: "Event List"
+            name: "eventlist"
+            widget: "list"
+            fields:
+              - { label: "Event Name", name: title, widget: string }
+              - { label: "URL", name: url, widget: string }
+              - { label: "Location", name: location, widget: string }
+              - { label: "Start Date", name: "start_date", widget: "datetime" }
+              - { label: "End Date", name: "end_date", widget: "datetime" }
+              - { label: "IANA Time Zone", name: "zone", widget: "list" }
