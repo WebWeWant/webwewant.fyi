@@ -8,28 +8,41 @@ backend:
 media_folder: "static/img" # Media files will be stored in the repo under images/uploads
 
 collections:
-  # Our blog posts
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
-    folder: "posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+  # Wants
+  - name: "wants"
+    label: "Want"
+    folder: "wants"
+    create: true
+    slug: "{{number}}"
+    fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-      - { label: "Body", name: "body", widget: "markdown" }
-  # Our pages e.g. About
+      - { label: "Submission Date", name: "date", widget: "datetime" }
+      - { label: "Submitted By", name: "submitter", widget: "string" }
+      - { label: "Number", name: "number", widget: "number" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Description", name: "body", widget: "markdown" }
+  # Pages
   - name: "pages"
     label: "Page"
     folder: "pages"
-    create: false # Change to true to allow editors to create new pages
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Permalink", name: "permalink", widget: "string" }
       - { label: "Navigation Title", name: "navtitle", widget: "string" }
       - { label: "Tags", name: "tags", widget: "hidden", default: "nav" }
       - { label: "Body", name: "body", widget: "markdown" }
+  # Events
+  - name: "files"
+    label: "Files"
+    files:
+      - label: "Event List"
+        name: "events"
+        file: "_data/events.json"
+        fields:
+          - { label: "Event Name", name: title, widget: string }
+          - { label: "URL", name: url, widget: string }
+          - { label: "Location", name: location, widget: string }
+          - { label: "Start Date", name: "start_date", widget: "datetime" }
+          - { label: "End Date", name: "end_date", widget: "datetime" }
+          - { label: "IANA Time Zone", name: "zone", widget: "list" }
