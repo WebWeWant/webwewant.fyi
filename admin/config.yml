@@ -40,6 +40,7 @@ collections:
       - label: "Event List"
         name: "events"
         file: "_data/events.json"
+        widget: list
         fields:
           - { label: "Event Name", name: title, widget: string }
           - { label: "URL", name: url, widget: string }
