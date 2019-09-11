@@ -1,6 +1,7 @@
 const { DateTime } = require("luxon");
 const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-es");
+const sanitizeHTML = require('sanitize-html')
 const htmlmin = require("html-minifier");
 const widont = require("widont");
 const md = require("markdown-it")({
@@ -208,6 +209,37 @@ module.exports = function(eleventyConfig) {
   //   });
   // });
 
+  // Webmentions Filter
+  eleventyConfig.addFilter('discussionOfWant', (webmentions, url) => {
+    const allowedTypes = ['in-rely-to', 'mention-of'];
+    const clean = content =>
+      sanitizeHTML(content, {
+        allowedTags: ['b', 'i', 'em', 'strong', 'a'],
+        allowedAttributes: {
+          a: ['href']
+        }
+      })
+
+    return webmentions
+      .filter(entry => entry['wm-target'] === url)
+      .filter(entry => allowedTypes.includes(entry['wm-property']))
+      .filter(entry => !!entry.content)
+      .map(entry => {
+        const { html, text } = entry.content;
+        entry.content.value = html ? clean(html) : clean(text);
+        return entry;
+      });
+  });
+
+  eleventyConfig.addFilter('votesForWant', (webmentions, url) => {
+    const allowedTypes = ['like-of', 'bookmark-of', 'mention-of'];
+
+    return webmentions
+      .filter(entry => entry['wm-target'] === url)
+      .filter(entry => allowedTypes.includes(entry['wm-property']))
+      .length;
+  });
+
   eleventyConfig.addFilter("toString", function(collection, separator, props) {
     var ret = [],
         i = collection.length;
@@ -245,6 +277,7 @@ module.exports = function(eleventyConfig) {
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("sw.js");
   eleventyConfig.addPassthroughCopy("static/img");
+  eleventyConfig.addPassthroughCopy("static/js");
   eleventyConfig.addPassthroughCopy("site.webmanifest");
   eleventyConfig.addPassthroughCopy("admin");
   // eleventyConfig.addPassthroughCopy("_includes/assets/");

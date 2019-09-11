@@ -1,3 +1,8 @@
+{% if javascript.body %}
+  {% for js in javascript.body %}
+    <script src="{{ js }}" defer></script>
+  {% endfor %}
+{% endif %}
 <script>
   (function( window, navigator, document ){
     // Register the service worker

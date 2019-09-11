@@ -233,18 +233,82 @@ nav a {
   }
 }
 
+/* sharing */
+.share dt {
+  font-weight: bold;
+}
+.share dd {
+  margin: .25em 0 0;
+  padding: 0;
+}
+.share-link {
+  border-radius: 6px;
+  display: inline-block;
+  margin: 0 .25em;
+  padding: 4px 8px;
+  transition: filter .5s;
+}
+.share-link:hover,
+.share-link:focus,
+.share-link:active {
+  filter: brightness(75%) contrast(2.5);
+}
+.share-link__icon {
+  vertical-align: top;
+  display: inline-block;
+}
+.share-link__icon path {
+  fill: white;
+}
+.share-link__text {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.share-link--twitter {
+  background: #26c4f1;
+}
+.share-link--twitter .share-link__icon {
+  width: 22px;
+  height: 22px;
+  margin-top: 3px;
+}
+.share-link--linkedin {
+  background: #007bb6;
+}
+.share-link--linkedin .share-link__icon {
+  width: 23px;
+  height: 23px;
+  margin-top: 3px;
+}
+.share-link--facebook {
+  background: #306199;
+}
+.share-link--facebook .share-link__icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+}
 
-/* Tags */
-.tags > * {
+/* Tags & votes */
+.tags > *,
+.votes > * {
   display: inline;
   margin: 0;
   padding: 0;
 }
-.tags dt {
+.tags dt,
+.votes dt {
   font-weight: bold;
 }
-.tags dt::after {
+.tags dt::after,
+.votes dt::after {
   content: ": ";
+}
+.votes > dd + dd {
+  display: block;
 }
 
 /* Footer */

@@ -4,6 +4,7 @@
   "description": "A project to gather information about what you need to realize your vision for the web.",
   "version": "1.0.0",
   "scripts": {
+    "start": "npx eleventy --serve",
     "build": "npx eleventy",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy"
@@ -24,9 +25,13 @@
   "homepage": "https://webwewant.fyi",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
+    "dotenv": "^6.2.0",
+    "lodash": "^4.17.15",
     "luxon": "^1.17.1",
     "markdown-it": "^9.0.1",
     "markdown-it-anchor": "^5.2.4",
+    "node-fetch": "^2.3.0",
+    "sanitize-html": "^1.20.0",
     "widont": "^0.3.3"
   },
   "dependencies": {
