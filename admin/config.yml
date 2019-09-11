@@ -39,10 +39,10 @@ collections:
     files:
       - label: "Events"
         name: "events"
-        file: "_data/events.json"
         delete: false
+        file: "_data/events.json"
         fields:
-          - label: "Event List"
+          - label: "Items"
             name: "items"
             widget: "list"
             fields:
