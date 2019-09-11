@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2019-09-09T19:07:13.472Z",
+  "lastFetched": "2019-09-11T16:43:49.352Z",
   "children": [
     {
       "type": "entry",
@@ -242,6 +242,773 @@
       },
       "in-reply-to": "https://webwewant.fyi/wants/64/",
       "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "_welt #FBPE",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e85dbdd40db106e9ac7cb63b80eda6bf506109ad23b320f3d7ef0d23dc501926.jpg",
+        "url": "https://twitter.com/j3610"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1171139612355383296#favorited-by-135381633",
+      "published": null,
+      "wm-received": "2019-09-10T19:33:47Z",
+      "wm-id": 688290,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1171139612355383296/135381633",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "like-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Kristof Neirynck",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/f1ad96bef7f2bca31c7c5747b5967ca55e08de7fa11e1f8965ba5ebadf4f68cb.jpg",
+        "url": "https://twitter.com/Crydust"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1171139612355383296#favorited-by-14048110",
+      "published": null,
+      "wm-received": "2019-09-10T18:58:56Z",
+      "wm-id": 688278,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1171139612355383296/14048110",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "like-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Anna Migas",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c73b47830c6c19813c95efbc296abf966ca5de0ed805af2aca6919d34ca0cf0e.jpg",
+        "url": "https://twitter.com/szynszyliszys"
+      },
+      "url": "https://twitter.com/szynszyliszys/status/1171490218244919299",
+      "published": "2019-09-10T18:26:47+00:00",
+      "wm-received": "2019-09-10T18:29:52Z",
+      "wm-id": 688260,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1171139612355383296/1171490218244919299",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "content": {
+        "text": "Judges’ Choice from @smashingconf Freiburg today had to do with HTML form controls. We need more options so we can avoid having to build ne"
+      },
+      "repost-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Anna Migas",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c73b47830c6c19813c95efbc296abf966ca5de0ed805af2aca6919d34ca0cf0e.jpg",
+        "url": "https://twitter.com/szynszyliszys"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1171139612355383296#favorited-by-106479510",
+      "published": null,
+      "wm-received": "2019-09-10T18:29:51Z",
+      "wm-id": 688259,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1171139612355383296/106479510",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "like-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Manuel Balland",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/f0dd74da6341e323beb57ef67e0541e8da5bef81b768fe10ab5b04907a1b0088.jpg",
+        "url": "https://twitter.com/ManuBalland"
+      },
+      "url": "https://twitter.com/ManuBalland/status/1171488595728683009",
+      "published": "2019-09-10T18:20:21+00:00",
+      "wm-received": "2019-09-10T18:29:49Z",
+      "wm-id": 688258,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1171488595728683009",
+      "wm-target": "https://webwewant.fyi/wants/22/",
+      "content": {
+        "html": "I want container queries <a href=\"https://webwewant.fyi/wants/22/\">webwewant.fyi/wants/22/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want container queries webwewant.fyi/wants/22/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/22/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Nicolas Hoizey",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c21eff209ada91f6fe7e85dade06b7cd289b2c253324148110fe5c4ae2cb8021.jpg",
+        "url": "https://twitter.com/nhoizey"
+      },
+      "url": "https://twitter.com/nhoizey/status/1171467683570708481",
+      "published": "2019-09-10T16:57:15+00:00",
+      "wm-received": "2019-09-10T16:58:30Z",
+      "wm-id": 688221,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1171467683570708481",
+      "wm-target": "https://webwewant.fyi/wants/22/",
+      "content": {
+        "html": "I want container queries! <a href=\"https://webwewant.fyi/wants/22/\">webwewant.fyi/wants/22/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want container queries! webwewant.fyi/wants/22/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/22/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Selen Gora",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/bf795e826e302b00cd317e88fc9644e46a8de75adfa97c431e65825179bfc3e7.jpg",
+        "url": "https://twitter.com/SelenGora"
+      },
+      "url": "https://twitter.com/SelenGora/status/1171441550393401346",
+      "published": "2019-09-10T15:13:24+00:00",
+      "wm-received": "2019-09-10T15:32:53Z",
+      "wm-id": 688143,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1171441550393401346",
+      "wm-target": "https://webwewant.fyi/wants/41/",
+      "content": {
+        "html": "I want a tooltip API <a href=\"https://webwewant.fyi/wants/41/\">webwewant.fyi/wants/41/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want a tooltip API webwewant.fyi/wants/41/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/41/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Selen Gora",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/bf795e826e302b00cd317e88fc9644e46a8de75adfa97c431e65825179bfc3e7.jpg",
+        "url": "https://twitter.com/SelenGora"
+      },
+      "url": "https://twitter.com/SelenGora/status/1171440885369753600",
+      "published": "2019-09-10T15:10:46+00:00",
+      "wm-received": "2019-09-10T15:32:52Z",
+      "wm-id": 688142,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1171440885369753600",
+      "wm-target": "https://webwewant.fyi/wants/21/",
+      "content": {
+        "html": "I want tabs and accordion elements <a href=\"https://webwewant.fyi/wants/21/\">webwewant.fyi/wants/21/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want tabs and accordion elements webwewant.fyi/wants/21/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/21/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Dilip Shukla",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/66a68eedb286b00171c5da38f34327758147864c9da7c9d53302eda458c53435.jpg",
+        "url": "https://twitter.com/fusionstrings"
+      },
+      "url": "https://twitter.com/fusionstrings/status/1171431542544990208",
+      "published": "2019-09-10T14:33:38+00:00",
+      "wm-received": "2019-09-10T14:58:29Z",
+      "wm-id": 688130,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1171431542544990208",
+      "wm-target": "https://webwewant.fyi/wants/22/",
+      "content": {
+        "html": "I want container queries <a href=\"https://webwewant.fyi/wants/22/\">webwewant.fyi/wants/22/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want container queries webwewant.fyi/wants/22/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/22/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Thomas Wilburn",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/208e854fab68fd42b571dce82fe1209209b9dc0c4066f4d07edf904ff670024f.jpg",
+        "url": "https://twitter.com/thomaswilburn"
+      },
+      "url": "https://twitter.com/thomaswilburn/status/1171424196532084736",
+      "published": "2019-09-10T14:04:27+00:00",
+      "wm-received": "2019-09-10T14:07:19Z",
+      "wm-id": 688100,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1171424196532084736",
+      "wm-target": "https://webwewant.fyi/wants/25/",
+      "content": {
+        "html": "Apparently my Web We Want entry (<a href=\"https://webwewant.fyi/wants/25/\">webwewant.fyi/wants/25/</a>) won an award at Smashing Conf Freiburg yesterday. People love styling SVG with CSS--who knew?",
+        "text": "Apparently my Web We Want entry (webwewant.fyi/wants/25/) won an award at Smashing Conf Freiburg yesterday. People love styling SVG with CSS--who knew?"
+      },
+      "mention-of": "https://webwewant.fyi/wants/25/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Rhys Lloyd",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0a00b3b8d471a6dfaaf20c77f073940ca58d6a8aff12641006d748931f90213b.jpg",
+        "url": "https://twitter.com/justrhysism"
+      },
+      "url": "https://twitter.com/justrhysism/status/1171418937780604928",
+      "published": "2019-09-10T13:43:33+00:00",
+      "wm-received": "2019-09-10T14:07:18Z",
+      "wm-id": 688099,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1171418937780604928",
+      "wm-target": "https://webwewant.fyi/wants/22/",
+      "content": {
+        "html": "I want container queries <a href=\"https://webwewant.fyi/wants/22/\">webwewant.fyi/wants/22/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want container queries webwewant.fyi/wants/22/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/22/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jonathan Lahue⚡",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d6564f5dd9b303ccdffab9f4ee5792609fa8739caa8c7559459e0ae665b14c39.jpg",
+        "url": "https://twitter.com/JCLaHoot"
+      },
+      "url": "https://twitter.com/JCLaHoot/status/1171412576976195593",
+      "published": "2019-09-10T13:18:16+00:00",
+      "wm-received": "2019-09-10T13:39:00Z",
+      "wm-id": 688075,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1171412576976195593",
+      "wm-target": "https://webwewant.fyi/wants/22/",
+      "content": {
+        "html": "Container queries: the #1 thing I want added to CSS <a href=\"https://webwewant.fyi/wants/22/\">webwewant.fyi/wants/22/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "Container queries: the #1 thing I want added to CSS webwewant.fyi/wants/22/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/22/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Rob Whiting 📓",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a0a99145a4e384d3945d706eaf57c525e2b0c2865345d896ddbb7054b5264ccc.jpg",
+        "url": "https://twitter.com/whitingx"
+      },
+      "url": "https://twitter.com/whitingx/status/1171413547533918209",
+      "published": "2019-09-10T13:22:08+00:00",
+      "wm-received": "2019-09-10T13:38:59Z",
+      "wm-id": 688074,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1131998584147070976/1171413547533918209",
+      "wm-target": "https://webwewant.fyi/#submit",
+      "content": {
+        "text": "If you could wave a magic wand and address a limitation of the web platform or DevTools, what would it be? Share your ideas with us! https:/"
+      },
+      "repost-of": "https://webwewant.fyi/#submit",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Brad Frost",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b52ce85f5ca5f6b9d004f5133a633072e1aceea9df35926d31c5af4151d4feff.jpg",
+        "url": "https://twitter.com/brad_frost"
+      },
+      "url": "https://twitter.com/brad_frost/status/1171410842291597313",
+      "published": "2019-09-10T13:11:23+00:00",
+      "wm-received": "2019-09-10T13:38:57Z",
+      "wm-id": 688072,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1171410842291597313",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "Checking out The Web We Want <a href=\"https://webwewant.fyi/\">webwewant.fyi</a> via <a href=\"https://twitter.com/rachelandrew\">@rachelandrew</a>. \n\nThe voting mechanism seems a bit weird, but consider this my full-throated vote for container queries (lovingly submitted by <a href=\"https://twitter.com/davatron5000\">@davatron5000</a>): <a href=\"https://webwewant.fyi/wants/22/\">webwewant.fyi/wants/22/</a>",
+        "text": "Checking out The Web We Want webwewant.fyi via @rachelandrew. \n\nThe voting mechanism seems a bit weird, but consider this my full-throated vote for container queries (lovingly submitted by @davatron5000): webwewant.fyi/wants/22/"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Brad Frost",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b52ce85f5ca5f6b9d004f5133a633072e1aceea9df35926d31c5af4151d4feff.jpg",
+        "url": "https://twitter.com/brad_frost"
+      },
+      "url": "https://twitter.com/brad_frost/status/1171410842291597313",
+      "published": "2019-09-10T13:11:23+00:00",
+      "wm-received": "2019-09-10T13:38:57Z",
+      "wm-id": 688073,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1171410842291597313",
+      "wm-target": "https://webwewant.fyi/wants/22/",
+      "content": {
+        "html": "Checking out The Web We Want <a href=\"https://webwewant.fyi/\">webwewant.fyi</a> via <a href=\"https://twitter.com/rachelandrew\">@rachelandrew</a>. \n\nThe voting mechanism seems a bit weird, but consider this my full-throated vote for container queries (lovingly submitted by <a href=\"https://twitter.com/davatron5000\">@davatron5000</a>): <a href=\"https://webwewant.fyi/wants/22/\">webwewant.fyi/wants/22/</a>",
+        "text": "Checking out The Web We Want webwewant.fyi via @rachelandrew. \n\nThe voting mechanism seems a bit weird, but consider this my full-throated vote for container queries (lovingly submitted by @davatron5000): webwewant.fyi/wants/22/"
+      },
+      "mention-of": "https://webwewant.fyi/wants/22/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Chris Burnell",
+        "photo": "https://webmention.io/avatar/chrisburnell.com/79a6e6142e7d6cc49b44c721d414c08fcbfaa1fad07dba870e7f8b624aeb0592.jpg",
+        "url": "https://chrisburnell.com/"
+      },
+      "url": "https://chrisburnell.com/like/1568122370",
+      "published": "2019-09-10T14:32:50+01:00",
+      "wm-received": "2019-09-10T13:36:27Z",
+      "wm-id": 688065,
+      "wm-source": "https://chrisburnell.com/like/1568122370",
+      "wm-target": "https://webwewant.fyi/wants/22/",
+      "like-of": "https://webwewant.fyi/wants/22/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Chris Burnell",
+        "photo": "https://webmention.io/avatar/chrisburnell.com/79a6e6142e7d6cc49b44c721d414c08fcbfaa1fad07dba870e7f8b624aeb0592.jpg",
+        "url": "https://chrisburnell.com/"
+      },
+      "url": "https://chrisburnell.com/like/1568121607",
+      "published": "2019-09-10T14:20:07+01:00",
+      "wm-received": "2019-09-10T13:23:04Z",
+      "wm-id": 688061,
+      "wm-source": "https://chrisburnell.com/like/1568121607",
+      "wm-target": "https://webwewant.fyi/wants/21/",
+      "like-of": "https://webwewant.fyi/wants/21/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Joseph Kohlmann (he/him/his)",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e24a6687ba1422c59f5d72c701f5d6343c6c45180e4995deed3343f6cc6f058c.jpg",
+        "url": "https://twitter.com/jkohlmann"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1171139612355383296#favorited-by-14579229",
+      "published": null,
+      "wm-received": "2019-09-10T00:00:17Z",
+      "wm-id": 687295,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1171139612355383296/14579229",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "like-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Joseph Kohlmann (he/him/his)",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e24a6687ba1422c59f5d72c701f5d6343c6c45180e4995deed3343f6cc6f058c.jpg",
+        "url": "https://twitter.com/jkohlmann"
+      },
+      "url": "https://twitter.com/jkohlmann/status/1171211143966351360",
+      "published": "2019-09-09T23:57:51+00:00",
+      "wm-received": "2019-09-10T00:00:16Z",
+      "wm-id": 687293,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1171139612355383296/1171211143966351360",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "content": {
+        "text": "Judges’ Choice from @smashingconf Freiburg today had to do with HTML form controls. We need more options so we can avoid having to build ne"
+      },
+      "repost-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Miriam Suzanne",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/fd18fa0dc0029a8ffddf242a36abf1b4239dc6de01b5c8aacb3c76100e7e3556.jpg",
+        "url": "https://twitter.com/MiriSuzanne"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1171139612355383296#favorited-by-6729252",
+      "published": null,
+      "wm-received": "2019-09-10T00:00:16Z",
+      "wm-id": 687294,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1171139612355383296/6729252",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "like-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Miriam Suzanne",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/fd18fa0dc0029a8ffddf242a36abf1b4239dc6de01b5c8aacb3c76100e7e3556.jpg",
+        "url": "https://twitter.com/MiriSuzanne"
+      },
+      "url": "https://twitter.com/MiriSuzanne/status/1171210177325912065",
+      "published": "2019-09-09T23:54:00+00:00",
+      "wm-received": "2019-09-10T00:00:15Z",
+      "wm-id": 687292,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1171139612355383296/1171210177325912065",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "content": {
+        "text": "Judges’ Choice from @smashingconf Freiburg today had to do with HTML form controls. We need more options so we can avoid having to build ne"
+      },
+      "repost-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Adrian D. Alvarez",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/55e1328db304a28858247c4bcb3a3f10d30839cab10354ac4672277893973c97.jpg",
+        "url": "https://twitter.com/06b"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1171139612355383296#favorited-by-30257040",
+      "published": null,
+      "wm-received": "2019-09-09T22:57:20Z",
+      "wm-id": 687243,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1171139612355383296/30257040",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "like-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Christian Sonne",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/02a170f918dd86af953624d5c841c895ff2caee8011778a314b3136ec3375f9c.jpg",
+        "url": "https://twitter.com/ChristianSonne"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1171139612355383296#favorited-by-21250778",
+      "published": null,
+      "wm-received": "2019-09-09T21:59:10Z",
+      "wm-id": 687211,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1171139612355383296/21250778",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "like-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "🌙 Stephanie Drescher",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/06f22d68032c16325a5efee856aa1912f3c3bf7a8e43210e67ba2015623bac14.png",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/seaotta/status/1171151770149478400",
+      "published": "2019-09-09T20:01:55+00:00",
+      "wm-received": "2019-09-09T20:24:06Z",
+      "wm-id": 687171,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1171139612355383296/1171151770149478400",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "content": {
+        "text": "Judges’ Choice from @smashingconf Freiburg today had to do with HTML form controls. We need more options so we can avoid having to build ne"
+      },
+      "repost-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "🌙 Stephanie Drescher",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/06f22d68032c16325a5efee856aa1912f3c3bf7a8e43210e67ba2015623bac14.png",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1171139612355383296#favorited-by-107281171",
+      "published": null,
+      "wm-received": "2019-09-09T20:24:06Z",
+      "wm-id": 687172,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1171139612355383296/107281171",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "like-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Kyle Pflug",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/9b94e1ae677f7fa7831f1d296bf0d4600b31706b08ab20b5fa3c78bf10cf1a51.png",
+        "url": "https://twitter.com/kylealden"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1171140057278771200#favorited-by-18642786",
+      "published": null,
+      "wm-received": "2019-09-09T19:57:32Z",
+      "wm-id": 687151,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1171140057278771200/18642786",
+      "wm-target": "https://webwewant.fyi/wants/25/",
+      "like-of": "https://webwewant.fyi/wants/25/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Kyle Pflug",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/9b94e1ae677f7fa7831f1d296bf0d4600b31706b08ab20b5fa3c78bf10cf1a51.png",
+        "url": "https://twitter.com/kylealden"
+      },
+      "url": "https://twitter.com/kylealden/status/1171147811699576833",
+      "published": "2019-09-09T19:46:11+00:00",
+      "wm-received": "2019-09-09T19:57:31Z",
+      "wm-id": 687149,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1171140057278771200/1171147811699576833",
+      "wm-target": "https://webwewant.fyi/wants/25/",
+      "content": {
+        "text": "The Audience Favorite from @smashingconf Freiburg today was a plea for more control over SVG display from CSS: \n\nwebwewant.fyi/wants/25/"
+      },
+      "repost-of": "https://webwewant.fyi/wants/25/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Kyle Pflug",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/9b94e1ae677f7fa7831f1d296bf0d4600b31706b08ab20b5fa3c78bf10cf1a51.png",
+        "url": "https://twitter.com/kylealden"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1171139612355383296#favorited-by-18642786",
+      "published": null,
+      "wm-received": "2019-09-09T19:57:31Z",
+      "wm-id": 687150,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1171139612355383296/18642786",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "like-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Kyle Pflug",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/9b94e1ae677f7fa7831f1d296bf0d4600b31706b08ab20b5fa3c78bf10cf1a51.png",
+        "url": "https://twitter.com/kylealden"
+      },
+      "url": "https://twitter.com/kylealden/status/1171147853231575041",
+      "published": "2019-09-09T19:46:21+00:00",
+      "wm-received": "2019-09-09T19:57:30Z",
+      "wm-id": 687148,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1171139612355383296/1171147853231575041",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "content": {
+        "text": "Judges’ Choice from @smashingconf Freiburg today had to do with HTML form controls. We need more options so we can avoid having to build ne"
+      },
+      "repost-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Greg Whitworth",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b8fae6e53539f90e269271e6a41597014eba3d6d09ff5a045cd952bb823bf2be.jpg",
+        "url": "https://twitter.com/gregwhitworth"
+      },
+      "url": "https://twitter.com/gregwhitworth/status/1171140011028144129",
+      "published": "2019-09-09T19:15:12+00:00",
+      "wm-received": "2019-09-09T19:30:46Z",
+      "wm-id": 687112,
+      "wm-source": "https://brid-gy.appspot.com/comment/twitter/AaronGustafson/1171121500444717057/1171140011028144129",
+      "wm-target": "https://webwewant.fyi/wants/68/",
+      "content": {
+        "html": "This sounds a lot like Edge's \"Copy element with styles\" - would be great to get more use case info on this one. I found this is great for layout/rendering issues but not for event based issues. Would be pretty sweet though if possible to get all wiring for an element.\n<a class=\"u-mention\" href=\"https://twitter.com/AaronGustafson\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/webwewantfyi\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/68/\"></a>\n<a class=\"u-mention\" href=\"https://www.aaron-gustafson.com/\"></a>",
+        "text": "This sounds a lot like Edge's \"Copy element with styles\" - would be great to get more use case info on this one. I found this is great for layout/rendering issues but not for event based issues. Would be pretty sweet though if possible to get all wiring for an element."
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/68/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Aaron Gustafson",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ccecfe0f8e7fe60a7d2fa1f0524b3e73449fd5bdf62eacb7d9c3298360ca316f.jpg",
+        "url": "https://twitter.com/AaronGustafson"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1171140584750215168",
+      "published": "2019-09-09T19:17:28+00:00",
+      "wm-received": "2019-09-09T19:30:44Z",
+      "wm-id": 687111,
+      "wm-source": "https://brid-gy.appspot.com/comment/twitter/AaronGustafson/1171121500444717057/1171140584750215168",
+      "wm-target": "https://webwewant.fyi/wants/68/",
+      "content": {
+        "html": "That was my thought as well. I remembered us having it in F12 and thought it was quite useful. We can gather more feedback on this one.\n<a class=\"u-mention\" href=\"https://twitter.com/gregwhitworth\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/webwewantfyi\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/68/\"></a>",
+        "text": "That was my thought as well. I remembered us having it in F12 and thought it was quite useful. We can gather more feedback on this one."
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/68/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Aaron Gustafson",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ccecfe0f8e7fe60a7d2fa1f0524b3e73449fd5bdf62eacb7d9c3298360ca316f.jpg",
+        "url": "https://twitter.com/AaronGustafson"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1171140974338174976",
+      "published": "2019-09-09T19:19:01+00:00",
+      "wm-received": "2019-09-09T19:30:39Z",
+      "wm-id": 687109,
+      "wm-source": "https://brid-gy.appspot.com/comment/twitter/AaronGustafson/1171121500444717057/1171140974338174976",
+      "wm-target": "https://webwewant.fyi/wants/68/",
+      "content": {
+        "html": "I agree that the eventing end of things is a little challenging. Perhaps there could be an option that could allow you to get access to the events triggered, but in a non-active, synthetic way (maybe having the events logged to the console only, for instance).\n<a class=\"u-mention\" href=\"https://twitter.com/gregwhitworth\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/webwewantfyi\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/68/\"></a>",
+        "text": "I agree that the eventing end of things is a little challenging. Perhaps there could be an option that could allow you to get access to the events triggered, but in a non-active, synthetic way (maybe having the events logged to the console only, for instance)."
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/68/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Greg Whitworth",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b8fae6e53539f90e269271e6a41597014eba3d6d09ff5a045cd952bb823bf2be.jpg",
+        "url": "https://twitter.com/gregwhitworth"
+      },
+      "url": "https://twitter.com/gregwhitworth/status/1171141146719817728",
+      "published": "2019-09-09T19:19:42+00:00",
+      "wm-received": "2019-09-09T19:30:39Z",
+      "wm-id": 687110,
+      "wm-source": "https://brid-gy.appspot.com/comment/twitter/AaronGustafson/1171121500444717057/1171141146719817728",
+      "wm-target": "https://webwewant.fyi/wants/68/",
+      "content": {
+        "html": "I asked for it, it helps amazingly for bug reductions assuming the issue doesn't require JS.\n<a class=\"u-mention\" href=\"https://twitter.com/AaronGustafson\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/webwewantfyi\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/68/\"></a>\n<a class=\"u-mention\" href=\"https://www.aaron-gustafson.com/\"></a>",
+        "text": "I asked for it, it helps amazingly for bug reductions assuming the issue doesn't require JS."
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/68/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Aaron Gustafson",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ccecfe0f8e7fe60a7d2fa1f0524b3e73449fd5bdf62eacb7d9c3298360ca316f.jpg",
+        "url": "https://twitter.com/AaronGustafson"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1171140134357458944",
+      "published": "2019-09-09T19:15:41+00:00",
+      "wm-received": "2019-09-09T19:26:42Z",
+      "wm-id": 687104,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1171140057278771200/1171140134357458944",
+      "wm-target": "https://webwewant.fyi/wants/25/",
+      "content": {
+        "text": "The Audience Favorite from @smashingconf Freiburg today was a plea for more control over SVG display from CSS: \n\nwebwewant.fyi/wants/25/"
+      },
+      "repost-of": "https://webwewant.fyi/wants/25/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Aaron Gustafson",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ccecfe0f8e7fe60a7d2fa1f0524b3e73449fd5bdf62eacb7d9c3298360ca316f.jpg",
+        "url": "https://twitter.com/AaronGustafson"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1171140057278771200#favorited-by-12028",
+      "published": null,
+      "wm-received": "2019-09-09T19:26:42Z",
+      "wm-id": 687103,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1171140057278771200/12028",
+      "wm-target": "https://webwewant.fyi/wants/25/",
+      "like-of": "https://webwewant.fyi/wants/25/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Aaron Gustafson",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ccecfe0f8e7fe60a7d2fa1f0524b3e73449fd5bdf62eacb7d9c3298360ca316f.jpg",
+        "url": "https://twitter.com/AaronGustafson"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1171139612355383296#favorited-by-12028",
+      "published": null,
+      "wm-received": "2019-09-09T19:26:39Z",
+      "wm-id": 687102,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1171139612355383296/12028",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "like-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Aaron Gustafson",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ccecfe0f8e7fe60a7d2fa1f0524b3e73449fd5bdf62eacb7d9c3298360ca316f.jpg",
+        "url": "https://twitter.com/AaronGustafson"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1171140146936369152",
+      "published": "2019-09-09T19:15:44+00:00",
+      "wm-received": "2019-09-09T19:26:38Z",
+      "wm-id": 687100,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1171139612355383296/1171140146936369152",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "content": {
+        "text": "Judges’ Choice from @smashingconf Freiburg today had to do with HTML form controls. We need more options so we can avoid having to build ne"
+      },
+      "repost-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Nikrooz 👨🏻‍💻",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/4d92c9973713a320d94df485c87e69f5851b52bb138b14ad753709e530784617.jpg",
+        "url": "https://twitter.com/nikrooz"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1171139612355383296#favorited-by-20779224",
+      "published": null,
+      "wm-received": "2019-09-09T19:26:38Z",
+      "wm-id": 687101,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1171139612355383296/20779224",
+      "wm-target": "https://webwewant.fyi/wants/48/",
+      "like-of": "https://webwewant.fyi/wants/48/",
+      "wm-property": "like-of",
       "wm-private": false
     }
   ]

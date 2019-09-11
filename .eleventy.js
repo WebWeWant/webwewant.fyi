@@ -180,11 +180,11 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("past_events", function(events) {
-    return events.filter( event => new Date(event.end_date) <= new Date() );
+    return events.items.filter( event => new Date(event.end_date) <= new Date() );
   });
 
   eleventyConfig.addFilter("future_events", function(events) {
-    return events.filter( event => new Date(event.end_date) >= new Date() );
+    return events.items.filter( event => new Date(event.end_date) >= new Date() );
   });
 
   eleventyConfig.addCollection("wants", function(collection) {
