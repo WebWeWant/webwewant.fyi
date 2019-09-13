@@ -35,7 +35,7 @@ collections:
       - { label: "Start Date", name: "start_date", widget: "datetime" }
       - { label: "End Date", name: "end_date", widget: "datetime" }
       - { label: "IANA Time Zone", name: "zone", widget: "string" }
-      - label: Hosts
+      - label: "Hosts"
         widget: "list"
         name: "hosts"
         field:
@@ -46,7 +46,7 @@ collections:
             - { label: "Name", name: "name", widget: "string" }
             - { label: "URL", name: "url", widget: "string" }
             - { label: "Twitter Username", name: "twitter", widget: "string" }
-      - label: Judges
+      - label: "Judges"
         widget: "list"
         name: "judges"
         field:
