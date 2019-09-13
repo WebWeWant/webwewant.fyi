@@ -1,0 +1,73 @@
+---
+layout: layouts/base.njk
+section: events
+---
+{% from "macros.njk" import want %}
+
+<h1 class="event__title">{{ title | markdownify | widont | safe }}</h1>
+<p>
+  {% set dates %}{{ start_date | machineDate }}|{{ end_date | machineDate }}|{{ zone }}{% endset %}
+  {% DateRange dates, "time" %}<br>
+  {{ location }}<br>
+  {% if url %}
+    <a href="{{ url }}">More Info</a>
+  {% endif %}
+</p>
+
+{% if pitches %}
+  <section id="pitched">
+    <h2>The following wants were pitched</h2>
+    <ol class="event__pitches">
+      {% for w in pitches %}
+        {% getwant collections.wants, w %}
+          {{ want( 'li', 'event__want', "url", 'h3', "data.title", "data.submitter" ) }}
+        {% endgetwant %}
+      {% endfor %}
+    </ol>
+  </section>
+{% endif %}
+
+
+{% if winners %}
+  <section id="winners">
+    <h2>And the winners were…</h2>
+    <dl class="event__info">
+      <dt id="judges-pick">{% include "assets/svg/judges-pick.svg" %}</dt>
+      <dd>
+        {% getwant collections.wants, winners.judges %}
+          {{ want( 'div', 'event__want event__want--winner event__want--judges-fave', "url", 'h3', "data.title", "data.submitter" ) }}
+        {% endgetwant %}
+      </dd>
+      <dt id="community-pick">{% include "assets/svg/community-pick.svg" %}</dt>
+      <dd>
+        {% getwant collections.wants, winners.community %}
+          {{ want( 'div', 'event__want event__want--winner event__want--community-fave', "url", 'h3', "data.title", "data.submitter" ) }}    
+        {% endgetwant %}
+      </dd>
+    </dl>
+  </section>
+{% endif %}
+
+<section id="thanks">
+  <h2>Many thanks to</h2>
+  <dl class="event__info">
+    {% if hosts %}
+      <dt>Our hosts</dt>
+      <dd>{% NameList hosts %}</dd>
+    {% endif %}
+    {% if judges %}
+      <dt>Our judging panel</dt>
+      <dd>{% NameList judges %}</dd>
+    {% endif %}
+    {% if sponsor %}
+      <dt>Our sponsor</dt>
+      <dd>{{ sponsor }}</dd>
+    {% endif %}
+  </dl>
+</section>
+
+<div class="pagination">
+  <p><a href="/events/">← See other events</a></p>
+</div>
+
+<small>Winner icons by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>.</small>

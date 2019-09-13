@@ -35,6 +35,32 @@ module.exports = function(eleventyConfig) {
     return text.replace(/-/g, ' ');
   });
 
+  // Name List
+  eleventyConfig.addShortcode("NameList", names => {
+    let strings = [],
+        string = "",
+        count = names.length;
+    while ( count-- )
+    {
+      strings.unshift( `<a href="${names[count].url}">${names[count].name}</a>` );
+    }
+    count = strings.length;
+    if ( count > 2 )
+    {
+      strings[count-1] = "and " + strings[count-1];
+      string = strings.join(", ");
+    }
+    else if ( count == 2 )
+    {
+      string = `${strings[0]} and ${strings[1]}`;
+    }
+    else
+    {
+      string = strings[0];
+    }
+    return `${string}`;
+  });
+
   // Fix proper nouns
   eleventyConfig.addFilter("fixNames", text => {
     let test = text.toLowerCase(),
@@ -179,12 +205,31 @@ module.exports = function(eleventyConfig) {
     return array.slice(0, limit);
   });
 
-  eleventyConfig.addFilter("past_events", function(events) {
-    return events.items.filter( event => new Date(event.end_date) <= new Date() );
+  /* eleventyConfig.addFilter("past_events", function(events) {
+    console.log(event.end_date);
+    return events.filter( event => new Date(event.end_date) <= new Date() );
   });
 
   eleventyConfig.addFilter("future_events", function(events) {
-    return events.items.filter( event => new Date(event.end_date) >= new Date() );
+    return events.filter( event => new Date(event.end_date) >= new Date() );
+  }); */
+
+  eleventyConfig.addCollection("events", function(collection) {
+    return collection.getAll().filter( item => {
+      return item.inputPath.indexOf("events/") > -1;
+    });
+  });
+  eleventyConfig.addCollection("past_events", function(collection) {
+    return collection.getAll()
+            .filter( item => item.inputPath.indexOf("events/") > -1 )
+            .filter( event => new Date(event.data.end_date) <= new Date() )
+            .sort( (a, b) => a.data.start_date < b.data.start_date );
+  });
+  eleventyConfig.addCollection("upcoming_events", function(collection) {
+    return collection.getAll()
+            .filter( item => item.inputPath.indexOf("events/") > -1 )
+            .filter( event => new Date(event.data.end_date) >= new Date() )
+            .sort( (a, b) => a.data.start_date > b.data.start_date );
   });
 
   eleventyConfig.addCollection("wants", function(collection) {
@@ -192,6 +237,14 @@ module.exports = function(eleventyConfig) {
     return collection.getAll().filter( item => {
       return item.inputPath.indexOf("wants/") > -1;
     });
+  });
+
+  eleventyConfig.addPairedShortcode("getwant", (content, wants, id) => {
+    let want = wants.filter( item => item.fileSlug == id )[0];
+    return content
+             .replace( "url", want.url )
+             .replace( "data.title", want.data.title )
+             .replace( "data.submitter", want.data.submitter );
   });
 
   // eleventyConfig.addFilter("by_start_date", function(events, dir) {
@@ -249,7 +302,7 @@ module.exports = function(eleventyConfig) {
           j = props.length;
       while ( j-- )
       {
-        let text = collection[i][props[j]];
+        let text = collection[i].data[props[j]];
         if ( props[j].indexOf("date") > -1 )
         {
           text = new Date( text );

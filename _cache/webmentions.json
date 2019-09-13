@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2019-09-11T16:49:40.544Z",
+  "lastFetched": "2019-09-13T22:20:40.907Z",
   "children": [
     {
       "type": "entry",
@@ -1009,6 +1009,28 @@
       "wm-target": "https://webwewant.fyi/wants/48/",
       "like-of": "https://webwewant.fyi/wants/48/",
       "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Christian Schaefer",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78535c31d268cb5af6a059ddb36015cc3526779136df20cbcd11fdec85cc9845.jpg",
+        "url": "https://twitter.com/derSchepp"
+      },
+      "url": "https://twitter.com/derSchepp/status/1172132979482800128",
+      "published": "2019-09-12T13:00:54+00:00",
+      "wm-received": "2019-09-12T13:30:56Z",
+      "wm-id": 689347,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1172132979482800128",
+      "wm-target": "https://webwewant.fyi/wants/22/",
+      "content": {
+        "html": "Nice try, <a href=\"https://twitter.com/davatron5000\">@davatron5000</a>, nice try... <a href=\"https://webwewant.fyi/wants/22/\">webwewant.fyi/wants/22/</a> 😂",
+        "text": "Nice try, @davatron5000, nice try... webwewant.fyi/wants/22/ 😂"
+      },
+      "mention-of": "https://webwewant.fyi/wants/22/",
+      "wm-property": "mention-of",
       "wm-private": false
     }
   ]

@@ -322,7 +322,7 @@ footer a[href], footer a[href]:visited {
 footer p {
   max-width: 80ch;
   margin: 0 auto;
-  padding: 1em;
+  padding: 2em;
 }
 footer small + small {
   margin-top: .75rem;
@@ -513,6 +513,49 @@ button:focus:active {
   font-weight: bold;
   letter-spacing: .01rem;
   text-transform: uppercase;
+}
+.event__info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: .25rem;
+  align-items: start;
+}
+.event__info > * {
+  margin: 0;
+}
+.event__info dt {
+  font-weight: bold;
+}
+.event__info dt::after {
+  content: ": ";
+}
+.event__info dt[id]::after {
+  display: none;
+}
+.event__pitches {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.event__pitches li {
+  margin: 0;
+  padding: 0;
+}
+.event__pitches .event__want + .event__want {
+  border: 0;
+  margin-top: .5rem;
+  padding-top: 0;
+}
+.event__want h3 {
+  font-size: 1.75rem;
+  line-height: 1.1;
+}
+.event__want .want__title {
+  font-size: 1em;
+}
+.event__want .want__meta {
+  margin-top: 0.5rem;
 }
 
 .wants {

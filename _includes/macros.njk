@@ -1,10 +1,18 @@
-{% macro event( tag, title, url, start_date, end_date, zone, location ) %}
+{% macro event( tag, title, url, start_date, end_date, zone, location, internal_url="" ) %}
   <{{ tag }} class="event">
-    <a class="event__title" href="{{ url }}">{{ title | widont }}</a><br>
-    {% set dates %}{{ start_date }}|{{ end_date }}|{{ zone }}{% endset %}
+    {% set the_url %}{% if internal_url != "" %}{{ internal_url }}{% else %}{{ url }}{% endif %}{% endset %}
+    <a class="event__title" href="{{ the_url }}">{{ title | widont }}</a><br>
+    {% set dates %}{{ start_date | machineDate }}|{{ end_date | machineDate }}|{{ zone }}{% endset %}
     <b class="event__timing">{% DateRange dates, "time" %}</b><br>
     <b class="event__location">{{ location }}</b>
   </{{tag}}>
+{% endmacro %}
+
+{% macro want( block_tag, additional_classes, url, title_tag, title, submitter ) %}
+  <{{ block_tag }} class="want {{ additional_classes }}">
+    <{{ title_tag }}><a class="want__title" href="{{ url }}">{{ title | markdownify | widont | safe }}</a></{{ title_tag }}>
+    <p class="want__meta">Submitted by {{ submitter }}</p>
+  </{{ block_tag }}>
 {% endmacro %}
 
 {% macro label( text, name ) %}

@@ -1,8 +1,7 @@
+{% from "macros.njk" import want %}
+
 <ul class="wants">
-  {% for want in wants %}
-    <li class="want">
-      <h2><a class="want__title" href="{{ want.url }}">{{ want.data.title | markdownify | widont | safe }}</a></h2>
-      <p class="want__meta">Submitted by {{ want.data.submitter }}</p>
-    </li>
+  {% for w in wants %}
+    {{ want( 'li', '', w.url, 'h2', w.data.title, w.data.submitter ) }}
   {% endfor %}
 </ul>
