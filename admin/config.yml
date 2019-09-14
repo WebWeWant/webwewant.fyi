@@ -38,25 +38,17 @@ collections:
       - label: "Hosts"
         widget: "list"
         name: "hosts"
-        field:
-          label: "Host"
-          name: "host"
-          widget: "object"
-          fields:
-            - { label: "Name", name: "name", widget: "string" }
-            - { label: "URL", name: "url", widget: "string" }
-            - { label: "Twitter Username", name: "twitter", widget: "string" }
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Twitter Username", name: "twitter", widget: "string" }
       - label: "Judges"
         widget: "list"
         name: "judges"
-        field:
-          label: "Judge"
-          name: "judge"
-          widget: "object"
-          fields:
-            - { label: "Name", name: "name", widget: "string" }
-            - { label: "URL", name: "url", widget: "string" }
-            - { label: "Twitter Username", name: "twitter", widget: "string" }
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Twitter Username", name: "twitter", widget: "string" }
       - { label: "Pitched Want IDs", name: "pitches", widget: "list" }
       - label: "Winners"
         name: "winners"
