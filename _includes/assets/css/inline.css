@@ -469,7 +469,7 @@ button:focus {
   background-color: #005e22;
   background-color: #005e22;
   transform: translateX(-2px) translateY(-2px);
-  box-shadow: 2px 2px 5px #666;
+  box-shadow: 3px 3px 0 #CFF7D9, 6px 6px 0 #3D9558;
   outline: 0;
 }
 button:hover:active,
