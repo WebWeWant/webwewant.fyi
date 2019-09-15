@@ -69,12 +69,12 @@ code {
 }
 
 code {
-  background: #ebebeb;
+  background: #CFF7D9;
   padding: 0 .25em;
-  border: 1px solid #999;
+  border: 1px solid #3D9558;
   border-radius: .15em;
   font-size: 1.25em;
-  color: #333;
+  color: #005e22;
 }
 
 a[href],
