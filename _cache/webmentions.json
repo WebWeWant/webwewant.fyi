@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2019-09-13T22:20:40.907Z",
+  "lastFetched": "2019-09-18T00:45:04.377Z",
   "children": [
     {
       "type": "entry",
@@ -1030,6 +1030,28 @@
         "text": "Nice try, @davatron5000, nice try... webwewant.fyi/wants/22/ 😂"
       },
       "mention-of": "https://webwewant.fyi/wants/22/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Kalpesh Singh",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/4f1b99ff21d3209699eca7553710f06cc424b09fcb6fb1d2f7889f617d46e6ea.jpg",
+        "url": "https://twitter.com/knowkalpesh"
+      },
+      "url": "https://twitter.com/knowkalpesh/status/1172777881962893313",
+      "published": "2019-09-14T07:43:30+00:00",
+      "wm-received": "2019-09-14T08:05:07Z",
+      "wm-id": 691147,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1172777881962893313",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "In the Issue 215 of CSS Layout News -\n\nRachel mentioned about The Web We Want (<a href=\"https://webwewant.fyi/\">webwewant.fyi</a>) and seems like good place to submit your problems or on what browser makers should invest energy and time.\n\nI thought good chance to give a shot about CSS Hooks. Remember? 😎",
+        "text": "In the Issue 215 of CSS Layout News -\n\nRachel mentioned about The Web We Want (webwewant.fyi) and seems like good place to submit your problems or on what browser makers should invest energy and time.\n\nI thought good chance to give a shot about CSS Hooks. Remember? 😎"
+      },
+      "mention-of": "https://webwewant.fyi/",
       "wm-property": "mention-of",
       "wm-private": false
     }

@@ -8,4 +8,4 @@ tags:
   - nav
 ---
 
-Here is a run-down of all of the "wants" submitted as part of this program. Check ’em out and if there’s something you want, [send it in](/#submit)!
+Here is a run-down of the {{ collections.wants.length }} "wants" submitted as part of this program. Check ’em out and if there’s something you want, [send it in](/#submit)!
