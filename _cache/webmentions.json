@@ -1,7 +1,6 @@
 {
   "lastFetched": "2019-10-01T23:04:44.623Z",
-  "children": [
-    {
+  "children": [{
       "type": "entry",
       "author": {
         "type": "card",
@@ -1071,7 +1070,7 @@
       "wm-target": "https://webwewant.fyi/wants/7/",
       "name": "#15 Update voting.md",
       "in-reply-to": "https://webwewant.fyi/wants/7/",
-      "wm-property": "in-reply-to",
+      "wm-property": "mention-of",
       "wm-private": false
     },
     {
