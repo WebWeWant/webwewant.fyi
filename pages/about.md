@@ -1,7 +1,5 @@
 ---
 title: About us
-description: "The Web We Want is a collective effort by browser makers to understand where the dev community would like us to invest our energy."
-date: 2019-01-04T00:00:00.000Z
 permalink: /about/
 navtitle: About
 tags:
@@ -13,7 +11,8 @@ The Web We Want is a collective effort by browser makers to understand where the
 ## Team
 
 * [Marcos Cáceres](https://twitter.com/marcosc) (Mozilla, W3C)
-* [Stephanie Drescher](https://twitter.com/seaotta) (Microsoft) — Designer
+* [Stephanie Drescher](https://twitter.com/seaotta) (Microsoft) — Program Manager
+* [Diego González](https://twitter.com/diekus) (Samsung)
 * [Aaron Gustafson](https://twitter.com/aarongustafson) (Microsoft) — Project Founder
 * [Brian Kardell](https://twitter.com/briankardell) (Igalia)
 * [Chris Wilson](https://twitter.com/cwilso) (Google, W3C)
