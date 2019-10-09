@@ -9,22 +9,22 @@ hosts:
   - name: Paul Verbeek-Mast
     url: http://paulvm.com/
     twitter: paul_v_m
-#judges:
-#  - name: 
-#    url: 
-#    twitter: 
-#  - name: 
-#    url: 
-#    twitter: 
-#  - name: 
-#    url: 
-#    twitter: 
-#pitches:
-#  - 
-#  - 
-#  - 
-#  - 
-#winners:
-#  judges: 
-#  community: 
+judges:
+  - name: Jory Burson
+    url: http://joryburson.com/
+    twitter: jorydotcom
+  - name: Hui Jing Chen
+    url: https://www.chenhuijing.com/
+    twitter: hj_chen
+  - name: Ali Spittel
+    url: https://welearncode.com/
+    twitter: ASpittel
+pitches:
+  - 8
+  - 10
+  - 60
+  - 67
+winners:
+  judges: 10
+  community: 60
 ---

@@ -38,6 +38,7 @@ collections:
       - label: "Hosts"
         widget: "list"
         name: "hosts"
+        required: false
         fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "URL", name: "url", widget: "string" }
@@ -45,17 +46,20 @@ collections:
       - label: "Judges"
         widget: "list"
         name: "judges"
+        required: false
         fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "URL", name: "url", widget: "string" }
           - { label: "Twitter Username", name: "twitter", widget: "string" }
-      - { label: "Pitched Want IDs", name: "pitches", widget: "list" }
+      - { label: "Pitched Want IDs", name: "pitches", widget: "list", required: false }
       - label: "Winners"
         name: "winners"
         widget: "object"
+        required: false
         fields:
             - { label: "Judge’s Pick ID", name: "judges", widget: "number" }
             - { label: "Community Pick ID", name: "community", widget: "number" }
+      - { label: "Sponsor", name: "sponsor", widget: "string", required: false }
   # Pages
   - name: "pages"
     label: "Page"
