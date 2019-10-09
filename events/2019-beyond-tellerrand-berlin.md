@@ -9,22 +9,4 @@ hosts:
   - name: Aaron Gustafson
     url: https://www.aaron-gustafson.com
     twitter: aarongustafson
-#judges:
-#  - name: 
-#    url: 
-#    twitter: 
-#  - name: 
-#    url: 
-#    twitter: 
-#  - name: 
-#    url: 
-#    twitter: 
-#pitches:
-#  - 
-#  - 
-#  - 
-#  - 
-#winners:
-#  judges: 
-#  community: 
 ---
