@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+---
+{% from "macros.njk" import want %}
+
+<h1>{{ title | widont  }}</h1>
+
+{{ layoutContent | safe }}
+
+<div class="dashboard">
+
+  {% for tag in collections.tags %}
+    <section id="{{ tag }}" class="dashboard__item">
+      <h2>{{ tag | unslug | fixNames }}</h2>
+      <ul class="wants">
+        {% for w in collections.topWants[tag] %}
+          {{ want( 'li', '', w.url, 'h3', w.data.title, w.data.submitter ) }}
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+
+</div>

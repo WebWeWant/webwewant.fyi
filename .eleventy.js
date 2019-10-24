@@ -10,8 +10,12 @@ const md = require("markdown-it")({
   typographer: true,
 });
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const fs = require('fs');
 
 module.exports = function(eleventyConfig) {
+  const VOTE_TYPES = ['like-of', 'bookmark-of', 'mention-of'];
+
+
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
   // Date formatting (human readable)
@@ -239,6 +243,106 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  eleventyConfig.addCollection("topWants", function(collection) {
+    const pluck = 3,
+          win_vote_factor = 30,
+          top_wants = {},
+          all = collection.getAll(),
+          wants = all.filter( item => {
+            return item.inputPath.indexOf("wants/") > -1;
+          }),
+          webmentions = all[0].data.webmentions.children;
+    
+    // gather winners
+    var winners = [];
+    collection.getAll()
+      .map( ( item, i ) => {
+        if ( item.inputPath.indexOf("events/") > -1 &&
+              'winners' in item.data )
+        {
+          winners.push( item.data.winners.judges, item.data.winners.community );
+        }
+      });
+    
+    // Calculate votes
+    var votes = {};
+    wants.map( ( want, i ) => {
+      
+      // capture the id
+      let id = parseInt( want.url.split('/')[2], 10 ); // make it a number
+      wants[i].id = id;
+      
+      // process votes from webmentions into an array
+      let count = 0,
+          mentions = webmentions
+                      // permalink would be better, but this works too
+                      .filter(entry => entry['wm-target'].indexOf(want.url) > -1 )
+                      .filter(entry => VOTE_TYPES.includes(entry['wm-property']));
+      
+      if ( mentions.length )
+      {
+        count += mentions.length;
+      }
+
+      // Factor in live voting
+      if ( winners.indexOf( id ) > -1 ) {
+        count += win_vote_factor;
+      }
+      
+      votes[want.url] = count;
+    });
+    // console.log( votes );
+
+    // sort wants by votes
+    wants
+      .sort( (a, b) => {
+        return votes[b.url] - votes[a.url];
+      })
+      // loop through all
+      .map( want => {
+        // pluck top by tag
+        want.data.tags.forEach(function( tag ){
+          
+          // add to tag group
+          if ( ! (tag in top_wants) )
+          {
+            top_wants[tag] = [];
+          }
+
+          // no more than pluck
+          if ( top_wants[tag].length > (pluck - 1) )
+          {
+            return;
+          }
+
+          top_wants[tag].push( want );
+
+        });
+      });
+      
+    // return the new collection sorted by tag
+    //console.log( top_wants );
+    return top_wants;
+  });
+
+  eleventyConfig.addCollection("tags", function(collection) {
+    // get unsorted items
+    var tags = [];
+    collection.getAll()
+      .map( item => {
+        if ( item.inputPath.indexOf("wants/") > -1 )
+        {
+          item.data.tags.map( tag => {
+            if ( tags.indexOf( tag ) < 0 )
+            {
+              tags.push( tag );
+            }
+          });
+        }
+      });
+    return tags.sort();
+  });
+
   eleventyConfig.addPairedShortcode("getwant", (content, wants, id) => {
     let want = wants.filter( item => item.fileSlug == id )[0];
     return content
@@ -271,7 +375,7 @@ module.exports = function(eleventyConfig) {
         allowedAttributes: {
           a: ['href']
         }
-      })
+      });
 
     return webmentions
       .filter(entry => entry['wm-target'] === url)
@@ -285,11 +389,9 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter('votesForWant', (webmentions, url) => {
-    const allowedTypes = ['like-of', 'bookmark-of', 'mention-of'];
-
     return webmentions
       .filter(entry => entry['wm-target'] === url)
-      .filter(entry => allowedTypes.includes(entry['wm-property']))
+      .filter(entry => VOTE_TYPES.includes(entry['wm-property']))
       .length;
   });
 
@@ -318,13 +420,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("getDirectory", function(url) {
     url = url.split('/');
     return url[1];
-  });
-
-  // only content in the `posts/` directory
-  eleventyConfig.addCollection("posts", function(collection) {
-    return collection.getAllSorted().filter(function(item) {
-      return item.inputPath.match(/^\.\/posts\//) !== null;
-    });
   });
 
   // Don't process folders with static assets e.g. images
