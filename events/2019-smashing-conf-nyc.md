@@ -13,9 +13,9 @@ hosts:
     url: https://www.aaron-gustafson.com
     twitter: aarongustafson
 judges:
-  - name: Dan Mall
-    url: https://superfriend.ly/
-    twitter: danmall
+  - name: Rachel Andrew
+    url: https://rachelandrew.co.uk/
+    twitter: rachelandrew
   - name: Marcy Sutton
     url: https://marcysutton.com/
     twitter: marcysutton
@@ -23,4 +23,12 @@ judges:
     url: https://oddbird.net
     twitter: mirisuzanne
 sponsor: Microsoft Edge
+pitches:
+  - 40
+  - 61
+  - 79
+  - 64
+winners:
+  judges: 64
+  community: 79
 ---
