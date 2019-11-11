@@ -39,3 +39,27 @@
     <p><em>Note: You can ask us to remove your personal information from this site or our form submission database at any time. We can also retroactively remove your full name from any submissions. Just <a href="/contact/">drop us a line</a>.</em></p>
   </form>
 </section>
+
+<script>
+  // enable events to pre-populate the select using the hash
+  // format: #Beyond+Tellerrand+-+Berlin,+Germany
+  (function(win, doc){
+    var hash = win.location.hash,
+        $options,
+        len;
+    if ( hash != "" )
+    {
+      hash = hash.replace("#","").replace(/\+/g," ");
+      $options = doc.getElementById('field-events').children;
+      len = $options.length;
+      while ( len-- )
+      {
+        if ( $options[len].value == hash ) {
+          $options[len].selected = true;
+          break;
+        }
+      }
+      $options = null;
+    }
+  }(this, this.document));
+</script>
