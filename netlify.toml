@@ -17,6 +17,7 @@
 [[headers]]
   for = "/*.html"
   [headers.values]
+    Content-Type = "text/html; charset=utf-8"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     Cache-Control = "no-cache"
