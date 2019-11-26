@@ -23,4 +23,13 @@ judges:
     url: https://www.communilogue.co/
     twitter: sharonsteed
 sponsor: Microsoft Edge
+pitches:
+  - 46
+  - 52
+  - 70
+  - 72
+  - 74
+winners:
+  judges: 52
+  community: 74
 ---
