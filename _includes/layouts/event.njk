@@ -46,29 +46,30 @@ section: events
       </dd>
     </dl>
   </section>
+
+  <section id="thanks">
+    <h2>Many thanks to</h2>
+    <dl class="event__info">
+      {% if hosts %}
+        {% if hosts.length > 1 %}
+          <dt>Our hosts</dt>
+        {% else %}
+          <dt>Our host</dt>
+        {% endif %}
+        <dd>{% NameList hosts %}</dd>
+      {% endif %}
+      {% if judges %}
+        <dt>Our judging panel</dt>
+        <dd>{% NameList judges %}</dd>
+      {% endif %}
+      {% if sponsor %}
+        <dt>Our prize sponsor</dt>
+        <dd>{{ sponsor }}</dd>
+      {% endif %}
+    </dl>
+  </section>
 {% endif %}
 
-<section id="thanks">
-  <h2>Many thanks to</h2>
-  <dl class="event__info">
-    {% if hosts %}
-      {% if hosts.length > 1 %}
-        <dt>Our hosts</dt>
-      {% else %}
-        <dt>Our host</dt>
-      {% endif %}
-      <dd>{% NameList hosts %}</dd>
-    {% endif %}
-    {% if judges %}
-      <dt>Our judging panel</dt>
-      <dd>{% NameList judges %}</dd>
-    {% endif %}
-    {% if sponsor %}
-      <dt>Our prize sponsor</dt>
-      <dd>{{ sponsor }}</dd>
-    {% endif %}
-  </dl>
-</section>
 
 <div class="pagination">
   <p><a href="/events/">← See other events</a></p>
