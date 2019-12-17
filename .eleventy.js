@@ -46,7 +46,8 @@ module.exports = function(eleventyConfig) {
         count = names.length;
     while ( count-- )
     {
-      strings.unshift( `<a href="${names[count].url}">${names[count].name}</a>` );
+      let url = names[count].url || `https://twitter.com/${names[count].twitter}/`;
+      strings.unshift( `<a href="${url}">${names[count].name}</a>` );
     }
     count = strings.length;
     if ( count > 2 )

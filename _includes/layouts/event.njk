@@ -52,7 +52,11 @@ section: events
   <h2>Many thanks to</h2>
   <dl class="event__info">
     {% if hosts %}
-      <dt>Our hosts</dt>
+      {% if hosts.length > 1 %}
+        <dt>Our hosts</dt>
+      {% else %}
+        <dt>Our host</dt>
+      {% endif %}
       <dd>{% NameList hosts %}</dd>
     {% endif %}
     {% if judges %}
@@ -60,7 +64,7 @@ section: events
       <dd>{% NameList judges %}</dd>
     {% endif %}
     {% if sponsor %}
-      <dt>Our sponsor</dt>
+      <dt>Our prize sponsor</dt>
       <dd>{{ sponsor }}</dd>
     {% endif %}
   </dl>
