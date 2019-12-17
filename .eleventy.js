@@ -236,11 +236,48 @@ module.exports = function(eleventyConfig) {
             .sort( (a, b) => a.data.start_date > b.data.start_date );
   });
 
+  eleventyConfig.addCollection("event_pitches", function(collection) {
+    var events_with_winners = collection.getAll().filter( item => "pitches" in item.data ),
+        wants = {};
+    events_with_winners.forEach( event => {
+      var event_data = {
+            title: event.data.title,
+            url: event.data.url,
+            start_date: event.data.start_date,
+            end_date: event.data.end_date,
+            zone: event.data.zone,
+            location: event.data.location,
+            page: event.data.page.url
+          },
+          pitches = event.data.pitches,
+          i = pitches.length;
+      while ( i-- )
+      {
+        let id = pitches[i].toString();
+        if ( !( id in wants ) ) {
+          wants[id] = {
+            pitched: [],
+            judges_pick: [],
+            community_pick: []
+          };
+        }
+        wants[id].pitched.push(event_data);
+      }
+      wants[event.data.winners.judges].judges_pick.push(event_data);
+      wants[event.data.winners.community].community_pick.push(event_data);
+    });
+    return wants;
+  });
+
   eleventyConfig.addCollection("wants", function(collection) {
     // get unsorted items
     return collection.getAll().filter( item => {
       return item.inputPath.indexOf("wants/") > -1;
     });
+  });
+  eleventyConfig.addFilter("extractID", (url) => {
+    url = url.split("/");
+    return url[2];
   });
 
   eleventyConfig.addCollection("topWants", function(collection) {

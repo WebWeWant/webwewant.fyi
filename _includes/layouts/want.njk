@@ -9,14 +9,23 @@ javascript:
     - /static/js/sharing.js
 ---
 
-{% set absoluteUrl %}{{ metadata.url }}{{ page.url | url }}{% endset %}
+{% from "macros.njk" import event %}
 
-<h1 class="problem__title">{{ title | markdownify | widont | safe }}</h1>
-<p>
-  <small>
-    <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by {{ submitter }}
-  </small>
-</p>
+{% set absoluteUrl %}{{ metadata.url }}{{ page.url | url }}{% endset %}
+{% set id %}{{ page.url | extractID }}{% endset %}
+{% set eventData = collections.event_pitches %}
+
+<h1 class="want__title">{{ title | markdownify | widont | safe }}</h1>
+<p><small>Submitted by {{ submitter }}</small></p>
+
+{% if eventData[id] %}
+  {% if eventData[id].judges_pick.length > 0 %}
+    <p class="want__award want__award--judges"><a href="#events">{% include "assets/svg/judges-pick.svg" %}Judges’ Pick</a></p>
+  {% endif %}
+  {% if eventData[id].community_pick.length > 0 %}
+    <p class="want__award want__award--community"><a href="#events">{% include "assets/svg/community-pick.svg" %}Community Pick</a></p>
+  {% endif %}
+{% endif %}
 
 {{ layoutContent | safe }}
 
@@ -38,6 +47,11 @@ javascript:
   </dd>
 </dl>
 
+<dl class="votes">
+  <dt>Votes</dt>
+  <dd>{{ webmentions.children | votesForWant( absoluteUrl ) }} <small><a href="/voting">What are votes for and how are they tallied?</a></small></dd>
+</dl>
+
 <dl class="tags">
   <dt>Tagged</dt>
   <dd>
@@ -47,10 +61,18 @@ javascript:
   </dd>
 </dl>
 
-<dl class="votes">
-  <dt>Votes</dt>
-  <dd>{{ webmentions.children | votesForWant( absoluteUrl ) }} <small><a href="/voting">What are votes for and how are they tallied?</a></small></dd>
+{% if ( eventData[id] ) and ( eventData[id].pitched.length > 0 ) %}
+<dl class="want__presented_at" id="events">
+  <dt>This was presented at</dt>
+  <dd>
+    <ul class="events">
+      {% for e in eventData[id].pitched %}
+        {{ event( 'li', e.title, e.url, e.start_date, e.end_date, e.zone, e.location, e.page ) }}
+      {% endfor %}
+    </ul>
+  </dd>
 </dl>
+{% endif %}
 
 <div class="pagination">
   <p><a href="/wants/">← See other wants</a></p>

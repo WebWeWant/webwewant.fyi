@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2019-11-11T18:32:44.171Z",
+  "lastFetched": "2019-12-17T18:40:58.757Z",
   "children": [
     {
       "type": "entry",
@@ -5227,6 +5227,881 @@
       "wm-target": "https://webwewant.fyi/",
       "like-of": "https://webwewant.fyi/",
       "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Marcy Sutton",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/3c7ce82bba5d01635ab173db23a36fe5cad2a2e995b1eec52e1646880b28d0a4.png",
+        "url": "https://twitter.com/marcysutton"
+      },
+      "url": "https://twitter.com/marcysutton/status/1205615633762643968",
+      "published": "2019-12-13T22:29:01+00:00",
+      "wm-received": "2019-12-14T02:31:49Z",
+      "wm-id": 734061,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1205615633762643968",
+      "wm-target": "https://webwewant.fyi/#Accessibility+and+Inclusive+Design+Meetup+-+Seattle,+WA+USA",
+      "content": {
+        "html": "Coming up on Monday in Seattle: the <a href=\"https://twitter.com/a11ysea\">@a11ySea</a> December meetup featuring <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>! We want to hear your accessibility ideas for the web platform. Submit pitches here and you could win a prize, along with potential for your idea to become reality: <a href=\"https://webwewant.fyi/#Accessibility+and+Inclusive+Design+Meetup+-+Seattle,+WA+USA\">webwewant.fyi/#Accessibility…</a>",
+        "text": "Coming up on Monday in Seattle: the @a11ySea December meetup featuring @webwewantfyi! We want to hear your accessibility ideas for the web platform. Submit pitches here and you could win a prize, along with potential for your idea to become reality: webwewant.fyi/#Accessibility…"
+      },
+      "mention-of": "https://webwewant.fyi/#Accessibility+and+Inclusive+Design+Meetup+-+Seattle,+WA+USA",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.24a11y.com/2019/the-future-is-now-so-what-about-tomorrow/",
+      "published": "2019-12-13T00:06:18+00:00",
+      "wm-received": "2019-12-13T00:07:32Z",
+      "wm-id": 733493,
+      "wm-source": "https://www.24a11y.com/2019/the-future-is-now-so-what-about-tomorrow/",
+      "wm-target": "https://webwewant.fyi/wants/",
+      "name": "The future is now, so what about tomorrow?",
+      "content": {
+        "html": "<p>It is <em>possible</em> to build accessible websites. We know because we have experimented with it and researched it. We have failed at it, and kept trying until we succeeded. We have tools, too. We have lists, we have articles, and we have manuals. However, there are a few things we don’t have, yet – some that we might not even have imagined. Perhaps if we spend a few moments considering what we do have, and identifying the gaps, we can make it easier to imagine what we want to have in the world of tomorrow.</p>\n<p>Roughly, the modern developer accessibility toolkit looks something like this:</p>\n<ul><li>\n<a href=\"https://html5.validator.nu/\">valid</a>, semantic HTML</li>\n<li>some type of automated accessibility checker for the obvious ones (<a href=\"https://github.com/dequelabs/axe-core\">axe-core</a>, <a href=\"https://github.com/ember-a11y/ember-a11y-testing\">ember-a11y-testing</a>, etc)</li>\n<li>keyboard-only support</li>\n<li>color contrast checkers (galore!)</li>\n<li>\n<a href=\"https://www.w3.org/WAI/test-evaluate/\">checklists</a><a href=\"https://www.w3.org/WAI/test-evaluate/\"> for testers</a>\n</li>\n</ul><p>Most front-end conferences now have <a href=\"https://noti.st/topics/accessibility\">accessibility talks</a> in their schedules as a rule, rather than exception; finding a good accessibility speaker is no longer a difficult task. We’re even making strides on accessibility in single page applications (SPAs) – <a href=\"https://guides.emberjs.com/release/accessibility/\">Ember</a>, <a href=\"https://reactjs.org/docs/accessibility.html\">React</a>, and <a href=\"https://angular.io/guide/accessibility\">Angular </a>all have accessibility integrated into their documentation.</p>\n<p>But somehow, accessibility still isn’t easy for designers and developers- at least not in the ways that we’ve come to expect. Some things are easy for us, like building an Ember app, thanks to its zero config setup, or how we don’t have to think about manually adding prefixes to CSS, thanks to things like <a href=\"https://postcss.org/\">PostCSS</a> and <a href=\"https://autoprefixer.github.io/\">Autoprefixer</a>.</p>\n<p>When it comes to digital accessibility, developers have a laundry list of <em>things-that-are-hard</em>:</p>\n<ul><li>Which screen reader and browser combinations work well together? Why can’t I use Voice Over + Chrome? Why are they not <em>all</em> interchangeable?</li>\n<li>Automated testing only covers a small percentage of total accessibility success criteria, and manual QA testing is costly and time-consuming!</li>\n<li>The specification is very difficult to understand and very hard to consume as a <em>giant wall-o-text!</em>\n</li>\n<li>The ARIA Authoring Practices demonstrates how ARIA can be used, which doesn’t necessarily mean that every pattern should be used.  Some patterns, though correctly using ARIA, lack proper support and require developers to either mitigate these gaps themselves, or find alternate patterns.</li>\n<li>How do we deal with focus management between custom components? It gets <em>especially</em> tricky within composable components (i.e., components that have been built separately and then used together as one).</li>\n</ul><p>and the list goes on.</p>\n<p>The thing is, there are far too few engineers who focus specifically on creating tools that make digital accessibility easier for developers. It’s a bit of a recursive problem- digital accessibility is difficult to grok, so fewer engineers have the skills necessary to build the tooling, and therefore fewer tools exist.</p>\n<p>It would seem as though digital accessibility has a developer tooling problem. Or, perhaps we could look at this a different way…perhaps this is an opportunity. <em>We</em> could make this easier for <em>ourselves</em>.</p>\n<h2>Practical Steps for Today</h2>\n<p>Since I find lists generally useful when I am taking stock of a problem, here is a list of three practical steps teams can take TODAY to make digital accessibility easier:</p>\n<ol><li>\n<strong>Integrate accessibility requirements</strong> from the start of every bit of work. Working on a solution? Digital accessibility should be a hard requirement. Full stop. If the “solution” isn’t accessible, then you haven’t found the solution yet. Keep working on it- you’ll get there! Check out tools like <a href=\"https://assistivlabs.com/\">Assistiv Labs</a>, that might be able to help with cross-browser/platform testing.</li>\n<li>\n<strong>Train</strong> to be a master. No one can do this overnight. Integrate training for all parts of your organization- hire experts to come in and provide training. Look for reputable online courses. Start adding in accessibility audits to code reviews and even consider making it a facet of annual employee reviews for developers that create code for the front-end. Change can be hard, but change starts with each one of us, and happens with every decision we make along the way.</li>\n<li>\n<strong>Participate</strong> in the process. Submit your ideas and wants to <a href=\"https://webwewant.fyi/wants/\">The Web We Want</a> project. File issues with browsers and frameworks, and make it clear that you want this from them. When you figure out that an ARIA authoring practice doesn’t work in your app, <a href=\"https://github.com/w3c/aria-practices\">file an issue on GitHub</a>.</li>\n</ol><h2>Imagining the world of tomorrow</h2>\n<p>After the practical things to help us right now, though, we can turn our thoughts to the developer experience we imagine having in the future.</p>\n<p>I recently started a project called <a href=\"https://melsumner.gitbook.io/ember-component-patterns/\">ember-component-patterns</a>, which is specifically for Ember.js users but could be expanded for all frameworks. While still in its infancy, the project aims to take accessibility development one step further, by showing patterns, anti-patterns, ideas for styling, semantic HTML and how to turn all of that into an Ember component. There are too many bridges yet to build between the islands of JavaScript developers, web developers, designers, and anyone else involved in building digital products. I think this project will, at its completion, do its part to build a bridge or two. And maybe inspire a few more along the way.</p>\n<p>Another imagination- what about a command-line tool for developers to review their own sites in the same way a screen reader would? Think more like a text adventure game- only it’s a tool for making sure you haven’t inadvertently created a keyboard trap, or content that doesn’t get properly exposed because it lacks appropriate semantics. I like this idea because I think it could provide a bridge between users with assistive technology and JavaScript engineers who spend their time at the command line. Experiencing the frustrations of the user with assistive technology within the medium that the engineer is familiar with would be a new approach to helping software engineers become more aware of what their code needs to actually do from a technical perspective. Plus, I think this would be <em>really fun to use</em>.</p>\n<p>Finally- how could we better signal the intent of a piece of code, or part of a website? After all, successful digital accessibility is the capability to express intent in a machine-readable way, so that a developer’s code can be interpreted properly by the assistive technology. I don’t think we have the tools past semantic HTML &amp; ARIA right now, and I think some imagination and experimentation has an opportunity to thrive here. We can create custom components to do some very cool things, but we need a new way to describe the intent and purpose of them to assistive technology.</p>\n<h2>It could be amazing- we just have to decide</h2>\n<p>While it is probably more likely than not that accessibility may have to be forced on developers by browsers (and who knows what that solution would look like), I dearly hope that this is not the inevitable future of our industry. I hope that our tenacity and ingenuity, paired with our creativity and imagination, will lead us to a different place entirely. My hope is that we will be <strong><em>inspired</em></strong> to create the world we want to live in, create the tech that allows us to develop inclusive experiences in a way that is fun for us, and makes the digital world possible for those who need it.</p>\n<p>The digital future is inclusive for all kinds of users- there is no changing this or stopping it. It has already been decided and it is already happening. Those on the forefront of the what some would call the last frontier in tech are already showing us the way. While we could just wait to see what legal regulations and tech giants hand to us, <em>it doesn’t have to be that way</em>. <strong>We</strong> can create the tools that <em>we want</em> to use, that are fun to use, and that take us to the next level of web development.</p>\n<p>We can create the the tools of tomorrow that we really want. Let’s seize this opportunity and create something incredible.</p>",
+        "text": "It is possible to build accessible websites. We know because we have experimented with it and researched it. We have failed at it, and kept trying until we succeeded. We have tools, too. We have lists, we have articles, and we have manuals. However, there are a few things we don’t have, yet – some that we might not even have imagined. Perhaps if we spend a few moments considering what we do have, and identifying the gaps, we can make it easier to imagine what we want to have in the world of tomorrow.\nRoughly, the modern developer accessibility toolkit looks something like this:\n\nvalid, semantic HTML\nsome type of automated accessibility checker for the obvious ones (axe-core, ember-a11y-testing, etc)\nkeyboard-only support\ncolor contrast checkers (galore!)\n\nchecklists for testers\n\nMost front-end conferences now have accessibility talks in their schedules as a rule, rather than exception; finding a good accessibility speaker is no longer a difficult task. We’re even making strides on accessibility in single page applications (SPAs) – Ember, React, and Angular all have accessibility integrated into their documentation.\nBut somehow, accessibility still isn’t easy for designers and developers- at least not in the ways that we’ve come to expect. Some things are easy for us, like building an Ember app, thanks to its zero config setup, or how we don’t have to think about manually adding prefixes to CSS, thanks to things like PostCSS and Autoprefixer.\nWhen it comes to digital accessibility, developers have a laundry list of things-that-are-hard:\nWhich screen reader and browser combinations work well together? Why can’t I use Voice Over + Chrome? Why are they not all interchangeable?\nAutomated testing only covers a small percentage of total accessibility success criteria, and manual QA testing is costly and time-consuming!\nThe specification is very difficult to understand and very hard to consume as a giant wall-o-text!\n\nThe ARIA Authoring Practices demonstrates how ARIA can be used, which doesn’t necessarily mean that every pattern should be used.  Some patterns, though correctly using ARIA, lack proper support and require developers to either mitigate these gaps themselves, or find alternate patterns.\nHow do we deal with focus management between custom components? It gets especially tricky within composable components (i.e., components that have been built separately and then used together as one).\nand the list goes on.\nThe thing is, there are far too few engineers who focus specifically on creating tools that make digital accessibility easier for developers. It’s a bit of a recursive problem- digital accessibility is difficult to grok, so fewer engineers have the skills necessary to build the tooling, and therefore fewer tools exist.\nIt would seem as though digital accessibility has a developer tooling problem. Or, perhaps we could look at this a different way…perhaps this is an opportunity. We could make this easier for ourselves.\nPractical Steps for Today\nSince I find lists generally useful when I am taking stock of a problem, here is a list of three practical steps teams can take TODAY to make digital accessibility easier:\n\nIntegrate accessibility requirements from the start of every bit of work. Working on a solution? Digital accessibility should be a hard requirement. Full stop. If the “solution” isn’t accessible, then you haven’t found the solution yet. Keep working on it- you’ll get there! Check out tools like Assistiv Labs, that might be able to help with cross-browser/platform testing.\n\nTrain to be a master. No one can do this overnight. Integrate training for all parts of your organization- hire experts to come in and provide training. Look for reputable online courses. Start adding in accessibility audits to code reviews and even consider making it a facet of annual employee reviews for developers that create code for the front-end. Change can be hard, but change starts with each one of us, and happens with every decision we make along the way.\n\nParticipate in the process. Submit your ideas and wants to The Web We Want project. File issues with browsers and frameworks, and make it clear that you want this from them. When you figure out that an ARIA authoring practice doesn’t work in your app, file an issue on GitHub.\nImagining the world of tomorrow\nAfter the practical things to help us right now, though, we can turn our thoughts to the developer experience we imagine having in the future.\nI recently started a project called ember-component-patterns, which is specifically for Ember.js users but could be expanded for all frameworks. While still in its infancy, the project aims to take accessibility development one step further, by showing patterns, anti-patterns, ideas for styling, semantic HTML and how to turn all of that into an Ember component. There are too many bridges yet to build between the islands of JavaScript developers, web developers, designers, and anyone else involved in building digital products. I think this project will, at its completion, do its part to build a bridge or two. And maybe inspire a few more along the way.\nAnother imagination- what about a command-line tool for developers to review their own sites in the same way a screen reader would? Think more like a text adventure game- only it’s a tool for making sure you haven’t inadvertently created a keyboard trap, or content that doesn’t get properly exposed because it lacks appropriate semantics. I like this idea because I think it could provide a bridge between users with assistive technology and JavaScript engineers who spend their time at the command line. Experiencing the frustrations of the user with assistive technology within the medium that the engineer is familiar with would be a new approach to helping software engineers become more aware of what their code needs to actually do from a technical perspective. Plus, I think this would be really fun to use.\nFinally- how could we better signal the intent of a piece of code, or part of a website? After all, successful digital accessibility is the capability to express intent in a machine-readable way, so that a developer’s code can be interpreted properly by the assistive technology. I don’t think we have the tools past semantic HTML & ARIA right now, and I think some imagination and experimentation has an opportunity to thrive here. We can create custom components to do some very cool things, but we need a new way to describe the intent and purpose of them to assistive technology.\nIt could be amazing- we just have to decide\nWhile it is probably more likely than not that accessibility may have to be forced on developers by browsers (and who knows what that solution would look like), I dearly hope that this is not the inevitable future of our industry. I hope that our tenacity and ingenuity, paired with our creativity and imagination, will lead us to a different place entirely. My hope is that we will be inspired to create the world we want to live in, create the tech that allows us to develop inclusive experiences in a way that is fun for us, and makes the digital world possible for those who need it.\nThe digital future is inclusive for all kinds of users- there is no changing this or stopping it. It has already been decided and it is already happening. Those on the forefront of the what some would call the last frontier in tech are already showing us the way. While we could just wait to see what legal regulations and tech giants hand to us, it doesn’t have to be that way. We can create the tools that we want to use, that are fun to use, and that take us to the next level of web development.\nWe can create the the tools of tomorrow that we really want. Let’s seize this opportunity and create something incredible."
+      },
+      "mention-of": "https://webwewant.fyi/wants/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://www.24a11y.com/2019/the-future-is-now-so-what-about-tomorrow/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.anthum.com/web-we-want-likes.html",
+      "published": null,
+      "wm-received": "2019-12-11T01:30:15Z",
+      "wm-id": 732879,
+      "wm-source": "https://www.anthum.com/web-we-want-likes.html",
+      "wm-target": "https://webwewant.fyi/wants/9/",
+      "mention-of": "https://webwewant.fyi/wants/9/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.anthum.com/web-we-want-likes.html",
+      "published": null,
+      "wm-received": "2019-12-11T00:42:15Z",
+      "wm-id": 732874,
+      "wm-source": "https://www.anthum.com/web-we-want-likes.html",
+      "wm-target": "https://webwewant.fyi/wants/6/",
+      "mention-of": "https://webwewant.fyi/wants/6/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.anthum.com/web-we-want-likes.html",
+      "published": null,
+      "wm-received": "2019-12-11T00:41:20Z",
+      "wm-id": 732873,
+      "wm-source": "https://www.anthum.com/web-we-want-likes.html",
+      "wm-target": "https://webwewant.fyi/wants/5/",
+      "mention-of": "https://webwewant.fyi/wants/5/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.anthum.com/web-we-want-likes.html",
+      "published": null,
+      "wm-received": "2019-12-11T00:39:34Z",
+      "wm-id": 732872,
+      "wm-source": "https://www.anthum.com/web-we-want-likes.html",
+      "wm-target": "https://webwewant.fyi/wants/4/",
+      "mention-of": "https://webwewant.fyi/wants/4/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.anthum.com/web-we-want-likes.html",
+      "published": null,
+      "wm-received": "2019-12-11T00:30:04Z",
+      "wm-id": 732871,
+      "wm-source": "https://www.anthum.com/web-we-want-likes.html",
+      "wm-target": "https://webwewant.fyi/wants/17/",
+      "mention-of": "https://webwewant.fyi/wants/17/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "David",
+        "photo": "https://webmention.io/avatar/secure.gravatar.com/5c8ed84fbf1693576f259104208cc75518111dbb6692f9a937c35b672c2b730f.jpg",
+        "url": "https://davidwolfpaw.com/author/david/"
+      },
+      "url": "https://davidwolfpaw.com/wordcamp-us-2019-recap/",
+      "published": "2019-11-28T09:21:00+00:00",
+      "wm-received": "2019-12-10T19:06:09Z",
+      "wm-id": 732769,
+      "wm-source": "https://davidwolfpaw.com/wordcamp-us-2019-recap/",
+      "wm-target": "https://webwewant.fyi/",
+      "photo": [
+        "https://assets.davidwolfpaw.com/wp-content/uploads/2019/12/10140514/2019-11-02-14.05.46-scaled.jpg",
+        "https://assets.davidwolfpaw.com/wp-content/uploads/2019/12/10125830/2019-11-01-07.00.55-scaled.jpg",
+        "https://assets.davidwolfpaw.com/wp-content/uploads/2019/12/10125859/2019-11-01-09.14.56-scaled.jpg"
+      ],
+      "content": {
+        "html": "<p>My friend Allie Nimmons asked recently if anyone would read a WordCamp US 2019 recap were she to publish now, and the feedback was highly positive. So much to the point that Allie published her <a href=\"https://allienimmons.com/my-wordcamp-us-st-louis-recap/\">WordCamp US Recap</a> that same day, and inspired me to write one myself. I am not quite as quick as getting things published 😅</p>Community and Diversity<p>Allie devotes a good portion of her post to talking about community, which if you already know me, know is one of the topics that I can discuss to the point of making people tired. That’s not a joke, by the way. I have twice had people tell me (once anonymously, once not so much) that I spend too much of my stage time talking about community.</p><p>I joined Allie, Jill Binder, and Aurooba Ahmed in giving a workshop on improving diversity at events, with a focus on improving diversity of speakers. More information on the workshop (as well as how to run it in your own community!) can be found at the <a href=\"https://make.wordpress.org/community/handbook/meetup-organizer/event-formats/diversity-speaker-training-workshop/\">Make WordPress site</a>, and you can also get <a href=\"https://tiny.cc/wpdiversityworkbook\">the workbook</a> that Aurooba put together for us.</p>Personal Scheduling<p>This was one of the most highly scheduled WordCamps I’ve ever attended. I had a tight schedule already, arriving late the night before and leaving the morning of contributor day. In between I had volunteer orientation and a few volunteer shifts, a SiteGround meeting, an organizer meeting, and of course the workshop and my own presentation, <a href=\"https://2019.us.wordcamp.org/session/the-power-of-css-cool-things-to-do-with-styles/\">The Power of CSS</a>.</p><p>My one regret this time around was the sessions that I had to miss. I was told that I got some shoutouts from Tantek Çelik during his talk, <a href=\"https://2019.us.wordcamp.org/session/take-back-your-web/\">“Take Back Your Web”</a>. I absolutely would have attended that regardless of a shoutout, considering how integral Tantek has been to the IndieWeb movement that I’m trying to become more involved in.</p><p>Similarly, <a href=\"https://webwewant.fyi/\">The Web We Want</a> did a session discussing changes that users would like to see on the web and how we as a community could work to make them happen. The idea looks great on the whole, and I would love to see it expanded in ways to be more accessible to people who aren’t able to attend a few large events or have heavy development skills. I submitted a few suggestions prior to the event, but due to scheduling was unable to be there in person to hear other ideas and see the panel discussion.</p><p>My connection to WordPress events revolves almost entirely around people. Whether that’s meeting new people or spending time with friends met online or via past events, I try to devote most of my time to conversations. That was easy to do with most of the jobs that I had, but even in this regard I didn’t fully succeed. As an example, I briefly got to meet David Shanske of the IndieWeb community as he introduced himself to me prior to our workshop, but I was unable to connect again until after the event. When a barrier to community involvement is not exactly knowing where you fit in and how to help, having conversations and finding allies is important. I aim to do so in the future so that one day I feel a bit less like an outsider imposter.</p>A Shift in WordPress<p>I won’t be the first to say that the WordPress Community and events have changed a fair amount over the past year. There are a variety of reasons given for this, and I imagine that it’s a combination of factors. WordCamp US certainly felt a bit more corporate than it has in years past, though that’s not really a bad thing to me for an event of this size. </p><p>I do think that the disconnect between funding (both the decline in sponsors and rules/limitations) and the volunteer nature of the event are also a cause for concern. I still have yet to get a good answer to a question that I had stemming from a conversation about WordPress Global Sponsors from over a year ago, and part of my concern is that I seem unable to </p>Highlights<p>Finally, a quick rundown of some of my favorite parts of the event.</p><ul><li>Meeting Jean Perpillant for coffee before the event, freezing my hands in the cold to get a picture of the Arch during the sunrise.</li><li>Chatting with Cami Kaos and Courtney PK about some non-WordPress things for a change, like gardening, pets, XOXO Fest, and their love for Portland.</li><li>Checking Twitter after my lightning talk and workshop to see a lot of positive tweets, helping to slightly alleviate the worry that I did a poor job.</li><li>The talks that I did attend! Like </li><li>Spending time with the SiteGround crew! This included a dinner in which I overstuffed myself before entrees even arrived, a productive meeting, and catching up with more people about work and life outside of the conference.</li></ul><ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul><p><a href=\"https://davidwolfpaw.com/wordcamp-us-2019-recap/\">https://davidwolfpaw.com/wordcamp-us-2019-recap/</a></p>",
+        "text": "My friend Allie Nimmons asked recently if anyone would read a WordCamp US 2019 recap were she to publish now, and the feedback was highly positive. So much to the point that Allie published her WordCamp US Recap that same day, and inspired me to write one myself. I am not quite as quick as getting things published 😅Community and DiversityAllie devotes a good portion of her post to talking about community, which if you already know me, know is one of the topics that I can discuss to the point of making people tired. That’s not a joke, by the way. I have twice had people tell me (once anonymously, once not so much) that I spend too much of my stage time talking about community.I joined Allie, Jill Binder, and Aurooba Ahmed in giving a workshop on improving diversity at events, with a focus on improving diversity of speakers. More information on the workshop (as well as how to run it in your own community!) can be found at the Make WordPress site, and you can also get the workbook that Aurooba put together for us.Personal SchedulingThis was one of the most highly scheduled WordCamps I’ve ever attended. I had a tight schedule already, arriving late the night before and leaving the morning of contributor day. In between I had volunteer orientation and a few volunteer shifts, a SiteGround meeting, an organizer meeting, and of course the workshop and my own presentation, The Power of CSS.My one regret this time around was the sessions that I had to miss. I was told that I got some shoutouts from Tantek Çelik during his talk, “Take Back Your Web”. I absolutely would have attended that regardless of a shoutout, considering how integral Tantek has been to the IndieWeb movement that I’m trying to become more involved in.Similarly, The Web We Want did a session discussing changes that users would like to see on the web and how we as a community could work to make them happen. The idea looks great on the whole, and I would love to see it expanded in ways to be more accessible to people who aren’t able to attend a few large events or have heavy development skills. I submitted a few suggestions prior to the event, but due to scheduling was unable to be there in person to hear other ideas and see the panel discussion.My connection to WordPress events revolves almost entirely around people. Whether that’s meeting new people or spending time with friends met online or via past events, I try to devote most of my time to conversations. That was easy to do with most of the jobs that I had, but even in this regard I didn’t fully succeed. As an example, I briefly got to meet David Shanske of the IndieWeb community as he introduced himself to me prior to our workshop, but I was unable to connect again until after the event. When a barrier to community involvement is not exactly knowing where you fit in and how to help, having conversations and finding allies is important. I aim to do so in the future so that one day I feel a bit less like an outsider imposter.A Shift in WordPressI won’t be the first to say that the WordPress Community and events have changed a fair amount over the past year. There are a variety of reasons given for this, and I imagine that it’s a combination of factors. WordCamp US certainly felt a bit more corporate than it has in years past, though that’s not really a bad thing to me for an event of this size. I do think that the disconnect between funding (both the decline in sponsors and rules/limitations) and the volunteer nature of the event are also a cause for concern. I still have yet to get a good answer to a question that I had stemming from a conversation about WordPress Global Sponsors from over a year ago, and part of my concern is that I seem unable to HighlightsFinally, a quick rundown of some of my favorite parts of the event.Meeting Jean Perpillant for coffee before the event, freezing my hands in the cold to get a picture of the Arch during the sunrise.Chatting with Cami Kaos and Courtney PK about some non-WordPress things for a change, like gardening, pets, XOXO Fest, and their love for Portland.Checking Twitter after my lightning talk and workshop to see a lot of positive tweets, helping to slightly alleviate the worry that I did a poor job.The talks that I did attend! Like Spending time with the SiteGround crew! This included a dinner in which I overstuffed myself before entrees even arrived, a productive meeting, and catching up with more people about work and life outside of the conference.https://davidwolfpaw.com/wordcamp-us-2019-recap/"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Christian Schaefer",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78535c31d268cb5af6a059ddb36015cc3526779136df20cbcd11fdec85cc9845.jpg",
+        "url": "https://twitter.com/derSchepp"
+      },
+      "url": "https://twitter.com/derSchepp/status/1203218975670362112",
+      "published": "2019-12-07T07:45:33+00:00",
+      "wm-received": "2019-12-07T07:49:02Z",
+      "wm-id": 731547,
+      "wm-source": "https://brid-gy.appspot.com/comment/twitter/derSchepp/1203045131026337792/1203218975670362112",
+      "wm-target": "https://webwewant.fyi/wants/65/",
+      "content": {
+        "html": "I've landed on an implementation, but I'm not too happy with it. What I get on the +side is inertial scrolling &amp; responsiveness. What is unpleasant w/o aforementioned JS API is to programmatically scroll to the next snap (also think diff. snap item widths) &amp; locate curr snap pos\n<a class=\"u-mention\" href=\"https://twitter.com/AndyDavies\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/danburzo\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/65/\"></a>",
+        "text": "I've landed on an implementation, but I'm not too happy with it. What I get on the +side is inertial scrolling & responsiveness. What is unpleasant w/o aforementioned JS API is to programmatically scroll to the next snap (also think diff. snap item widths) & locate curr snap pos"
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/65/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Dan Burzo",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a277ea2b8aaf6e3d85212f09554b5f919dc554285ff47b4adbbbb78952dbd123.jpg",
+        "url": "https://twitter.com/danburzo"
+      },
+      "url": "https://twitter.com/danburzo/status/1203213889539919872",
+      "published": "2019-12-07T07:25:20+00:00",
+      "wm-received": "2019-12-07T07:49:01Z",
+      "wm-id": 731546,
+      "wm-source": "https://brid-gy.appspot.com/comment/twitter/derSchepp/1203045131026337792/1203213889539919872",
+      "wm-target": "https://webwewant.fyi/wants/65/",
+      "content": {
+        "html": "Have you landed on an implementation you're happy with? Haven't had the chance to explore scroll-snap carousels fully, but I intuit there's a CSS + IntersectionObserver formula that can get you there?\n<a class=\"u-mention\" href=\"http://workingdraft.de/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/AndyDavies\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/derSchepp\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/65/\"></a>",
+        "text": "Have you landed on an implementation you're happy with? Haven't had the chance to explore scroll-snap carousels fully, but I intuit there's a CSS + IntersectionObserver formula that can get you there?"
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/65/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Christian Schaefer",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78535c31d268cb5af6a059ddb36015cc3526779136df20cbcd11fdec85cc9845.jpg",
+        "url": "https://twitter.com/derSchepp"
+      },
+      "url": "https://twitter.com/derSchepp/status/1203208286893424640",
+      "published": "2019-12-07T07:03:04+00:00",
+      "wm-received": "2019-12-07T07:20:03Z",
+      "wm-id": 731542,
+      "wm-source": "https://brid-gy.appspot.com/comment/twitter/derSchepp/1203045131026337792/1203208286893424640",
+      "wm-target": "https://webwewant.fyi/wants/65/",
+      "content": {
+        "html": "Oh, in that case it's perfectly suited. I just would like to take it further than that and substitute away those carousel JavaScript libraries with it, too. So many websites use them, and they are pretty heavy.\n<a class=\"u-mention\" href=\"https://twitter.com/AndyDavies\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/65/\"></a>",
+        "text": "Oh, in that case it's perfectly suited. I just would like to take it further than that and substitute away those carousel JavaScript libraries with it, too. So many websites use them, and they are pretty heavy."
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/65/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Andy Davies",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a90e45d17c9a935a015f99d326dc9af4063a54eeabcea9348c5775bb27468963.jpg",
+        "url": "https://twitter.com/AndyDavies"
+      },
+      "url": "https://twitter.com/AndyDavies/status/1203069630467772417",
+      "published": "2019-12-06T21:52:06+00:00",
+      "wm-received": "2019-12-06T21:52:40Z",
+      "wm-id": 731468,
+      "wm-source": "https://brid-gy.appspot.com/comment/twitter/derSchepp/1203045131026337792/1203069630467772417",
+      "wm-target": "https://webwewant.fyi/wants/65/",
+      "content": {
+        "html": "Interesting, I was thinking of the case where there are lists of products and when scrolling the page should probably finish with one product on the page rather than 1/2 each pf teo\n<a class=\"u-mention\" href=\"http://workingdraft.de/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/derSchepp\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/65/\"></a>",
+        "text": "Interesting, I was thinking of the case where there are lists of products and when scrolling the page should probably finish with one product on the page rather than 1/2 each pf teo"
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/65/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Mendy Berger",
+        "photo": "https://webmention.io/avatar/abs.twimg.com/0e6b2cd70aa5b35dec24ca4e1e63f8963f0118736d9ec3bba77e3a8c99a27bc2.png",
+        "url": "https://twitter.com/mendyaberger"
+      },
+      "url": "https://twitter.com/mendyaberger/status/1202268618685321216",
+      "published": "2019-12-04T16:49:10+00:00",
+      "wm-received": "2019-12-04T19:36:39Z",
+      "wm-id": 730619,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1202268618685321216",
+      "wm-target": "https://webwewant.fyi/wants/103/",
+      "content": {
+        "html": "I want web apps to be able to work in other contexts (like car displays) <a href=\"https://webwewant.fyi/wants/103/\">webwewant.fyi/wants/103/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want web apps to be able to work in other contexts (like car displays) webwewant.fyi/wants/103/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/103/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephanie 🔮🌙 Casting Spells",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a29e92ba2514fe7047a2822d6063df02ef33ef723bbf7ee0fee76cd041775993.jpg",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/seaotta/status/1201614139426082817",
+      "published": "2019-12-02T21:28:30+00:00",
+      "wm-received": "2019-12-02T21:47:06Z",
+      "wm-id": 729894,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1201614139426082817",
+      "wm-target": "https://webwewant.fyi/events/",
+      "content": {
+        "html": "Starting to get the <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a> sessions squared away for 2020. Slowly but surely. <a href=\"https://webwewant.fyi/events\">webwewant.fyi/events</a>\n\nCheck out where we'll be and if you run a conference or meetup and want to run this community-focused session, give us a shout!\n<a class=\"u-mention\" href=\"https://webwewant.fyi/events/\"></a>",
+        "text": "Starting to get the @webwewantfyi sessions squared away for 2020. Slowly but surely. webwewant.fyi/events\n\nCheck out where we'll be and if you run a conference or meetup and want to run this community-focused session, give us a shout!"
+      },
+      "mention-of": "https://webwewant.fyi/events/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.anthum.com/web-we-want-likes.html",
+      "published": null,
+      "wm-received": "2019-11-27T05:33:44Z",
+      "wm-id": 728165,
+      "wm-source": "https://www.anthum.com/web-we-want-likes.html",
+      "wm-target": "https://webwewant.fyi/wants/93/",
+      "mention-of": "https://webwewant.fyi/wants/93/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.anthum.com/web-we-want-likes.html",
+      "published": null,
+      "wm-received": "2019-11-27T04:39:58Z",
+      "wm-id": 728160,
+      "wm-source": "https://www.anthum.com/web-we-want-likes.html",
+      "wm-target": "https://webwewant.fyi/wants/15/",
+      "mention-of": "https://webwewant.fyi/wants/15/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.anthum.com/web-we-want-likes.html",
+      "published": null,
+      "wm-received": "2019-11-27T04:36:23Z",
+      "wm-id": 728159,
+      "wm-source": "https://www.anthum.com/web-we-want-likes.html",
+      "wm-target": "https://webwewant.fyi/wants/2/",
+      "mention-of": "https://webwewant.fyi/wants/2/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://www.anthum.com/web-we-want-likes.html",
+      "published": null,
+      "wm-received": "2019-11-27T04:27:23Z",
+      "wm-id": 728156,
+      "wm-source": "https://www.anthum.com/web-we-want-likes.html",
+      "wm-target": "https://webwewant.fyi/wants/102/",
+      "name": "https://webwewant.fyi/wants/102/",
+      "like-of": "https://webwewant.fyi/wants/102/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://batman.dev/webmention-likes.html",
+      "published": null,
+      "wm-received": "2019-11-27T04:15:14Z",
+      "wm-id": 728152,
+      "wm-source": "https://batman.dev/webmention-likes.html",
+      "wm-target": "https://webwewant.fyi/wants/102/",
+      "name": "https://webwewant.fyi/wants/102/",
+      "like-of": "https://webwewant.fyi/wants/102/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Moshe",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b0b796cdbb1bb89feabb5a75d6808eb98ae2c0bab428cae5bf4ee8442ecc1d2e.jpg",
+        "url": "https://twitter.com/MosheChill"
+      },
+      "url": "https://twitter.com/MosheChill/status/1199470510016487425",
+      "published": "2019-11-26T23:30:29+00:00",
+      "wm-received": "2019-11-26T23:50:23Z",
+      "wm-id": 728104,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1199470510016487425",
+      "wm-target": "https://webwewant.fyi/wants/103/",
+      "content": {
+        "html": "I want web apps to be able to work in other contexts (like car displays) <a href=\"https://webwewant.fyi/wants/103/\">webwewant.fyi/wants/103/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want web apps to be able to work in other contexts (like car displays) webwewant.fyi/wants/103/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/103/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Baldur Bjarnason @baldur@toot.cafe",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/380091dbece0311dd5cadc43ecdde03be0b6517dc13a83e8b6622a2a1e24516c.jpg",
+        "url": "https://twitter.com/fakebaldur"
+      },
+      "url": "https://twitter.com/fakebaldur/status/1197174737362919426",
+      "published": "2019-11-20T15:27:54+00:00",
+      "wm-received": "2019-11-20T15:42:04Z",
+      "wm-id": 726067,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1197174737362919426",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "“The Web We Want” <a href=\"https://webwewant.fyi/\">webwewant.fyi</a>",
+        "text": "“The Web We Want” webwewant.fyi"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Progressive Web Apps",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/7baf5abd6d40e8860738c322548aa19da8d7ff6e4d0de0df67c1abc6cda8254e.png",
+        "url": "https://twitter.com/WebAppManifest"
+      },
+      "url": "https://twitter.com/WebAppManifest/status/1196943714653896704",
+      "published": "2019-11-20T00:09:54+00:00",
+      "wm-received": "2019-11-20T00:15:49Z",
+      "wm-id": 725894,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1196943714653896704",
+      "wm-target": "https://webwewant.fyi/wants/25/",
+      "content": {
+        "html": "I want SVG to be fully styled from CSS <a href=\"https://webwewant.fyi/wants/25/\">webwewant.fyi/wants/25/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want SVG to be fully styled from CSS webwewant.fyi/wants/25/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/25/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Progressive Web Apps",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/7baf5abd6d40e8860738c322548aa19da8d7ff6e4d0de0df67c1abc6cda8254e.png",
+        "url": "https://twitter.com/WebAppManifest"
+      },
+      "url": "https://twitter.com/WebAppManifest/status/1196943869998292992",
+      "published": "2019-11-20T00:10:31+00:00",
+      "wm-received": "2019-11-20T00:15:48Z",
+      "wm-id": 725892,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1196943869998292992",
+      "wm-target": "https://webwewant.fyi/wants/36/",
+      "content": {
+        "html": "I want table bodys to be able to scroll independently of the header and footer <a href=\"https://webwewant.fyi/wants/36/\">webwewant.fyi/wants/36/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want table bodys to be able to scroll independently of the header and footer webwewant.fyi/wants/36/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/36/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Progressive Web Apps",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/7baf5abd6d40e8860738c322548aa19da8d7ff6e4d0de0df67c1abc6cda8254e.png",
+        "url": "https://twitter.com/WebAppManifest"
+      },
+      "url": "https://twitter.com/WebAppManifest/status/1196944647676821504",
+      "published": "2019-11-20T00:13:36+00:00",
+      "wm-received": "2019-11-20T00:15:48Z",
+      "wm-id": 725893,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1196944647676821504",
+      "wm-target": "https://webwewant.fyi/wants/76/",
+      "content": {
+        "html": "I want all new APIs to be supported in Web Workers (within reason) <a href=\"https://webwewant.fyi/wants/76/\">webwewant.fyi/wants/76/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want all new APIs to be supported in Web Workers (within reason) webwewant.fyi/wants/76/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/76/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Zoran Ljubojevic",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/1017d033b5296538077e4f79a57558273a52f4daaa78c81e71b1d56792e2d7ca.jpg",
+        "url": "https://twitter.com/zoranljubojevic"
+      },
+      "url": "https://twitter.com/zoranljubojevic/status/1196155200706416641",
+      "published": "2019-11-17T19:56:37+00:00",
+      "wm-received": "2019-11-17T20:14:41Z",
+      "wm-id": 725165,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1196155200706416641",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "<a href=\"https://webwewant.fyi/\">webwewant.fyi</a>",
+        "text": "webwewant.fyi"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "kosmar 🇪🇺",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/aedcf5503a6ac2a7e46ca0eb383d0218c162bfbf6c77894c7ac4f3db26dacf56.jpeg",
+        "url": "https://twitter.com/kosmar"
+      },
+      "url": "https://twitter.com/kosmar/status/1195210725586882560",
+      "published": "2019-11-15T05:23:37+00:00",
+      "wm-received": "2019-11-15T05:27:16Z",
+      "wm-id": 724476,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1195210725586882560",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "<a href=\"https://webwewant.fyi/\">webwewant.fyi</a>",
+        "text": "webwewant.fyi"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Frans van Bellen",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/8b621d696fa0d3d2df2826c50d377668d094fbd1ccc001927fb4628439b6b37d.jpg",
+        "url": "https://twitter.com/Fransvb"
+      },
+      "url": "https://twitter.com/Fransvb/status/1195074855395299328",
+      "published": "2019-11-14T20:23:43+00:00",
+      "wm-received": "2019-11-14T20:42:04Z",
+      "wm-id": 724380,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1195074855395299328",
+      "wm-target": "https://webwewant.fyi/wants/52/",
+      "content": {
+        "html": "I want semantic HTML sidenotes <a href=\"https://webwewant.fyi/wants/52/\">webwewant.fyi/wants/52/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want semantic HTML sidenotes webwewant.fyi/wants/52/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/52/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Markus Guenther",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b0fe299dc61a27a6b8347012bf017055307c4cc0776a123685d00190a7dfaefa.png",
+        "url": "https://twitter.com/Markus306"
+      },
+      "url": "https://twitter.com/Markus306/status/1195043279210975237",
+      "published": "2019-11-14T18:18:15+00:00",
+      "wm-received": "2019-11-14T18:18:28Z",
+      "wm-id": 724352,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1195043279210975237",
+      "wm-target": "https://webwewant.fyi/",
+      "photo": [
+        "https://pbs.twimg.com/media/EJWlhMkWwAEp3-U.jpg"
+      ],
+      "content": {
+        "html": "Did not hear something about <a href=\"https://twitter.com/search?q=%23webwewant\">#webwewant</a> but it is an nice Plattform <a href=\"https://webwewant.fyi/\">webwewant.fyi</a> <a href=\"https://twitter.com/search?q=%23btconf\">#btconf</a>",
+        "text": "Did not hear something about #webwewant but it is an nice Plattform webwewant.fyi #btconf"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Chris Heilmann",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/2cb539703b09adb2ef4818c0fa52e2d97c6b8365befe25ba741bbc98ca12fde9.png",
+        "url": "https://twitter.com/codepo8"
+      },
+      "url": "https://twitter.com/codepo8/status/1195033856660955136",
+      "published": "2019-11-14T17:40:48+00:00",
+      "wm-received": "2019-11-14T17:51:41Z",
+      "wm-id": 724351,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1195033856660955136",
+      "wm-target": "https://webwewant.fyi/",
+      "photo": [
+        "https://pbs.twimg.com/media/EJWc8jaXYAEbpK9.jpg"
+      ],
+      "content": {
+        "html": "<a href=\"https://twitter.com/search?q=%23btconf\">#btconf</a> <a href=\"https://twitter.com/search?q=%23webwewant\">#webwewant</a> session is going strong. <a href=\"http://webwewant.fyi\">webwewant.fyi</a> <a href=\"https://twitter.com/cassiecodes\">@cassiecodes</a> <a href=\"https://twitter.com/natalya\">@natalya</a> <a href=\"https://twitter.com/sharonsteed\">@sharonsteed</a> <a href=\"https://twitter.com/natalyathree\">@natalyathree</a>\n<a class=\"u-mention\" href=\"http://webwewant.fyi/\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/\"></a>",
+        "text": "#btconf #webwewant session is going strong. webwewant.fyi @cassiecodes @natalya @sharonsteed @natalyathree"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Geoffrey Crofte 🐲 🇱🇺",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/4456273d4106d7c703deffe20a53a3d13bc7ee1124d52cb1fbd082890585878f.jpg",
+        "url": "https://twitter.com/geoffreycrofte"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1194978555781943297#favorited-by-88633011",
+      "published": null,
+      "wm-received": "2019-11-14T16:26:16Z",
+      "wm-id": 724341,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1194978555781943297/88633011",
+      "wm-target": "https://webwewant.fyi/",
+      "like-of": "https://webwewant.fyi/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Monique Dubbelman in Berlin for #btconf",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e0da1482df75efa6c4ab0207c6a941d31ee7d7e3120b2036dbf82b462fabe683.png",
+        "url": "https://twitter.com/BOEmedia"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1194978555781943297#favorited-by-369170268",
+      "published": null,
+      "wm-received": "2019-11-14T16:26:16Z",
+      "wm-id": 724342,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1194978555781943297/369170268",
+      "wm-target": "https://webwewant.fyi/",
+      "like-of": "https://webwewant.fyi/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jean-Philippe Belley",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b274113ee9bcab581e1b332fa2e660b4dec5cdec9c6ae65d65295d3bf90a62ab.jpg",
+        "url": "https://twitter.com/JP_Belley"
+      },
+      "url": "https://twitter.com/JP_Belley/status/1194985041320910853",
+      "published": "2019-11-14T14:26:50+00:00",
+      "wm-received": "2019-11-14T14:44:22Z",
+      "wm-id": 724319,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1194985041320910853",
+      "wm-target": "https://webwewant.fyi/wants/23/",
+      "content": {
+        "html": "I want to animate height from 0 to auto <a href=\"https://webwewant.fyi/wants/23/\">webwewant.fyi/wants/23/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want to animate height from 0 to auto webwewant.fyi/wants/23/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/23/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://pavvydesigns.com/2019/11/13/semantic-sidenotes-for-the-web/",
+      "published": null,
+      "wm-received": "2019-11-13T04:01:10Z",
+      "wm-id": 723874,
+      "wm-source": "https://pavvydesigns.com/2019/11/13/semantic-sidenotes-for-the-web/",
+      "wm-target": "https://webwewant.fyi/wants/52/",
+      "name": "Semantic sidenotes for the web",
+      "content": {
+        "html": "<p><span><span>I</span> will try to keep it short, because I have tendency to make stories longer than necessary. My relatives already mocked my rambling when I was a teenager. Complained that my stories had no begin and no end.</span></p>\n<p>I noticed that in my writing too. It’s good practice to make blog posts short. But I like to add details, anecdotes and silliness.</p>\n<p>Luckily, there’s an old typographical solution for that: sidenotes. I can put all the info that’s not critical for the main story there, so you, dear reader, can just skip that kind of frivolry, if you’re not interested.</p>\n\n  This late-13th century page has wide margins for notes. Although the notes may have been added later in this example, it’s not uncommon for printed texts to have sidenotes from the author.<br /><p>On this website, sidenotes appear next to the article when there’s enough space. On small screens, they’re hidden by default and can be made visible with a tap. Here’s <span><br /><span title=\"Actually, here's the example! This is the actual sidenote.\">an example</span><br /><br /><span> (sidenote: </span><br />\n    Actually, here’s the example! This is the actual sidenote.<br /><span>)</span><br /><br /></span><br />\n.</p>\n<p>The problem is, it’s hard to find a properly semantic HTML solution to do this.</p>\n<h2>Requirements</h2>\n<p>My sidenotes have two parts:</p>\n<ol><li>The sidenote’s content</li>\n<li>A word or a span of words that it refers to.</li>\n</ol><p>My additional requirements for them are:</p>\n<ul><li>The span that the sidenote refers to should have a proper semantic HTML element (no abuse of elements made for other purposes)</li>\n<li>The content of the sidenote should have a similarly valid HTML tag. Additionally:\n<ul><li>The sidenote content may contain span elements such as <code><a></a></code> and <code><em></em></code>.</li>\n<li>The sidenote content may contain clickable elements that can receive keyboard focus.</li>\n<li>The sidenote content must be stylable.</li>\n</ul></li>\n<li>The elements should not cause auto closing of their parent\n<p> tag.</p>\n</li>\n<li>Reader modes and apps like Pocket and RSS readers should show sidenote content in a typographically acceptable way. That means at the very least that I can’t rely on website’s CSS to place and style the elements correctly.</li>\n<li>The sidenote content should be read by screen readers, in a flow that makes sense. That likely means the two parts should be be placed together.</li>\n</ul><h2>Elements that don’t work</h2>\n<p>Here are some options that I considered, with help from answers on my <a href=\"https://stackoverflow.com/questions/57272564/what-html-element-for-semantic-sidenotes/57304727#57304727\">StackOverflow question</a>.</p>\n<p>Footnotes<a href=\"https://pavvydesigns.com/2019/11/13/semantic-sidenotes-for-the-web/#fn:1\">1</a> appear below the text. That requires one click to go there and another to go back to the article. Way too much effort. Moreover, most of my sidenotes make no sense without the context of the sentence they refer to. That also rules out the <code></code></p>\n HTML element.\n<p>Asides are meant for, quoting <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside\">MDN web docs</a>: “a portion of a document whose content is only indirectly related to the document’s main content”.</p>\n<p>The definition element <code></code> could be abused for sidenotes, but my sidenotes are usually not about definitions of words. The <code></code></p>\n element comes close to what I need; it has two parts, like my sidenotes:\n<pre><code><span></span>\n  <span></span>Details<span></span>\n  Here would be my sidenote content\n<span></span></code></pre><p>Unfortunately, it’s a block element. That means that it shouldn’t be placed inside paragraph. Here’s what happens </p>\nwhen<p>Sorry, this is hard to follow with the line breaks.</p><p> you do that. Browsers automatically add a close tag for that paragraph. As you can see, this causes the words following the sidenote to appear in a new paragraph. And Jekyll doesn’t handle it well, but there’s probably a workaround for that.</p>\n<p>Finally there’s the <code>abbr</code> element. It’s even closer to a solution, because it can be placed inline. Unfortunately, it’s meant for abbreviations only. Worse, the meaning (or title as it’s called) can only appear on mouse hover and can’t be styled. It can’t contain markup like links either. Example: <abbr title=\"User Experience/User Interface design. I just say 'design'.\">UX/UI design</abbr>.</p>\n<h2>My solution for semantic sidenotes</h2>\n<p>My solution for now is a combination of HTML, CSS and JavaScript. The HTML looks like this:</p>\n<pre><code>\n</code></pre><pre><code>1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n</code></pre><code>\n\n\n</code><pre><code><span></span>\n<span></span></code></pre><p><code></code></p><code> <span>Some</span> <span>sentence</span> <span>with</span> <span>a</span><span></span><span>span</span> <span>class=</span><span>\"sidenote sidenote--collapsed\"</span><span>&gt;</span>\n  <span><span></span> <span>class=</span><span>\"sidenote sidenote--collapsed\"</span><span>&gt;</span>\n    <span><span></span>\n      <span>class=</span><span>\"sidenote__button\"</span>\n      <span>tabindex=</span><span>\"0\"</span>\n      <span>title=</span><span>\"Here's the content of the sidenote.\"</span>\n      <span>onKeypress=</span><span>\"handleSidenoteKeypress(event)\"</span>\n      <span>onClick=</span><span>\"handleSidenoteButtonClick(event)\"</span><span>&gt;</span>\n        label\n      <span></span></span>\n    <span></span> <span>class=</span><span>\"sidenote__content\"</span><span>&gt;</span>\n      <span><span></span> <span>class=</span><span>\"sidenote__content-parenthesis\"</span><span>&gt;</span>\n        (sidenote:\n      <span></span></span>\n      Here's the content of the sidenote\n      <span><span></span> <span>class=</span><span>\"sidenote__content-parenthesis\"</span><span>&gt;</span>\n        )\n      <span></span></span>\n    <span></span>\n  <span></span></span>\nfor the sidenote.<span></span>\n\n\n</code><p><code></code></p><code></code><p>I wrap the whole thing in a span, <span><br /><span title=\"As a nice side effect, on large screens, where the sidenote appears next to the body text, both asterisks get hover styling when one either the content or the inline span has the mouse cursor over it.\">mainly</span><br /><br /><span> (sidenote: </span><br />\n    As a nice side effect, on large screens, where the sidenote appears next to the body text, both asterisks get hover styling when one either the content or the inline span has the mouse cursor over it.<br /><span>)</span><br /><br /></span><br />\n to keep the required JavaScript simple.</p>\n<p>Then there’s the inline phrase that gets the asterisk. The <code></code> tag would be perfect for it, but buttons are hidden by Safari and Firefox’s reader modes, leaving a gap in the sentence. With <code>tabindex=\"0\"</code> and some CSS, the thing seems to behave pretty much like a button. It has a <code>title</code> attribute, so the content is also shown on mouse hover.</p>\n<p>For the sidenote content I use the <code></code> element. <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small\">MDN says</a> it was made for representing side comments and small print. So semantically that’s pretty good. It has an additional benefit: by default it should be rendered with a smaller font size. So even when CSS is not applied, like in my RSS reader, it should appear smaller.</p>\n<p>The spans with the class <code>sidenote__content-parenthesis</code> are hidden with CSS. They’re mainly there for screen readers. I found that when my iPhone reads my posts out loud, only adding parenthesis around the sidenotes is confusing. By adding the phrase ‘sidenote: ‘, it’s much clearer why the sentence is interrupted.</p>\n<p>The JavaScript I added is straightforward; it just toggles classes on the wrapper span <code>sidenote</code>:</p>\n<pre><code>\n</code></pre><pre><code>1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n</code></pre><code>\n\n\n</code><pre><code><span>function</span> <span>handleSidenoteButtonClick</span><span>(</span><span>e</span><span>){</span>\n  <span>const</span> <span>el</span><span>=</span><span>e</span><span>.</span><span>target</span><span>;</span>\n  <span>el</span><span>.</span><span>parentNode</span><span>.</span><span>classList</span><span>.</span><span>toggle</span><span>(</span><span>'</span><span>sidenote--expanded</span><span>'</span><span>);</span>\n  <span>el</span><span>.</span><span>parentNode</span><span>.</span><span>classList</span><span>.</span><span>toggle</span><span>(</span><span>'</span><span>sidenote--collapsed</span><span>'</span><span>);</span>\n  <span>el</span><span>.</span><span>blur</span><span>();</span>\n<span>}</span>\n\n<span>function</span> <span>handleSidenoteKeypress</span><span>(</span><span>e</span><span>){</span>\n  <span>if</span><span>(</span><span>e</span><span>.</span><span>key</span> <span>===</span> <span>'</span><span>Enter</span><span>'</span> <span>||</span> <span>e</span><span>.</span><span>key</span> <span>===</span> <span>'</span><span> </span><span>'</span><span>){</span>\n    <span>const</span> <span>el</span><span>=</span><span>e</span><span>.</span><span>target</span><span>;</span>\n    <span>e</span><span>.</span><span>preventDefault</span><span>();</span>\n    <span>el</span><span>.</span><span>parentNode</span><span>.</span><span>classList</span><span>.</span><span>toggle</span><span>(</span><span>'</span><span>sidenote--expanded</span><span>'</span><span>);</span>\n    <span>el</span><span>.</span><span>parentNode</span><span>.</span><span>classList</span><span>.</span><span>toggle</span><span>(</span><span>'</span><span>sidenote--collapsed</span><span>'</span><span>);</span>\n  <span>};</span>\n<span>}</span>\n</code></pre><code>\n\n</code><p><code></code></p><code></code><p>There’s a whole bunch of CSS to make the content appear in the right place, hide it by default on small screens and to add the asterisks. I’m not going to include all of it—use the inspector of you’re interested. But it’s worth mentioning that just hiding the sidenote’s content with <code>display: none</code> causes it to be ignored by screen readers. So instead, I hide it like this:</p>\n<pre><code><span>.sidenote--collapsed</span> <span>.sidenote__content</span><span>,</span>\n<span>.sidenote__content-parenthesis</span><span>{</span>\n  <span>position</span><span>:</span> <span>absolute</span><span>;</span>\n  <span>left</span><span>:</span> <span>-99999px</span><span>;</span>\n  <span>top</span><span>:</span> <span>auto</span><span>;</span>\n<span>}</span></code></pre>\n<h2>Is this solution good enough?</h2>\n<p>The solution above looks good in the major browsers; when CSS is applied things look as intended. When CSS is not available, default styles make the everything look as intended. In that scenario, the content in the example code above would look like this: “(sidenote: Here’s the content of the sidenote)”. No weird line breaks there. The only screen reader test I did was with iOS. It speaks the text just as intended, including the ‘sidenote:’ part of it (which is the reason I included that part, otherwise the sentences sound weird).</p>\n<p>For non-standard browsers, support is okay-ish. Firefox’s and Desktop Safari’s reader views do a fine job. It correctly renders the content within the <code></code> tags smaller. Same for The RSS reader I use, Reeder. Chrome’s <span><br /><span title=\"Jeez Chrome, how is this still experimental?!\">experimental</span><br /><br /><span> (sidenote: </span><br />\n    Jeez Chrome, how is this still experimental?!<br /><span>)</span><br /><br /></span><br />\n reader mode adds some superfluous linebreaks, but doesn’t remove any content. Mobile Safari’s reader view hides the sidenote content, but the button span remains, so there’s still a readable main article. Pocket however, just hides the whole <code>.sidenote</code> span—weird!</p>\n<p>The worst part of the solution is that requires CSS and JavaScript. There’s a lot of HTML. I guess it’s hard to add to CMSs. And it feels icky that the clickable part  has to be a <code><span></span></code>.</p>\n<h2>Conclusion</h2>\n<p>Arguably, I (and you) would be better off, If I tried to write more concisely. But beyond this blog, I think there’s a valid case to be made for sidenotes. They’ve been around in print media for centuries. A better separation in the representation of main content and details can be useful in many areas. I think especially long form educational and journalistic content could benefit a lot from sidenotes.</p>\n<p>My solution is the result of several iterations with help from <a href=\"https://stackoverflow.com/questions/57272564/what-html-element-for-semantic-sidenotes/57304727#57304727\">StackOverflow</a> users. They did mention elements I hadn’t considered, but there’s no perfect solution just yet.</p>\n<p>So when I found out about the <span><br /><span title=\"It's [like a survey](https://webwewant.fyi/about/) for web devs to tell browser makers what they want. Check it out, there are cool ideas there.\">Web We Want</span><br /><br /><span> (sidenote: </span><br />\n    It’s <a href=\"https://webwewant.fyi/about/\">like a survey</a> for web devs to tell browser makers what they want. Check it out, there are cool ideas there.<br /><span>)</span><br /><br /></span><br />\n, <a href=\"https://webwewant.fyi/wants/52/\">I submitted</a> this sidenotes problem. The team selected it to be presented at the Beyond Tellerrand conference and asked me to make a video <a href=\"https://www.youtube.com/watch?v=IzAzWJ3Tm00\">about how I made sidenotes</a> (a short version of this post). Their team was formed by the browser makers, so I’m pretty sure the proper semantic solution really doesn’t exist yet.</p>\n<p>You think my solution for sidenotes is not great? Neither do I. Vote for <a href=\"https://webwewant.fyi/wants/52/\">I want semantic HTML sidenotes</a> and one day there may be a more elegant way to do this!\n</p>",
+        "text": "I will try to keep it short, because I have tendency to make stories longer than necessary. My relatives already mocked my rambling when I was a teenager. Complained that my stories had no begin and no end.\nI noticed that in my writing too. It’s good practice to make blog posts short. But I like to add details, anecdotes and silliness.\nLuckily, there’s an old typographical solution for that: sidenotes. I can put all the info that’s not critical for the main story there, so you, dear reader, can just skip that kind of frivolry, if you’re not interested.\n\n  This late-13th century page has wide margins for notes. Although the notes may have been added later in this example, it’s not uncommon for printed texts to have sidenotes from the author.\nOn this website, sidenotes appear next to the article when there’s enough space. On small screens, they’re hidden by default and can be made visible with a tap. Here’s \nan example\n\n (sidenote: \n\n    Actually, here’s the example! This is the actual sidenote.\n)\n\n\n\n.\nThe problem is, it’s hard to find a properly semantic HTML solution to do this.\nRequirements\nMy sidenotes have two parts:\nThe sidenote’s content\nA word or a span of words that it refers to.\nMy additional requirements for them are:\nThe span that the sidenote refers to should have a proper semantic HTML element (no abuse of elements made for other purposes)\nThe content of the sidenote should have a similarly valid HTML tag. Additionally:\nThe sidenote content may contain span elements such as  and .\nThe sidenote content may contain clickable elements that can receive keyboard focus.\nThe sidenote content must be stylable.\n\nThe elements should not cause auto closing of their parent\n tag.\n\nReader modes and apps like Pocket and RSS readers should show sidenote content in a typographically acceptable way. That means at the very least that I can’t rely on website’s CSS to place and style the elements correctly.\nThe sidenote content should be read by screen readers, in a flow that makes sense. That likely means the two parts should be be placed together.\nElements that don’t work\nHere are some options that I considered, with help from answers on my StackOverflow question.\nFootnotes1 appear below the text. That requires one click to go there and another to go back to the article. Way too much effort. Moreover, most of my sidenotes make no sense without the context of the sentence they refer to. That also rules out the \n HTML element.\nAsides are meant for, quoting MDN web docs: “a portion of a document whose content is only indirectly related to the document’s main content”.\nThe definition element  could be abused for sidenotes, but my sidenotes are usually not about definitions of words. The \n element comes close to what I need; it has two parts, like my sidenotes:\n\n  Details\n  Here would be my sidenote content\nUnfortunately, it’s a block element. That means that it shouldn’t be placed inside paragraph. Here’s what happens \nwhenSorry, this is hard to follow with the line breaks. you do that. Browsers automatically add a close tag for that paragraph. As you can see, this causes the words following the sidenote to appear in a new paragraph. And Jekyll doesn’t handle it well, but there’s probably a workaround for that.\nFinally there’s the abbr element. It’s even closer to a solution, because it can be placed inline. Unfortunately, it’s meant for abbreviations only. Worse, the meaning (or title as it’s called) can only appear on mouse hover and can’t be styled. It can’t contain markup like links either. Example: UX/UI design.\nMy solution for semantic sidenotes\nMy solution for now is a combination of HTML, CSS and JavaScript. The HTML looks like this:\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n\n\n\n\n Some sentence with aspan class=\"sidenote sidenote--collapsed\">\n   class=\"sidenote sidenote--collapsed\">\n    \n      class=\"sidenote__button\"\n      tabindex=\"0\"\n      title=\"Here's the content of the sidenote.\"\n      onKeypress=\"handleSidenoteKeypress(event)\"\n      onClick=\"handleSidenoteButtonClick(event)\">\n        label\n      \n     class=\"sidenote__content\">\n       class=\"sidenote__content-parenthesis\">\n        (sidenote:\n      \n      Here's the content of the sidenote\n       class=\"sidenote__content-parenthesis\">\n        )\n      \n    \n  \nfor the sidenote.\n\n\nI wrap the whole thing in a span, \nmainly\n\n (sidenote: \n\n    As a nice side effect, on large screens, where the sidenote appears next to the body text, both asterisks get hover styling when one either the content or the inline span has the mouse cursor over it.\n)\n\n\n\n to keep the required JavaScript simple.\nThen there’s the inline phrase that gets the asterisk. The  tag would be perfect for it, but buttons are hidden by Safari and Firefox’s reader modes, leaving a gap in the sentence. With tabindex=\"0\" and some CSS, the thing seems to behave pretty much like a button. It has a title attribute, so the content is also shown on mouse hover.\nFor the sidenote content I use the  element. MDN says it was made for representing side comments and small print. So semantically that’s pretty good. It has an additional benefit: by default it should be rendered with a smaller font size. So even when CSS is not applied, like in my RSS reader, it should appear smaller.\nThe spans with the class sidenote__content-parenthesis are hidden with CSS. They’re mainly there for screen readers. I found that when my iPhone reads my posts out loud, only adding parenthesis around the sidenotes is confusing. By adding the phrase ‘sidenote: ‘, it’s much clearer why the sentence is interrupted.\nThe JavaScript I added is straightforward; it just toggles classes on the wrapper span sidenote:\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n\n\n\nfunction handleSidenoteButtonClick(e){\n  const el=e.target;\n  el.parentNode.classList.toggle('sidenote--expanded');\n  el.parentNode.classList.toggle('sidenote--collapsed');\n  el.blur();\n}\n\nfunction handleSidenoteKeypress(e){\n  if(e.key === 'Enter' || e.key === ' '){\n    const el=e.target;\n    e.preventDefault();\n    el.parentNode.classList.toggle('sidenote--expanded');\n    el.parentNode.classList.toggle('sidenote--collapsed');\n  };\n}\n\n\nThere’s a whole bunch of CSS to make the content appear in the right place, hide it by default on small screens and to add the asterisks. I’m not going to include all of it—use the inspector of you’re interested. But it’s worth mentioning that just hiding the sidenote’s content with display: none causes it to be ignored by screen readers. So instead, I hide it like this:\n.sidenote--collapsed .sidenote__content,\n.sidenote__content-parenthesis{\n  position: absolute;\n  left: -99999px;\n  top: auto;\n}\nIs this solution good enough?\nThe solution above looks good in the major browsers; when CSS is applied things look as intended. When CSS is not available, default styles make the everything look as intended. In that scenario, the content in the example code above would look like this: “(sidenote: Here’s the content of the sidenote)”. No weird line breaks there. The only screen reader test I did was with iOS. It speaks the text just as intended, including the ‘sidenote:’ part of it (which is the reason I included that part, otherwise the sentences sound weird).\nFor non-standard browsers, support is okay-ish. Firefox’s and Desktop Safari’s reader views do a fine job. It correctly renders the content within the  tags smaller. Same for The RSS reader I use, Reeder. Chrome’s \nexperimental\n\n (sidenote: \n\n    Jeez Chrome, how is this still experimental?!\n)\n\n\n\n reader mode adds some superfluous linebreaks, but doesn’t remove any content. Mobile Safari’s reader view hides the sidenote content, but the button span remains, so there’s still a readable main article. Pocket however, just hides the whole .sidenote span—weird!\nThe worst part of the solution is that requires CSS and JavaScript. There’s a lot of HTML. I guess it’s hard to add to CMSs. And it feels icky that the clickable part  has to be a .\nConclusion\nArguably, I (and you) would be better off, If I tried to write more concisely. But beyond this blog, I think there’s a valid case to be made for sidenotes. They’ve been around in print media for centuries. A better separation in the representation of main content and details can be useful in many areas. I think especially long form educational and journalistic content could benefit a lot from sidenotes.\nMy solution is the result of several iterations with help from StackOverflow users. They did mention elements I hadn’t considered, but there’s no perfect solution just yet.\nSo when I found out about the \nWeb We Want\n\n (sidenote: \n\n    It’s like a survey for web devs to tell browser makers what they want. Check it out, there are cool ideas there.\n)\n\n\n\n, I submitted this sidenotes problem. The team selected it to be presented at the Beyond Tellerrand conference and asked me to make a video about how I made sidenotes (a short version of this post). Their team was formed by the browser makers, so I’m pretty sure the proper semantic solution really doesn’t exist yet.\nYou think my solution for sidenotes is not great? Neither do I. Vote for I want semantic HTML sidenotes and one day there may be a more elegant way to do this!"
+      },
+      "mention-of": "https://webwewant.fyi/wants/52/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Gavin McFarland",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d3db76f0e2679f30719099cf9fd5dc6b9d7f12924359890fb20964e026509d76.jpg",
+        "url": "https://twitter.com/gavinmcfarland"
+      },
+      "url": "https://twitter.com/gavinmcfarland/status/1194424925727133697",
+      "published": "2019-11-13T01:21:08+00:00",
+      "wm-received": "2019-11-13T01:34:06Z",
+      "wm-id": 723860,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1194424925727133697",
+      "wm-target": "https://webwewant.fyi/wants/52/",
+      "content": {
+        "html": "This would be a big improvement for accessibility of sites with terms and conditions associated with it's content.\n\nJoin me in voting for HTML sidenotes!\n\n <a href=\"https://webwewant.fyi/wants/52/\">webwewant.fyi/wants/52/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "This would be a big improvement for accessibility of sites with terms and conditions associated with it's content.\n\nJoin me in voting for HTML sidenotes!\n\n webwewant.fyi/wants/52/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/52/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Saleh Yusefnejad",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ade4c690cdbd10bcf2252a061918743faccd485516dd86a4399fa0e5b8dc8dbf.jpg",
+        "url": "https://twitter.com/SalehYusefnejad"
+      },
+      "url": "https://twitter.com/SalehYusefnejad/status/1194335219685441536",
+      "published": "2019-11-12T19:24:40+00:00",
+      "wm-received": "2019-11-12T19:45:40Z",
+      "wm-id": 723728,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1194335219685441536",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "TIL:\n<a href=\"http://webwewant.fyi\">webwewant.fyi</a>\n\n<a class=\"u-mention\" href=\"http://webwewant.fyi/\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/\"></a>",
+        "text": "TIL:\nwebwewant.fyi"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Giuseppe",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/defa10ccb786904c779951b051b88a9e09145caf2640af718933bce4bf182417.jpg",
+        "url": "https://twitter.com/giuseppegurgone"
+      },
+      "url": "https://twitter.com/giuseppegurgone/status/1194331366764228608",
+      "published": "2019-11-12T19:09:22+00:00",
+      "wm-received": "2019-11-12T19:14:42Z",
+      "wm-id": 723723,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1194331366764228608",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "The Web We Want is a great initiative! <a href=\"http://webwewant.fyi\">webwewant.fyi</a>\n<a class=\"u-mention\" href=\"http://webwewant.fyi/\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/\"></a>",
+        "text": "The Web We Want is a great initiative! webwewant.fyi"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Andrew @ #ChromeDevSummit",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b148a6c9e63bcaa1e54c27c7fa822018411939ca537a1ce88a7abadb555e7d04.jpg",
+        "url": "https://twitter.com/drewml"
+      },
+      "url": "https://twitter.com/drewml/status/1194318580709380096",
+      "published": "2019-11-12T18:18:33+00:00",
+      "wm-received": "2019-11-12T18:46:53Z",
+      "wm-id": 723715,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1194318580709380096",
+      "wm-target": "https://webwewant.fyi/about/",
+      "photo": [
+        "https://pbs.twimg.com/media/EJMSas8UcAAGGbq.jpg",
+        "https://pbs.twimg.com/media/EJMSas6U8AAAzDc.jpg"
+      ],
+      "content": {
+        "html": "TIL: <a href=\"https://webwewant.fyi/about/\">webwewant.fyi/about/</a>\n\n<a href=\"https://twitter.com/search?q=%23ChromeDevSummit\">#ChromeDevSummit</a>",
+        "text": "TIL: webwewant.fyi/about/\n\n#ChromeDevSummit"
+      },
+      "mention-of": "https://webwewant.fyi/about/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Filip Bech in 🇺🇸 for #ChromeDevSummit",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d81e3661259c957ad65e04b6ba6264ea3e7d0e7e6ed94220a9dbe270a87011c0.jpg",
+        "url": "https://twitter.com/Filipbech"
+      },
+      "url": "https://twitter.com/Filipbech/status/1194318162679877632",
+      "published": "2019-11-12T18:16:53+00:00",
+      "wm-received": "2019-11-12T18:46:53Z",
+      "wm-id": 723716,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1194318162679877632",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "“We dont have a 10 year prioritized feature roadmap for Chrome... instead we listen!”. Tell Google what you want for the web at <a href=\"http://webwewant.fyi\">webwewant.fyi</a> <a href=\"https://twitter.com/search?q=%23ChromeDevSummit\">#ChromeDevSummit</a>\n<a class=\"u-mention\" href=\"http://webwewant.fyi/\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/\"></a>",
+        "text": "“We dont have a 10 year prioritized feature roadmap for Chrome... instead we listen!”. Tell Google what you want for the web at webwewant.fyi #ChromeDevSummit"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "JJ@CDS🇺🇸",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/40d2f33e25b451ede9032abfe68d5657d2bbeb7f3500c7b19c9d538798d4a12b.jpg",
+        "url": "https://twitter.com/konojunya"
+      },
+      "url": "https://twitter.com/konojunya/status/1194081100877815808",
+      "published": "2019-11-12T02:34:54+00:00",
+      "wm-received": "2019-11-12T02:56:31Z",
+      "wm-id": 723339,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1194081100877815808",
+      "wm-target": "https://webwewant.fyi/",
+      "photo": [
+        "https://pbs.twimg.com/media/EJI6a9xX0AImDUw.jpg"
+      ],
+      "content": {
+        "html": "新しいCapabilityが欲しければここへ\n\n<a href=\"https://webwewant.fyi\">webwewant.fyi</a>\n\n<a href=\"https://twitter.com/search?q=%23ChromeDevSummit\">#ChromeDevSummit</a>\n\n<a class=\"u-mention\" href=\"https://webwewant.fyi/\"></a>",
+        "text": "新しいCapabilityが欲しければここへ\n\nwebwewant.fyi\n\n#ChromeDevSummit"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Filip Bech in 🇺🇸 for #ChromeDevSummit",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d81e3661259c957ad65e04b6ba6264ea3e7d0e7e6ed94220a9dbe270a87011c0.jpg",
+        "url": "https://twitter.com/Filipbech"
+      },
+      "url": "https://twitter.com/Filipbech/status/1194080147240038400",
+      "published": "2019-11-12T02:31:06+00:00",
+      "wm-received": "2019-11-12T02:56:29Z",
+      "wm-id": 723338,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1194080147240038400",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "A feature you want on the web.. propose it over on <a href=\"http://webwewant.fyi\">webwewant.fyi</a> <a href=\"https://twitter.com/search?q=%23ChromeDevSummit\">#ChromeDevSummit</a>\n<a class=\"u-mention\" href=\"http://webwewant.fyi/\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/\"></a>",
+        "text": "A feature you want on the web.. propose it over on webwewant.fyi #ChromeDevSummit"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://the-newscast.com/semantic-sidenotes-for-the-web/",
+      "published": null,
+      "wm-received": "2019-11-11T21:11:34Z",
+      "wm-id": 723298,
+      "wm-source": "https://the-newscast.com/semantic-sidenotes-for-the-web/",
+      "wm-target": "https://webwewant.fyi/about/",
+      "mention-of": "https://webwewant.fyi/about/",
+      "wm-property": "mention-of",
       "wm-private": false
     }
   ]

@@ -294,17 +294,20 @@ nav a {
 
 /* Tags & votes */
 .tags > *,
-.votes > * {
+.votes > *,
+.want__presented_at > * {
   display: inline;
   margin: 0;
   padding: 0;
 }
 .tags dt,
-.votes dt {
+.votes dt,
+.want__presented_at dt {
   font-weight: bold;
 }
 .tags dt::after,
-.votes dt::after {
+.votes dt::after,
+.want__presented_at dt::after {
   content: ": ";
 }
 .votes > dd + dd {
@@ -578,6 +581,22 @@ button:focus:active {
 h1.want__title {
   font-size: 2.875rem;
 }
+.want__award {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.want__award svg {
+  vertical-align: middle;
+  margin-right: .5rem;
+}
+.want__presented_at {
+  margin-bottom: 0;
+}
+.want__presented_at .events {
+  margin-top: .25rem;
+  margin-bottom: 0;
+}
+
 
 [hidden] {
   display: none;
