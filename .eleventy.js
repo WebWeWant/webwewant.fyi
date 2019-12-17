@@ -269,18 +269,18 @@ module.exports = function(eleventyConfig) {
     return wants;
   });
 
-  eleventyConfig.addCollection("wants", function(collection) {
+  eleventyConfig.addCollection("wants", collection => {
     // get unsorted items
     return collection.getAll().filter( item => {
       return item.inputPath.indexOf("wants/") > -1;
     });
   });
-  eleventyConfig.addFilter("extractID", (url) => {
+  eleventyConfig.addFilter("extractID", url => {
     url = url.split("/");
     return url[2];
   });
 
-  eleventyConfig.addCollection("topWants", function(collection) {
+  eleventyConfig.addCollection("topWants", collection => {
     const pluck = 3,
           win_vote_factor = 30,
           top_wants = {},
@@ -384,7 +384,8 @@ module.exports = function(eleventyConfig) {
     let want = wants.filter( item => item.fileSlug == id )[0];
     return content
              .replace( "url", want.url )
-             .replace( "data.title", want.data.title )
+             .replace( "data.title", md.render( want.data.title ) )
+             .replace( /<\/?p>/g, "" )
              .replace( "data.submitter", want.data.submitter );
   });
 
