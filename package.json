@@ -25,6 +25,7 @@
   "homepage": "https://webwewant.fyi",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
+    "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
     "dotenv": "^6.2.0",
     "lodash": "^4.17.15",
     "luxon": "^1.17.1",

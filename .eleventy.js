@@ -10,7 +10,7 @@ const md = require("markdown-it")({
   typographer: true,
 });
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const fs = require('fs');
+const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 
 module.exports = function(eleventyConfig) {
   const VOTE_TYPES = ['like-of', 'bookmark-of', 'mention-of'];
@@ -486,6 +486,8 @@ module.exports = function(eleventyConfig) {
   );
 
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  //eleventyConfig.addPlugin(inclusiveLangPlugin);
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
