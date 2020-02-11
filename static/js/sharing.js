@@ -7,6 +7,12 @@
   {
       return;
   }
+
+  // gather the links container
+  var share_links = document.querySelectorAll('.share, .button--vote'),
+      watcher_count = share_links.length,
+      w_threshold = 540,
+      h_threshold = 340;
   
   // event handler
   function click(e)
@@ -14,8 +20,9 @@
       var target = e.target;
 
       // target must be an anchor and the inner width threshold must be met
-      if ( e.target.matches( 'a *' ) &&
-           window.innerWidth >= threshold )
+      if ( ( target.matches( 'a *' ) || target.matches( '.button' ) ) &&
+           window.innerWidth >= w_threshold &&
+           window.innerHeight >= h_threshold )
       {
           // prevent the default link click
           e.preventDefault();
@@ -33,15 +40,10 @@
       }
   }
 
-      // gather the links container
-  var share_links = document.querySelectorAll('.share'),
-      // set the threshold width
-      threshold = 640;
-
   // watcher
-  if ( share_links.length > 0 )
+  while ( watcher_count-- )
   {
-      share_links[0].addEventListener( 'click', click, false );
+    share_links[watcher_count].addEventListener( 'click', click, false );
   }
 
 }( this, this.document ));
