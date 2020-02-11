@@ -3,7 +3,11 @@
 
   {% include "components/head.njk" %}
 
-  <body>
+  {% if body_class %}
+    <body class="{{ body_class }}">
+  {% else %}
+    <body>
+  {% endif %}
 
     <header>
       <a id="logo" href="{{ '/' | url }}">

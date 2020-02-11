@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 section: wants
+body_class: "h-entry"
 javascript:
   head:
     - /static/js/indieconfig.js
@@ -15,8 +16,8 @@ javascript:
 {% set id %}{{ page.url | extractID }}{% endset %}
 {% set eventData = collections.event_pitches %}
 
-<h1 class="want__title">{{ title | markdownify | widont | safe }}</h1>
-<p><small>Submitted by {{ submitter }}</small></p>
+<h1 class="want__title p-name">{{ title | markdownify | widont | safe }}</h1>
+<p><small>Submitted by <b class="p-author h-card">{{ submitter }}</b></small></p>
 
 {% if eventData[id] %}
   {% if eventData[id].judges_pick.length > 0 %}
@@ -27,7 +28,9 @@ javascript:
   {% endif %}
 {% endif %}
 
-{{ layoutContent | safe }}
+<div class="e-content">
+  {{ layoutContent | safe }}
+</div>
 
 <dl class="share">
   <dt>Do you want this too? Share it!</dt>
@@ -56,7 +59,7 @@ javascript:
   <dt>Tagged</dt>
   <dd>
   {% for tag in tags %}
-    <a href="/wants/tagged/{{ tag }}">{{ tag | unslug | fixNames }}</a>
+    <a href="/wants/tagged/{{ tag }}" class="p-category">{{ tag | unslug | fixNames }}</a>
   {% endfor %}
   </dd>
 </dl>
