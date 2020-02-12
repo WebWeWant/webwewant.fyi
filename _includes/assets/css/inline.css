@@ -120,6 +120,7 @@ small {
   display: block;
   font-size: .875rem;
   line-height: 1.25;
+  margin-top: .5rem;
 }
 
 /* Header */
@@ -453,7 +454,8 @@ label input {
 }
 
 
-button {
+button,
+.button {
   cursor: pointer;
   display: inline-block;
   background-color: #005e22;
@@ -467,8 +469,25 @@ button {
   box-shadow: none;
   transition: transform .25s, box-shadow .25s, background-color .5s;
 }
+a[href].button,
+a[href].button:visited {
+  color: #fff;
+  text-decoration: none;
+  margin-top: .25rem;
+  padding: .5em 1em;
+}
+.button .button__icon {
+  width: auto;
+  height: 22px;
+  transform: translate(-2px, 4px);
+}
+.button__icon path {
+  fill: white;
+}
 button:hover,
-button:focus {
+button:focus,
+.button:hover,
+.button:focus {
   background-color: #005e22;
   background-color: #005e22;
   transform: translateX(-2px) translateY(-2px);
@@ -476,7 +495,9 @@ button:focus {
   outline: 0;
 }
 button:hover:active,
-button:focus:active {
+button:focus:active,
+.button:hover:active,
+.button:focus:active {
   transform: translateX(0) translateY(0);
   box-shadow: none;
   transition: background-color .5s;
