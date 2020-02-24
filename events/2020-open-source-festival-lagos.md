@@ -20,4 +20,12 @@ judges:
     url: https://medium.com/@obinnacodes
     twitter: Obinnaspeaks
 sponsor: Microsoft Edge
+pitches:
+  - 120
+  - 121
+  - 122
+  - 124
+winners:
+  judges: 120
+  community: 124
 ---
