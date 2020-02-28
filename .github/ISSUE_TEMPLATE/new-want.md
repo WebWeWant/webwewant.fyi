@@ -7,6 +7,8 @@ assignees: ''
 
 ---
 
+My proposal:
+
 ---
 title: I want SOMETHING
 date: DATETIME
