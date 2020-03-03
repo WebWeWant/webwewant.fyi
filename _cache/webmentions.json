@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2020-02-11T22:35:38.776Z",
+  "lastFetched": "2020-03-03T22:02:52.142Z",
   "children": [
     {
       "type": "entry",
@@ -8310,6 +8310,2008 @@
       },
       "mention-of": "https://webwewant.fyi/",
       "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Scrambler",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/930727519c9f692808477cc4492d52e1b9b423ea3de55835f0390f75cf46cb33.jpg",
+        "url": "https://twitter.com/cjeight"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1234658172201078785#favorited-by-5253141",
+      "published": null,
+      "wm-received": "2020-03-03T02:57:26Z",
+      "wm-id": 763590,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1234658172201078785/5253141",
+      "wm-target": "https://webwewant.fyi/",
+      "like-of": "https://webwewant.fyi/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephanie Stimac 🔮 Casting Spells",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78bddfc3c55809c606a37f5b881daee13edb9d9ffe39d048836e66c3688328bd.jpg",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/seaotta/status/1234659092381089793",
+      "published": "2020-03-03T01:57:21+00:00",
+      "wm-received": "2020-03-03T02:20:16Z",
+      "wm-id": 763579,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1234658172201078785/1234659092381089793",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "Our next event will be at the @sfhtml5 meetup on March 27th! \n\nIf you're in the Bay Area this is a great meetup to attend &amp; we're accept",
+        "text": "Our next event will be at the @sfhtml5 meetup on March 27th! \n\nIf you're in the Bay Area this is a great meetup to attend & we're accept"
+      },
+      "repost-of": "https://webwewant.fyi/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Eco Web Hosting",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b5e84c25e6d0daaf6e42b541ccae87c5731329221a855deebe0e5330a057b9d4.png",
+        "url": "https://twitter.com/ecowebhostinguk"
+      },
+      "url": "https://twitter.com/ecowebhostinguk/status/1234418425809768449",
+      "published": "2020-03-02T10:01:01+00:00",
+      "wm-received": "2020-03-02T10:17:39Z",
+      "wm-id": 763076,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1234418425809768449",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "When you build websites, you'll always hit one weird problem. Wouldn't it be great if you could tell your browser to render your site just like you want it to?\n<a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a> wants to hear from you: <a href=\"https://webwewant.fyi/\">webwewant.fyi</a>",
+        "text": "When you build websites, you'll always hit one weird problem. Wouldn't it be great if you could tell your browser to render your site just like you want it to?\n@webwewantfyi wants to hear from you: webwewant.fyi"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Moraa 💙",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b0486ac59dc04e6089122aff24d515af91ee8522fb653cdfb42b0ecaa1fd11be.jpg",
+        "url": "https://twitter.com/mobagi_lorna"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-1217390332998037504",
+      "published": null,
+      "wm-received": "2020-02-29T16:09:23Z",
+      "wm-id": 762685,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/1217390332998037504",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "like-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Moraa 💙",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b0486ac59dc04e6089122aff24d515af91ee8522fb653cdfb42b0ecaa1fd11be.jpg",
+        "url": "https://twitter.com/mobagi_lorna"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-1217390332998037504",
+      "published": null,
+      "wm-received": "2020-02-29T16:09:23Z",
+      "wm-id": 762686,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/1217390332998037504",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "like-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "hirsebirse",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/2581a846759dfb52806b29eec7f503063c4a0eca3775651cb2091ccc523238d0.jpg",
+        "url": "https://twitter.com/hirsebirse"
+      },
+      "url": "https://twitter.com/hirsebirse/status/1233512006025719813",
+      "published": "2020-02-28T21:59:14+00:00",
+      "wm-received": "2020-02-28T22:27:50Z",
+      "wm-id": 762453,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1233512006025719813",
+      "wm-target": "https://webwewant.fyi/wants/106/",
+      "content": {
+        "html": "Now my apprentice has to style big checkboxes. And he asks: \"Why does it has to be so hard? Why is this so ugly? We're living in 2020, for god's sake!\" Good question. Can we do something against this madness? <a href=\"http://webwewant.fyi/wants/106/\">webwewant.fyi/wants/106/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/106/\"></a>",
+        "text": "Now my apprentice has to style big checkboxes. And he asks: \"Why does it has to be so hard? Why is this so ugly? We're living in 2020, for god's sake!\" Good question. Can we do something against this madness? webwewant.fyi/wants/106/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/106/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jescinta",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ba79462150c8e627ac2abf53715f7947e9c60ab653afe0aaad1bd866ac68bade.jpg",
+        "url": "https://twitter.com/Jescintar"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-873548973822357504",
+      "published": null,
+      "wm-received": "2020-02-27T14:10:06Z",
+      "wm-id": 761857,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/873548973822357504",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "like-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jescinta",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ba79462150c8e627ac2abf53715f7947e9c60ab653afe0aaad1bd866ac68bade.jpg",
+        "url": "https://twitter.com/Jescintar"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-873548973822357504",
+      "published": null,
+      "wm-received": "2020-02-27T14:10:06Z",
+      "wm-id": 761858,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/873548973822357504",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "like-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "unStack",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/8f30da730cc3c1745bcbdc12f027088812c891be01855b6ad105528c01c29e58.png",
+        "url": "https://twitter.com/unstack_"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-1122181237450342401",
+      "published": null,
+      "wm-received": "2020-02-27T09:31:33Z",
+      "wm-id": 761754,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/1122181237450342401",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "like-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "unStack",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/8f30da730cc3c1745bcbdc12f027088812c891be01855b6ad105528c01c29e58.png",
+        "url": "https://twitter.com/unstack_"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-1122181237450342401",
+      "published": null,
+      "wm-received": "2020-02-27T09:31:33Z",
+      "wm-id": 761755,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/1122181237450342401",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "like-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Braulio Cassule 🇦🇴",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e89b2ca333334c9e5f2b8bb289f94bf630ac98a8117aef5dff4b810705649611.jpg",
+        "url": "https://twitter.com/brauliocaassule"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-890119356897779714",
+      "published": null,
+      "wm-received": "2020-02-27T08:19:04Z",
+      "wm-id": 761715,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/890119356897779714",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "like-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Braulio Cassule 🇦🇴",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e89b2ca333334c9e5f2b8bb289f94bf630ac98a8117aef5dff4b810705649611.jpg",
+        "url": "https://twitter.com/brauliocaassule"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-890119356897779714",
+      "published": null,
+      "wm-received": "2020-02-27T08:19:04Z",
+      "wm-id": 761716,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/890119356897779714",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "like-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "D.Kimathi University",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0fee68a681a975e710ea933207f56104c1ff181504c3fc5e91bbda8946dd63ae.jpg",
+        "url": "https://twitter.com/DeKUTkenya"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-1886366900",
+      "published": null,
+      "wm-received": "2020-02-27T05:15:17Z",
+      "wm-id": 761655,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/1886366900",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "like-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "D.Kimathi University",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0fee68a681a975e710ea933207f56104c1ff181504c3fc5e91bbda8946dd63ae.jpg",
+        "url": "https://twitter.com/DeKUTkenya"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-1886366900",
+      "published": null,
+      "wm-received": "2020-02-27T05:15:17Z",
+      "wm-id": 761656,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/1886366900",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "like-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "kennygrace",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/1a2828e5944d960231801eaeee06a0298f1aeedef0535231d23bbf6570ad5e0d.jpg",
+        "url": "https://twitter.com/kennygrace5"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-3362837379",
+      "published": null,
+      "wm-received": "2020-02-27T02:21:43Z",
+      "wm-id": 761625,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/3362837379",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "like-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "kennygrace",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/1a2828e5944d960231801eaeee06a0298f1aeedef0535231d23bbf6570ad5e0d.jpg",
+        "url": "https://twitter.com/kennygrace5"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-3362837379",
+      "published": null,
+      "wm-received": "2020-02-27T02:21:43Z",
+      "wm-id": 761626,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/3362837379",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "like-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Reuben #oscafest",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/071a0963b04a2c9dca8c4f63711404cb99a8772386ead0c152fd8ebd5c9828b8.jpg",
+        "url": "https://twitter.com/ReubenKihiu1"
+      },
+      "url": "https://twitter.com/ReubenKihiu1/status/1232811738413834241",
+      "published": "2020-02-26T23:36:37+00:00",
+      "wm-received": "2020-02-26T23:49:26Z",
+      "wm-id": 761607,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1232811738413834241",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "content": {
+        "html": "At <a href=\"https://twitter.com/DeKUTkenya\">@DeKUTkenya</a>, we make wins world over!  This was a win to show that it's possible no matter where you come from. \nNow <a href=\"https://twitter.com/Jcardif254\">@Jcardif254</a> &amp; <a href=\"https://twitter.com/julzajules\">@julzajules</a>, Go show the world what we're made of! \n<a href=\"https://twitter.com/imaginecup\">@imaginecup</a>\n\n<a href=\"https://twitter.com/dehub_dekut\">@dehub_dekut</a> \n<a href=\"https://twitter.com/googledevs\">@googledevs</a> \n<a href=\"https://twitter.com/dsckimathi\">@dsckimathi</a>\n\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/120/\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/124/\"></a>",
+        "text": "At @DeKUTkenya, we make wins world over!  This was a win to show that it's possible no matter where you come from. \nNow @Jcardif254 & @julzajules, Go show the world what we're made of! \n@imaginecup\n\n@dehub_dekut \n@googledevs \n@dsckimathi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Reuben #oscafest",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/071a0963b04a2c9dca8c4f63711404cb99a8772386ead0c152fd8ebd5c9828b8.jpg",
+        "url": "https://twitter.com/ReubenKihiu1"
+      },
+      "url": "https://twitter.com/ReubenKihiu1/status/1232811738413834241",
+      "published": "2020-02-26T23:36:37+00:00",
+      "wm-received": "2020-02-26T23:49:25Z",
+      "wm-id": 761606,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1232811738413834241",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "At <a href=\"https://twitter.com/DeKUTkenya\">@DeKUTkenya</a>, we make wins world over!  This was a win to show that it's possible no matter where you come from. \nNow <a href=\"https://twitter.com/Jcardif254\">@Jcardif254</a> &amp; <a href=\"https://twitter.com/julzajules\">@julzajules</a>, Go show the world what we're made of! \n<a href=\"https://twitter.com/imaginecup\">@imaginecup</a>\n\n<a href=\"https://twitter.com/dehub_dekut\">@dehub_dekut</a> \n<a href=\"https://twitter.com/googledevs\">@googledevs</a> \n<a href=\"https://twitter.com/dsckimathi\">@dsckimathi</a>\n\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/120/\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/124/\"></a>",
+        "text": "At @DeKUTkenya, we make wins world over!  This was a win to show that it's possible no matter where you come from. \nNow @Jcardif254 & @julzajules, Go show the world what we're made of! \n@imaginecup\n\n@dehub_dekut \n@googledevs \n@dsckimathi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Reuben #oscafest",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/071a0963b04a2c9dca8c4f63711404cb99a8772386ead0c152fd8ebd5c9828b8.jpg",
+        "url": "https://twitter.com/ReubenKihiu1"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-762955902420779009",
+      "published": null,
+      "wm-received": "2020-02-26T23:48:57Z",
+      "wm-id": 761604,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/762955902420779009",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "like-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Reuben #oscafest",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/071a0963b04a2c9dca8c4f63711404cb99a8772386ead0c152fd8ebd5c9828b8.jpg",
+        "url": "https://twitter.com/ReubenKihiu1"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-762955902420779009",
+      "published": null,
+      "wm-received": "2020-02-26T23:48:57Z",
+      "wm-id": 761605,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/762955902420779009",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "like-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jose Blaq",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e3ca309d9c1e6b8ec9e9a611af24bd23e7c6ff09555b25b56a498268479f0111.jpg",
+        "url": "https://twitter.com/_joseblaq"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-1205871037596028929",
+      "published": null,
+      "wm-received": "2020-02-26T22:53:43Z",
+      "wm-id": 761599,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/1205871037596028929",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "like-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jose Blaq",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e3ca309d9c1e6b8ec9e9a611af24bd23e7c6ff09555b25b56a498268479f0111.jpg",
+        "url": "https://twitter.com/_joseblaq"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-1205871037596028929",
+      "published": null,
+      "wm-received": "2020-02-26T22:53:42Z",
+      "wm-id": 761598,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/1205871037596028929",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "like-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Blessing Emmanuel 🇳🇬 🎓 💻",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c920c8b90f0be45d258c215e09657e9def6e86bfa59b86d1e7ff2411623b29a4.jpg",
+        "url": "https://twitter.com/bcjcodes"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-923614006983655426",
+      "published": null,
+      "wm-received": "2020-02-26T21:38:13Z",
+      "wm-id": 761579,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/923614006983655426",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "like-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Blessing Emmanuel 🇳🇬 🎓 💻",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c920c8b90f0be45d258c215e09657e9def6e86bfa59b86d1e7ff2411623b29a4.jpg",
+        "url": "https://twitter.com/bcjcodes"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-923614006983655426",
+      "published": null,
+      "wm-received": "2020-02-26T21:38:13Z",
+      "wm-id": 761580,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/923614006983655426",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "like-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "fiyin.",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/30f284eee317db2eb5620d2d3b6d653bfb065106913a437cfeed07d65ff04049.jpg",
+        "url": "https://twitter.com/annie_dibz"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-750339620",
+      "published": null,
+      "wm-received": "2020-02-26T20:30:30Z",
+      "wm-id": 761553,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/750339620",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "like-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "fiyin.",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/30f284eee317db2eb5620d2d3b6d653bfb065106913a437cfeed07d65ff04049.jpg",
+        "url": "https://twitter.com/annie_dibz"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-750339620",
+      "published": null,
+      "wm-received": "2020-02-26T20:30:30Z",
+      "wm-id": 761554,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/750339620",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "like-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Perrie.xyz 🤡 #oscafest #SustainAfrica 🇳🇬",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/432baa73bb7d6366264ba9442ebab7ab4e6933d0cc1dc4df9f88af1baa4284ad.jpg",
+        "url": "https://twitter.com/Peace_Ojemeh"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-905097033157148672",
+      "published": null,
+      "wm-received": "2020-02-26T20:29:56Z",
+      "wm-id": 761551,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/905097033157148672",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "like-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Perrie.xyz 🤡 #oscafest #SustainAfrica 🇳🇬",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/432baa73bb7d6366264ba9442ebab7ab4e6933d0cc1dc4df9f88af1baa4284ad.jpg",
+        "url": "https://twitter.com/Peace_Ojemeh"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-905097033157148672",
+      "published": null,
+      "wm-received": "2020-02-26T20:29:56Z",
+      "wm-id": 761552,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/905097033157148672",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "like-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Ousseynou Diop",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/dc15abf10f05d609a759d4e861cce5b7eb5799e63566fa229672762e4727afd6.jpg",
+        "url": "https://twitter.com/xarala221"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-867516906978369537",
+      "published": null,
+      "wm-received": "2020-02-26T20:29:40Z",
+      "wm-id": 761549,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/867516906978369537",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "like-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Ousseynou Diop",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/dc15abf10f05d609a759d4e861cce5b7eb5799e63566fa229672762e4727afd6.jpg",
+        "url": "https://twitter.com/xarala221"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1232443651994738688#favorited-by-867516906978369537",
+      "published": null,
+      "wm-received": "2020-02-26T20:29:40Z",
+      "wm-id": 761550,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1232443651994738688/867516906978369537",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "like-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Wes",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/28c5ddb14531d8b7e74310b1ca961cd33961615b50339283e5222a45cb7c3a5a.jpg",
+        "url": "https://twitter.com/wes566"
+      },
+      "url": "https://twitter.com/wes566/status/1232475919677194240",
+      "published": "2020-02-26T01:22:12+00:00",
+      "wm-received": "2020-02-26T01:50:20Z",
+      "wm-id": 761212,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1232475919677194240",
+      "wm-target": "https://webwewant.fyi/wants/97/",
+      "content": {
+        "html": "I want a system calendar API <a href=\"https://webwewant.fyi/wants/97/\">webwewant.fyi/wants/97/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want a system calendar API webwewant.fyi/wants/97/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/97/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephanie Stimac 🔮 Casting Spells",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78bddfc3c55809c606a37f5b881daee13edb9d9ffe39d048836e66c3688328bd.jpg",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/seaotta/status/1232444372915896323",
+      "published": "2020-02-25T23:16:50+00:00",
+      "wm-received": "2020-02-25T23:47:41Z",
+      "wm-id": 761175,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1232443651994738688/1232444372915896323",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "photo": [
+        "https://pbs.twimg.com/media/ERqEfxmU8AAHdQm.jpg"
+      ],
+      "content": {
+        "text": "We're excited to see the session run by the community across the globe! \n\nAt @oscafrica #oscafest the two winners were: \n\nI want media opt"
+      },
+      "repost-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephanie Stimac 🔮 Casting Spells",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78bddfc3c55809c606a37f5b881daee13edb9d9ffe39d048836e66c3688328bd.jpg",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/seaotta/status/1232444372915896323",
+      "published": "2020-02-25T23:16:50+00:00",
+      "wm-received": "2020-02-25T23:47:41Z",
+      "wm-id": 761176,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1232443651994738688/1232444372915896323",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "photo": [
+        "https://pbs.twimg.com/media/ERqEfxmU8AAHdQm.jpg"
+      ],
+      "content": {
+        "text": "We're excited to see the session run by the community across the globe! \n\nAt @oscafrica #oscafest the two winners were: \n\nI want media opt"
+      },
+      "repost-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Sami Stein",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d94f3ba5305278b6dee393bf6635a675f17b33f703bf06a0c4c9ec3323af07e0.jpg",
+        "url": "https://twitter.com/frontend_cat"
+      },
+      "url": "https://twitter.com/frontend_cat/status/1232338724064813058",
+      "published": "2020-02-25T16:17:02+00:00",
+      "wm-received": "2020-02-25T17:30:43Z",
+      "wm-id": 761020,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1232338724064813058",
+      "wm-target": "https://webwewant.fyi/wants/106/",
+      "content": {
+        "html": "Sharing is caring, <a href=\"https://twitter.com/search?q=%23accessibility\">#accessibility</a> community! ...for better styles inputs and selects 🦾 <a href=\"https://webwewant.fyi/wants/106/\">webwewant.fyi/wants/106/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "Sharing is caring, #accessibility community! ...for better styles inputs and selects 🦾 webwewant.fyi/wants/106/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/106/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "F1NN",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a2e729358aea07b6a3704d3503afd07e37b024b025d4f4ab9cd5ad326130acfa.png",
+        "url": "https://twitter.com/Finnyooo"
+      },
+      "url": "https://twitter.com/Finnyooo/status/1232280251121750019",
+      "published": "2020-02-25T12:24:41+00:00",
+      "wm-received": "2020-02-25T12:40:02Z",
+      "wm-id": 760952,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1232280251121750019",
+      "wm-target": "https://webwewant.fyi/wants/106/",
+      "content": {
+        "html": "I want better styling for inputs and selects <a href=\"https://webwewant.fyi/wants/106/\">webwewant.fyi/wants/106/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want better styling for inputs and selects webwewant.fyi/wants/106/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/106/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Johan Westling 🇦🇽",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/07a360d8222f3f4a52ebbb11b88243c18bf9b21a8a8140c3dc72c27d4602a0e3.jpg",
+        "url": "https://twitter.com/johanwestling"
+      },
+      "url": "https://twitter.com/johanwestling/status/1232156682186371074",
+      "published": "2020-02-25T04:13:40+00:00",
+      "wm-received": "2020-02-25T04:31:03Z",
+      "wm-id": 760799,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1232156682186371074",
+      "wm-target": "https://webwewant.fyi/wants/86/",
+      "content": {
+        "html": "I want web components to enable exposing elements to assistive technology and forms <a href=\"https://webwewant.fyi/wants/86/\">webwewant.fyi/wants/86/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want web components to enable exposing elements to assistive technology and forms webwewant.fyi/wants/86/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/86/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "hirsebirse",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/2581a846759dfb52806b29eec7f503063c4a0eca3775651cb2091ccc523238d0.jpg",
+        "url": "https://twitter.com/hirsebirse"
+      },
+      "url": "https://twitter.com/hirsebirse/status/1232059464959897600",
+      "published": "2020-02-24T21:47:21+00:00",
+      "wm-received": "2020-02-24T22:23:46Z",
+      "wm-id": 760710,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1232059464959897600",
+      "wm-target": "https://webwewant.fyi/wants/106/",
+      "content": {
+        "html": "I want better styling for inputs and selects <a href=\"https://webwewant.fyi/wants/106/\">webwewant.fyi/wants/106/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want better styling for inputs and selects webwewant.fyi/wants/106/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/106/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Agene Sunday",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/383c9e4e79b3d1b48b8da36609f12aa192906ac1880970c07b23d44ec1677fef.jpg",
+        "url": "https://twitter.com/ojimagene"
+      },
+      "url": "https://twitter.com/ojimagene/status/1231305562878595077",
+      "published": "2020-02-22T19:51:37+00:00",
+      "wm-received": "2020-02-22T20:17:05Z",
+      "wm-id": 759531,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231305562878595077",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "content": {
+        "html": "I want media optimization tools in browser DevTools <a href=\"https://webwewant.fyi/wants/120/\">webwewant.fyi/wants/120/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want media optimization tools in browser DevTools webwewant.fyi/wants/120/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Sylvia_Rotich☆°°°",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/8b60b44d62be3105d46afd08a179dfe8f16e008e46cc2f1dd877ecebe721e0a2.jpg",
+        "url": "https://twitter.com/_Jeptum"
+      },
+      "url": "https://twitter.com/_Jeptum/status/1231300946778624001",
+      "published": "2020-02-22T19:33:16+00:00",
+      "wm-received": "2020-02-22T19:42:09Z",
+      "wm-id": 759525,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231300946778624001",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "I want an intelligent UI/UX dev tool <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want an intelligent UI/UX dev tool webwewant.fyi/wants/124/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Grand Kenyan",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/96ccb1303833a0efeef9a4ebfc3743bbbbb2651b3c4747d0a30b5851211d5f0a.png",
+        "url": "https://twitter.com/kareithi_h"
+      },
+      "url": "https://twitter.com/kareithi_h/status/1231303064033923072",
+      "published": "2020-02-22T19:41:41+00:00",
+      "wm-received": "2020-02-22T19:42:01Z",
+      "wm-id": 759524,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231303064033923072",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "I want an intelligent UI/UX dev tool <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want an intelligent UI/UX dev tool webwewant.fyi/wants/124/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Silas Adedoyin #oscafest",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/1699beb17a71c8634b3389a3ab0b9223f36313815fd72aeeef3ee480744f4d02.jpg",
+        "url": "https://twitter.com/silasadedoyin"
+      },
+      "url": "https://twitter.com/silasadedoyin/status/1231283235738419200",
+      "published": "2020-02-22T18:22:54+00:00",
+      "wm-received": "2020-02-22T18:24:46Z",
+      "wm-id": 759515,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231283235738419200",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "content": {
+        "html": "I want media optimization tools in browser DevTools <a href=\"https://webwewant.fyi/wants/120/\">webwewant.fyi/wants/120/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>\n\n<a href=\"https://twitter.com/iambolajiayo\">@iambolajiayo</a>",
+        "text": "I want media optimization tools in browser DevTools webwewant.fyi/wants/120/ via @webwewantfyi\n\n@iambolajiayo"
+      },
+      "mention-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "💃Dodo🤓 #OSCAFEST #SustainAfrica #OSCA",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0804c9111ddf4453109d9467fa6da111dd8e80fc26dd7b06c7cf71785fb6d32f.jpg",
+        "url": "https://twitter.com/VuyanziG"
+      },
+      "url": "https://twitter.com/VuyanziG/status/1231209625556484098",
+      "published": "2020-02-22T13:30:24+00:00",
+      "wm-received": "2020-02-22T13:46:42Z",
+      "wm-id": 759439,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231209625556484098",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "Being that I have been transitioning to design lately, this is a discussion I would love to be part of because most devs are forced by circumstances to be designers as well and that can be too much pressure at times. <a href=\"https://twitter.com/oscafrica\">@oscafrica</a> <a href=\"https://twitter.com/search?q=%23oscafest\">#oscafest</a>  <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "Being that I have been transitioning to design lately, this is a discussion I would love to be part of because most devs are forced by circumstances to be designers as well and that can be too much pressure at times. @oscafrica #oscafest  webwewant.fyi/wants/124/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "ShellHunter",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/5a50757e416f9e3e87a9ea4f1b4977e0c1e032fbcd73406ebb1545da355672c2.jpg",
+        "url": "https://twitter.com/MartinShakesp9"
+      },
+      "url": "https://twitter.com/MartinShakesp9/status/1231186233705062400",
+      "published": "2020-02-22T11:57:27+00:00",
+      "wm-received": "2020-02-22T12:04:48Z",
+      "wm-id": 759430,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231186233705062400",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "I want an intelligent UI/UX dev tool <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want an intelligent UI/UX dev tool webwewant.fyi/wants/124/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "ShellHunter",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/5a50757e416f9e3e87a9ea4f1b4977e0c1e032fbcd73406ebb1545da355672c2.jpg",
+        "url": "https://twitter.com/MartinShakesp9"
+      },
+      "url": "https://twitter.com/MartinShakesp9/status/1231187682325385216",
+      "published": "2020-02-22T12:03:12+00:00",
+      "wm-received": "2020-02-22T12:04:42Z",
+      "wm-id": 759429,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231187682325385216",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "I want an intelligent UI/UX dev tool <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a> \n<a href=\"https://twitter.com/DeKUTkenya\">@DeKUTkenya</a>  <a href=\"https://twitter.com/TechDekut\">@TechDekut</a> <a href=\"https://twitter.com/dsckimathi\">@dsckimathi</a>",
+        "text": "I want an intelligent UI/UX dev tool webwewant.fyi/wants/124/ via @webwewantfyi \n@DeKUTkenya  @TechDekut @dsckimathi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Dillion Megida 🚀",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a9b799c396085168be86b6c1b9a9a12d967bb2a9a062af47632e8596c356d4b0.jpg",
+        "url": "https://twitter.com/iamdillion"
+      },
+      "url": "https://twitter.com/iamdillion/status/1231174955716534272",
+      "published": "2020-02-22T11:12:38+00:00",
+      "wm-received": "2020-02-22T11:28:12Z",
+      "wm-id": 759428,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231174955716534272",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "content": {
+        "html": "I want media optimization tools in browser DevTools <a href=\"https://webwewant.fyi/wants/120/\">webwewant.fyi/wants/120/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want media optimization tools in browser DevTools webwewant.fyi/wants/120/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Benson Imoh, ST",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/e56e18f1142884a9c5a007462b3ef510af9f0d8f67879603657de086ecb26fb7.jpg",
+        "url": "https://twitter.com/stbensonimoh"
+      },
+      "url": "https://twitter.com/stbensonimoh/status/1231161384790040576",
+      "published": "2020-02-22T10:18:42+00:00",
+      "wm-received": "2020-02-22T10:57:23Z",
+      "wm-id": 759424,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231161384790040576",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "content": {
+        "html": "I want media optimization tools in browser DevTools <a href=\"https://webwewant.fyi/wants/120/\">webwewant.fyi/wants/120/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want media optimization tools in browser DevTools webwewant.fyi/wants/120/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Bolaji Ayodeji 💙 #oscafest #SustainAfrica",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a9f6382ac6f1bb9a01bf5dd8ebbf235439732abf16950e1e1367a78263e7189e.jpg",
+        "url": "https://twitter.com/iambolajiayo"
+      },
+      "url": "https://twitter.com/iambolajiayo/status/1231158229511659520",
+      "published": "2020-02-22T10:06:10+00:00",
+      "wm-received": "2020-02-22T10:22:10Z",
+      "wm-id": 759413,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231158229511659520",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "content": {
+        "html": "My want was accepted and will be pitched today at <a href=\"https://twitter.com/search?q=%23oscafest\">#oscafest</a> 2020.\n\nHead to the link below to vote for this want 🙏👇\n\n <a href=\"https://webwewant.fyi/wants/120/\">webwewant.fyi/wants/120/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "My want was accepted and will be pitched today at #oscafest 2020.\n\nHead to the link below to vote for this want 🙏👇\n\n webwewant.fyi/wants/120/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Tabitha Kavyu",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ed710ad8c3311e62e3849aaaf1108aec2efd8b82e68b65f705d0b902729c0f21.jpg",
+        "url": "https://twitter.com/TabithaKavyu"
+      },
+      "url": "https://twitter.com/TabithaKavyu/status/1231120932489584640",
+      "published": "2020-02-22T07:37:58+00:00",
+      "wm-received": "2020-02-22T08:11:00Z",
+      "wm-id": 759384,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231120932489584640",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "I want an intelligent UI/UX dev tool <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a> \n<a href=\"https://twitter.com/ReubenKihiu1\">@ReubenKihiu1</a>",
+        "text": "I want an intelligent UI/UX dev tool webwewant.fyi/wants/124/ via @webwewantfyi \n@ReubenKihiu1"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Joseph Githumbi",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/29512d70ac86741451aab6feb2702b620edfcd7e9d64707ac418d5542c2cc3b8.jpg",
+        "url": "https://twitter.com/Joegithumbi"
+      },
+      "url": "https://twitter.com/Joegithumbi/status/1231091154013347840",
+      "published": "2020-02-22T05:39:38+00:00",
+      "wm-received": "2020-02-22T06:30:52Z",
+      "wm-id": 759375,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231091154013347840",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "I want an intelligent UI/UX dev tool <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want an intelligent UI/UX dev tool webwewant.fyi/wants/124/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Developer Students Club: FCAPT",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a65bec6af5f476349aaa5612520a8824ab301a337fa0f9488e8827c6f13e9990.jpg",
+        "url": "https://twitter.com/dscfcapt"
+      },
+      "url": "https://twitter.com/dscfcapt/status/1231099026365452290",
+      "published": "2020-02-22T06:10:55+00:00",
+      "wm-received": "2020-02-22T06:30:45Z",
+      "wm-id": 759374,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231099026365452290",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "I want an intelligent UI/UX dev tool <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want an intelligent UI/UX dev tool webwewant.fyi/wants/124/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "W!nny🐼",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/39ac23e7655e3b54f31f34388db8bdcbfcf86ad9a844435a98bde07e82956e6c.jpg",
+        "url": "https://twitter.com/nyambura_weeny"
+      },
+      "url": "https://twitter.com/nyambura_weeny/status/1231101391474765824",
+      "published": "2020-02-22T06:20:19+00:00",
+      "wm-received": "2020-02-22T06:30:32Z",
+      "wm-id": 759373,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231101391474765824",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "I want an intelligent UI/UX dev tool <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want an intelligent UI/UX dev tool webwewant.fyi/wants/124/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Victor Omondi, (VICK)❁",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/1c35aa46a4d11da89a1abcc38016b227f801bf2eeaa60203b36dc19036b3570f.jpg",
+        "url": "https://twitter.com/VictorOmondi197"
+      },
+      "url": "https://twitter.com/VictorOmondi197/status/1231084029820231681",
+      "published": "2020-02-22T05:11:19+00:00",
+      "wm-received": "2020-02-22T05:39:43Z",
+      "wm-id": 759357,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231084029820231681",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "I want an intelligent UI/UX dev tool <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want an intelligent UI/UX dev tool webwewant.fyi/wants/124/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Julius Junior",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/029910eed8b0f55bddc2a6815b20db1cae159155b3fd21350dcd0e1f9e8f316d.jpg",
+        "url": "https://twitter.com/JuliusJunior20"
+      },
+      "url": "https://twitter.com/JuliusJunior20/status/1231062301442265088",
+      "published": "2020-02-22T03:44:59+00:00",
+      "wm-received": "2020-02-22T04:01:44Z",
+      "wm-id": 759343,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231062301442265088",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "Vote \nI want an intelligent UI/UX dev tool <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>\n<a href=\"https://twitter.com/ReubenKihiu1\">@ReubenKihiu1</a>",
+        "text": "Vote \nI want an intelligent UI/UX dev tool webwewant.fyi/wants/124/ via @webwewantfyi\n@ReubenKihiu1"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Bolaji Ayodeji 💙 #oscafest #SustainAfrica",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a9f6382ac6f1bb9a01bf5dd8ebbf235439732abf16950e1e1367a78263e7189e.jpg",
+        "url": "https://twitter.com/iambolajiayo"
+      },
+      "url": "https://twitter.com/iambolajiayo/status/1231053075017818117",
+      "published": "2020-02-22T03:08:19+00:00",
+      "wm-received": "2020-02-22T03:19:20Z",
+      "wm-id": 759322,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231053075017818117",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "content": {
+        "html": "I want media optimization tools in browser DevTools <a href=\"https://webwewant.fyi/wants/120/\">webwewant.fyi/wants/120/</a>",
+        "text": "I want media optimization tools in browser DevTools webwewant.fyi/wants/120/"
+      },
+      "mention-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Frankline Kihiu",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/536a87ce4b46480f487caeb23f0d4e63703c4275399fe89884658ce471c696fd.jpg",
+        "url": "https://twitter.com/frankline_kihiu"
+      },
+      "url": "https://twitter.com/frankline_kihiu/status/1231006501923426305",
+      "published": "2020-02-22T00:03:15+00:00",
+      "wm-received": "2020-02-22T00:36:44Z",
+      "wm-id": 759297,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231006501923426305",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "I want an intelligent UI/UX dev tool <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want an intelligent UI/UX dev tool webwewant.fyi/wants/124/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Bolaji Ayodeji 💙 #oscafest #SustainAfrica",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a9f6382ac6f1bb9a01bf5dd8ebbf235439732abf16950e1e1367a78263e7189e.jpg",
+        "url": "https://twitter.com/iambolajiayo"
+      },
+      "url": "https://twitter.com/iambolajiayo/status/1231010348553166850",
+      "published": "2020-02-22T00:18:32+00:00",
+      "wm-received": "2020-02-22T00:35:46Z",
+      "wm-id": 759296,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1231010348553166850",
+      "wm-target": "https://webwewant.fyi/wants/120/",
+      "content": {
+        "html": "I want media optimization tools in browser DevTools <a href=\"https://webwewant.fyi/wants/120/\">webwewant.fyi/wants/120/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want media optimization tools in browser DevTools webwewant.fyi/wants/120/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/120/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Reuben #oscafest",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/071a0963b04a2c9dca8c4f63711404cb99a8772386ead0c152fd8ebd5c9828b8.jpg",
+        "url": "https://twitter.com/ReubenKihiu1"
+      },
+      "url": "https://twitter.com/ReubenKihiu1/status/1230994919814320129",
+      "published": "2020-02-21T23:17:14+00:00",
+      "wm-received": "2020-02-21T23:52:35Z",
+      "wm-id": 759290,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1230994919814320129",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "My submission for The Web We Want at OSCA has been accepted and I'll be pitching tomorrow <a href=\"https://twitter.com/oscafrica\">@oscafrica</a> 🥳🥳\n\nPlease view it and vote here: <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a>",
+        "text": "My submission for The Web We Want at OSCA has been accepted and I'll be pitching tomorrow @oscafrica 🥳🥳\n\nPlease view it and vote here: webwewant.fyi/wants/124/"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephen Oyeyo 💙",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/18f8483e63627b84273f46e0725498d61fc4aa83600590c6d4c28e09520eefcc.jpg",
+        "url": "https://twitter.com/sulemaez_o"
+      },
+      "url": "https://twitter.com/sulemaez_o/status/1230998052242100224",
+      "published": "2020-02-21T23:29:41+00:00",
+      "wm-received": "2020-02-21T23:52:28Z",
+      "wm-id": 759289,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1230998052242100224",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "I want an intelligent UI/UX dev tool <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want an intelligent UI/UX dev tool webwewant.fyi/wants/124/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Annie🌸",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/5d56e97de7cd83c7acc6d32bf7d6bbe3194417f9ad9d916d3fe4f27e48e4c524.jpg",
+        "url": "https://twitter.com/wambuicodes"
+      },
+      "url": "https://twitter.com/wambuicodes/status/1230998764678270981",
+      "published": "2020-02-21T23:32:31+00:00",
+      "wm-received": "2020-02-21T23:52:18Z",
+      "wm-id": 759288,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1230998764678270981",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "I want an intelligent UI/UX dev tool <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want an intelligent UI/UX dev tool webwewant.fyi/wants/124/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Bello Gbadebo",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/dc1ba5a0e462172ef9ace6ed31cd3d267741e99d776599f6b2889d8f13f44de9.jpg",
+        "url": "https://twitter.com/Gbahdeyboh"
+      },
+      "url": "https://twitter.com/Gbahdeyboh/status/1230985683088674823",
+      "published": "2020-02-21T22:40:32+00:00",
+      "wm-received": "2020-02-21T23:15:10Z",
+      "wm-id": 759268,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1230985683088674823",
+      "wm-target": "https://webwewant.fyi/wants/124/",
+      "content": {
+        "html": "I want an intelligent UI/UX dev tool <a href=\"https://webwewant.fyi/wants/124/\">webwewant.fyi/wants/124/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want an intelligent UI/UX dev tool webwewant.fyi/wants/124/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/124/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Dave Crossland",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/d681bbfb2275b91c61872072b2b422b81e4246c3f3f2f669959c21a406f5020d.jpg",
+        "url": "https://twitter.com/davelab6"
+      },
+      "url": "https://twitter.com/davelab6/status/1230915662966640640",
+      "published": "2020-02-21T18:02:18+00:00",
+      "wm-received": "2020-02-21T18:25:54Z",
+      "wm-id": 759181,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1230915662966640640",
+      "wm-target": "https://webwewant.fyi/wants/",
+      "content": {
+        "html": "<a href=\"https://twitter.com/ScottKellum\">@ScottKellum</a> post TT in CSS on <a href=\"https://webwewant.fyi/wants/\">webwewant.fyi/wants/</a> ?",
+        "text": "@ScottKellum post TT in CSS on webwewant.fyi/wants/ ?"
+      },
+      "mention-of": "https://webwewant.fyi/wants/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Uduak Essien",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/2bda3f32469bfb2592154408e1b6aa219fde63910f717ecc740b99d57b96ce89.jpg",
+        "url": "https://twitter.com/acushlakoncept"
+      },
+      "url": "https://twitter.com/acushlakoncept/status/1230785245907165184",
+      "published": "2020-02-21T09:24:04+00:00",
+      "wm-received": "2020-02-21T09:32:43Z",
+      "wm-id": 758998,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1230785245907165184",
+      "wm-target": "https://webwewant.fyi/",
+      "photo": [
+        "https://pbs.twimg.com/media/ERSgk0RWkAAngdE.jpg"
+      ],
+      "content": {
+        "html": "Adewale talks about <a href=\"http://webwewant.fyi\">webwewant.fyi</a> , have you imagined something on the web, yet it's not there. Head there and let's make it happen <a href=\"https://twitter.com/search?q=%23oscafest\">#oscafest</a> <a href=\"https://twitter.com/oscafrica\">@oscafrica</a>\n<a class=\"u-mention\" href=\"http://webwewant.fyi/\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/\"></a>",
+        "text": "Adewale talks about webwewant.fyi , have you imagined something on the web, yet it's not there. Head there and let's make it happen #oscafest @oscafrica"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Nikita Voloboev",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/bdce6dd623c6fc3e66ab6dac30cfd1c53fbf984a601882c9960c94fb2bbbd477.jpg",
+        "url": "https://twitter.com/nikitavoloboev"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281#favorited-by-1469451499",
+      "published": null,
+      "wm-received": "2020-02-20T23:37:16Z",
+      "wm-id": 758892,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230280009098465281/1469451499",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "like-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Bruce Anderson",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c7df29905d1479d88e0c8ddd6080548701b8ec3b83d644824c1dcf5fcdf95a97.jpg",
+        "url": "https://twitter.com/bahrusnikoffin"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281#favorited-by-2846071437",
+      "published": null,
+      "wm-received": "2020-02-20T22:18:43Z",
+      "wm-id": 758858,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230280009098465281/2846071437",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "like-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephanie Stimac 🔮 Casting Spells",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78bddfc3c55809c606a37f5b881daee13edb9d9ffe39d048836e66c3688328bd.jpg",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/seaotta/status/1230583458537148416",
+      "published": "2020-02-20T20:02:14+00:00",
+      "wm-received": "2020-02-20T20:56:52Z",
+      "wm-id": 758825,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/AaronGustafson/1230280009098465281/1230583458537148416",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "content": {
+        "text": "This is a really interesting idea… have browsers use custom properties in their default browser stylesheets.\n\nwebwewant.fyi/wants/116/"
+      },
+      "repost-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "KΞNNΞTH C.⚡",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/3eb4c5667eed83917ca5cb03ceaa12e81d1133a602bcd75cfc24e856f636fbbe.jpg",
+        "url": "https://twitter.com/kennethrohde"
+      },
+      "url": "https://twitter.com/kennethrohde/status/1230589144130347023",
+      "published": "2020-02-20T20:24:49+00:00",
+      "wm-received": "2020-02-20T20:56:23Z",
+      "wm-id": 758824,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/AaronGustafson/1230280009098465281/1230589144130347023",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "content": {
+        "text": "This is a really interesting idea… have browsers use custom properties in their default browser stylesheets.\n\nwebwewant.fyi/wants/116/"
+      },
+      "repost-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephanie Stimac 🔮 Casting Spells",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78bddfc3c55809c606a37f5b881daee13edb9d9ffe39d048836e66c3688328bd.jpg",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281#favorited-by-107281171",
+      "published": null,
+      "wm-received": "2020-02-20T20:56:13Z",
+      "wm-id": 758823,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230280009098465281/107281171",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "like-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "lil PWA",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/92181d8cd3faef8723da96664993760d516bdef104889fb1abb72d89328c7bc2.jpg",
+        "url": "https://twitter.com/Justinwillis96"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281#favorited-by-3342117765",
+      "published": null,
+      "wm-received": "2020-02-20T20:56:08Z",
+      "wm-id": 758822,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230280009098465281/3342117765",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "like-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "KΞNNΞTH C. ⚡",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/3eb4c5667eed83917ca5cb03ceaa12e81d1133a602bcd75cfc24e856f636fbbe.jpg",
+        "url": "https://twitter.com/kennethrohde"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281#favorited-by-43562385",
+      "published": null,
+      "wm-received": "2020-02-20T20:56:03Z",
+      "wm-id": 758821,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230280009098465281/43562385",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "like-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "@_developing_dev",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/000a55021c1f0b3473b84a0eff1371311905b30e7bf9afad752ae5a2deeca332.jpg",
+        "url": "https://twitter.com/_developing_dev"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230216334304141312#favorited-by-987305447555325952",
+      "published": null,
+      "wm-received": "2020-02-20T16:30:20Z",
+      "wm-id": 758732,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230216334304141312/987305447555325952",
+      "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "like-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Olushesi Toheeb",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/4f719081aa5db695a03a9a851bdc717176196b06d0a021d8caa275054f68eb1d.png",
+        "url": "https://twitter.com/OT_coder"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230216334304141312#favorited-by-938142633767194627",
+      "published": null,
+      "wm-received": "2020-02-20T16:29:46Z",
+      "wm-id": 758731,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230216334304141312/938142633767194627",
+      "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "like-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Omowunmi",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/dcad5d6169666f9d60d39af22c6f4d8f04bee629248bdacdfc5540c8a1c1c292.jpg",
+        "url": "https://twitter.com/Omowunm36489057"
+      },
+      "url": "https://twitter.com/Omowunm36489057/status/1230501546028404741",
+      "published": "2020-02-20T14:36:44+00:00",
+      "wm-received": "2020-02-20T14:48:08Z",
+      "wm-id": 758686,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/AaronGustafson/1230216334304141312/1230501546028404741",
+      "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "content": {
+        "text": "I am really excited to hear what African devs want from the web platform. @Ace_KYD is running a @webwewantfyi session on Saturday at #OSCAfe"
+      },
+      "repost-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "U J A H ✨",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b592aa66fd86d53e36e4128b503870b0eaeab6306b62bf27f48d6e56e2a5a419.jpg",
+        "url": "https://twitter.com/logiquecoder"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230216334304141312#favorited-by-482195571",
+      "published": null,
+      "wm-received": "2020-02-20T14:47:58Z",
+      "wm-id": 758685,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230216334304141312/482195571",
+      "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "like-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Ace 🦋#oscafest",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/5418bac3deb6cbaf0d8916bae36ba7eca559acbebc4a4eedeaa28cb7ab934bfe.jpg",
+        "url": "https://twitter.com/Ace_KYD"
+      },
+      "url": "https://twitter.com/Ace_KYD/status/1230489144780087298",
+      "published": "2020-02-20T13:47:28+00:00",
+      "wm-received": "2020-02-20T14:12:52Z",
+      "wm-id": 758667,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/AaronGustafson/1230489144780087298",
+      "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "content": {
+        "html": "If you are a web developer and you'd be attending <a href=\"https://twitter.com/oscafrica\">@oscafrica</a>'s <a href=\"https://twitter.com/search?q=%23OSCAFEST\">#OSCAFEST</a>, submit something you'd like to see on the web and get to pitch at the festival for a chance to see it come to live and also win a nice prize! 🎉\n<a class=\"u-mention\" href=\"https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria\"></a>",
+        "text": "If you are a web developer and you'd be attending @oscafrica's #OSCAFEST, submit something you'd like to see on the web and get to pitch at the festival for a chance to see it come to live and also win a nice prize! 🎉"
+      },
+      "mention-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Tueloper 💻",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/3388d028e087ed6163c97958ed0432ee45fe59bc5a03574422ed5ce6b2d911c3.jpg",
+        "url": "https://twitter.com/Tueloper"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230216334304141312#favorited-by-803472312041435136",
+      "published": null,
+      "wm-received": "2020-02-20T13:34:01Z",
+      "wm-id": 758647,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230216334304141312/803472312041435136",
+      "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "like-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Chi 🔥 ⚡ #oscafest #SustainAfrica",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0d1ee541c882982239415ba59411d6fca632949fc23ae4392bba2ca5766d8158.jpg",
+        "url": "https://twitter.com/codefinest"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230216334304141312#favorited-by-3303480335",
+      "published": null,
+      "wm-received": "2020-02-20T11:23:20Z",
+      "wm-id": 758617,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230216334304141312/3303480335",
+      "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "like-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Your Friendly Neighbourhood Bakman",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/303c5b6a426cb8417d0b8ddb674939fb9cbe4aef7c7c1c688924a31e7ed503c7.jpg",
+        "url": "https://twitter.com/TiemmaBakare"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230216334304141312#favorited-by-604749081",
+      "published": null,
+      "wm-received": "2020-02-20T08:36:19Z",
+      "wm-id": 758550,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230216334304141312/604749081",
+      "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "like-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Никита Зайцев",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/61033d16a1758147a5d33788b059c808467eca17d2322548a3a4116edbc0fc87.jpg",
+        "url": "https://twitter.com/zaya_pro"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230216334304141312#favorited-by-68526993",
+      "published": null,
+      "wm-received": "2020-02-20T08:35:17Z",
+      "wm-id": 758549,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230216334304141312/68526993",
+      "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "like-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Ada #oscafest #SustainAfrica",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/aa3ab6f6e51f52306b4a078b0828ba4e0095697653dc09527b0214bdd3c00134.jpg",
+        "url": "https://twitter.com/Kolokodess"
+      },
+      "url": "https://twitter.com/Kolokodess/status/1230389431024201728",
+      "published": "2020-02-20T07:11:14+00:00",
+      "wm-received": "2020-02-20T07:57:45Z",
+      "wm-id": 758528,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/AaronGustafson/1230216334304141312/1230389431024201728",
+      "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "content": {
+        "text": "I am really excited to hear what African devs want from the web platform. @Ace_KYD is running a @webwewantfyi session on Saturday at #OSCAfe"
+      },
+      "repost-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Ada #oscafest #SustainAfrica",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/aa3ab6f6e51f52306b4a078b0828ba4e0095697653dc09527b0214bdd3c00134.jpg",
+        "url": "https://twitter.com/Kolokodess"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230216334304141312#favorited-by-371156597",
+      "published": null,
+      "wm-received": "2020-02-20T07:57:24Z",
+      "wm-id": 758527,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230216334304141312/371156597",
+      "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "like-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Soliudeen Ogunsola ✨",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/4511060f7a242f8d02503ba868f538fd76b1eef956632d42df90ba6ebd1c42d4.jpg",
+        "url": "https://twitter.com/WebMaye"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230216334304141312#favorited-by-893907705592766464",
+      "published": null,
+      "wm-received": "2020-02-20T07:57:07Z",
+      "wm-id": 758526,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230216334304141312/893907705592766464",
+      "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "like-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Diego Castaño",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/7b0db0b9129bb4b4665230d2cc9f386f215a7686ff1220cd0aee7d9366881240.jpg",
+        "url": "https://twitter.com/Dowrow"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281#favorited-by-162377671",
+      "published": null,
+      "wm-received": "2020-02-20T07:12:23Z",
+      "wm-id": 758518,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230280009098465281/162377671",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "like-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "JimDabell",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b3ce31be504a02533cdf77226d398a90d0c90ffe7b1c8c2d12b11d4f878c8d54.jpg",
+        "url": "https://twitter.com/JimDabell"
+      },
+      "url": "https://twitter.com/JimDabell/status/1230375701699690497",
+      "published": "2020-02-20T06:16:41+00:00",
+      "wm-received": "2020-02-20T06:38:26Z",
+      "wm-id": 758512,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/AaronGustafson/1230280009098465281/1230375701699690497",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "content": {
+        "text": "This is a really interesting idea… have browsers use custom properties in their default browser stylesheets.\n\nwebwewant.fyi/wants/116/"
+      },
+      "repost-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "JimDabell",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/b3ce31be504a02533cdf77226d398a90d0c90ffe7b1c8c2d12b11d4f878c8d54.jpg",
+        "url": "https://twitter.com/JimDabell"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281#favorited-by-14505515",
+      "published": null,
+      "wm-received": "2020-02-20T06:37:12Z",
+      "wm-id": 758511,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230280009098465281/14505515",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "like-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Corbin Otwell",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/caddad3b49cb94acc90a8ff5c70d419dcd97e596af8d1a0256d320d58a109c6b.jpg",
+        "url": "https://twitter.com/cbotwell"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281#favorited-by-15251987",
+      "published": null,
+      "wm-received": "2020-02-20T02:03:07Z",
+      "wm-id": 758463,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230280009098465281/15251987",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "like-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "George Salib®",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/2fc0fa85e7633b0670eb630b00d9fd1e9e3cdd257f26218b933726d60c2b3f41.jpg",
+        "url": "https://twitter.com/G4S90"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281#favorited-by-119888775",
+      "published": null,
+      "wm-received": "2020-02-20T01:24:00Z",
+      "wm-id": 758458,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230280009098465281/119888775",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "like-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "WestbrookJ",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/1607b524ddb6653f31c5e31abee7894878f0398ed3013bc9b73d501b30a492a2.jpg",
+        "url": "https://twitter.com/WestbrookJ"
+      },
+      "url": "https://twitter.com/WestbrookJ/status/1230286262344527873",
+      "published": "2020-02-20T00:21:17+00:00",
+      "wm-received": "2020-02-20T00:40:10Z",
+      "wm-id": 758447,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/AaronGustafson/1230280009098465281/1230286262344527873",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "content": {
+        "text": "This is a really interesting idea… have browsers use custom properties in their default browser stylesheets.\n\nwebwewant.fyi/wants/116/"
+      },
+      "repost-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "WestbrookJ",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/1607b524ddb6653f31c5e31abee7894878f0398ed3013bc9b73d501b30a492a2.jpg",
+        "url": "https://twitter.com/WestbrookJ"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281#favorited-by-16910874",
+      "published": null,
+      "wm-received": "2020-02-20T00:40:02Z",
+      "wm-id": 758446,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230280009098465281/16910874",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "like-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stuart Langridge",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/f89362bfde1ae1eb0bb607979ded9180c486b9beb5c195ff5a50bc842eb4707f.png",
+        "url": "https://twitter.com/sil"
+      },
+      "url": "https://twitter.com/sil/status/1230286089979559937",
+      "published": "2020-02-20T00:20:36+00:00",
+      "wm-received": "2020-02-20T00:39:46Z",
+      "wm-id": 758445,
+      "wm-source": "https://brid-gy.appspot.com/comment/twitter/AaronGustafson/1230280009098465281/1230286089979559937",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "content": {
+        "html": "I might be being a bit dim here, but I don't see how this helps?\nWell, I can see one way: it's weird that currentColor exists but not currentFont and currentBorderWidth and currentOrphans. But I'm still missing why this is useful, which is my fault.\n<a class=\"u-mention\" href=\"https://twitter.com/AaronGustafson\"></a>",
+        "text": "I might be being a bit dim here, but I don't see how this helps?\nWell, I can see one way: it's weird that currentColor exists but not currentFont and currentBorderWidth and currentOrphans. But I'm still missing why this is useful, which is my fault."
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/116/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Alex Russell",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a4a72ec7d1c3e4b1f833bff7b2294c6f9f9f2114cbdba428b9a84da0a75f6e83.jpg",
+        "url": "https://twitter.com/slightlylate"
+      },
+      "url": "https://twitter.com/slightlylate/status/1230280489644093440",
+      "published": "2020-02-19T23:58:20+00:00",
+      "wm-received": "2020-02-20T00:06:19Z",
+      "wm-id": 758440,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/AaronGustafson/1230280009098465281/1230280489644093440",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "content": {
+        "text": "This is a really interesting idea… have browsers use custom properties in their default browser stylesheets.\n\nwebwewant.fyi/wants/116/"
+      },
+      "repost-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Robin Berjon",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/cde0f3468ea92d07a006d03c5bd29f04d5e419712f4e9144a5f425bbc04c0323.jpg",
+        "url": "https://twitter.com/robinberjon"
+      },
+      "url": "https://twitter.com/robinberjon/status/1230281630448857088",
+      "published": "2020-02-20T00:02:52+00:00",
+      "wm-received": "2020-02-20T00:06:07Z",
+      "wm-id": 758439,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/AaronGustafson/1230280009098465281/1230281630448857088",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "content": {
+        "text": "This is a really interesting idea… have browsers use custom properties in their default browser stylesheets.\n\nwebwewant.fyi/wants/116/"
+      },
+      "repost-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Alex Russell",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a4a72ec7d1c3e4b1f833bff7b2294c6f9f9f2114cbdba428b9a84da0a75f6e83.jpg",
+        "url": "https://twitter.com/slightlylate"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281#favorited-by-229237555",
+      "published": null,
+      "wm-received": "2020-02-20T00:05:59Z",
+      "wm-id": 758438,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230280009098465281/229237555",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "like-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Kathleen McMahon",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/17efd969828de1c2a7a88c92ee820ba2867711a45d729f729bc16c62f470f8d5.jpg",
+        "url": "https://twitter.com/resource11"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281#favorited-by-32190243",
+      "published": null,
+      "wm-received": "2020-02-20T00:05:51Z",
+      "wm-id": 758437,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230280009098465281/32190243",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "like-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "RYO@Rriver",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/2fec89193f8dfa00702761874bda50d2a571ed7a385ee8f00658a563266c26c5.jpg",
+        "url": "https://twitter.com/rriver"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281#favorited-by-7125352",
+      "published": null,
+      "wm-received": "2020-02-20T00:05:41Z",
+      "wm-id": 758436,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230280009098465281/7125352",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "like-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Robin Berjon",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/cde0f3468ea92d07a006d03c5bd29f04d5e419712f4e9144a5f425bbc04c0323.jpg",
+        "url": "https://twitter.com/robinberjon"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281#favorited-by-25805235",
+      "published": null,
+      "wm-received": "2020-02-20T00:05:31Z",
+      "wm-id": 758435,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230280009098465281/25805235",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "like-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "James Coyle",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0b5413b5131bc3baf8ed9b96d6b6bd7874735baa793e98910ffda135f5ea5e3b.jpg",
+        "url": "https://twitter.com/JamesCoyle95"
+      },
+      "url": "https://twitter.com/JamesCoyle95/status/1230272224575344640",
+      "published": "2020-02-19T23:25:30+00:00",
+      "wm-received": "2020-02-20T00:05:27Z",
+      "wm-id": 758434,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1230272224575344640",
+      "wm-target": "https://webwewant.fyi/wants/59/",
+      "content": {
+        "html": "I want browsers to localize data like dates and numbers <a href=\"https://webwewant.fyi/wants/59/\">webwewant.fyi/wants/59/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want browsers to localize data like dates and numbers webwewant.fyi/wants/59/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/59/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Reuben #oscafest",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/071a0963b04a2c9dca8c4f63711404cb99a8772386ead0c152fd8ebd5c9828b8.jpg",
+        "url": "https://twitter.com/ReubenKihiu1"
+      },
+      "url": "https://twitter.com/ReubenKihiu1/status/1230279725056172032",
+      "published": "2020-02-19T23:55:18+00:00",
+      "wm-received": "2020-02-20T00:05:11Z",
+      "wm-id": 758433,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1230279725056172032",
+      "wm-target": "https://webwewant.fyi/wants/103/",
+      "content": {
+        "html": "I want web apps to be able to work in other contexts (like car displays) <a href=\"https://webwewant.fyi/wants/103/\">webwewant.fyi/wants/103/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want web apps to be able to work in other contexts (like car displays) webwewant.fyi/wants/103/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/103/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Aaron Gustafson",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/ccecfe0f8e7fe60a7d2fa1f0524b3e73449fd5bdf62eacb7d9c3298360ca316f.jpg",
+        "url": "https://twitter.com/AaronGustafson"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230280009098465281",
+      "published": "2020-02-19T23:56:26+00:00",
+      "wm-received": "2020-02-20T00:05:02Z",
+      "wm-id": 758432,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1230280009098465281",
+      "wm-target": "https://webwewant.fyi/wants/116/",
+      "content": {
+        "html": "This is a really interesting idea… have browsers use custom properties in their default browser stylesheets.\n\n<a href=\"https://webwewant.fyi/wants/116/\">webwewant.fyi/wants/116/</a>",
+        "text": "This is a really interesting idea… have browsers use custom properties in their default browser stylesheets.\n\nwebwewant.fyi/wants/116/"
+      },
+      "mention-of": "https://webwewant.fyi/wants/116/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Wellington Torrejais da Silva",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/13ef441ec040d50ee26fb7faa077071221ccd6ab83c5ac502c046d3282e938ba.jpg",
+        "url": "https://twitter.com/Wellington_Tds"
+      },
+      "url": "https://twitter.com/Wellington_Tds/status/1230257760148873217",
+      "published": "2020-02-19T22:28:01+00:00",
+      "wm-received": "2020-02-19T23:14:10Z",
+      "wm-id": 758426,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/AaronGustafson/1230216334304141312/1230257760148873217",
+      "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "content": {
+        "text": "I am really excited to hear what African devs want from the web platform. @Ace_KYD is running a @webwewantfyi session on Saturday at #OSCAfe"
+      },
+      "repost-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Wellington Torrejais da Silva",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/13ef441ec040d50ee26fb7faa077071221ccd6ab83c5ac502c046d3282e938ba.jpg",
+        "url": "https://twitter.com/Wellington_Tds"
+      },
+      "url": "https://twitter.com/AaronGustafson/status/1230216334304141312#favorited-by-37937416",
+      "published": null,
+      "wm-received": "2020-02-19T23:13:26Z",
+      "wm-id": 758425,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/AaronGustafson/1230216334304141312/37937416",
+      "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "like-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
+      "wm-property": "like-of",
       "wm-private": false
     }
   ]
