@@ -48,9 +48,14 @@
           id="field-{{ name }}"
           value="1"
           {% if data.required %}required aria-required="true"{% endif %}
+          {% if data.description %}aria-describedby="description-{{ name }}"{% endif %}
           >
     {{ text }}
   </label>
+  {% if data.description %}
+    <br>
+    <em class="question__description" id="description-{{ name }}">{{ data.description | widont }}</em>
+  {% endif %}
 {% endmacro %}
 
 {% macro select( name, options, data ) %}

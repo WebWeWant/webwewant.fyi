@@ -21,4 +21,34 @@ section: home
   </section>
 {% endif %}
 
-{% include 'components/submit.njk' %}
+<section id="submit">
+  <h2>We’re listening…</h2>
+  <p>We’d love to know what tools you want to add to your web dev toolbox. We’ll evaluate all submissions for inclusion on this site and we may reach out to ask that you present your “want” at a future event.</p>
+  <p>We reserve the right to accept or reject any submissions. Any rude or inappropriate submissions will be rejected outright.</p>
+  
+  {% include 'components/submit.njk' %}
+</section>
+
+<script>
+  // enable events to pre-populate the select using the hash
+  // format: #Beyond+Tellerrand+-+Berlin,+Germany
+  (function(win, doc){
+    var hash = win.location.hash,
+        $options,
+        len;
+    if ( hash != "" )
+    {
+      hash = hash.replace("#","").replace(/\+/g," ");
+      $options = doc.getElementById('field-events').children;
+      len = $options.length;
+      while ( len-- )
+      {
+        if ( $options[len].value == hash ) {
+          $options[len].selected = true;
+          break;
+        }
+      }
+      $options = null;
+    }
+  }(this, this.document));
+</script>

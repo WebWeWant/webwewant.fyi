@@ -451,6 +451,10 @@ label input {
 }
 .question--confirm input {
   width: auto;
+  vertical-align: middle;
+  /* hacky */
+  position: relative;
+  top: -.1em;
 }
 
 
