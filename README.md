@@ -8,11 +8,11 @@ If you build websites, you inevitably run into problems. Maybe there’s no way 
 
 ## Adding Events
 
-You can add events by editing [the `events.json` file](./_data/events.json).
+[File a new event issue](https://github.com/WebWeWant/webwewant.fyi/issues/new?assignees=&labels=event&template=new-event.md&title=Event%3A+EVENT+NAME+-+DAY+MONTH+YEAR) and then [follow the instructions for creating a new event](https://github.com/WebWeWant/webwewant.fyi/wiki/Managing-Events).
 
 ## Adding Wants
 
-You can add a new "Want" by creating a new markdown file in [the `wants` directory](./wants/). Feel free to duplicate an existing Want and use that as a template.
+[File a new "want" issue](https://github.com/WebWeWant/webwewant.fyi/issues/new?assignees=&labels=want&template=new-want.md&title=New+Want%3A+YOUR+WANT+TITLE).
 
 ## Local development
 
