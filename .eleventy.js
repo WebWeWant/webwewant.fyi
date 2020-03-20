@@ -70,7 +70,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("fixNames", text => {
     let test = text.toLowerCase(),
         acronyms = [ "html", "css", "svg" ],
-        camel_case = [ "JavaScript", "DevTools", "WebDriver", "WebRTC" ],
+        camel_case = [ "JavaScript", "DevTools", "WebDriver", "WebRTC", "URLs" ],
         i, proper_name;
     
     if ( acronyms.indexOf( test ) > -1 )
