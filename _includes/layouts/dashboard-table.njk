@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+---
+<h1>{{ title | widont  }}</h1>
+
+{{ layoutContent | safe }}
+
+<table>
+{% for w in collections.wants %}
+    <tr>
+        <td>
+        </td>
+    </tr>
+{% endfor %}
+</table>
