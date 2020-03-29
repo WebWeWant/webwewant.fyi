@@ -282,11 +282,76 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("wantsWithItem", collection => {
     // get unsorted items
+
     return collection.getAll().filter( item => {
       if(item.inputPath.indexOf("wants/") > -1) {
         return item;
       }
     });
+  });
+
+  eleventyConfig.addCollection("wantsSortedByVotes", collection => {
+    const pluck = 3,
+          top_wants = {},
+          all = collection.getAll(),
+          wants = all.filter( item => {
+            return item.inputPath.indexOf("wants/") > -1;
+          }),
+          webmentions = all[0].data.webmentions.children;
+
+    // Calculate votes
+    var votes = {};
+    wants.map( ( want, i ) => {
+
+      // capture the id
+      let id = parseInt( want.url.split('/')[2], 10 ); // make it a number
+      wants[i].id = id;
+
+      // process votes from webmentions into an array
+      let count = 0,
+          mentions = webmentions
+                      // permalink would be better, but this works too
+                      .filter(entry => entry['wm-target'].indexOf(want.url) > -1 )
+                      .filter(entry => VOTE_TYPES.includes(entry['wm-property']));
+
+      if ( mentions.length )
+      {
+        count += mentions.length;
+      }
+
+      votes[want.url] = count;
+    });
+    // console.log( votes );
+
+    // sort wants by votes
+    wants
+      .sort( (a, b) => {
+        return votes[b.url] - votes[a.url];
+      })
+      // loop through all
+      .map( want => {
+        // pluck top by tag
+        want.data.tags.forEach(function( tag ){
+
+          // add to tag group
+          if ( ! (tag in top_wants) )
+          {
+            top_wants[tag] = [];
+          }
+
+          // no more than pluck
+          if ( top_wants[tag].length > (pluck - 1) )
+          {
+            return;
+          }
+
+          top_wants[tag].push( want );
+
+        });
+      });
+
+    // return the new collection sorted by tag
+    return top_wants;
   });
 
   eleventyConfig.addCollection("topWants", collection => {
