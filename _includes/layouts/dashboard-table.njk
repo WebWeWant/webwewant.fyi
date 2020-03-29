@@ -5,10 +5,32 @@ layout: layouts/base.njk
 
 {{ layoutContent | safe }}
 
+<br/>Gregwants Count: {{ collections.gregswants.length }}
+<br/>Webmention Count: {{ webmentions.children.length}}
+<br/>Tag Count: {{collections.tags.length}}
+
 <table>
-{% for w in collections.wants %}
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Votes</th>
+            <th>Tags</th>
+        </tr>
+    </thead>
+{% for w in collections.wantsWithItem %}
+    {% set url %}{{ 'https://webwewant.fyi/wants/' }}{{ w.url | extractID }}{{ '/' }}{% endset %}
     <tr>
-        <td>
+        <td class="dashboard-id">
+            <!-- ID -->
+            <a href="{{url}}">{{ w.url | extractID }}</a>
+        </td>
+        <td class="dashboard-votes">
+            <!-- Votes -->
+            {{ webmentions.children | votesForWant( url ) }}<br/>
+        </td>
+        <td class="dashboard-tags">
+            <!-- Tags -->
+            {{ w.data.tags }}
         </td>
     </tr>
 {% endfor %}
