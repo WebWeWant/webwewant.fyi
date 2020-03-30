@@ -13,8 +13,10 @@ layout: layouts/base.njk
     <section id="{{ tag }}" class="dashboard__item">
       <h2>{{ tag | unslug | fixNames }}</h2>
       <ul class="wants">
-        {% for w in collections.topWants[tag] %}
+        {% for w in collections.topWantsPerTag[tag] %}
           {{ want( 'li', '', w.url, 'h3', w.data.title, w.data.submitter ) }}
+          <br/>
+          Votes: {{ w.data.votes }}
         {% endfor %}
       </ul>
     </section>

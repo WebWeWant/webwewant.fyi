@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+---
+<h1>{{ title | widont  }}</h1>
+
+{{ layoutContent | safe }}
+
+<table class="dashboard">
+    <thead>
+        <tr>
+            <th class="dashboard-title">Title</th>
+            <th class="dashboard-votes">Votes</th>
+            <th class="dashboard-tags">Tags</th>
+        </tr>
+    </thead>
+{% for w in collections.wantsSortedByVotes %}
+    {% set url %}{{ 'https://webwewant.fyi/wants/' }}{{ w.url | extractID }}{{ '/' }}{% endset %}
+    <tr>
+        <td class="dashboard-title">
+            <!-- Title -->
+            <a href="{{url}}">{{ w.data.title }}</a>
+        </td>
+        <td class="dashboard-votes">
+            <!-- Votes -->
+            {{ webmentions.children | votesForWant( url ) }}<br/>
+        </td>
+        <td class="dashboard-tags">
+            <!-- Tags -->
+            {{ w.data.tags }}
+        </td>
+    </tr>
+{% endfor %}
+</table>

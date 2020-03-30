@@ -27,7 +27,7 @@ body {
   font-smooth: always;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+
   line-height: 1.5;
 
   padding: 0;
@@ -186,7 +186,7 @@ nav a {
     display: flex;
     justify-content: center;
   }
-  nav li {  
+  nav li {
     position: relative;
   }
   nav li::before,
@@ -640,6 +640,32 @@ hr {
   }
 }
 
+/* Dashboard */
+
+table.dashboard {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.dashboard-title {
+    width: 70%;
+    text-align: left;
+    vertical-align: top;
+}
+
+.dashboard-votes {
+    width: 10%;
+    text-align: center;
+    vertical-align: top;
+}
+
+.dashboard-tags {
+    width: 30%;
+    text-align: left;
+    vertical-align: top;
+    overflow: hidden;
+}
+
 
 /* Prism */
 /**
@@ -660,38 +686,38 @@ hr {
    word-break: normal;
    word-wrap: normal;
    line-height: 1.5;
- 
+
    -moz-tab-size: 4;
    -o-tab-size: 4;
    tab-size: 4;
- 
+
    -webkit-hyphens: none;
    -moz-hyphens: none;
    -ms-hyphens: none;
    hyphens: none;
  }
- 
+
  /* Code blocks */
  pre[class*="language-"] {
    border-radius: 0.3em;
  }
- 
+
  :not(pre) > code[class*="language-"],
  pre[class*="language-"] {
    background: #2b2b2b;
  }
- 
+
  .token.comment,
  .token.prolog,
  .token.doctype,
  .token.cdata {
    color: #d4d0ab;
  }
- 
+
  .token.punctuation {
    color: #fefefe;
  }
- 
+
  .token.property,
  .token.tag,
  .token.constant,
@@ -699,12 +725,12 @@ hr {
  .token.deleted {
    color: #ffa07a;
  }
- 
+
  .token.boolean,
  .token.number {
    color: #00e0e0;
  }
- 
+
  .token.selector,
  .token.attr-name,
  .token.string,
@@ -713,7 +739,7 @@ hr {
  .token.inserted {
    color: #abe338;
  }
- 
+
  .token.operator,
  .token.entity,
  .token.url,
@@ -722,22 +748,22 @@ hr {
  .token.variable {
    color: #00e0e0;
  }
- 
+
  .token.atrule,
  .token.attr-value,
  .token.function {
    color: #ffd700;
  }
- 
+
  .token.keyword {
    color: #00e0e0;
  }
- 
+
  .token.regex,
  .token.important {
    color: #ffd700;
  }
- 
+
  .token.important,
  .token.bold {
    font-weight: bold;
@@ -745,29 +771,29 @@ hr {
  .token.italic {
    font-style: italic;
  }
- 
+
  .token.entity {
    cursor: help;
  }
- 
+
  @media screen and (-ms-high-contrast: active) {
    code[class*="language-"],
    pre[class*="language-"] {
      color: windowText;
      background: window;
    }
- 
+
    :not(pre) > code[class*="language-"],
    pre[class*="language-"] {
      background: window;
    }
- 
+
    .token.important {
      background: highlight;
      color: window;
      font-weight: normal;
    }
- 
+
    .token.atrule,
    .token.attr-value,
    .token.function,
@@ -776,7 +802,7 @@ hr {
    .token.selector {
      font-weight: bold;
    }
- 
+
    .token.attr-value,
    .token.comment,
    .token.doctype,
@@ -787,7 +813,7 @@ hr {
    .token.string {
      color: highlight;
    }
- 
+
    .token.attr-value,
    .token.url {
      font-weight: normal;

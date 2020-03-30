@@ -15,7 +15,6 @@ const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 module.exports = function(eleventyConfig) {
   const VOTE_TYPES = ['like-of', 'bookmark-of', 'mention-of'];
 
-
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
   // Date formatting (human readable)
@@ -72,7 +71,7 @@ module.exports = function(eleventyConfig) {
         acronyms = [ "html", "css", "svg" ],
         camel_case = [ "JavaScript", "DevTools", "WebDriver", "WebRTC", "URLs" ],
         i, proper_name;
-    
+
     if ( acronyms.indexOf( test ) > -1 )
     {
       return text.toUpperCase();
@@ -89,7 +88,7 @@ module.exports = function(eleventyConfig) {
       }
     }
     return text;
-  });  
+  });
 
   // HTML date range
   eleventyConfig.addShortcode("DateRange", ( string, html ) => {
@@ -100,15 +99,15 @@ module.exports = function(eleventyConfig) {
 
     let s_yr = start.year,
         s_mo = start.month,
-        s_dy = start.day, 
+        s_dy = start.day,
         s_dt,
         e_yr = end.year,
         e_mo = end.month,
         e_dy = end.day,
         e_dt,
         template = '<time datetime="DATETIME">DISPLAY</time>';
-    
-    
+
+
     switch (true)
     {
       // same date
@@ -165,7 +164,7 @@ module.exports = function(eleventyConfig) {
     return `${widont( text )}`;
   });
 
-  
+
   // Minify CSS
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
@@ -281,66 +280,81 @@ module.exports = function(eleventyConfig) {
     return url[2];
   });
 
-  eleventyConfig.addCollection("topWants", collection => {
-    const pluck = 3,
-          win_vote_factor = 30,
-          top_wants = {},
-          all = collection.getAll(),
-          wants = all.filter( item => {
-            return item.inputPath.indexOf("wants/") > -1;
-          }),
+  eleventyConfig.addCollection("wantsObject", collection => {
+    // get unsorted items
+    return collection.getAll().filter( item => {
+      if(item.inputPath.indexOf("wants/") > -1) {
+        return item;
+      }
+    });
+  });
+
+  eleventyConfig.addCollection("wantsSortedByVotes", collection => {
+    const all = collection.getAll(),
+          wants = all[0].data.collections.wantsObject,
           webmentions = all[0].data.webmentions.children;
-    
-    // gather winners
-    var winners = [];
-    collection.getAll()
-      .map( ( item, i ) => {
-        if ( item.inputPath.indexOf("events/") > -1 &&
-              'winners' in item.data )
-        {
-          winners.push( item.data.winners.judges, item.data.winners.community );
-        }
-      });
-    
+
     // Calculate votes
     var votes = {};
     wants.map( ( want, i ) => {
-      
       // capture the id
       let id = parseInt( want.url.split('/')[2], 10 ); // make it a number
       wants[i].id = id;
-      
+
       // process votes from webmentions into an array
       let count = 0,
           mentions = webmentions
                       // permalink would be better, but this works too
                       .filter(entry => entry['wm-target'].indexOf(want.url) > -1 )
                       .filter(entry => VOTE_TYPES.includes(entry['wm-property']));
-      
+
       if ( mentions.length )
       {
         count += mentions.length;
       }
 
-      // Factor in live voting
-      if ( winners.indexOf( id ) > -1 ) {
-        count += win_vote_factor;
-      }
-      
       votes[want.url] = count;
+      want.data.votes = count;
     });
-    // console.log( votes );
 
-    // sort wants by votes
     wants
       .sort( (a, b) => {
         return votes[b.url] - votes[a.url];
       })
+
+    return wants;
+  });
+
+/* // For some reason this is throwing a template replace error
+  // If you place this code down in the topWantsPerTag it works fine
+  // with no build error. Not sure what the issue is
+  eleventyConfig.addCollection("getWinners", collection => {
+    let winners = [];
+    collection.getAll()
+    .map( ( item, i ) => {
+        if ( item.inputPath.indexOf("events/") > -1 &&
+            'winners' in item.data )
+        {
+            winners.push( item.data.winners.judges, item.data.winners.community );
+        }
+    });
+    console.log(winners);
+    return winners;
+  });
+*/
+
+  eleventyConfig.addCollection("topWantsPerTag", collection => {
+    const pluck = 3,
+          top_wants = {},
+          all = collection.getAll(),
+          wants = all[0].data.collections.wantsSortedByVotes;
+
+    wants
       // loop through all
       .map( want => {
         // pluck top by tag
         want.data.tags.forEach(function( tag ){
-          
+
           // add to tag group
           if ( ! (tag in top_wants) )
           {
@@ -354,10 +368,9 @@ module.exports = function(eleventyConfig) {
           }
 
           top_wants[tag].push( want );
-
         });
       });
-      
+
     // return the new collection sorted by tag
     //console.log( top_wants );
     return top_wants;
