@@ -5,24 +5,25 @@ layout: layouts/base.njk
 
 {{ layoutContent | safe }}
 
-<br/>Gregwants Count: {{ collections.gregswants.length }}
-<br/>Webmention Count: {{ webmentions.children.length}}
-<br/>Tag Count: {{collections.tags.length}}
-
 <table>
     <thead>
         <tr>
-            <th>ID</th>
-            <th>Votes</th>
-            <th>Tags</th>
+            <th class="dashboard-id">ID</th>
+            <th class="dashboard-title">Title</th>
+            <th class="dashboard-votes">Votes</th>
+            <th class="dashboard-tags">Tags</th>
         </tr>
     </thead>
-{% for w in collections.wantsWithItem %}
+{% for w in collections.wantsSortedByVotes %}
     {% set url %}{{ 'https://webwewant.fyi/wants/' }}{{ w.url | extractID }}{{ '/' }}{% endset %}
     <tr>
         <td class="dashboard-id">
             <!-- ID -->
             <a href="{{url}}">{{ w.url | extractID }}</a>
+        </td>
+        <td class="dashboard-title">
+            <!-- Title -->
+            {{ w.data.title }}
         </td>
         <td class="dashboard-votes">
             <!-- Votes -->

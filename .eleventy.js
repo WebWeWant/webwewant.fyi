@@ -280,9 +280,8 @@ module.exports = function(eleventyConfig) {
     return url[2];
   });
 
-  eleventyConfig.addCollection("wantsWithItem", collection => {
+  eleventyConfig.addCollection("wantsObject", collection => {
     // get unsorted items
-
     return collection.getAll().filter( item => {
       if(item.inputPath.indexOf("wants/") > -1) {
         return item;
@@ -291,18 +290,13 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addCollection("wantsSortedByVotes", collection => {
-    const pluck = 3,
-          top_wants = {},
-          all = collection.getAll(),
-          wants = all.filter( item => {
-            return item.inputPath.indexOf("wants/") > -1;
-          }),
+    const all = collection.getAll(),
+          wants = all[0].data.collections.wantsObject,
           webmentions = all[0].data.webmentions.children;
 
     // Calculate votes
     var votes = {};
     wants.map( ( want, i ) => {
-
       // capture the id
       let id = parseInt( want.url.split('/')[2], 10 ); // make it a number
       wants[i].id = id;
@@ -321,37 +315,13 @@ module.exports = function(eleventyConfig) {
 
       votes[want.url] = count;
     });
-    // console.log( votes );
 
-    // sort wants by votes
     wants
       .sort( (a, b) => {
         return votes[b.url] - votes[a.url];
       })
-      // loop through all
-      .map( want => {
-        // pluck top by tag
-        want.data.tags.forEach(function( tag ){
 
-          // add to tag group
-          if ( ! (tag in top_wants) )
-          {
-            top_wants[tag] = [];
-          }
-
-          // no more than pluck
-          if ( top_wants[tag].length > (pluck - 1) )
-          {
-            return;
-          }
-
-          top_wants[tag].push( want );
-
-        });
-      });
-
-    // return the new collection sorted by tag
-    return top_wants;
+    return wants;
   });
 
   eleventyConfig.addCollection("topWants", collection => {
