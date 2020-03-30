@@ -314,6 +314,7 @@ module.exports = function(eleventyConfig) {
       }
 
       votes[want.url] = count;
+      want.data.votes = count;
     });
 
     wants
@@ -324,61 +325,31 @@ module.exports = function(eleventyConfig) {
     return wants;
   });
 
-  eleventyConfig.addCollection("topWants", collection => {
+/* // For some reason this is throwing a template replace error
+  // If you place this code down in the topWantsPerTag it works fine
+  // with no build error. Not sure what the issue is
+  eleventyConfig.addCollection("getWinners", collection => {
+    let winners = [];
+    collection.getAll()
+    .map( ( item, i ) => {
+        if ( item.inputPath.indexOf("events/") > -1 &&
+            'winners' in item.data )
+        {
+            winners.push( item.data.winners.judges, item.data.winners.community );
+        }
+    });
+    console.log(winners);
+    return winners;
+  });
+*/
+
+  eleventyConfig.addCollection("topWantsPerTag", collection => {
     const pluck = 3,
-          win_vote_factor = 30,
           top_wants = {},
           all = collection.getAll(),
-          wants = all.filter( item => {
-            return item.inputPath.indexOf("wants/") > -1;
-          }),
-          webmentions = all[0].data.webmentions.children;
+          wants = all[0].data.collections.wantsSortedByVotes;
 
-    // gather winners
-    var winners = [];
-    collection.getAll()
-      .map( ( item, i ) => {
-        if ( item.inputPath.indexOf("events/") > -1 &&
-              'winners' in item.data )
-        {
-          winners.push( item.data.winners.judges, item.data.winners.community );
-        }
-      });
-
-    // Calculate votes
-    var votes = {};
-    wants.map( ( want, i ) => {
-
-      // capture the id
-      let id = parseInt( want.url.split('/')[2], 10 ); // make it a number
-      wants[i].id = id;
-
-      // process votes from webmentions into an array
-      let count = 0,
-          mentions = webmentions
-                      // permalink would be better, but this works too
-                      .filter(entry => entry['wm-target'].indexOf(want.url) > -1 )
-                      .filter(entry => VOTE_TYPES.includes(entry['wm-property']));
-
-      if ( mentions.length )
-      {
-        count += mentions.length;
-      }
-
-      // Factor in live voting
-      if ( winners.indexOf( id ) > -1 ) {
-        count += win_vote_factor;
-      }
-
-      votes[want.url] = count;
-    });
-    // console.log( votes );
-
-    // sort wants by votes
     wants
-      .sort( (a, b) => {
-        return votes[b.url] - votes[a.url];
-      })
       // loop through all
       .map( want => {
         // pluck top by tag
@@ -397,7 +368,6 @@ module.exports = function(eleventyConfig) {
           }
 
           top_wants[tag].push( want );
-
         });
       });
 

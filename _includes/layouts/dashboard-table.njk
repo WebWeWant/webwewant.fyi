@@ -5,10 +5,9 @@ layout: layouts/base.njk
 
 {{ layoutContent | safe }}
 
-<table>
+<table class="dashboard">
     <thead>
         <tr>
-            <th class="dashboard-id">ID</th>
             <th class="dashboard-title">Title</th>
             <th class="dashboard-votes">Votes</th>
             <th class="dashboard-tags">Tags</th>
@@ -17,13 +16,9 @@ layout: layouts/base.njk
 {% for w in collections.wantsSortedByVotes %}
     {% set url %}{{ 'https://webwewant.fyi/wants/' }}{{ w.url | extractID }}{{ '/' }}{% endset %}
     <tr>
-        <td class="dashboard-id">
-            <!-- ID -->
-            <a href="{{url}}">{{ w.url | extractID }}</a>
-        </td>
         <td class="dashboard-title">
             <!-- Title -->
-            {{ w.data.title }}
+            <a href="{{url}}">{{ w.data.title }}</a>
         </td>
         <td class="dashboard-votes">
             <!-- Votes -->
