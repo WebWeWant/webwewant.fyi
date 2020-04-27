@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2020-03-03T23:58:35.271Z",
+  "lastFetched": "2020-04-27T21:15:09.191Z",
   "children": [
     {
       "type": "entry",
@@ -10312,6 +10312,769 @@
       "wm-target": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
       "like-of": "https://webwewant.fyi/#Open+Source+Festival+-+Lagos,+Nigeria",
       "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephanie Stimac 🔮 Casting Spells",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78bddfc3c55809c606a37f5b881daee13edb9d9ffe39d048836e66c3688328bd.jpg",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/seaotta/status/1254817248260153345",
+      "published": "2020-04-27T16:58:40+00:00",
+      "wm-received": "2020-04-27T20:42:14Z",
+      "wm-id": 787850,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1254817248260153345",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "Good morning! I know things are not normal right now, but we're always taking submissions to <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a> about things you want for the web. \n\nThis tweet from Kilian is a great example. 🤗 Doesn't matter how small or large the problem or gap, let us know! <a href=\"http://webwewant.fyi\">webwewant.fyi</a>\n\n<a class=\"u-mention\" href=\"http://webwewant.fyi/\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/\"></a>",
+        "text": "Good morning! I know things are not normal right now, but we're always taking submissions to @webwewantfyi about things you want for the web. \n\nThis tweet from Kilian is a great example. 🤗 Doesn't matter how small or large the problem or gap, let us know! webwewant.fyi"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "CSS Class",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/3dc8cc3da463cb4961d443fef2aba0cda8c804d327b16573aef8f210a9592853.png",
+        "url": "https://twitter.com/css_class"
+      },
+      "url": "https://twitter.com/css_class/status/1254834056849743872",
+      "published": "2020-04-27T18:05:27+00:00",
+      "wm-received": "2020-04-27T20:42:08Z",
+      "wm-id": 787848,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1254834056849743872",
+      "wm-target": "https://webwewant.fyi/wants/114/",
+      "content": {
+        "html": "CSS Logical Properties still doesn't support logical properties in responsive design media rule, please vote for it for a better future of CSS.\n<a href=\"https://webwewant.fyi/wants/114/\">webwewant.fyi/wants/114/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "CSS Logical Properties still doesn't support logical properties in responsive design media rule, please vote for it for a better future of CSS.\nwebwewant.fyi/wants/114/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/114/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Elad Shechter",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0c00980b7b224ced626ec327dd9a999c22178cda20cfeb80e9ce0916e44f377c.jpg",
+        "url": "https://twitter.com/eladsc"
+      },
+      "url": "https://twitter.com/eladsc/status/1254833690221445121",
+      "published": "2020-04-27T18:04:00+00:00",
+      "wm-received": "2020-04-27T20:42:08Z",
+      "wm-id": 787849,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1254833690221445121",
+      "wm-target": "https://webwewant.fyi/wants/114/",
+      "content": {
+        "html": "CSS Logical Properties still doesn't support logical properties in responsive design media rule, please vote for it for a better future of CSS \n<a href=\"https://webwewant.fyi/wants/114/\">webwewant.fyi/wants/114/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "CSS Logical Properties still doesn't support logical properties in responsive design media rule, please vote for it for a better future of CSS \nwebwewant.fyi/wants/114/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/114/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "rachel_bt",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/8f302588d281bf238fd7bd2b68e16e10c46fc1b9971b9922015087984b14dfce.jpg",
+        "url": "https://twitter.com/rachel_bt"
+      },
+      "url": "https://twitter.com/rachel_bt/status/1254858603564986368",
+      "published": "2020-04-27T19:42:59+00:00",
+      "wm-received": "2020-04-27T20:40:17Z",
+      "wm-id": 787846,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1254858603564986368",
+      "wm-target": "https://webwewant.fyi/wants/114/",
+      "content": {
+        "html": "I want logical property support in media queries <a href=\"https://webwewant.fyi/wants/114/\">webwewant.fyi/wants/114/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want logical property support in media queries webwewant.fyi/wants/114/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/114/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Alastair Coote",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/f2023496e3a346703e756e2b1297170f0401763085e91bc86f5839076767ae61.jpg",
+        "url": "https://twitter.com/_alastair"
+      },
+      "url": "https://twitter.com/_alastair/status/1250800773149097985",
+      "published": "2020-04-16T14:58:37+00:00",
+      "wm-received": "2020-04-16T15:24:35Z",
+      "wm-id": 783319,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1250800773149097985",
+      "wm-target": "https://webwewant.fyi/wants/15/",
+      "content": {
+        "html": "Stumbled across this while trying to make a text message like interface. Frustrating that it so nearly works (but doesn’t, see thread). I proposed a separate property for this: <a href=\"https://webwewant.fyi/wants/15/\">webwewant.fyi/wants/15/</a> but maybe it just needs bug fixes?",
+        "text": "Stumbled across this while trying to make a text message like interface. Frustrating that it so nearly works (but doesn’t, see thread). I proposed a separate property for this: webwewant.fyi/wants/15/ but maybe it just needs bug fixes?"
+      },
+      "mention-of": "https://webwewant.fyi/wants/15/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephanie Stimac 🔮 Casting Spells",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78bddfc3c55809c606a37f5b881daee13edb9d9ffe39d048836e66c3688328bd.jpg",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/seaotta/status/1249750813561327617",
+      "published": "2020-04-13T17:26:27+00:00",
+      "wm-received": "2020-04-13T17:59:12Z",
+      "wm-id": 781960,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1249750813561327617",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "This survey is open until Wednesday! Only takes a few moments to fill out. And if there's a problem or feature gap you've encountered on the web, don't forget to head over to <a href=\"http://webwewant.fyi\">webwewant.fyi</a> and let us know! \n\nLet's work on improving the future of the web together \n🤝🖥\n<a class=\"u-mention\" href=\"http://webwewant.fyi/\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/\"></a>",
+        "text": "This survey is open until Wednesday! Only takes a few moments to fill out. And if there's a problem or feature gap you've encountered on the web, don't forget to head over to webwewant.fyi and let us know! \n\nLet's work on improving the future of the web together \n🤝🖥"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephanie Stimac 🔮 Casting Spells",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78bddfc3c55809c606a37f5b881daee13edb9d9ffe39d048836e66c3688328bd.jpg",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/seaotta/status/1248751820937166848",
+      "published": "2020-04-10T23:16:49+00:00",
+      "wm-received": "2020-04-10T23:35:42Z",
+      "wm-id": 781244,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1248751820937166848",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "Thank you to everyone who has filled this out so far! A few people have left their wants for the web in the comments. \n\nPlease head over to <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a> <a href=\"https://webwewant.fyi\">webwewant.fyi</a> and submit your problems or things that make building for the web difficult!\n<a class=\"u-mention\" href=\"https://webwewant.fyi/\"></a>",
+        "text": "Thank you to everyone who has filled this out so far! A few people have left their wants for the web in the comments. \n\nPlease head over to @webwewantfyi webwewant.fyi and submit your problems or things that make building for the web difficult!"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stéphane Edgard",
+        "photo": "https://webmention.io/avatar/abs.twimg.com/0e6b2cd70aa5b35dec24ca4e1e63f8963f0118736d9ec3bba77e3a8c99a27bc2.png",
+        "url": "https://twitter.com/StephaneEdgard"
+      },
+      "url": "https://twitter.com/StephaneEdgard/status/1248301173901340673",
+      "published": "2020-04-09T17:26:06+00:00",
+      "wm-received": "2020-04-09T18:35:04Z",
+      "wm-id": 780389,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1248301173901340673",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "The Web We Want <a href=\"https://webwewant.fyi/\">webwewant.fyi</a> <a href=\"https://twitter.com/search?q=%23Web\">#Web</a> <a href=\"https://twitter.com/search?q=%23Want\">#Want</a>",
+        "text": "The Web We Want webwewant.fyi #Web #Want"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jason McIntosh",
+        "photo": "https://webmention.io/avatar/jmac.org/4af6ebbfb9755bf19bdb4abbf7462169df13bbdea3d0e3aa263f2334adf9a3e7.png",
+        "url": "http://jmac.org"
+      },
+      "url": "https://fogknife.com/2020-04-05-webmentions-active-and-passive.html",
+      "published": "2020-04-05T17:17:13",
+      "wm-received": "2020-04-05T17:18:04Z",
+      "wm-id": 778927,
+      "wm-source": "https://fogknife.com/2020-04-05-webmentions-active-and-passive.html",
+      "wm-target": "https://webwewant.fyi/voting/",
+      "name": "Webmentions, active and passive",
+      "syndication": [
+        "https://news.indieweb.org/en",
+        "https://indieweb.xyz/en/indieweb",
+        "https://twitter.com/JmacDotOrg/status/1246861411000745986"
+      ],
+      "summary": {
+        "content-type": "text/plain",
+        "value": "An overview of two major use-case types for Webmention: passive commentary on other posts, and active requests for other websites to respond."
+      },
+      "content": {
+        "html": "<p></p><img src=\"https://fogknife.com/images/posts/phone-pole.jpg\" alt=\"Photograph of a telephone pole with its crest above the treeline, its cables stretching in every direction.\" /><a href=\"https://www.flickr.com/photos/68089229@N06/8524495233\">“Telephone Wires”</a><span> by <a href=\"https://www.flickr.com/photos/68089229@N06\">oatsy40</a></span> is licensed under <a href=\"https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&amp;atype=html\" style=\"margin-right:5px;\">CC BY 2.0</a><p>I first discovered Webmention by its ability to serve as a federated cross-site commenting system, one free of the baggage inherent to elsewhere-centralized systems <a href=\"https://fogknife.com/2017-10-07-fogknife-housekeeping-comments-and-logos.html\">I’d tried earlier</a>. Providing the connective tissue for no-middleman public conversations among independent websites remains a central promise of Webmention — and also describes Fogknife’s most obvious use of it — but the protocol has other, more subtle uses that may escape one’s first discovery of it.</p>\n\n<p>Through its very simple and general design, Webmention allows one website to remotely — and consensually — affect the content of another site by publishing something onto itself. That is, I post something, in public, to my own website, and the mere act of this causes another website, somewhere else, to automatically update its own content in some appropriate fashion. This can achieve a variety of purposes beyond comment and conversation that I find both fascinating and kind of hard to describe in one sentence! Please indulge me, then, as I explore this concept over the length of an article here.</p>\n\n<h2>Passive webmentions: comments, replies, and reactions</h2>\n\n<h3>An Alice-and-Bob example</h3>\n\n<p>Generally speaking, a webmention message notifies a website that one of its constituent pages was referenced on some other part of the public web. In the simplest common case, this happens when Alice publishes a new web page that uses an ordinary HTML hyperlink to refer to a page that Bob had posted earlier. For example, she might post a page at <code>https://alice.example.com/go-read-bob</code> whose content begins this way:</p>\n\n<blockquote>\n  <p><strong>Thoughts on Bob’s C-SI stability theory</strong></p>\n  \n  <p><em>by Alice</em></p>\n  \n  <p>My friend and colleague Bob wrote <a href=\"https://fogknife.com/2020-04-05-webmentions-active-and-passive.html#analice-and-bobexample\">a very interesting article</a> that everyone who follows my work should go read. Some real food for thought here.</p>\n  \n  <p>Regarding his theory about the stability of chrono-synclastic infidibuli, I would like to add my own observation that <em>[etc.]</em></p>\n</blockquote>\n\n<p>Let’s pretend that that hyperlink goes to <code>https://bobs-blog.example/my-theory</code>, a page on Bob’s website. Putting aside the mechanics of webmention transmission — a rich topic on its own that I shall leave outside the scope of this article — Alice’s content-management software will, on publishing this page, contact a webmention-receiver that Bob uses, letting it know that a page under its jurisdiction has received a mention from Alice’s new post. Bob’s software will confirm that this is true by loading and scanning the HTML of Alice’s post, and will then take some appropriate action, such as adding a summary of and link to Alice’s page to a “Comments and reactions” section at the bottom of Bob’s page.</p>\n\n<p>There exist many variations of this basic model: perhaps Bob’s software takes a more cautious approach to public webmentions and holds it for manual approval, or perhaps Alice’s CMS knows how to mark up her post with microformats (more on which later) so that Bob’s software knows, in turn, more about the post’s author. Microformats can also mark Alice’s page as an intentional reply to Bob’s post, rather than a tangentially related page that links to it as a mere aside, and Bob’s CMS may wish to display the link back to Alice’s page differently given this fact.</p>\n\n<p>Regardless of these details, I think of this as a <strong>passive webmention</strong> example. Alice published her post with the main intent of sharing her ideals with her own readership. As a beneficial <em>side effect</em>, it also extended to Bob the courtesy of a webmention. He is free to treat this information however he wishes. It would be a nice gesture for Bob to let his software automatically link back to Alice’s response — but if he delays or declines to do so, it would not make Alice’s link any less meaningful in the meantime.</p>\n\n<h3>Real-world passive webmentions with Fogknife</h3>\n\n<p>And this, in essence, desrcribes how Fogknife has used Webmention since 2018. The “reactions” that decorate the bottom of many of my posts comprise a mix of Twitter-based responses (arriving, unbeknownst to those tweeters, via <a href=\"https://brid.gy\">Bridgy</a>), URLs manually entered via the “suggest a mention” form at the bottom of every Fogknife post-page, and intentional mentions sent from readers’ own Webmention-aware software. In every case, Fogknife receives these messages as webmentions, and displays them in ways appropriate to each, whether a “like”, a repost, an explicit reply, or just a generic mention. <a href=\"https://fogknife.com/2018-04-22-announcing-two-new-indieweb-modules-for-perl.html#webmentions\">This post contains several</a>, in a variety of flavors*, coming from a mix of sources.</p>\n\n<p>You’ll note that several of that post’s reactions have my own name attached. This happens because Fogknife also sends webmentions: its underlying software looks up the Webmention capability of each and every URL contained in every new or updated post, and sends a message to each receiver it discovers. This includes links to other Fogknife articles, because I don’t have Fogknife’s webmention listener treat webmentions sent from <code>fogknife.com</code> in any special way, compared to webmentions from any other source! If they are legitimate, they get published. And through this mechanism, I get to share a forward-linking “related articles” feature on my older posts, at no extra effort.</p>\n\n<h2>Active webmentions: RSVPs, syndication, and more</h2>\n\n<p>Distinct from websites that accept and publish these sorts of by-happenstance webmentions, a site can set itself up to receive webmentions that possess a more intentional edge. In these cases, a webmention means more than a passive “say, someone referred to you over here”. Instead, it declares that the source prepared the link <em>primarily</em> to send a webmention to the linked website. The author expects the target to read a particular intent in the link, and react in some appropriate way. I think of these as <strong>active webmentions</strong>.</p>\n\n<p><em>This is the cool part</em>, so I shall skip the Alice-and-Bob basics and dive right into to some real-world examples.</p>\n\n<h3>My RSVP to a meeting in April</h3>\n\n<p>Through the same kind of microformats markup that can identify a link’s intent as a response to the article at the linked URL, the author of a page can declare a self-published post as their RSVP to a future event.</p>\n\n<p><a href=\"https://events.indieweb.org\">The upcoming-events site for the worldwide IndieWeb community</a> (whence comes Webmention itself) accepts exactly these sorts of RSVP webmentions. Anyone using Webmention-aware publishing tools can create a public page declaring their intent to attend one of these events, naturally linking to that event’s page in the process. The Events website, on receipt of the mention, scans this new page for microformats that confirm the link’s intent as an RSVP, as well as the identity of the person submitting it.</p>\n\n<p>So, for a real example, let me pause and declare my <em><span class=\"p-rsvp\">yes</span></em> RSVP to <a href=\"https://events.indieweb.org/2020/04/online-indieweb-meetup-nyc-xzPxXTK5HGbe\" class=\"u-in-reply-to\">the April 15 IndieWeb NYC meetup</a>, which plans to gather via teleconference that evening (New York, alas, <a href=\"https://fogknife.com/2020-03-28-dispatch-from-locked-down-new-york-march-2020.html\">not presenting its best face</a> for in-person meetings at the moment).</p>\n\n<p>And <em>through no further action on my part</em>, by the mere publishing of the page you are now reading, my RSVP has appeared on that event page. And this is where Webmention starts feeling truly magical, to me. I made a webpage addressing my human readership, expressing the notion “I plan to attend this meeting”, and daemonic servants that overheard my desires flew into action, making those plans real.</p>\n\n<p>All this happens in line with core IndieWeb philosophy, where I publish my activity exclusively to my own domain, submitting nothing about my plans or desires to any company looking to make a buck off of my attention.</p>\n\n<p>(A small caveat: Sending an RSVP in the middle of a long blog post like this is <em>a bit unusual</em>, even though it works. A typical RSVP webmention will instead originate from a very short note serving only that one purpose. But, with the NYC meetup happening only a few days from now, I had to show off a little…)</p>\n\n<h3>About those Microformats</h3>\n\n<p>I can no longer resist getting technical for a bit, but I can at least save you a dive through this blog post’s source code to show you what the raw HTML of that RSVP paragraph looks like:</p>\n\n<blockquote>\n  <p>&lt;p&gt;So, for a real example, let me pause and declare my &lt;em&gt;&lt;span class=”<strong>p-rsvp</strong>“&gt;yes&lt;/span&gt;&lt;/em&gt; RSVP to &lt;a href=”https://events.indieweb.org/2020/04/online-indieweb-meetup-nyc-xzPxXTK5HGbe” class=”<strong>u-in-reply-to</strong>“&gt;the April 15 IndieWeb NYC meetup&lt;/a&gt;, which plans to gather via teleconference that evening.&lt;/p&gt;</p>\n</blockquote>\n\n<p>Here you see two microformats in play, both implemented as plain old HTML <code>class</code> attributes:</p>\n\n<ul><li><p>The <code>u-in-reply-to</code> crouched in the hyperlink means that this post means to catch the attention of the page it links to via Webmention, identifying itself as an intentional response. This is no typically off-hand reference to another page!</p></li>\n<li><p>The presence of a <code>p-rsvp</code> class further defines this reply-post as an RSVP, and specifically a “yes” RSVP.†</p></li>\n</ul><p>Furthermore, at the top of this post — and, indeed, at the top of every single Fogknife post — lurks some HTML that looks like this:</p>\n\n<blockquote>\n  <p>&lt;data class=”p-author h-card”&gt;\n          &lt;data class=”p-name” value=”Jason McIntosh”&gt;&lt;/data&gt;\n          &lt;data class=”u-url” value=”http://jmac.org”&gt;&lt;/data&gt;\n          &lt;data class=”u-photo” value=”http://jmac.org/misc/old_unicorn.png”&gt;&lt;/data&gt;</p>\n</blockquote>\n\n<p>Just as that <code>p-author</code> microformat implies by its name, this <code>data</code> element identifies the author of this webpage for any software that cares to scan its content for machine-readable semantic content.</p>\n\n<p>And I, the fallible human author, don’t need to keep any of this particular syntax in mind: I have set up my publishing software to always stamp that <code>data</code> element at the top of every Fogknife page. I have also set up my text editor to make the addition of those RSVP-specific microformats as easy as selecting from a pull-down menu, so I don’t need to manually type all that stuff in every time I wish to invoke it.</p>\n\n<p>My publishing software also takes care of the far trickier business of actually preparing and sending webmentions to every URL that appears in my post, including the IndieWeb Events one, as a side-effect of my putting it online. It is up to the software running IndieWeb Events to receive the webmention, scan this blog post, and do the thing I intend it to do.</p>\n\n<p>From a programmer’s perspective, active webmentions are almost — but not quite — like calling a method on a remote API. The action that the “programmer” takes, however, involves publishing something human-readable on a public URL; the main communication does not happen in the realm of raw JSON or XML payloads passing invisibly between two computers, as with a true API. The whole time, I act as a human speaking primarily with other humans, but I intentionally sprinkle my communications with the <em>sotto voce</em> asides of microformats we intend for our mechanical servants to overhear and react to with swift elegance.</p>\n\n<p>It appeals to me so much. I love it, and I want to see more of it.</p>\n\n<h3>Zero-click syndication</h3>\n\n<p>My own most frequent practical use of active webmentions involves syndication: a request that the webmention receiver simply republish (or at least link back to) the source post in some fashion. Most commonly, the target website serves as an aggregator, collecting web pages that deal with some particular topic. A page can automatically add itself to this list by including a syndication-microformatted link to such as site, and following up with a webmention.</p>\n\n<p>I know of two live examples of this, both of which Fogknife has invoked before:</p>\n\n<ul><li><p>Aaron Parecki’s <a href=\"https://news.indieweb.org/en\">IndieNews</a> collects articles of interest to the IndieWeb community. At the time of this writing, it posts several articles per month, all of which come to its attention via Webmention.</p></li>\n<li><p>Kicks Condor’s <a href=\"https://indieweb.xyz\">IndieWeb.xyz</a> is an experimental Reddit-style collection of “subs”, each of which focuses on a particular topic. My first contribution to it came via <a href=\"https://indieweb.xyz/en/books\">its <em>books</em> sub</a>, where I joined an “IndieWeb book club” activity last summer <a href=\"https://fogknife.com/2019-05-23-i-read-ruined-by-design.html\">by reading Mike Monteiro’s <em>Ruined by Design</em></a> and then adding a syndication link to IndieWeb.xyz in that post’s footer.</p></li>\n</ul><p>Naturally, the post you now read also links to both of these aggregators in its sign-off, a few paragraphs below this. If you check either website (or subscribe to their RSS feeds) around the time I published this page, you will find references to this article, constructed out of microformats-based metadata parsed out of this post via the same mechanisms that the RSVP sites use.</p>\n\n<h3>Polls, and who knows what else</h3>\n\n<p>Last week, gathering notes for this article, I asked <a href=\"https://chat.indieweb.org/\">the IndieWeb chat</a> for more examples of sites using active webmentions. In this way I learned about <a href=\"https://webwewant.fyi\">The Web We Want</a>, a project run by representatives of several browser manufacturers as a way to collect public opinion on future browser features. Anyone can post features they’d like to see, and then people can show their support for a specific proposal by <a href=\"https://webwewant.fyi/voting/\">sending “bookmark” or “like”-flavored webmention to its detail page</a>. (You can also just tweet about it, according to the site, and I presume that gets turned into a webmention via Bridgy.)</p>\n\n<p>While not something I felt immediately drawn to participate in, this nonetheless makes me happy to see. I had not at all anticipated the use of Webmention as a polling medium, and seeing it used that way proves my hypothesis that the technology has potential for a vast array of creative, wonderful uses across the web, in a spectrum wider than I can currently imagine.</p>\n\n<p>Even though its use remains quite humbly obscure in mid-2020, I support Webmention because I love the things that I know it can do — and because I have no idea what else it can do, <em>because nobody’s done it yet</em>. I want to help its future innovators discover Webmention and get inspired too, so I can start selfishly enjoying the further magic they end up bringing to the open web.</p>\n\n<p><em>This article was also posted to <a href=\"https://news.indieweb.org/en\" class=\"u-syndication\">IndieNews</a>, and to <a href=\"https://indieweb.xyz/en/indieweb\" class=\"u-syndication\">the “indieweb” section of Indieweb.xyz</a>.</em></p>\n\n<p>* At the time of this writing, it also makes plain a bug that my blogging software has when trying to display user-avatar images that have changed since the original receipt of their associated webmentions; this explains all the broken images. My work this spring sees me making improvements to my own webmention-handling software, and I hope to share more about in in the coming months.</p>\n\n<p>† Some references for this magic: <a href=\"https://indieweb.org/rsvp\">IndieWeb Wiki’s page on RSVP</a>; <a href=\"http://microformats.org/wiki/h-entry#Core_Properties\">Microformats.org documentation on <code>h-entry</code> properties</a>. (And note also that every Fogknife post is wrapped in an <code>h-entry</code> microformat.)</p>",
+        "text": "“Telephone Wires” by oatsy40 is licensed under CC BY 2.0I first discovered Webmention by its ability to serve as a federated cross-site commenting system, one free of the baggage inherent to elsewhere-centralized systems I’d tried earlier. Providing the connective tissue for no-middleman public conversations among independent websites remains a central promise of Webmention — and also describes Fogknife’s most obvious use of it — but the protocol has other, more subtle uses that may escape one’s first discovery of it.\n\nThrough its very simple and general design, Webmention allows one website to remotely — and consensually — affect the content of another site by publishing something onto itself. That is, I post something, in public, to my own website, and the mere act of this causes another website, somewhere else, to automatically update its own content in some appropriate fashion. This can achieve a variety of purposes beyond comment and conversation that I find both fascinating and kind of hard to describe in one sentence! Please indulge me, then, as I explore this concept over the length of an article here.\n\nPassive webmentions: comments, replies, and reactions\n\nAn Alice-and-Bob example\n\nGenerally speaking, a webmention message notifies a website that one of its constituent pages was referenced on some other part of the public web. In the simplest common case, this happens when Alice publishes a new web page that uses an ordinary HTML hyperlink to refer to a page that Bob had posted earlier. For example, she might post a page at https://alice.example.com/go-read-bob whose content begins this way:\n\n\n  Thoughts on Bob’s C-SI stability theory\n  \n  by Alice\n  \n  My friend and colleague Bob wrote a very interesting article that everyone who follows my work should go read. Some real food for thought here.\n  \n  Regarding his theory about the stability of chrono-synclastic infidibuli, I would like to add my own observation that [etc.]\n\n\nLet’s pretend that that hyperlink goes to https://bobs-blog.example/my-theory, a page on Bob’s website. Putting aside the mechanics of webmention transmission — a rich topic on its own that I shall leave outside the scope of this article — Alice’s content-management software will, on publishing this page, contact a webmention-receiver that Bob uses, letting it know that a page under its jurisdiction has received a mention from Alice’s new post. Bob’s software will confirm that this is true by loading and scanning the HTML of Alice’s post, and will then take some appropriate action, such as adding a summary of and link to Alice’s page to a “Comments and reactions” section at the bottom of Bob’s page.\n\nThere exist many variations of this basic model: perhaps Bob’s software takes a more cautious approach to public webmentions and holds it for manual approval, or perhaps Alice’s CMS knows how to mark up her post with microformats (more on which later) so that Bob’s software knows, in turn, more about the post’s author. Microformats can also mark Alice’s page as an intentional reply to Bob’s post, rather than a tangentially related page that links to it as a mere aside, and Bob’s CMS may wish to display the link back to Alice’s page differently given this fact.\n\nRegardless of these details, I think of this as a passive webmention example. Alice published her post with the main intent of sharing her ideals with her own readership. As a beneficial side effect, it also extended to Bob the courtesy of a webmention. He is free to treat this information however he wishes. It would be a nice gesture for Bob to let his software automatically link back to Alice’s response — but if he delays or declines to do so, it would not make Alice’s link any less meaningful in the meantime.\n\nReal-world passive webmentions with Fogknife\n\nAnd this, in essence, desrcribes how Fogknife has used Webmention since 2018. The “reactions” that decorate the bottom of many of my posts comprise a mix of Twitter-based responses (arriving, unbeknownst to those tweeters, via Bridgy), URLs manually entered via the “suggest a mention” form at the bottom of every Fogknife post-page, and intentional mentions sent from readers’ own Webmention-aware software. In every case, Fogknife receives these messages as webmentions, and displays them in ways appropriate to each, whether a “like”, a repost, an explicit reply, or just a generic mention. This post contains several, in a variety of flavors*, coming from a mix of sources.\n\nYou’ll note that several of that post’s reactions have my own name attached. This happens because Fogknife also sends webmentions: its underlying software looks up the Webmention capability of each and every URL contained in every new or updated post, and sends a message to each receiver it discovers. This includes links to other Fogknife articles, because I don’t have Fogknife’s webmention listener treat webmentions sent from fogknife.com in any special way, compared to webmentions from any other source! If they are legitimate, they get published. And through this mechanism, I get to share a forward-linking “related articles” feature on my older posts, at no extra effort.\n\nActive webmentions: RSVPs, syndication, and more\n\nDistinct from websites that accept and publish these sorts of by-happenstance webmentions, a site can set itself up to receive webmentions that possess a more intentional edge. In these cases, a webmention means more than a passive “say, someone referred to you over here”. Instead, it declares that the source prepared the link primarily to send a webmention to the linked website. The author expects the target to read a particular intent in the link, and react in some appropriate way. I think of these as active webmentions.\n\nThis is the cool part, so I shall skip the Alice-and-Bob basics and dive right into to some real-world examples.\n\nMy RSVP to a meeting in April\n\nThrough the same kind of microformats markup that can identify a link’s intent as a response to the article at the linked URL, the author of a page can declare a self-published post as their RSVP to a future event.\n\nThe upcoming-events site for the worldwide IndieWeb community (whence comes Webmention itself) accepts exactly these sorts of RSVP webmentions. Anyone using Webmention-aware publishing tools can create a public page declaring their intent to attend one of these events, naturally linking to that event’s page in the process. The Events website, on receipt of the mention, scans this new page for microformats that confirm the link’s intent as an RSVP, as well as the identity of the person submitting it.\n\nSo, for a real example, let me pause and declare my yes RSVP to the April 15 IndieWeb NYC meetup, which plans to gather via teleconference that evening (New York, alas, not presenting its best face for in-person meetings at the moment).\n\nAnd through no further action on my part, by the mere publishing of the page you are now reading, my RSVP has appeared on that event page. And this is where Webmention starts feeling truly magical, to me. I made a webpage addressing my human readership, expressing the notion “I plan to attend this meeting”, and daemonic servants that overheard my desires flew into action, making those plans real.\n\nAll this happens in line with core IndieWeb philosophy, where I publish my activity exclusively to my own domain, submitting nothing about my plans or desires to any company looking to make a buck off of my attention.\n\n(A small caveat: Sending an RSVP in the middle of a long blog post like this is a bit unusual, even though it works. A typical RSVP webmention will instead originate from a very short note serving only that one purpose. But, with the NYC meetup happening only a few days from now, I had to show off a little…)\n\nAbout those Microformats\n\nI can no longer resist getting technical for a bit, but I can at least save you a dive through this blog post’s source code to show you what the raw HTML of that RSVP paragraph looks like:\n\n\n  <p>So, for a real example, let me pause and declare my <em><span class=”p-rsvp“>yes</span></em> RSVP to <a href=”https://events.indieweb.org/2020/04/online-indieweb-meetup-nyc-xzPxXTK5HGbe” class=”u-in-reply-to“>the April 15 IndieWeb NYC meetup</a>, which plans to gather via teleconference that evening.</p>\n\n\nHere you see two microformats in play, both implemented as plain old HTML class attributes:\n\nThe u-in-reply-to crouched in the hyperlink means that this post means to catch the attention of the page it links to via Webmention, identifying itself as an intentional response. This is no typically off-hand reference to another page!\nThe presence of a p-rsvp class further defines this reply-post as an RSVP, and specifically a “yes” RSVP.†\nFurthermore, at the top of this post — and, indeed, at the top of every single Fogknife post — lurks some HTML that looks like this:\n\n\n  <data class=”p-author h-card”>\n          <data class=”p-name” value=”Jason McIntosh”></data>\n          <data class=”u-url” value=”http://jmac.org”></data>\n          <data class=”u-photo” value=”http://jmac.org/misc/old_unicorn.png”></data>\n\n\nJust as that p-author microformat implies by its name, this data element identifies the author of this webpage for any software that cares to scan its content for machine-readable semantic content.\n\nAnd I, the fallible human author, don’t need to keep any of this particular syntax in mind: I have set up my publishing software to always stamp that data element at the top of every Fogknife page. I have also set up my text editor to make the addition of those RSVP-specific microformats as easy as selecting from a pull-down menu, so I don’t need to manually type all that stuff in every time I wish to invoke it.\n\nMy publishing software also takes care of the far trickier business of actually preparing and sending webmentions to every URL that appears in my post, including the IndieWeb Events one, as a side-effect of my putting it online. It is up to the software running IndieWeb Events to receive the webmention, scan this blog post, and do the thing I intend it to do.\n\nFrom a programmer’s perspective, active webmentions are almost — but not quite — like calling a method on a remote API. The action that the “programmer” takes, however, involves publishing something human-readable on a public URL; the main communication does not happen in the realm of raw JSON or XML payloads passing invisibly between two computers, as with a true API. The whole time, I act as a human speaking primarily with other humans, but I intentionally sprinkle my communications with the sotto voce asides of microformats we intend for our mechanical servants to overhear and react to with swift elegance.\n\nIt appeals to me so much. I love it, and I want to see more of it.\n\nZero-click syndication\n\nMy own most frequent practical use of active webmentions involves syndication: a request that the webmention receiver simply republish (or at least link back to) the source post in some fashion. Most commonly, the target website serves as an aggregator, collecting web pages that deal with some particular topic. A page can automatically add itself to this list by including a syndication-microformatted link to such as site, and following up with a webmention.\n\nI know of two live examples of this, both of which Fogknife has invoked before:\n\nAaron Parecki’s IndieNews collects articles of interest to the IndieWeb community. At the time of this writing, it posts several articles per month, all of which come to its attention via Webmention.\nKicks Condor’s IndieWeb.xyz is an experimental Reddit-style collection of “subs”, each of which focuses on a particular topic. My first contribution to it came via its books sub, where I joined an “IndieWeb book club” activity last summer by reading Mike Monteiro’s Ruined by Design and then adding a syndication link to IndieWeb.xyz in that post’s footer.\nNaturally, the post you now read also links to both of these aggregators in its sign-off, a few paragraphs below this. If you check either website (or subscribe to their RSS feeds) around the time I published this page, you will find references to this article, constructed out of microformats-based metadata parsed out of this post via the same mechanisms that the RSVP sites use.\n\nPolls, and who knows what else\n\nLast week, gathering notes for this article, I asked the IndieWeb chat for more examples of sites using active webmentions. In this way I learned about The Web We Want, a project run by representatives of several browser manufacturers as a way to collect public opinion on future browser features. Anyone can post features they’d like to see, and then people can show their support for a specific proposal by sending “bookmark” or “like”-flavored webmention to its detail page. (You can also just tweet about it, according to the site, and I presume that gets turned into a webmention via Bridgy.)\n\nWhile not something I felt immediately drawn to participate in, this nonetheless makes me happy to see. I had not at all anticipated the use of Webmention as a polling medium, and seeing it used that way proves my hypothesis that the technology has potential for a vast array of creative, wonderful uses across the web, in a spectrum wider than I can currently imagine.\n\nEven though its use remains quite humbly obscure in mid-2020, I support Webmention because I love the things that I know it can do — and because I have no idea what else it can do, because nobody’s done it yet. I want to help its future innovators discover Webmention and get inspired too, so I can start selfishly enjoying the further magic they end up bringing to the open web.\n\nThis article was also posted to IndieNews, and to the “indieweb” section of Indieweb.xyz.\n\n* At the time of this writing, it also makes plain a bug that my blogging software has when trying to display user-avatar images that have changed since the original receipt of their associated webmentions; this explains all the broken images. My work this spring sees me making improvements to my own webmention-handling software, and I hope to share more about in in the coming months.\n\n† Some references for this magic: IndieWeb Wiki’s page on RSVP; Microformats.org documentation on h-entry properties. (And note also that every Fogknife post is wrapped in an h-entry microformat.)"
+      },
+      "rsvp": "yes",
+      "in-reply-to": "https://webwewant.fyi/voting/",
+      "wm-property": "rsvp",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jason McIntosh",
+        "photo": "https://webmention.io/avatar/jmac.org/4af6ebbfb9755bf19bdb4abbf7462169df13bbdea3d0e3aa263f2334adf9a3e7.png",
+        "url": "http://jmac.org"
+      },
+      "url": "https://fogknife.com/2020-04-05-webmentions-active-and-passive.html",
+      "published": "2020-04-05T17:17:13",
+      "wm-received": "2020-04-05T17:18:03Z",
+      "wm-id": 778926,
+      "wm-source": "https://fogknife.com/2020-04-05-webmentions-active-and-passive.html",
+      "wm-target": "https://webwewant.fyi",
+      "name": "Webmentions, active and passive",
+      "syndication": [
+        "https://news.indieweb.org/en",
+        "https://indieweb.xyz/en/indieweb",
+        "https://twitter.com/JmacDotOrg/status/1246861411000745986"
+      ],
+      "summary": {
+        "content-type": "text/plain",
+        "value": "An overview of two major use-case types for Webmention: passive commentary on other posts, and active requests for other websites to respond."
+      },
+      "content": {
+        "html": "<p></p><img src=\"https://fogknife.com/images/posts/phone-pole.jpg\" alt=\"Photograph of a telephone pole with its crest above the treeline, its cables stretching in every direction.\" /><a href=\"https://www.flickr.com/photos/68089229@N06/8524495233\">“Telephone Wires”</a><span> by <a href=\"https://www.flickr.com/photos/68089229@N06\">oatsy40</a></span> is licensed under <a href=\"https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&amp;atype=html\" style=\"margin-right:5px;\">CC BY 2.0</a><p>I first discovered Webmention by its ability to serve as a federated cross-site commenting system, one free of the baggage inherent to elsewhere-centralized systems <a href=\"https://fogknife.com/2017-10-07-fogknife-housekeeping-comments-and-logos.html\">I’d tried earlier</a>. Providing the connective tissue for no-middleman public conversations among independent websites remains a central promise of Webmention — and also describes Fogknife’s most obvious use of it — but the protocol has other, more subtle uses that may escape one’s first discovery of it.</p>\n\n<p>Through its very simple and general design, Webmention allows one website to remotely — and consensually — affect the content of another site by publishing something onto itself. That is, I post something, in public, to my own website, and the mere act of this causes another website, somewhere else, to automatically update its own content in some appropriate fashion. This can achieve a variety of purposes beyond comment and conversation that I find both fascinating and kind of hard to describe in one sentence! Please indulge me, then, as I explore this concept over the length of an article here.</p>\n\n<h2>Passive webmentions: comments, replies, and reactions</h2>\n\n<h3>An Alice-and-Bob example</h3>\n\n<p>Generally speaking, a webmention message notifies a website that one of its constituent pages was referenced on some other part of the public web. In the simplest common case, this happens when Alice publishes a new web page that uses an ordinary HTML hyperlink to refer to a page that Bob had posted earlier. For example, she might post a page at <code>https://alice.example.com/go-read-bob</code> whose content begins this way:</p>\n\n<blockquote>\n  <p><strong>Thoughts on Bob’s C-SI stability theory</strong></p>\n  \n  <p><em>by Alice</em></p>\n  \n  <p>My friend and colleague Bob wrote <a href=\"https://fogknife.com/2020-04-05-webmentions-active-and-passive.html#analice-and-bobexample\">a very interesting article</a> that everyone who follows my work should go read. Some real food for thought here.</p>\n  \n  <p>Regarding his theory about the stability of chrono-synclastic infidibuli, I would like to add my own observation that <em>[etc.]</em></p>\n</blockquote>\n\n<p>Let’s pretend that that hyperlink goes to <code>https://bobs-blog.example/my-theory</code>, a page on Bob’s website. Putting aside the mechanics of webmention transmission — a rich topic on its own that I shall leave outside the scope of this article — Alice’s content-management software will, on publishing this page, contact a webmention-receiver that Bob uses, letting it know that a page under its jurisdiction has received a mention from Alice’s new post. Bob’s software will confirm that this is true by loading and scanning the HTML of Alice’s post, and will then take some appropriate action, such as adding a summary of and link to Alice’s page to a “Comments and reactions” section at the bottom of Bob’s page.</p>\n\n<p>There exist many variations of this basic model: perhaps Bob’s software takes a more cautious approach to public webmentions and holds it for manual approval, or perhaps Alice’s CMS knows how to mark up her post with microformats (more on which later) so that Bob’s software knows, in turn, more about the post’s author. Microformats can also mark Alice’s page as an intentional reply to Bob’s post, rather than a tangentially related page that links to it as a mere aside, and Bob’s CMS may wish to display the link back to Alice’s page differently given this fact.</p>\n\n<p>Regardless of these details, I think of this as a <strong>passive webmention</strong> example. Alice published her post with the main intent of sharing her ideals with her own readership. As a beneficial <em>side effect</em>, it also extended to Bob the courtesy of a webmention. He is free to treat this information however he wishes. It would be a nice gesture for Bob to let his software automatically link back to Alice’s response — but if he delays or declines to do so, it would not make Alice’s link any less meaningful in the meantime.</p>\n\n<h3>Real-world passive webmentions with Fogknife</h3>\n\n<p>And this, in essence, desrcribes how Fogknife has used Webmention since 2018. The “reactions” that decorate the bottom of many of my posts comprise a mix of Twitter-based responses (arriving, unbeknownst to those tweeters, via <a href=\"https://brid.gy\">Bridgy</a>), URLs manually entered via the “suggest a mention” form at the bottom of every Fogknife post-page, and intentional mentions sent from readers’ own Webmention-aware software. In every case, Fogknife receives these messages as webmentions, and displays them in ways appropriate to each, whether a “like”, a repost, an explicit reply, or just a generic mention. <a href=\"https://fogknife.com/2018-04-22-announcing-two-new-indieweb-modules-for-perl.html#webmentions\">This post contains several</a>, in a variety of flavors*, coming from a mix of sources.</p>\n\n<p>You’ll note that several of that post’s reactions have my own name attached. This happens because Fogknife also sends webmentions: its underlying software looks up the Webmention capability of each and every URL contained in every new or updated post, and sends a message to each receiver it discovers. This includes links to other Fogknife articles, because I don’t have Fogknife’s webmention listener treat webmentions sent from <code>fogknife.com</code> in any special way, compared to webmentions from any other source! If they are legitimate, they get published. And through this mechanism, I get to share a forward-linking “related articles” feature on my older posts, at no extra effort.</p>\n\n<h2>Active webmentions: RSVPs, syndication, and more</h2>\n\n<p>Distinct from websites that accept and publish these sorts of by-happenstance webmentions, a site can set itself up to receive webmentions that possess a more intentional edge. In these cases, a webmention means more than a passive “say, someone referred to you over here”. Instead, it declares that the source prepared the link <em>primarily</em> to send a webmention to the linked website. The author expects the target to read a particular intent in the link, and react in some appropriate way. I think of these as <strong>active webmentions</strong>.</p>\n\n<p><em>This is the cool part</em>, so I shall skip the Alice-and-Bob basics and dive right into to some real-world examples.</p>\n\n<h3>My RSVP to a meeting in April</h3>\n\n<p>Through the same kind of microformats markup that can identify a link’s intent as a response to the article at the linked URL, the author of a page can declare a self-published post as their RSVP to a future event.</p>\n\n<p><a href=\"https://events.indieweb.org\">The upcoming-events site for the worldwide IndieWeb community</a> (whence comes Webmention itself) accepts exactly these sorts of RSVP webmentions. Anyone using Webmention-aware publishing tools can create a public page declaring their intent to attend one of these events, naturally linking to that event’s page in the process. The Events website, on receipt of the mention, scans this new page for microformats that confirm the link’s intent as an RSVP, as well as the identity of the person submitting it.</p>\n\n<p>So, for a real example, let me pause and declare my <em><span class=\"p-rsvp\">yes</span></em> RSVP to <a href=\"https://events.indieweb.org/2020/04/online-indieweb-meetup-nyc-xzPxXTK5HGbe\" class=\"u-in-reply-to\">the April 15 IndieWeb NYC meetup</a>, which plans to gather via teleconference that evening (New York, alas, <a href=\"https://fogknife.com/2020-03-28-dispatch-from-locked-down-new-york-march-2020.html\">not presenting its best face</a> for in-person meetings at the moment).</p>\n\n<p>And <em>through no further action on my part</em>, by the mere publishing of the page you are now reading, my RSVP has appeared on that event page. And this is where Webmention starts feeling truly magical, to me. I made a webpage addressing my human readership, expressing the notion “I plan to attend this meeting”, and daemonic servants that overheard my desires flew into action, making those plans real.</p>\n\n<p>All this happens in line with core IndieWeb philosophy, where I publish my activity exclusively to my own domain, submitting nothing about my plans or desires to any company looking to make a buck off of my attention.</p>\n\n<p>(A small caveat: Sending an RSVP in the middle of a long blog post like this is <em>a bit unusual</em>, even though it works. A typical RSVP webmention will instead originate from a very short note serving only that one purpose. But, with the NYC meetup happening only a few days from now, I had to show off a little…)</p>\n\n<h3>About those Microformats</h3>\n\n<p>I can no longer resist getting technical for a bit, but I can at least save you a dive through this blog post’s source code to show you what the raw HTML of that RSVP paragraph looks like:</p>\n\n<blockquote>\n  <p>&lt;p&gt;So, for a real example, let me pause and declare my &lt;em&gt;&lt;span class=”<strong>p-rsvp</strong>“&gt;yes&lt;/span&gt;&lt;/em&gt; RSVP to &lt;a href=”https://events.indieweb.org/2020/04/online-indieweb-meetup-nyc-xzPxXTK5HGbe” class=”<strong>u-in-reply-to</strong>“&gt;the April 15 IndieWeb NYC meetup&lt;/a&gt;, which plans to gather via teleconference that evening.&lt;/p&gt;</p>\n</blockquote>\n\n<p>Here you see two microformats in play, both implemented as plain old HTML <code>class</code> attributes:</p>\n\n<ul><li><p>The <code>u-in-reply-to</code> crouched in the hyperlink means that this post means to catch the attention of the page it links to via Webmention, identifying itself as an intentional response. This is no typically off-hand reference to another page!</p></li>\n<li><p>The presence of a <code>p-rsvp</code> class further defines this reply-post as an RSVP, and specifically a “yes” RSVP.†</p></li>\n</ul><p>Furthermore, at the top of this post — and, indeed, at the top of every single Fogknife post — lurks some HTML that looks like this:</p>\n\n<blockquote>\n  <p>&lt;data class=”p-author h-card”&gt;\n          &lt;data class=”p-name” value=”Jason McIntosh”&gt;&lt;/data&gt;\n          &lt;data class=”u-url” value=”http://jmac.org”&gt;&lt;/data&gt;\n          &lt;data class=”u-photo” value=”http://jmac.org/misc/old_unicorn.png”&gt;&lt;/data&gt;</p>\n</blockquote>\n\n<p>Just as that <code>p-author</code> microformat implies by its name, this <code>data</code> element identifies the author of this webpage for any software that cares to scan its content for machine-readable semantic content.</p>\n\n<p>And I, the fallible human author, don’t need to keep any of this particular syntax in mind: I have set up my publishing software to always stamp that <code>data</code> element at the top of every Fogknife page. I have also set up my text editor to make the addition of those RSVP-specific microformats as easy as selecting from a pull-down menu, so I don’t need to manually type all that stuff in every time I wish to invoke it.</p>\n\n<p>My publishing software also takes care of the far trickier business of actually preparing and sending webmentions to every URL that appears in my post, including the IndieWeb Events one, as a side-effect of my putting it online. It is up to the software running IndieWeb Events to receive the webmention, scan this blog post, and do the thing I intend it to do.</p>\n\n<p>From a programmer’s perspective, active webmentions are almost — but not quite — like calling a method on a remote API. The action that the “programmer” takes, however, involves publishing something human-readable on a public URL; the main communication does not happen in the realm of raw JSON or XML payloads passing invisibly between two computers, as with a true API. The whole time, I act as a human speaking primarily with other humans, but I intentionally sprinkle my communications with the <em>sotto voce</em> asides of microformats we intend for our mechanical servants to overhear and react to with swift elegance.</p>\n\n<p>It appeals to me so much. I love it, and I want to see more of it.</p>\n\n<h3>Zero-click syndication</h3>\n\n<p>My own most frequent practical use of active webmentions involves syndication: a request that the webmention receiver simply republish (or at least link back to) the source post in some fashion. Most commonly, the target website serves as an aggregator, collecting web pages that deal with some particular topic. A page can automatically add itself to this list by including a syndication-microformatted link to such as site, and following up with a webmention.</p>\n\n<p>I know of two live examples of this, both of which Fogknife has invoked before:</p>\n\n<ul><li><p>Aaron Parecki’s <a href=\"https://news.indieweb.org/en\">IndieNews</a> collects articles of interest to the IndieWeb community. At the time of this writing, it posts several articles per month, all of which come to its attention via Webmention.</p></li>\n<li><p>Kicks Condor’s <a href=\"https://indieweb.xyz\">IndieWeb.xyz</a> is an experimental Reddit-style collection of “subs”, each of which focuses on a particular topic. My first contribution to it came via <a href=\"https://indieweb.xyz/en/books\">its <em>books</em> sub</a>, where I joined an “IndieWeb book club” activity last summer <a href=\"https://fogknife.com/2019-05-23-i-read-ruined-by-design.html\">by reading Mike Monteiro’s <em>Ruined by Design</em></a> and then adding a syndication link to IndieWeb.xyz in that post’s footer.</p></li>\n</ul><p>Naturally, the post you now read also links to both of these aggregators in its sign-off, a few paragraphs below this. If you check either website (or subscribe to their RSS feeds) around the time I published this page, you will find references to this article, constructed out of microformats-based metadata parsed out of this post via the same mechanisms that the RSVP sites use.</p>\n\n<h3>Polls, and who knows what else</h3>\n\n<p>Last week, gathering notes for this article, I asked <a href=\"https://chat.indieweb.org/\">the IndieWeb chat</a> for more examples of sites using active webmentions. In this way I learned about <a href=\"https://webwewant.fyi\">The Web We Want</a>, a project run by representatives of several browser manufacturers as a way to collect public opinion on future browser features. Anyone can post features they’d like to see, and then people can show their support for a specific proposal by <a href=\"https://webwewant.fyi/voting/\">sending “bookmark” or “like”-flavored webmention to its detail page</a>. (You can also just tweet about it, according to the site, and I presume that gets turned into a webmention via Bridgy.)</p>\n\n<p>While not something I felt immediately drawn to participate in, this nonetheless makes me happy to see. I had not at all anticipated the use of Webmention as a polling medium, and seeing it used that way proves my hypothesis that the technology has potential for a vast array of creative, wonderful uses across the web, in a spectrum wider than I can currently imagine.</p>\n\n<p>Even though its use remains quite humbly obscure in mid-2020, I support Webmention because I love the things that I know it can do — and because I have no idea what else it can do, <em>because nobody’s done it yet</em>. I want to help its future innovators discover Webmention and get inspired too, so I can start selfishly enjoying the further magic they end up bringing to the open web.</p>\n\n<p><em>This article was also posted to <a href=\"https://news.indieweb.org/en\" class=\"u-syndication\">IndieNews</a>, and to <a href=\"https://indieweb.xyz/en/indieweb\" class=\"u-syndication\">the “indieweb” section of Indieweb.xyz</a>.</em></p>\n\n<p>* At the time of this writing, it also makes plain a bug that my blogging software has when trying to display user-avatar images that have changed since the original receipt of their associated webmentions; this explains all the broken images. My work this spring sees me making improvements to my own webmention-handling software, and I hope to share more about in in the coming months.</p>\n\n<p>† Some references for this magic: <a href=\"https://indieweb.org/rsvp\">IndieWeb Wiki’s page on RSVP</a>; <a href=\"http://microformats.org/wiki/h-entry#Core_Properties\">Microformats.org documentation on <code>h-entry</code> properties</a>. (And note also that every Fogknife post is wrapped in an <code>h-entry</code> microformat.)</p>",
+        "text": "“Telephone Wires” by oatsy40 is licensed under CC BY 2.0I first discovered Webmention by its ability to serve as a federated cross-site commenting system, one free of the baggage inherent to elsewhere-centralized systems I’d tried earlier. Providing the connective tissue for no-middleman public conversations among independent websites remains a central promise of Webmention — and also describes Fogknife’s most obvious use of it — but the protocol has other, more subtle uses that may escape one’s first discovery of it.\n\nThrough its very simple and general design, Webmention allows one website to remotely — and consensually — affect the content of another site by publishing something onto itself. That is, I post something, in public, to my own website, and the mere act of this causes another website, somewhere else, to automatically update its own content in some appropriate fashion. This can achieve a variety of purposes beyond comment and conversation that I find both fascinating and kind of hard to describe in one sentence! Please indulge me, then, as I explore this concept over the length of an article here.\n\nPassive webmentions: comments, replies, and reactions\n\nAn Alice-and-Bob example\n\nGenerally speaking, a webmention message notifies a website that one of its constituent pages was referenced on some other part of the public web. In the simplest common case, this happens when Alice publishes a new web page that uses an ordinary HTML hyperlink to refer to a page that Bob had posted earlier. For example, she might post a page at https://alice.example.com/go-read-bob whose content begins this way:\n\n\n  Thoughts on Bob’s C-SI stability theory\n  \n  by Alice\n  \n  My friend and colleague Bob wrote a very interesting article that everyone who follows my work should go read. Some real food for thought here.\n  \n  Regarding his theory about the stability of chrono-synclastic infidibuli, I would like to add my own observation that [etc.]\n\n\nLet’s pretend that that hyperlink goes to https://bobs-blog.example/my-theory, a page on Bob’s website. Putting aside the mechanics of webmention transmission — a rich topic on its own that I shall leave outside the scope of this article — Alice’s content-management software will, on publishing this page, contact a webmention-receiver that Bob uses, letting it know that a page under its jurisdiction has received a mention from Alice’s new post. Bob’s software will confirm that this is true by loading and scanning the HTML of Alice’s post, and will then take some appropriate action, such as adding a summary of and link to Alice’s page to a “Comments and reactions” section at the bottom of Bob’s page.\n\nThere exist many variations of this basic model: perhaps Bob’s software takes a more cautious approach to public webmentions and holds it for manual approval, or perhaps Alice’s CMS knows how to mark up her post with microformats (more on which later) so that Bob’s software knows, in turn, more about the post’s author. Microformats can also mark Alice’s page as an intentional reply to Bob’s post, rather than a tangentially related page that links to it as a mere aside, and Bob’s CMS may wish to display the link back to Alice’s page differently given this fact.\n\nRegardless of these details, I think of this as a passive webmention example. Alice published her post with the main intent of sharing her ideals with her own readership. As a beneficial side effect, it also extended to Bob the courtesy of a webmention. He is free to treat this information however he wishes. It would be a nice gesture for Bob to let his software automatically link back to Alice’s response — but if he delays or declines to do so, it would not make Alice’s link any less meaningful in the meantime.\n\nReal-world passive webmentions with Fogknife\n\nAnd this, in essence, desrcribes how Fogknife has used Webmention since 2018. The “reactions” that decorate the bottom of many of my posts comprise a mix of Twitter-based responses (arriving, unbeknownst to those tweeters, via Bridgy), URLs manually entered via the “suggest a mention” form at the bottom of every Fogknife post-page, and intentional mentions sent from readers’ own Webmention-aware software. In every case, Fogknife receives these messages as webmentions, and displays them in ways appropriate to each, whether a “like”, a repost, an explicit reply, or just a generic mention. This post contains several, in a variety of flavors*, coming from a mix of sources.\n\nYou’ll note that several of that post’s reactions have my own name attached. This happens because Fogknife also sends webmentions: its underlying software looks up the Webmention capability of each and every URL contained in every new or updated post, and sends a message to each receiver it discovers. This includes links to other Fogknife articles, because I don’t have Fogknife’s webmention listener treat webmentions sent from fogknife.com in any special way, compared to webmentions from any other source! If they are legitimate, they get published. And through this mechanism, I get to share a forward-linking “related articles” feature on my older posts, at no extra effort.\n\nActive webmentions: RSVPs, syndication, and more\n\nDistinct from websites that accept and publish these sorts of by-happenstance webmentions, a site can set itself up to receive webmentions that possess a more intentional edge. In these cases, a webmention means more than a passive “say, someone referred to you over here”. Instead, it declares that the source prepared the link primarily to send a webmention to the linked website. The author expects the target to read a particular intent in the link, and react in some appropriate way. I think of these as active webmentions.\n\nThis is the cool part, so I shall skip the Alice-and-Bob basics and dive right into to some real-world examples.\n\nMy RSVP to a meeting in April\n\nThrough the same kind of microformats markup that can identify a link’s intent as a response to the article at the linked URL, the author of a page can declare a self-published post as their RSVP to a future event.\n\nThe upcoming-events site for the worldwide IndieWeb community (whence comes Webmention itself) accepts exactly these sorts of RSVP webmentions. Anyone using Webmention-aware publishing tools can create a public page declaring their intent to attend one of these events, naturally linking to that event’s page in the process. The Events website, on receipt of the mention, scans this new page for microformats that confirm the link’s intent as an RSVP, as well as the identity of the person submitting it.\n\nSo, for a real example, let me pause and declare my yes RSVP to the April 15 IndieWeb NYC meetup, which plans to gather via teleconference that evening (New York, alas, not presenting its best face for in-person meetings at the moment).\n\nAnd through no further action on my part, by the mere publishing of the page you are now reading, my RSVP has appeared on that event page. And this is where Webmention starts feeling truly magical, to me. I made a webpage addressing my human readership, expressing the notion “I plan to attend this meeting”, and daemonic servants that overheard my desires flew into action, making those plans real.\n\nAll this happens in line with core IndieWeb philosophy, where I publish my activity exclusively to my own domain, submitting nothing about my plans or desires to any company looking to make a buck off of my attention.\n\n(A small caveat: Sending an RSVP in the middle of a long blog post like this is a bit unusual, even though it works. A typical RSVP webmention will instead originate from a very short note serving only that one purpose. But, with the NYC meetup happening only a few days from now, I had to show off a little…)\n\nAbout those Microformats\n\nI can no longer resist getting technical for a bit, but I can at least save you a dive through this blog post’s source code to show you what the raw HTML of that RSVP paragraph looks like:\n\n\n  <p>So, for a real example, let me pause and declare my <em><span class=”p-rsvp“>yes</span></em> RSVP to <a href=”https://events.indieweb.org/2020/04/online-indieweb-meetup-nyc-xzPxXTK5HGbe” class=”u-in-reply-to“>the April 15 IndieWeb NYC meetup</a>, which plans to gather via teleconference that evening.</p>\n\n\nHere you see two microformats in play, both implemented as plain old HTML class attributes:\n\nThe u-in-reply-to crouched in the hyperlink means that this post means to catch the attention of the page it links to via Webmention, identifying itself as an intentional response. This is no typically off-hand reference to another page!\nThe presence of a p-rsvp class further defines this reply-post as an RSVP, and specifically a “yes” RSVP.†\nFurthermore, at the top of this post — and, indeed, at the top of every single Fogknife post — lurks some HTML that looks like this:\n\n\n  <data class=”p-author h-card”>\n          <data class=”p-name” value=”Jason McIntosh”></data>\n          <data class=”u-url” value=”http://jmac.org”></data>\n          <data class=”u-photo” value=”http://jmac.org/misc/old_unicorn.png”></data>\n\n\nJust as that p-author microformat implies by its name, this data element identifies the author of this webpage for any software that cares to scan its content for machine-readable semantic content.\n\nAnd I, the fallible human author, don’t need to keep any of this particular syntax in mind: I have set up my publishing software to always stamp that data element at the top of every Fogknife page. I have also set up my text editor to make the addition of those RSVP-specific microformats as easy as selecting from a pull-down menu, so I don’t need to manually type all that stuff in every time I wish to invoke it.\n\nMy publishing software also takes care of the far trickier business of actually preparing and sending webmentions to every URL that appears in my post, including the IndieWeb Events one, as a side-effect of my putting it online. It is up to the software running IndieWeb Events to receive the webmention, scan this blog post, and do the thing I intend it to do.\n\nFrom a programmer’s perspective, active webmentions are almost — but not quite — like calling a method on a remote API. The action that the “programmer” takes, however, involves publishing something human-readable on a public URL; the main communication does not happen in the realm of raw JSON or XML payloads passing invisibly between two computers, as with a true API. The whole time, I act as a human speaking primarily with other humans, but I intentionally sprinkle my communications with the sotto voce asides of microformats we intend for our mechanical servants to overhear and react to with swift elegance.\n\nIt appeals to me so much. I love it, and I want to see more of it.\n\nZero-click syndication\n\nMy own most frequent practical use of active webmentions involves syndication: a request that the webmention receiver simply republish (or at least link back to) the source post in some fashion. Most commonly, the target website serves as an aggregator, collecting web pages that deal with some particular topic. A page can automatically add itself to this list by including a syndication-microformatted link to such as site, and following up with a webmention.\n\nI know of two live examples of this, both of which Fogknife has invoked before:\n\nAaron Parecki’s IndieNews collects articles of interest to the IndieWeb community. At the time of this writing, it posts several articles per month, all of which come to its attention via Webmention.\nKicks Condor’s IndieWeb.xyz is an experimental Reddit-style collection of “subs”, each of which focuses on a particular topic. My first contribution to it came via its books sub, where I joined an “IndieWeb book club” activity last summer by reading Mike Monteiro’s Ruined by Design and then adding a syndication link to IndieWeb.xyz in that post’s footer.\nNaturally, the post you now read also links to both of these aggregators in its sign-off, a few paragraphs below this. If you check either website (or subscribe to their RSS feeds) around the time I published this page, you will find references to this article, constructed out of microformats-based metadata parsed out of this post via the same mechanisms that the RSVP sites use.\n\nPolls, and who knows what else\n\nLast week, gathering notes for this article, I asked the IndieWeb chat for more examples of sites using active webmentions. In this way I learned about The Web We Want, a project run by representatives of several browser manufacturers as a way to collect public opinion on future browser features. Anyone can post features they’d like to see, and then people can show their support for a specific proposal by sending “bookmark” or “like”-flavored webmention to its detail page. (You can also just tweet about it, according to the site, and I presume that gets turned into a webmention via Bridgy.)\n\nWhile not something I felt immediately drawn to participate in, this nonetheless makes me happy to see. I had not at all anticipated the use of Webmention as a polling medium, and seeing it used that way proves my hypothesis that the technology has potential for a vast array of creative, wonderful uses across the web, in a spectrum wider than I can currently imagine.\n\nEven though its use remains quite humbly obscure in mid-2020, I support Webmention because I love the things that I know it can do — and because I have no idea what else it can do, because nobody’s done it yet. I want to help its future innovators discover Webmention and get inspired too, so I can start selfishly enjoying the further magic they end up bringing to the open web.\n\nThis article was also posted to IndieNews, and to the “indieweb” section of Indieweb.xyz.\n\n* At the time of this writing, it also makes plain a bug that my blogging software has when trying to display user-avatar images that have changed since the original receipt of their associated webmentions; this explains all the broken images. My work this spring sees me making improvements to my own webmention-handling software, and I hope to share more about in in the coming months.\n\n† Some references for this magic: IndieWeb Wiki’s page on RSVP; Microformats.org documentation on h-entry properties. (And note also that every Fogknife post is wrapped in an h-entry microformat.)"
+      },
+      "rsvp": "yes",
+      "in-reply-to": "https://webwewant.fyi",
+      "wm-property": "rsvp",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Laxman",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/12aece3f107c0182bd9ad524abe2bfe121586d7ec494dd0625e4eb50515d5e58.jpg",
+        "url": "https://twitter.com/bytemode"
+      },
+      "url": "https://twitter.com/bytemode/status/1243524706453471233",
+      "published": "2020-03-27T13:06:08+00:00",
+      "wm-received": "2020-03-27T13:33:48Z",
+      "wm-id": 775885,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1243524706453471233",
+      "wm-target": "https://webwewant.fyi/wants/4/",
+      "content": {
+        "html": "I want a standard API for event throttling and debouncing <a href=\"https://webwewant.fyi/wants/4/\">webwewant.fyi/wants/4/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want a standard API for event throttling and debouncing webwewant.fyi/wants/4/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/4/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Šime Vidas",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/09bb4880190585b5e89c617e2b0fc0af42f2bd0b1eefa64fa76f35eb307555a6.jpeg",
+        "url": "https://twitter.com/simevidas"
+      },
+      "url": "https://twitter.com/simevidas/status/1243273685609431045",
+      "published": "2020-03-26T20:28:40+00:00",
+      "wm-received": "2020-03-26T20:35:21Z",
+      "wm-id": 775697,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1243273685609431045",
+      "wm-target": "https://webwewant.fyi/wants/113/",
+      "content": {
+        "html": "I want a vertical-align property that aligns with the text middle <a href=\"https://webwewant.fyi/wants/113/\">webwewant.fyi/wants/113/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want a vertical-align property that aligns with the text middle webwewant.fyi/wants/113/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/113/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Šime Vidas",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/09bb4880190585b5e89c617e2b0fc0af42f2bd0b1eefa64fa76f35eb307555a6.jpeg",
+        "url": "https://twitter.com/simevidas"
+      },
+      "url": "https://twitter.com/simevidas/status/1243255139613450241",
+      "published": "2020-03-26T19:14:58+00:00",
+      "wm-received": "2020-03-26T19:30:59Z",
+      "wm-id": 775674,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1243255139613450241",
+      "wm-target": "https://webwewant.fyi/wants/4/",
+      "content": {
+        "html": "I want a standard API for event throttling and debouncing <a href=\"https://webwewant.fyi/wants/4/\">webwewant.fyi/wants/4/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want a standard API for event throttling and debouncing webwewant.fyi/wants/4/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/4/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Fynn Becker",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/6d5d5c4950782468722b4b84b05e9579adb65346b128a4bc3309b88864205df1.jpg",
+        "url": "https://twitter.com/MVSde"
+      },
+      "url": "https://twitter.com/MVSde/status/1243255598063521793",
+      "published": "2020-03-26T19:16:47+00:00",
+      "wm-received": "2020-03-26T19:30:58Z",
+      "wm-id": 775673,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1243255598063521793",
+      "wm-target": "https://webwewant.fyi/wants/4/",
+      "content": {
+        "html": "I want a standard API for event throttling and debouncing <a href=\"https://webwewant.fyi/wants/4/\">webwewant.fyi/wants/4/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want a standard API for event throttling and debouncing webwewant.fyi/wants/4/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/4/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "hirsebirse",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/2581a846759dfb52806b29eec7f503063c4a0eca3775651cb2091ccc523238d0.jpg",
+        "url": "https://twitter.com/hirsebirse"
+      },
+      "url": "https://twitter.com/hirsebirse/status/1241102052199186432",
+      "published": "2020-03-20T20:39:22+00:00",
+      "wm-received": "2020-03-20T21:14:35Z",
+      "wm-id": 772381,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1241102052199186432",
+      "wm-target": "https://webwewant.fyi/wants/106/",
+      "content": {
+        "html": "Oh, and don’t forget to vote for <a href=\"https://webwewant.fyi/wants/106/\">webwewant.fyi/wants/106/</a> <a href=\"https://twitter.com/search?q=%23accessibility\">#accessibility</a> <a href=\"https://twitter.com/search?q=%23a11y\">#a11y</a>",
+        "text": "Oh, and don’t forget to vote for webwewant.fyi/wants/106/ #accessibility #a11y"
+      },
+      "mention-of": "https://webwewant.fyi/wants/106/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Gaurav Seth",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/7f0b5be878b1770060f4e48d06c0c412fe269dfc7f78317da9372684c6bac21a.jpg",
+        "url": "https://twitter.com/gauravseth"
+      },
+      "url": "https://twitter.com/gauravseth/status/1239599966185635850",
+      "published": "2020-03-16T17:10:37+00:00",
+      "wm-received": "2020-03-16T17:20:48Z",
+      "wm-id": 770522,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1239590462031138816/1239599966185635850",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "text": "Due to the ongoing situation with COVID-19, both Smashing Conf SF and SFHTML5 have been postponed. We'll update the site with the new dates"
+      },
+      "repost-of": "https://webwewant.fyi/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephanie Stimac 🔮 Casting Spells",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78bddfc3c55809c606a37f5b881daee13edb9d9ffe39d048836e66c3688328bd.jpg",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/seaotta/status/1239590991633371137",
+      "published": "2020-03-16T16:34:57+00:00",
+      "wm-received": "2020-03-16T17:20:23Z",
+      "wm-id": 770521,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1239590462031138816/1239590991633371137",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "text": "Due to the ongoing situation with COVID-19, both Smashing Conf SF and SFHTML5 have been postponed. We'll update the site with the new dates"
+      },
+      "repost-of": "https://webwewant.fyi/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Erica",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/0171eec882d9a1bdad708791a5614b6c9d55d9f464a4842a08cfda47370151a6.jpg",
+        "url": "https://twitter.com/hiamerica"
+      },
+      "url": "https://twitter.com/hiamerica/status/1239598070444089344",
+      "published": "2020-03-16T17:03:05+00:00",
+      "wm-received": "2020-03-16T17:20:15Z",
+      "wm-id": 770520,
+      "wm-source": "https://brid-gy.appspot.com/repost/twitter/webwewantfyi/1239590462031138816/1239598070444089344",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "text": "Due to the ongoing situation with COVID-19, both Smashing Conf SF and SFHTML5 have been postponed. We'll update the site with the new dates"
+      },
+      "repost-of": "https://webwewant.fyi/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephanie Stimac 🔮 Casting Spells",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/78bddfc3c55809c606a37f5b881daee13edb9d9ffe39d048836e66c3688328bd.jpg",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/webwewantfyi/status/1239590462031138816#favorited-by-107281171",
+      "published": null,
+      "wm-received": "2020-03-16T17:18:42Z",
+      "wm-id": 770518,
+      "wm-source": "https://brid-gy.appspot.com/like/twitter/webwewantfyi/1239590462031138816/107281171",
+      "wm-target": "https://webwewant.fyi/",
+      "like-of": "https://webwewant.fyi/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "a11y-101",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/9bdf36505d18b7c6446f8ec9794db367d57fa41b6eb649a8bf6aff6505e8f4e1.jpg",
+        "url": "https://twitter.com/101A11y"
+      },
+      "url": "https://twitter.com/101A11y/status/1237257886780227584",
+      "published": "2020-03-10T06:04:02+00:00",
+      "wm-received": "2020-03-10T07:17:45Z",
+      "wm-id": 767032,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1237257886780227584",
+      "wm-target": "https://webwewant.fyi/wants/106/",
+      "content": {
+        "html": "I want better styling for inputs and selects <a href=\"https://webwewant.fyi/wants/106/\">webwewant.fyi/wants/106/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want better styling for inputs and selects webwewant.fyi/wants/106/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/106/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Gipsi",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/388ade7b6bc7fb1480cf2fc4a09f0c1afb87ffce1f72d76c5018a07bd168c867.jpg",
+        "url": "https://twitter.com/gipsitana"
+      },
+      "url": "https://twitter.com/gipsitana/status/1236030911906537474",
+      "published": "2020-03-06T20:48:28+00:00",
+      "wm-received": "2020-03-06T21:24:48Z",
+      "wm-id": 765252,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1236030911906537474",
+      "wm-target": "https://webwewant.fyi/wants/131/",
+      "content": {
+        "html": "<a href=\"https://twitter.com/search?q=%23100DaysOfCode\">#100DaysOfCode</a> day 22\nI want to know the size of a linked page before I click it <a href=\"https://webwewant.fyi/wants/131/\">webwewant.fyi/wants/131/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "#100DaysOfCode day 22\nI want to know the size of a linked page before I click it webwewant.fyi/wants/131/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/131/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "𝔻𝕒𝕝𝕖 ⭐⭐ ℍ𝕒𝕣𝕣𝕚𝕤 十三",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/8121c80659e39be39b63b7be91ce8c6decf923616e216af5f918fe144d8b9cfa.jpg",
+        "url": "https://twitter.com/Da13Harris"
+      },
+      "url": "https://twitter.com/Da13Harris/status/1235465134727786497",
+      "published": "2020-03-05T07:20:16+00:00",
+      "wm-received": "2020-03-05T07:41:19Z",
+      "wm-id": 764538,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1235465134727786497",
+      "wm-target": "https://webwewant.fyi/wants/21/",
+      "content": {
+        "html": "I want tabs and accordion elements <a href=\"https://webwewant.fyi/wants/21/\">webwewant.fyi/wants/21/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want tabs and accordion elements webwewant.fyi/wants/21/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/21/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Ilma",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/456756d07fedbf5f72cf46c4e59aee8b454b9f0769ecf41a07a4e0f096f3e462.jpg",
+        "url": "https://twitter.com/decembrun"
+      },
+      "url": "https://twitter.com/decembrun/status/1235466362731945985",
+      "published": "2020-03-05T07:25:09+00:00",
+      "wm-received": "2020-03-05T07:41:11Z",
+      "wm-id": 764537,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1235466362731945985",
+      "wm-target": "https://webwewant.fyi/wants/131/",
+      "content": {
+        "html": "I want to know the size of a linked page before I click it <a href=\"https://webwewant.fyi/wants/131/\">webwewant.fyi/wants/131/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want to know the size of a linked page before I click it webwewant.fyi/wants/131/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/131/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Matt Kreiling",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/51acbc9535fe9d5d6978d4b7d4358fa03371e4516e391b03e45d787f76ba5a44.jpg",
+        "url": "https://twitter.com/tinynow"
+      },
+      "url": "https://twitter.com/tinynow/status/1235363932237254657",
+      "published": "2020-03-05T00:38:08+00:00",
+      "wm-received": "2020-03-05T00:41:10Z",
+      "wm-id": 764450,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1235363932237254657",
+      "wm-target": "https://webwewant.fyi/wants/21/",
+      "content": {
+        "html": "I want tabs and accordion elements <a href=\"https://webwewant.fyi/wants/21/\">webwewant.fyi/wants/21/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want tabs and accordion elements webwewant.fyi/wants/21/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/21/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Dan Tonon",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/2379c8a698a22b1c280bd6afd9abf12bd90de9e2a871c63b2ba32b95e0661c38.jpg",
+        "url": "https://twitter.com/Daniel_Tonon"
+      },
+      "url": "https://twitter.com/Daniel_Tonon/status/1235309725111193600",
+      "published": "2020-03-04T21:02:44+00:00",
+      "wm-received": "2020-03-04T21:30:12Z",
+      "wm-id": 764383,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1235309725111193600",
+      "wm-target": "https://webwewant.fyi/wants/5e52722b13def22bf8bfd348/",
+      "content": {
+        "html": "Flexbox sizing should factor in the width of wrapped text <a href=\"https://webwewant.fyi/wants/5e52722b13def22bf8bfd348/\">webwewant.fyi/wants/5e52722b…</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "Flexbox sizing should factor in the width of wrapped text webwewant.fyi/wants/5e52722b… via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/5e52722b13def22bf8bfd348/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "JulieG",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/6da9e57bce90b8da61930fab7aedf351f07104b54cce67d84f6c2bd87bd2931a.png",
+        "url": "https://twitter.com/stringy"
+      },
+      "url": "https://twitter.com/stringy/status/1235287028671098882",
+      "published": "2020-03-04T19:32:32+00:00",
+      "wm-received": "2020-03-04T20:08:21Z",
+      "wm-id": 764341,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1235287028671098882",
+      "wm-target": "https://webwewant.fyi/wants/105/",
+      "content": {
+        "html": "I want a way to mark up branching, meaningful sequences (like flowcharts) <a href=\"https://webwewant.fyi/wants/105/\">webwewant.fyi/wants/105/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a> - just had a use-case for this last week, to show a workflow diagram.",
+        "text": "I want a way to mark up branching, meaningful sequences (like flowcharts) webwewant.fyi/wants/105/ via @webwewantfyi - just had a use-case for this last week, to show a workflow diagram."
+      },
+      "mention-of": "https://webwewant.fyi/wants/105/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Todd Parker",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/f1a8ee6f06b45713c5dc3d9376f02964ed6944d1504567bcafddbafb1003c6f7.jpg",
+        "url": "https://twitter.com/toddmparker"
+      },
+      "url": "https://twitter.com/toddmparker/status/1235223889485193216",
+      "published": "2020-03-04T15:21:39+00:00",
+      "wm-received": "2020-03-04T15:27:35Z",
+      "wm-id": 764242,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1235223889485193216",
+      "wm-target": "https://webwewant.fyi/wants/131/",
+      "content": {
+        "html": "I want to know the size of a linked page before I click it <a href=\"https://webwewant.fyi/wants/131/\">webwewant.fyi/wants/131/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want to know the size of a linked page before I click it webwewant.fyi/wants/131/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/131/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Patty Toland",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/11766c9c538cf0067a8b3da9fb836a97133a87dd992406bec3fbeccb9139e4de.jpg",
+        "url": "https://twitter.com/pattytoland"
+      },
+      "url": "https://twitter.com/pattytoland/status/1235224135367872522",
+      "published": "2020-03-04T15:22:37+00:00",
+      "wm-received": "2020-03-04T15:27:29Z",
+      "wm-id": 764241,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1235224135367872522",
+      "wm-target": "https://webwewant.fyi/wants/131/",
+      "content": {
+        "html": "Hooray! My \"Web we want\" Want was just accepted.  Please consider upvoting if you agree:  \n\"I want to know the size of a linked page before I click it\"<a href=\"https://webwewant.fyi/wants/131/\">webwewant.fyi/wants/131/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "Hooray! My \"Web we want\" Want was just accepted.  Please consider upvoting if you agree:  \n\"I want to know the size of a linked page before I click it\"webwewant.fyi/wants/131/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/131/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Ed Rodley",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/41a04d723080603b9b8adf0bee179eb6ab81e822e215b095f90da09da32ad121.jpg",
+        "url": "https://twitter.com/erodley"
+      },
+      "url": "https://twitter.com/erodley/status/1235224487429320705",
+      "published": "2020-03-04T15:24:01+00:00",
+      "wm-received": "2020-03-04T15:27:24Z",
+      "wm-id": 764240,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1235224487429320705",
+      "wm-target": "https://webwewant.fyi/wants/131/",
+      "content": {
+        "html": "My friend Patty is wicked smart, and her talk will be too, if you vote for it! \"I want to know the size of a linked page before I click it\" <a href=\"https://webwewant.fyi/wants/131/\">webwewant.fyi/wants/131/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "My friend Patty is wicked smart, and her talk will be too, if you vote for it! \"I want to know the size of a linked page before I click it\" webwewant.fyi/wants/131/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/131/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Andrew Burns",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/dbeb4be0bf2e385a700b61ea1dd79413be06fa166ab7e09f2a005b319b6b272c.jpg",
+        "url": "https://twitter.com/AndyWBurns"
+      },
+      "url": "https://twitter.com/AndyWBurns/status/1235125584029716481",
+      "published": "2020-03-04T08:51:01+00:00",
+      "wm-received": "2020-03-04T09:22:22Z",
+      "wm-id": 764154,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1235125584029716481",
+      "wm-target": "https://webwewant.fyi/wants/125/",
+      "content": {
+        "html": "Web Browsers - I want universal support for a modern image format <a href=\"https://webwewant.fyi/wants/125/\">webwewant.fyi/wants/125/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "Web Browsers - I want universal support for a modern image format webwewant.fyi/wants/125/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/125/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Andrew Burns",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/dbeb4be0bf2e385a700b61ea1dd79413be06fa166ab7e09f2a005b319b6b272c.jpg",
+        "url": "https://twitter.com/AndyWBurns"
+      },
+      "url": "https://twitter.com/AndyWBurns/status/1235127426885308416",
+      "published": "2020-03-04T08:58:20+00:00",
+      "wm-received": "2020-03-04T09:22:13Z",
+      "wm-id": 764153,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1235127426885308416",
+      "wm-target": "https://webwewant.fyi/wants/126/",
+      "content": {
+        "html": "Web Browsers - I want fail-over for resources <a href=\"https://webwewant.fyi/wants/126/\">webwewant.fyi/wants/126/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "Web Browsers - I want fail-over for resources webwewant.fyi/wants/126/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/126/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Andrew Burns",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/dbeb4be0bf2e385a700b61ea1dd79413be06fa166ab7e09f2a005b319b6b272c.jpg",
+        "url": "https://twitter.com/AndyWBurns"
+      },
+      "url": "https://twitter.com/AndyWBurns/status/1235127777147449344",
+      "published": "2020-03-04T08:59:44+00:00",
+      "wm-received": "2020-03-04T09:22:09Z",
+      "wm-id": 764152,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1235127777147449344",
+      "wm-target": "https://webwewant.fyi/wants/128/",
+      "content": {
+        "html": "Damn JavaScript! I want an overhaul of the Date object <a href=\"https://webwewant.fyi/wants/128/\">webwewant.fyi/wants/128/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "Damn JavaScript! I want an overhaul of the Date object webwewant.fyi/wants/128/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/128/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Yogesh Jadhav",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/5bef2d92344909c0878f690e104d65d36671186e1586ab12779b1c9322b61bf6.jpg",
+        "url": "https://twitter.com/yogeshcjadhav"
+      },
+      "url": "https://twitter.com/yogeshcjadhav/status/1235047626996740099",
+      "published": "2020-03-04T03:41:15+00:00",
+      "wm-received": "2020-03-04T03:59:42Z",
+      "wm-id": 764111,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1235047626996740099",
+      "wm-target": "https://webwewant.fyi/wants/134/",
+      "content": {
+        "html": "I requested for a feature in web <a href=\"https://twitter.com/search?q=%23browsers\">#browsers</a> to open up possibility for <a href=\"https://twitter.com/search?q=%23web\">#web</a> applications. Please vote at <a href=\"https://webwewant.fyi/wants/134/\">webwewant.fyi/wants/134/</a>",
+        "text": "I requested for a feature in web #browsers to open up possibility for #web applications. Please vote at webwewant.fyi/wants/134/"
+      },
+      "mention-of": "https://webwewant.fyi/wants/134/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Zachariah Moreno",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c494ca6ae47e03162e7d1e02056c6d91290187c89b787c89ad94127076faf8da.jpg",
+        "url": "https://twitter.com/Zach__Moreno"
+      },
+      "url": "https://twitter.com/Zach__Moreno/status/1235034801461051392",
+      "published": "2020-03-04T02:50:17+00:00",
+      "wm-received": "2020-03-04T03:11:39Z",
+      "wm-id": 764106,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1235034801461051392",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "\"We started this project to collect your feedback about the current <a href=\"https://twitter.com/search?q=%23StateOfTheWeb\">#StateOfTheWeb</a> and to give you a voice to help shape its future.\" - <a href=\"https://webwewant.fyi\">webwewant.fyi</a> <a href=\"https://twitter.com/search?q=%23WebAudio\">#WebAudio</a> <a href=\"https://twitter.com/search?q=%23PerfMatters\">#PerfMatters</a> <a href=\"https://twitter.com/search?q=%23WebDevelopment\">#WebDevelopment</a> <a href=\"https://twitter.com/search?q=%23javascript\">#javascript</a> <a href=\"https://twitter.com/search?q=%23MovingTheWebForward\">#MovingTheWebForward</a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/\"></a>",
+        "text": "\"We started this project to collect your feedback about the current #StateOfTheWeb and to give you a voice to help shape its future.\" - webwewant.fyi #WebAudio #PerfMatters #WebDevelopment #javascript #MovingTheWebForward"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
       "wm-private": false
     }
   ]
