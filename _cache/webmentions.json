@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2020-04-27T21:15:09.191Z",
+  "lastFetched": "2020-05-13T23:14:23.784Z",
   "children": [
     {
       "type": "entry",
@@ -11074,6 +11074,107 @@
         "text": "\"We started this project to collect your feedback about the current #StateOfTheWeb and to give you a voice to help shape its future.\" - webwewant.fyi #WebAudio #PerfMatters #WebDevelopment #javascript #MovingTheWebForward"
       },
       "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://ashton.codes/fortnight11y-issue-13/",
+      "published": null,
+      "wm-received": "2020-05-11T07:16:22Z",
+      "wm-id": 795121,
+      "wm-source": "https://ashton.codes/fortnight11y-issue-13/",
+      "wm-target": "https://webwewant.fyi/wants/52/",
+      "mention-of": "https://webwewant.fyi/wants/52/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Die Medialen",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/47fe0afc12854a45fe553b9b17a7500cf1775c7c195d2dae60a120c6b993e073.jpg",
+        "url": "https://twitter.com/DieMedialen"
+      },
+      "url": "https://twitter.com/DieMedialen/status/1257943424851947520",
+      "published": "2020-05-06T08:00:58+00:00",
+      "wm-received": "2020-05-06T10:01:19Z",
+      "wm-id": 793046,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1257943424851947520",
+      "wm-target": "https://webwewant.fyi/",
+      "photo": [
+        "https://pbs.twimg.com/media/EXUc4PVWoAIP8Pw.jpg"
+      ],
+      "content": {
+        "html": "Nice to know! Auf der Plattform „The Web We Want“ versuchen <a href=\"https://twitter.com/search?q=%23Google\">#Google</a>, Microsoft, Samsung und <a href=\"https://twitter.com/search?q=%23Mozilla\">#Mozilla</a> das Internet ein bisschen besser zu machen. Und zwar indem sie u.a. die, die „im Internet arbeiten“ fragen, was sie stört. Schaut mal rein: <a href=\"http://webwewant.fyi/\">webwewant.fyi</a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/\"></a>",
+        "text": "Nice to know! Auf der Plattform „The Web We Want“ versuchen #Google, Microsoft, Samsung und #Mozilla das Internet ein bisschen besser zu machen. Und zwar indem sie u.a. die, die „im Internet arbeiten“ fragen, was sie stört. Schaut mal rein: webwewant.fyi"
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://ashton.codes/week11y-issue-25/",
+      "published": null,
+      "wm-received": "2020-05-04T06:43:39Z",
+      "wm-id": 792270,
+      "wm-source": "https://ashton.codes/week11y-issue-25/",
+      "wm-target": "https://webwewant.fyi/wants/52/",
+      "mention-of": "https://webwewant.fyi/wants/52/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://ashton.codes/dai11y-04-05-2020/",
+      "published": null,
+      "wm-received": "2020-05-04T06:42:12Z",
+      "wm-id": 792269,
+      "wm-source": "https://ashton.codes/dai11y-04-05-2020/",
+      "wm-target": "https://webwewant.fyi/wants/52/",
+      "mention-of": "https://webwewant.fyi/wants/52/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Lurx",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/21ac12216f13a076d3e0b1623fe49cd8ced37e2264f956d18bcb981818f47594.png",
+        "url": "https://twitter.com/lurx"
+      },
+      "url": "https://twitter.com/lurx/status/1256291820226711557",
+      "published": "2020-05-01T18:38:05+00:00",
+      "wm-received": "2020-05-01T19:11:03Z",
+      "wm-id": 790341,
+      "wm-source": "https://brid-gy.appspot.com/post/twitter/webwewantfyi/1256291820226711557",
+      "wm-target": "https://webwewant.fyi/wants/114/",
+      "content": {
+        "html": "I want logical property support in media queries <a href=\"https://webwewant.fyi/wants/114/\">webwewant.fyi/wants/114/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want logical property support in media queries webwewant.fyi/wants/114/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/114/",
       "wm-property": "mention-of",
       "wm-private": false
     }
