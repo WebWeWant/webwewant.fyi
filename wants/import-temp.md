@@ -1,0 +1,33 @@
+---
+title: I want my own media queries in browsers
+date: 2020-10-20T06:21:31.922Z
+submitter: Kilian Valkhof
+number: 
+tags: [ css, devtools ]
+---
+
+Right now, developers can only test media features that are fully supported in a browser, but with many new media queries coming up and getting better support (e.g., `prefers-contrast`, `prefers-reduced-media`, `forced-colors`) we have to wait for browsers to fully implement those before developers can use the developer tools to emulate them.
+
+I would love browsers to enable me to preview the results of any arbitrary media query (regardless of their support) so I can test them. I have [filed a Chromium bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1058326) about this and [wrote an article](https://kilianvalkhof.com/2020/web/i-want-my-own-media-queries-in-browsers/) about the idea. Here are some highlights from those:
+
+If developer tools supported arbitrary media features, we could:
+
+- Play around with upcoming media queries (like `prefers-contrast`) before they land to see how we could adapt our CSS to it ahead of actual support.
+- Try out our CSS for media queries only supported in other browsers.
+- Build our own domain-specific media queries for development.
+
+The benefit of getting ahead of browser support for media queries in our stylesheets should be self-evident. Checking browser-specific media queries (e.g., Safari’s) in competing browsers is also incredibly convenient. The last use case, however, is the most exciting to me and has the potential to simplify a lot of development.
+
+For example, consider CSS rules intended for debugging. To use these rules, you might define them in a stylesheet you comment out when you go to production. Or you might include them in a partial stylesheet that gets included or excluded in your build system, depending on whether the target is a development environment or production. Or you might toggle them on and off with a `class` on the `html` element.
+
+Imagine if, instead, you could create an arbitrary media query to encompass the rules, like this:
+
+```css
+@media (-domain-debug-styles: on) { 
+  ... 
+}
+```
+
+This code doesn’t match an existing media query, so browsers would ignore the block entirely. (Of course, you’d still likely want to remove these extraneous rules in production.) In the developer tools, however, you could enable the arbitrary `-domain-debug-styles` media feature and set its value to “on,” which would cause this CSS to be applied.
+
+You could have just one custom media query, or a whole set to test different parts of your CSS… the possibilities are myriad.
