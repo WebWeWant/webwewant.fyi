@@ -24,20 +24,20 @@
   },
   "homepage": "https://webwewant.fyi",
   "devDependencies": {
-    "@11ty/eleventy": "^0.8.3",
+    "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
-    "dotenv": "^6.2.0",
-    "lodash": "^4.17.15",
-    "luxon": "^1.17.1",
-    "markdown-it": "^9.0.1",
-    "markdown-it-anchor": "^5.2.4",
-    "node-fetch": "^2.3.0",
-    "sanitize-html": "^1.20.0",
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.20",
+    "luxon": "^1.25.0",
+    "markdown-it": "^12.0.1",
+    "markdown-it-anchor": "^6.0.0",
+    "node-fetch": "^2.6.1",
+    "sanitize-html": "^2.1.1",
     "widont": "^0.3.3"
   },
   "dependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
-    "clean-css": "^4.2.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
+    "clean-css": "^4.2.3",
     "html-minifier": "^4.0.0",
     "uglify-es": "^3.3.9"
   }
