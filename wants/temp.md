@@ -1,0 +1,13 @@
+---
+title: I want intrinsic typography
+date: 2020-04-14T00:00:00
+submitter: Scott Kellum
+number: FOR INTERNAL USE ONLY
+tags: [ css, typography ]
+---
+
+Good typesetting is subtle, but important for legibility. _Line height_, _font size_, _font variation settings_, and _letter spacing_ need subtle adjustments as a _block of text_ changes size. Currently, the best tool we have to control this with just CSS is [`clamp`](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp), and previously [CSS Locks](https://blog.typekit.com/2016/08/17/flexible-typography-with-css-locks/), but these technologies are tied to viewport, not a block of text, as well as having no support for variable font variation settings and a lack of control over rate of change across widths through easing (clamp and locks always have linear transitions).
+
+As a result of all these problems, current tools create a substantial amount of excess code. Fixing this will mean a 60% to 90% reduction in typographic styles by my calculations. Easing and element as opposed to viewport contexts are necessary for these substantial code reductions. We also have variable fonts, and the lack of variable font support in CSS Locks and `clamp` runs counter to [expectations type designers have for the technology](https://www.instagram.com/p/B81EnHGBtW3/). To support the utility of variable fonts moving forward we need better fluid typography tools.
+
+I have prototyped an idea for what a solution might look like called [Typetura](https://github.com/typetura/Typetura-Core). It works by binding CSS keyframe animations with `resizeObserver` to elements. I would love to see something similar be baked into CSS itself.
