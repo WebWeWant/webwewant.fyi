@@ -1,0 +1,12 @@
+---
+title: I want a media query to detect when a device is running in “night mode”
+date: 2020-05-18
+submitter: Kilian Valkhof
+number: TBD
+tags: [ css ]
+discussion: https://github.com/WebWeWant/webwewant.fyi/discussions/53/
+---
+
+With more and more OSes offering “night mode”—where the screen dims and blues are reduced—it would be nice to have a media query to detect that. Maybe even with a way to (request to) deactivate it for a site or a specific part of a website where color accuracy is important.
+
+This would be interesting for media browsing or editing, but also for smaller stuff like adapting the site’s contrast like you might with `light-level` and `prefers-contrast: low` media queries.
