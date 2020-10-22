@@ -19,6 +19,18 @@ javascript:
 <h1 class="want__title p-name">{{ title | markdownify | widont | safe }}</h1>
 <p><small>Submitted by <b class="p-author h-card">{{ submitter }}</b></small></p>
 
+{% if status %}
+  <p class="status-message status-message--{{ status }}">
+    {% if status=="complete" %}
+      A solution for this has landed in the web platform.
+    {% elif status=="in-progress" %}
+      A solution for this is currently being developed.
+    {% else %}
+      This idea is currently being discussed.
+    {% endif %}
+  </p> 
+{% endif %}
+
 {% if eventData[id] %}
   {% if eventData[id].judges_pick.length > 0 %}
     <p class="want__award want__award--judges"><a href="#events">{% include "assets/svg/judges-pick.svg" %}Judges’ Pick</a></p>
@@ -31,6 +43,28 @@ javascript:
 <div class="e-content">
   {{ layoutContent | safe }}
 </div>
+
+{% if related %}
+  <dl class="related" id="related">
+    <dt>Related Links</dt>
+    <dd>
+      <ul>
+        {% for link in related %}
+          <li class="related__link related__link--{{ link.type }}">
+            <a href="{{ link.url }}" rel="external bookmark">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </dd>
+  </dl> 
+{% endif %}
+
+{% if discussion %}
+  <dl class="discuss">
+    <dt>What do you think about this?</dt>
+    <dd><a class="button button--discuss" rel="external" href="{{ discussion }}">Join the discussion</a></dd>
+  </dl> 
+{% endif %}
 
 <dl class="share">
   <dt>Do you want this too? Share it!</dt>
