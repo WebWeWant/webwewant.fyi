@@ -12,6 +12,7 @@ related:
   - title: "Leading-Trim: The Future of Digital Typesetting"
     url: https://medium.com/microsoft-design/leading-trim-the-future-of-digital-typesetting-d082d84b202
     type: article
+discussion: https://github.com/WebWeWant/webwewant.fyi/discussions/59
 ---
 
 Currently if you want to add spacing between two lines, you need to use `line-height.` This property has the annoying effect of always adding an amount of spacing above and below the block of text.
