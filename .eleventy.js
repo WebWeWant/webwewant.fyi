@@ -11,6 +11,7 @@ const md = require("markdown-it")({
 });
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
   const VOTE_TYPES = ['like-of', 'bookmark-of', 'mention-of'];
@@ -353,22 +354,25 @@ module.exports = function(eleventyConfig) {
       // loop through all
       .map( want => {
         // pluck top by tag
-        want.data.tags.forEach(function( tag ){
+        if ( 'tags' in want.data )
+        {
+          want.data.tags.forEach(function( tag ){
 
-          // add to tag group
-          if ( ! (tag in top_wants) )
-          {
-            top_wants[tag] = [];
-          }
-
-          // no more than pluck
-          if ( top_wants[tag].length > (pluck - 1) )
-          {
-            return;
-          }
-
-          top_wants[tag].push( want );
-        });
+            // add to tag group
+            if ( ! (tag in top_wants) )
+            {
+              top_wants[tag] = [];
+            }
+  
+            // no more than pluck
+            if ( top_wants[tag].length > (pluck - 1) )
+            {
+              return;
+            }
+  
+            top_wants[tag].push( want );
+          });  
+        }
       });
 
     // return the new collection sorted by tag
@@ -499,7 +503,9 @@ module.exports = function(eleventyConfig) {
   );
 
   eleventyConfig.addPlugin(syntaxHighlight);
-
+  
+  eleventyConfig.addPlugin(pluginRss);
+  
   //eleventyConfig.addPlugin(inclusiveLangPlugin);
 
   return {

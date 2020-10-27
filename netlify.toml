@@ -29,6 +29,12 @@
     Cache-Control = "no-cache"
 
 [[headers]]
+  for = "/*.json"
+  [headers.values]
+    Content-Type = "application/manifest+json; charset=utf-8"
+    Cache-Control = "no-cache"
+
+[[headers]]
   for = "/*.png"
   [headers.values]
     Cache-Control = "max-age=31536000, immutable"
