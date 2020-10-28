@@ -2,6 +2,7 @@
   "name": "webwewant-fyi",
   "title": "The Web We Want",
   "description": "A project to gather information about what you need to realize your vision for the web.",
+  "url": "https://webwewant.fyi",
   "version": "1.0.0",
   "scripts": {
     "start": "npx eleventy --serve",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.9",
     "dotenv": "^8.2.0",
     "lodash": "^4.17.20",
     "luxon": "^1.25.0",

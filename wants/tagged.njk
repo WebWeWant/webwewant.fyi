@@ -1,15 +1,8 @@
 ---
 pagination:
-  data: collections
+  data: collections.tags
   size: 1
   alias: tag
-  filter:
-    - nav
-    - all
-    - wants
-    - posts
-    - tags
-  addAllPagesToCollections: true
 layout: layouts/base.njk
 renderData:
   title: Wants Tagged “{{ tag | unslug | fixNames }}”

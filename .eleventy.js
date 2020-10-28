@@ -11,6 +11,7 @@ const md = require("markdown-it")({
 });
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
   const VOTE_TYPES = ['like-of', 'bookmark-of', 'mention-of'];
@@ -197,7 +198,7 @@ module.exports = function(eleventyConfig) {
 
   // Minify JS output
   eleventyConfig.addTransform("jsmin", function(content, outputPath) {
-    if (outputPath.indexOf(".js") > -1) {
+    if (outputPath.match(/.\.js$/) !== null) {
       let minified = UglifyJS.minify(content);
       return minified;
     }
@@ -271,10 +272,21 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("wants", collection => {
     // get unsorted items
-    return collection.getAll().filter( item => {
-      return item.inputPath.indexOf("wants/") > -1;
-    });
+    return collection.getAll()
+             .filter( item => item.inputPath.match(/\/wants\/.*\.md/) !== null );
   });
+
+  eleventyConfig.addCollection("wantsBySubmissionDate", collection => {
+    return collection.getAll()
+             .filter( item => item.inputPath.match(/\/wants\/.*\.md/) !== null )
+             .sort( (a, b) => b.date - a.date )
+             // append the raw content
+             .map( item => {
+               item.data.rawMarkdown = item.template.frontMatter.content.trim() || "";
+               return item;
+             } );
+  });
+
   eleventyConfig.addFilter("extractID", url => {
     url = url.split("/");
     return url[2];
@@ -353,22 +365,25 @@ module.exports = function(eleventyConfig) {
       // loop through all
       .map( want => {
         // pluck top by tag
-        want.data.tags.forEach(function( tag ){
+        if ( 'tags' in want.data )
+        {
+          want.data.tags.forEach(function( tag ){
 
-          // add to tag group
-          if ( ! (tag in top_wants) )
-          {
-            top_wants[tag] = [];
-          }
-
-          // no more than pluck
-          if ( top_wants[tag].length > (pluck - 1) )
-          {
-            return;
-          }
-
-          top_wants[tag].push( want );
-        });
+            // add to tag group
+            if ( ! (tag in top_wants) )
+            {
+              top_wants[tag] = [];
+            }
+  
+            // no more than pluck
+            if ( top_wants[tag].length > (pluck - 1) )
+            {
+              return;
+            }
+  
+            top_wants[tag].push( want );
+          });  
+        }
       });
 
     // return the new collection sorted by tag
@@ -499,7 +514,9 @@ module.exports = function(eleventyConfig) {
   );
 
   eleventyConfig.addPlugin(syntaxHighlight);
-
+  
+  eleventyConfig.addPlugin(pluginRss);
+  
   //eleventyConfig.addPlugin(inclusiveLangPlugin);
 
   return {

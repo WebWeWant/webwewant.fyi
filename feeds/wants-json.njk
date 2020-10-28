@@ -1,0 +1,22 @@
+---
+permalink: /feeds/wants.json
+eleventyExcludeFromCollections: true
+---
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Wants ↬ {{ pkg.title }}",
+  "home_page_url": "{{ pkg.url }}",
+  "feed_url": "{{ pkg.url }}{{ permalink }}",
+  "posts": [
+    {% for want in collections.wantsBySubmissionDate %}
+      {
+        "id": "{{ want.fileSlug }}",
+        "title": "{{ want.data.title }}",
+        "url": "{{ pkg.url }}{{ want.url }}",
+        "date_published": "{{ want.date }}",
+        "tags": [{% for tag in want.data.tags %}"{{ tag }}"{% if not loop.last %},{% endif %}{% endfor %}],
+        "content_text": "{{ want.data.rawMarkdown | replace("\n", "\\n") | replace("\r", "") }}"
+      }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
