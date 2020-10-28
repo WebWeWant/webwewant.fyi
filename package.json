@@ -2,6 +2,7 @@
   "name": "webwewant-fyi",
   "title": "The Web We Want",
   "description": "A project to gather information about what you need to realize your vision for the web.",
+  "url": "https://webwewant.fyi",
   "version": "1.0.0",
   "scripts": {
     "start": "npx eleventy --serve",

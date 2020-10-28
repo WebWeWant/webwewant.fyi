@@ -198,7 +198,7 @@ module.exports = function(eleventyConfig) {
 
   // Minify JS output
   eleventyConfig.addTransform("jsmin", function(content, outputPath) {
-    if (outputPath.indexOf(".js") > -1) {
+    if (outputPath.match(/.\.js$/) !== null) {
       let minified = UglifyJS.minify(content);
       return minified;
     }
@@ -272,10 +272,21 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("wants", collection => {
     // get unsorted items
-    return collection.getAll().filter( item => {
-      return item.inputPath.indexOf("wants/") > -1;
-    });
+    return collection.getAll()
+             .filter( item => item.inputPath.match(/\/wants\/.*\.md/) !== null );
   });
+
+  eleventyConfig.addCollection("wantsBySubmissionDate", collection => {
+    return collection.getAll()
+             .filter( item => item.inputPath.match(/\/wants\/.*\.md/) !== null )
+             .sort( (a, b) => b.date - a.date )
+             // append the raw content
+             .map( item => {
+               item.data.rawMarkdown = item.template.frontMatter.content.trim() || "";
+               return item;
+             } );
+  });
+
   eleventyConfig.addFilter("extractID", url => {
     url = url.split("/");
     return url[2];
