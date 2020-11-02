@@ -12,7 +12,7 @@ The Web We Want is a collective effort by browser makers to understand where the
 
 * [Marcos Cáceres](https://twitter.com/marcosc) (W3C)
 * [Tantek Çelik](https://twitter.com/t) (Mozilla)
-* [Diego González](https://twitter.com/diekus) (Samsung)
+* [Diego González](https://twitter.com/diekus) (Microsoft)
 * [Aaron Gustafson](https://twitter.com/aarongustafson) (Microsoft)
 * [Brian Kardell](https://twitter.com/briankardell) (Igalia)
 * [Stephanie Stimac](https://twitter.com/seaotta) (Microsoft)
