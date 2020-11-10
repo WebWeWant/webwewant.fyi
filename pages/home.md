@@ -7,6 +7,7 @@ permalink: /
 navtitle: Home
 tags:
   - nav
+includeInSitemap: true
 ---
 
 If you build websites, you inevitably run into problems. Maybe there’s no way to achieve an aspect of your design using CSS. Or maybe there’s a device feature you really wish you could tap into using JavaScript. Or perhaps the in-browser DevTools don’t give you a key insight you need to do your job. We want to hear about it!

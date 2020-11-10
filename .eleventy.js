@@ -409,6 +409,13 @@ module.exports = function(eleventyConfig) {
     return tags.sort();
   });
 
+  eleventyConfig.addCollection("sitemap", function(collection) {
+    // get unsorted items
+    return collection
+            .getAll()
+            .filter( item => ( "includeInSitemap" in item.data  && item.data.includeInSitemap === true ) );
+  });
+
   eleventyConfig.addPairedShortcode("getwant", (content, wants, id) => {
     let want = wants.filter( item => item.fileSlug == id )[0];
     return content
@@ -495,6 +502,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("static/js");
   eleventyConfig.addPassthroughCopy("site.webmanifest");
   eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy("robots.txt");
   // eleventyConfig.addPassthroughCopy("_includes/assets/");
 
   /* Markdown Plugins */

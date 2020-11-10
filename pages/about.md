@@ -4,6 +4,7 @@ permalink: /about/
 navtitle: About
 tags:
   - nav
+includeInSitemap: true
 ---
 
 The Web We Want is a collective effort by browser makers to understand where the dev community would like us to invest our energy. If you end up throwing a ton of code at a problem, perhaps there’s a better way. Help us discover the cowpaths worth paving.

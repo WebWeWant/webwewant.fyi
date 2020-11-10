@@ -1,3 +1,4 @@
 {
-  "layout": "layouts/event.njk"
+  "layout": "layouts/event.njk",
+  "includeInSitemap": true
 }

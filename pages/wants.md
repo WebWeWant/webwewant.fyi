@@ -6,6 +6,7 @@ date: 2019-01-02T00:00:00.000Z
 navtitle: Wants
 tags:
   - nav
+includeInSitemap: true
 ---
 
 Here is a run-down of the {{ collections.wants.length }} "wants" submitted as part of this program. Check ’em out and if there’s something you want, [send it in](/#submit)!

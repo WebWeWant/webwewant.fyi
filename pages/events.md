@@ -7,6 +7,7 @@ permalink: /events/
 navtitle: Events
 tags:
   - nav
+includeInSitemap: true
 ---
 
 We’re traveling to conferences and meetups across the world to listen to your feedback. If you’re attending, you may get the opportunity to pitch us on why we (as a community) need to go solve a particular problem or deficiency you’ve encountered. The most compelling problems—as judged by a panel of experts and the audience—will win awesome prizes too!
