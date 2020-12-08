@@ -1,10 +1,13 @@
 /*--------------------------
 
+  Export Wants To Edge ADO
+
   Be sure to set up the following in /.env prior to running this :-)
 
   ADO_PAT - Your ADO Personal Access Token (https://dev.azure.com/microsoft/_usersSettings/tokens)
-  ADO_USER - The ADO User
-  ADO_PROJECT - The ADO Project
+  ADO_USER - Your ADO User account
+  ADO_ORG - The ADO org (microsoft)
+  ADO_PROJECT - The ADO Project (Edge)
 
 */
 
@@ -15,6 +18,7 @@ require('dotenv').config();
 const TRACKING_FILE = "_data/tracking.json";
 
 const feed = require("../_site/feeds/wants.json");
+const { triggerAsyncId } = require('async_hooks');
 const tracking = require(`../${TRACKING_FILE}`);
 
 syncToADO = function(feed, tracking) {
@@ -34,6 +38,12 @@ syncToADO = function(feed, tracking) {
     description += "<hr>";
     description += `<p>Imported from <a href="${want.url}">${want.url}</a></p>`;
     description += `<p>Discussion: <a href="${want.external_url}">${want.external_url}</a></p>`;
+
+    var tags = want.tags;
+    tags.map(( tag, i ) => {
+      tags[i] = `Web We Want - ${tag}`
+    });
+    tags.unshift("Web We Want");
 
     var work_item = [
       {
@@ -72,6 +82,7 @@ syncToADO = function(feed, tracking) {
         "from": null,
         "value": description
       },
+      // Comments
       // {
       //   "op": "add",
       //   "path": "/fields/System.History",
@@ -82,18 +93,19 @@ syncToADO = function(feed, tracking) {
         "op": "add",
         "path": "/fields/System.AssignedTo",
         "from": null,
-        "value": "aarongu@microsoft.com"
+        "value": "webwewant@microsoft.com"
       },
+      // Tags are comma separated
       {
         "op": "add",
         "path": "/fields/System.Tags",
         "from": null,
-        "value": "Web We Want"
+        "value": tags.join(", ")
       }
     ];
     
-    // console.log( work_item, JSON.stringify( work_item ) );
-    // return;
+    console.log( work_item, JSON.stringify( work_item ) );
+    return;
 
     const auth = `Basic ${Buffer.from(
       `${process.env.ADO_USER}:${process.env.ADO_PAT}`
