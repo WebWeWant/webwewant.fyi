@@ -93,7 +93,7 @@ syncToADO = function(feed, tracking) {
         "op": "add",
         "path": "/fields/System.AssignedTo",
         "from": null,
-        "value": "webwewant@microsoft.com"
+        "value": "aarongu@microsoft.com"
       },
       // Tags are comma separated
       {
@@ -104,8 +104,8 @@ syncToADO = function(feed, tracking) {
       }
     ];
     
-    console.log( work_item, JSON.stringify( work_item ) );
-    return;
+    //console.log( work_item, JSON.stringify( work_item ) );
+    //return;
 
     const auth = `Basic ${Buffer.from(
       `${process.env.ADO_USER}:${process.env.ADO_PAT}`
