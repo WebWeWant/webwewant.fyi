@@ -57,6 +57,7 @@
         $email = doc.getElementById('field-email'),
         key = 'contact-info',
         saved_data = win.localStorage.getItem( key ),
+        $github = doc.getElementById('field-github'),
         $github_description = doc.getElementById('description-github'),
         o_github_description = $github_description.innerText;
 
@@ -70,7 +71,8 @@
         saved_data = {
           name:    $name.value,
           privacy: $privacy.checked ? '1' : '0',
-          email:   $email.value
+          email:   $email.value,
+          github:  $github.value
         };
         win.localStorage.setItem( key, JSON.stringify( saved_data ) );
       }
@@ -92,6 +94,9 @@
       if ( saved_data['email'] ) {
         $email.value = saved_data['email'];
       }
+      if ( saved_data['github'] ) {
+        $github.value = saved_data['github'];
+      }
       $save.checked = true;
     }
 
@@ -106,7 +111,6 @@
 
     // Update GitHub field if user goes private
     function toggleGitHub(){
-      var $github = doc.getElementById('field-github');
       if ( $privacy.checked )
       {
         $github.disabled = true;
