@@ -224,7 +224,8 @@ self.addEventListener( "fetch", event => {
   }
 
   // Other HTML
-  else if ( request.headers.get("Accept").includes("text/html") ||
+  else if ( ( request.headers.get("Accept") &&
+              request.headers.get("Accept").includes("text/html") ) ||
             requestIsLikelyForHTML( url ) )
   {
     event.respondWith(
