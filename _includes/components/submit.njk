@@ -14,6 +14,10 @@
       {{ field( "email", "email", { required: true, placeholder: "katherine@johnson.tld", autocomplete: "email", description: "We will only use this information to contact you when your want is published and reach out if we select you to participate in an event. We will not retain your email address beyond that period of time." } ) }}
     </li>
     <li class="question">
+      {{ label("Do you have a GitHub username?", "github") }}
+      {{ field( "text", "github", { placeholder: "your_handle", description: "We use GitHub for tracking and discussing Wants. A GitHub account isn’t required, but could be helpful if you’re interested in participating there." } ) }}
+    </li>
+    <li class="question">
       {% set upcoming_events = collections.upcoming_events | toString( " - ", ["title", "location"]) %}
       {{ label("If you are already attending one of the events we’ll be at, would you consider presenting your idea in person?", "events") }}
       {{ select( "events", upcoming_events, { required: true, options_before: ["I’m not attending an event, but am open to my submission being shared at one", "I’m not interested in having my submission shared at an event"], description: "If you are not already planning to attend the event, it is unlikely we will be able to get you a ticket. That said, if you might qualify for an attendee scholarship, contact us and we will try to help you if we can." } ) }}
@@ -52,7 +56,9 @@
         $privacy = doc.getElementById('field-privacy'),
         $email = doc.getElementById('field-email'),
         key = 'contact-info',
-        saved_data = win.localStorage.getItem( key );
+        saved_data = win.localStorage.getItem( key ),
+        $github_description = doc.getElementById('description-github'),
+        o_github_description = $github_description.innerText;
 
     // add the field
     $form.querySelector('ol').appendChild($li);
@@ -97,6 +103,22 @@
 
     // listen for changes
     $form.addEventListener('submit', saveInfo, true);
+
+    // Update GitHub field if user goes private
+    function toggleGitHub(){
+      var $github = doc.getElementById('field-github');
+      if ( $privacy.checked )
+      {
+        $github.disabled = true;
+        $github_description.innerText = 'Since you’ve opted to remain private, we’ve disabled this field.';
+      }
+      else
+      {
+        $github.disabled = false;
+        $github_description.innerText = o_github_description;
+      }
+    }
+    $privacy.addEventListener('change', toggleGitHub, true);
 
   }(this, this.document));
 </script>
