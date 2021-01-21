@@ -1,4 +1,4 @@
-const version = "v1:", // be sure to update
+const version = "v2:", // be sure to update
 
       // Stuff to load on install
       offline_page = "/offline/",
