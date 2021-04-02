@@ -17,7 +17,7 @@ The Web We Want is a collective effort by browser makers to understand where the
 * [Aaron Gustafson](https://twitter.com/aarongustafson) (Microsoft)
 * [Brian Kardell](https://twitter.com/briankardell) (Igalia)
 * [Stephanie Stimac](https://twitter.com/seaotta) (Microsoft)
-* [Greg Whitworth](https://twitter.com/gregwhitworth) (SalesForce)
+* [Greg Whitworth](https://twitter.com/gregwhitworth) (Salesforce)
 * [Chris Wilson](https://twitter.com/cwilso) (Google, W3C)
 
 Interested in getting involved? [Reach out!](/contact)
