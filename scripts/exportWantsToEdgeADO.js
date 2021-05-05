@@ -34,10 +34,10 @@ syncToADO = function(feed, tracking) {
     var description = want.content_html
                           .replace(/&lt;/g, "<")
                           .replace(/&gt;/g, ">")
-                          .replace(/&quot;/g, '"');
+                          .replace(/&quot;/g, "'");
     description += "<hr>";
-    description += `<p>Imported from <a href="${want.url}">${want.url}</a></p>`;
-    description += `<p>Discussion: <a href="${want.external_url}">${want.external_url}</a></p>`;
+    description += `<p>Imported from <a href='${want.url}'>${want.url}</a></p>`;
+    description += `<p>Discussion: <a href='${want.external_url}'>${want.external_url}</a></p>`;
 
     var tags = want.tags;
     tags.map(( tag, i ) => {
@@ -103,8 +103,9 @@ syncToADO = function(feed, tracking) {
         "value": tags.join(", ")
       }
     ];
-    
-    //console.log( work_item, JSON.stringify( work_item ) );
+
+    var payload = JSON.stringify( work_item );
+    //console.log( work_item, payload );
     //return;
 
     const auth = `Basic ${Buffer.from(
@@ -115,7 +116,7 @@ syncToADO = function(feed, tracking) {
       `https://dev.azure.com/${process.env.ADO_ORG}/${process.env.ADO_PROJECT}/_apis/wit/workitems/$scenario?api-version=6.0`,
       {
         method: "patch",
-        body: JSON.stringify( work_item ),
+        body: payload,
         headers: {
           "Authorization": auth,
           "Content-Type": "application/json-patch+json"
@@ -124,19 +125,33 @@ syncToADO = function(feed, tracking) {
     )
     .then( res => {
       console.log(res);
-      return res.json();
-    })
-    .then( json => {
-      if ( 'id' in json )
+      if ( res.status === 200 )
       {
-        console.log( `Want ${want.id} created as Scenario: ${json.id}` );
-        logWantInEdgeADO( want.id, json.id );
+        return res.json();
       }
       else
       {
-        console.log( 'Something went wrong.', json, work_item );
+        throw new Error( res );
       }
-    });
+    })
+    .then( 
+      // resolved
+      json => {
+        if ( 'id' in json )
+        {
+          console.log( `Want ${want.id} created as Scenario: ${json.id}` );
+          logWantInEdgeADO( want.id, json.id );
+        }
+        else
+        {
+          console.log( 'Something went wrong.', json, payload );
+        }
+      },
+      // error
+      error => {
+        console.log( 'Something went wrong.', error, payload );
+      }
+    );
   });
   
 };

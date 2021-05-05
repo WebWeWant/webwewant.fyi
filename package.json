@@ -25,22 +25,24 @@
   },
   "homepage": "https://webwewant.fyi",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
-    "@11ty/eleventy-plugin-rss": "^1.0.9",
-    "dotenv": "^8.2.0",
-    "lodash": "^4.17.20",
-    "luxon": "^1.25.0",
-    "markdown-it": "^12.0.1",
-    "markdown-it-anchor": "^6.0.0",
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-inclusive-language": "^1.0.2",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "dotenv": "^8.6.0",
+    "lodash": "^4.17.21",
+    "luxon": "^1.26.0",
+    "markdown-it": "^12.0.6",
+    "markdown-it-anchor": "^6.0.1",
     "node-fetch": "^2.6.1",
-    "sanitize-html": "^2.1.1",
+    "sanitize-html": "^2.3.3",
     "widont": "^0.3.3"
   },
   "dependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
+    "bufferutil": "^4.0.3",
     "clean-css": "^4.2.3",
     "html-minifier": "^4.0.0",
-    "uglify-es": "^3.3.9"
+    "uglify-es": "^3.3.9",
+    "utf-8-validate": "^5.0.5"
   }
 }

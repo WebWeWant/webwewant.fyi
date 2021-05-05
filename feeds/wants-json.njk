@@ -16,8 +16,8 @@ eleventyExcludeFromCollections: true
         "date_published": "{{ want.date.toISOString() }}",
         "tags": [{% for tag in want.data.tags %}"{{ tag }}"{% if not loop.last %},{% endif %}{% endfor %}],
         {% if want.data.discussion %}"external_url": "{{ want.data.discussion }}",{% endif %}
-        "content_text": "{{ want.data.rawMarkdown | replace("\n", "\\n") | replace("\r", "") }}",
-        "content_html": "{{ want.templateContent | escape | replace("\n", "\\n") | replace("\r", "") }}"
+        "content_text": "{{ want.data.rawMarkdown | replace("\\", "&#92;") | replace("\n", "\\n") | replace("\r", "") }}",
+        "content_html": "{{ want.templateContent | escape | replace("\\", "&#92;") | replace("\n", "\\n") | replace("\r", "") }}"
       }{% if not loop.last %},{% endif %}
     {% endfor %}
   ]
