@@ -18,6 +18,7 @@ javascript:
 
 <h1 class="want__title p-name">{{ title | markdownify | widont | safe }}</h1>
 <p><small>Submitted by <b class="p-author h-card">{{ submitter }}</b></small></p>
+<p hidden><small>Permalink <b class="u-url">{{ absoluteUrl }}</b></small></p>
 
 {% if status %}
   <p class="want__status want__status--{{ status }}">
@@ -86,7 +87,7 @@ javascript:
   {% if discussion %}
     <dl class="want__discuss" id="discuss">
       <dt>What do you think about this?</dt>
-      <dd><a class="button button--discuss" rel="external" href="{{ discussion }}">Join the discussion</a></dd>
+      <dd><a class="button button--discuss u-syndication" rel="external" href="{{ discussion }}">Join the discussion</a></dd>
     </dl> 
   {% endif %}
 
