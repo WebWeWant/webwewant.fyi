@@ -299,6 +299,8 @@ a[rel="tag"]:last-child {
   grid-gap: 1rem;
   align-items: center;
   grid-auto-columns: 1fr;
+
+  user-select: none;
 }
 .pagination strong {
   grid-area: page;
@@ -393,6 +395,7 @@ button,
   transform: translateX(0) translateY(0);
   box-shadow: none;
   transition: transform .25s, box-shadow .25s, background-color .5s;
+  user-select: none;
 }
 a[href].button,
 a[href].button:visited {
@@ -400,6 +403,7 @@ a[href].button:visited {
   text-decoration: none;
   margin-top: .25rem;
   padding: .5em 1em;
+  user-select: none;
 }
 .button .button__icon {
   width: auto;
