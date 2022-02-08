@@ -31,9 +31,9 @@ async function fetchWebmentions(since) {
 
   let url = `${API_ORIGIN}?domain=${domain}&token=${TOKEN}`;
   if (since) {
-    url += `&per-page=1000&since=${since}`;
+    url += `&per-page=10000&since=${since}`;
   } else {
-    url += `&per-page=999`;
+    url += `&per-page=9999`;
   }
   
   const response = await fetch(url);
