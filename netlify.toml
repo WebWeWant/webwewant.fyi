@@ -38,3 +38,10 @@
   for = "/*.png"
   [headers.values]
     Cache-Control = "max-age=31536000, immutable"
+
+[[plugins]]
+  package = "@algolia/netlify-plugin-crawler"
+  [plugins.inputs]
+  branches = ['main']
+  pathPrefix = "/_site"
+  customDomain = "webwewant.fyi"
