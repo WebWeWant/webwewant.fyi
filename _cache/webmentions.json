@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2022-02-08T17:58:16.839Z",
+  "lastFetched": "2022-07-06T23:21:49.419Z",
   "children": [
     {
       "type": "entry",
@@ -15028,6 +15028,307 @@
       },
       "repost-of": "https://webwewant.fyi/wants/59/",
       "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Peter 🇨🇦🇺🇦 Rushforth",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/80d80cc5336f0b20f89039791b6566ace3571ca9871bef72d5603156afbd4f78.png",
+        "url": "https://twitter.com/prushforth"
+      },
+      "url": "https://twitter.com/prushforth/status/1542167810364825603",
+      "published": "2022-06-29T15:27:12+00:00",
+      "wm-received": "2022-06-29T18:16:00Z",
+      "wm-id": 1424598,
+      "wm-source": "https://brid.gy/comment/twitter/AaronGustafson/1542152111630204939/1542167810364825603",
+      "wm-target": "https://webwewant.fyi/wants/61/",
+      "content": {
+        "html": "Oh yeah, drop on by any time! We'll be moving this mountain, one teaspoonful at a time... <a href=\"https://www.w3.org/community/maps4html/\">w3.org/community/maps…</a>\n<a class=\"u-mention\" href=\"https://twitter.com/AaronGustafson\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/seaotta\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/slightlylate\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/webwewantfyi\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/61/\"></a>\n<a class=\"u-mention\" href=\"https://www.aaron-gustafson.com/\"></a>",
+        "text": "Oh yeah, drop on by any time! We'll be moving this mountain, one teaspoonful at a time... w3.org/community/maps…"
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/61/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephanie Stimac 🔮 Web Witch in 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/36f0170471475829413965d0cbaa461a00a0b4fc5c2544d11563e5106d16e5b1.jpg",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/seaotta/status/1542153127658496000",
+      "published": "2022-06-29T14:28:52+00:00",
+      "wm-received": "2022-06-29T18:16:00Z",
+      "wm-id": 1424599,
+      "wm-source": "https://brid.gy/comment/twitter/AaronGustafson/1542152111630204939/1542153127658496000",
+      "wm-target": "https://webwewant.fyi/wants/61/",
+      "content": {
+        "html": "Cc: <a href=\"https://twitter.com/prushforth\">@prushforth</a>\n<a class=\"u-mention\" href=\"https://twitter.com/AaronGustafson\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/slightlylate\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/webwewantfyi\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/61/\"></a>\n<a class=\"u-mention\" href=\"https://www.aaron-gustafson.com/\"></a>",
+        "text": "Cc: @prushforth"
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/61/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephanie Stimac 🔮 Web Witch in 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/36f0170471475829413965d0cbaa461a00a0b4fc5c2544d11563e5106d16e5b1.jpg",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/seaotta/status/1542152993260322817",
+      "published": "2022-06-29T14:28:20+00:00",
+      "wm-received": "2022-06-29T18:15:59Z",
+      "wm-id": 1424597,
+      "wm-source": "https://brid.gy/comment/twitter/AaronGustafson/1542152111630204939/1542152993260322817",
+      "wm-target": "https://webwewant.fyi/wants/61/",
+      "content": {
+        "html": "And the folks who submitted it are pretty active too. Let me find their handle.\n<a class=\"u-mention\" href=\"https://twitter.com/AaronGustafson\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/slightlylate\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/webwewantfyi\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/61/\"></a>\n<a class=\"u-mention\" href=\"https://www.aaron-gustafson.com/\"></a>",
+        "text": "And the folks who submitted it are pretty active too. Let me find their handle."
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/61/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Aaron Gustafson",
+        "photo": "",
+        "url": "https://www.aaron-gustafson.com/about"
+      },
+      "url": "https://www.aaron-gustafson.com/notebook/a-bittersweet-goodbye/",
+      "published": "2022-06-10T22:15:48+00:00",
+      "wm-received": "2022-06-11T03:35:22Z",
+      "wm-id": 1413941,
+      "wm-source": "https://www.aaron-gustafson.com/notebook/a-bittersweet-goodbye/",
+      "wm-target": "https://webwewant.fyi",
+      "name": "A Bittersweet Goodbye",
+      "content": {
+        "html": "<p>June 3rd was my last day on the Edge team. It’s been an absolute honor and privilege to work with such an amazing team all these years, moving from Internet Explorer (IE) to “Spartan” Edge and, finally, to “Anaheim” Edge.</p><p>My first interactions with the IE team were back in 2006 and 2007, when I was representing the <a href=\"https://webstandards.org/\">Web Standards Project (WaSP)</a>, pushing the team to deliver better JavaScript compatibility (especially the standardized event model). I continued to agitate for IE to up its standards game over the next few years and worked closely with folks on a number of projects. One that stands out was working on <a href=\"https://docs.microsoft.com/en-us/openspecs/ie_standards/ms-iedoco/380e2488-f5eb-4457-a07a-0cb1b6e4b4b5\">the X-UA-Compatible <code>meta</code> tag</a>. <a href=\"https://quirksmode.org\">PPK</a> and I helped with the design of the somewhat controversial feature. I’m particularly proud that I pushed for IE to adopt <a href=\"https://alistapart.com/article/beyonddoctype/#section8\">an “always-on” standards mode for version targeting</a>. I called it “edge mode” because it allowed developers to work with “bleeding edge” standards. I like to think that name inspired—in some small way—the name of the Edge browser today.</p><p>In 2015, I joined Microsoft as an evangelist for web standards, just before the team announced the move from IE to “Spartan” Edge. I chose to come to Microsoft because I saw a passion for web standards within the browser team. I also love underdogs and saw the IE team operating like a scrappy upstart (albeit backed by an industry titan). The IE team wasn’t allowed to hire remote folks—I was in Tennessee at the time—so I joined Microsoft as part of the Developer Experience, alongside <a href=\"https://twitter.com/ReyBango\">Rey Bango</a> and <a href=\"https://twitter.com/codepo8/\">Christian Heilmann</a> to form the first dedicated evangelism team the browser had in ages. We worked closely with the browser’s Ecosystem team to promote best practices in web standards, accessibility, and more.</p><p>After hopping around between a handful of different orgs, our little team was finally brought “in house” to Edge in 2018. Before that happened, however, I had already caught the PWA bug and had been working closely with Edge’s web apps team to chart the future of PWAs on Windows. Coming onto the Edge team opened up even more opportunities for me in this space and with the support from Rey (and then <a href=\"https://twitter.com/kylealden\">Kyle Pflug</a>), I took an even more active role in the development of PWA-related standards, culminating in me becoming a spec editor for the <a href=\"https://www.w3.org/TR/appmanifest/\">Web App Manifest</a> and developing features such as <a href=\"https://web.dev/app-shortcuts/\">PWA Shortcuts</a> (which Edge shipped first and up-streamed to Chromium) and <a href=\"https://github.com/aarongustafson/pwa-widgets\">Web Widgets</a> (which are coming soon).</p><p>I’ve had an incredible amount of support from my management chain for so many ambitious and important projects over the years—<a href=\"https://webwewant.fyi\">The Web We Want</a>, for one—and I am so thankful for that. I‘m most especially appreciative of the support I’ve gotten to focus on D&amp;I work. Culture and inclusion matters so much and I truly appreciate how much my team not only believes in, but invests in making Edge (and Microsoft) a more inclusive place to work.</p><p>I have so much love for the Edge team and will continue to root for them from not too far away. This Monday marked my first on the Technology &amp; Corporate Responsibility team in CELA as their Accessibility Innovation Strategist. I’ll be <a href=\"https://www.microsoft.com/en-us/ai/ai-for-accessibility\">charting the future of accessible technologies and directing future investments in this space across Microsoft products and beyond</a>. I know my work will continue to overlap with Edge as there are so many ways we can use the browser to break down barriers and improve people’s lives.</p>",
+        "text": "June 3rd was my last day on the Edge team. It’s been an absolute honor and privilege to work with such an amazing team all these years, moving from Internet Explorer (IE) to “Spartan” Edge and, finally, to “Anaheim” Edge.My first interactions with the IE team were back in 2006 and 2007, when I was representing the Web Standards Project (WaSP), pushing the team to deliver better JavaScript compatibility (especially the standardized event model). I continued to agitate for IE to up its standards game over the next few years and worked closely with folks on a number of projects. One that stands out was working on the X-UA-Compatible meta tag. PPK and I helped with the design of the somewhat controversial feature. I’m particularly proud that I pushed for IE to adopt an “always-on” standards mode for version targeting. I called it “edge mode” because it allowed developers to work with “bleeding edge” standards. I like to think that name inspired—in some small way—the name of the Edge browser today.In 2015, I joined Microsoft as an evangelist for web standards, just before the team announced the move from IE to “Spartan” Edge. I chose to come to Microsoft because I saw a passion for web standards within the browser team. I also love underdogs and saw the IE team operating like a scrappy upstart (albeit backed by an industry titan). The IE team wasn’t allowed to hire remote folks—I was in Tennessee at the time—so I joined Microsoft as part of the Developer Experience, alongside Rey Bango and Christian Heilmann to form the first dedicated evangelism team the browser had in ages. We worked closely with the browser’s Ecosystem team to promote best practices in web standards, accessibility, and more.After hopping around between a handful of different orgs, our little team was finally brought “in house” to Edge in 2018. Before that happened, however, I had already caught the PWA bug and had been working closely with Edge’s web apps team to chart the future of PWAs on Windows. Coming onto the Edge team opened up even more opportunities for me in this space and with the support from Rey (and then Kyle Pflug), I took an even more active role in the development of PWA-related standards, culminating in me becoming a spec editor for the Web App Manifest and developing features such as PWA Shortcuts (which Edge shipped first and up-streamed to Chromium) and Web Widgets (which are coming soon).I’ve had an incredible amount of support from my management chain for so many ambitious and important projects over the years—The Web We Want, for one—and I am so thankful for that. I‘m most especially appreciative of the support I’ve gotten to focus on D&I work. Culture and inclusion matters so much and I truly appreciate how much my team not only believes in, but invests in making Edge (and Microsoft) a more inclusive place to work.I have so much love for the Edge team and will continue to root for them from not too far away. This Monday marked my first on the Technology & Corporate Responsibility team in CELA as their Accessibility Innovation Strategist. I’ll be charting the future of accessible technologies and directing future investments in this space across Microsoft products and beyond. I know my work will continue to overlap with Edge as there are so many ways we can use the browser to break down barriers and improve people’s lives."
+      },
+      "mention-of": "https://webwewant.fyi",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://www.aaron-gustafson.com/notebook/a-bittersweet-goodbye/"
+      }
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "James' Coffee Blog",
+        "photo": "https://webmention.io/avatar/jamesg.coffee/e8d29a44a5635bb53c5794c32ed11aedad3f5d0e66c1476d1efe615243d08114.jpg",
+        "url": "https://jamesg.coffee/profile/capjamesg"
+      },
+      "url": "https://jamesg.coffee/2022/i-want-browsers-to-throw-accessibility-errors-the-web-we",
+      "published": "2022-05-05T16:26:34+00:00",
+      "wm-received": "2022-05-05T16:26:37Z",
+      "wm-id": 1392161,
+      "wm-source": "https://jamesg.coffee/2022/i-want-browsers-to-throw-accessibility-errors-the-web-we",
+      "wm-target": "https://webwewant.fyi/wants/11/",
+      "name": "I want browsers to throw accessibility errors ↬ The Web We Want",
+      "like-of": "https://webwewant.fyi/wants/11/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Loïc Fürhoff",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c40cd6855a775cfb0450517217aecf9dbd58993192207dfb1ade6dacf7a03b52.jpg",
+        "url": "https://twitter.com/imagoiq"
+      },
+      "url": "https://twitter.com/imagoiq/status/1519203561623769088",
+      "published": "2022-04-27T06:35:29+00:00",
+      "wm-received": "2022-04-27T08:30:42Z",
+      "wm-id": 1387685,
+      "wm-source": "https://brid.gy/post/twitter/webwewantfyi/1519203561623769088",
+      "wm-target": "https://webwewant.fyi/wants/61/",
+      "content": {
+        "html": "I want native maps in the browser (and HTML) <a href=\"https://webwewant.fyi/wants/61/\">webwewant.fyi/wants/61/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want native maps in the browser (and HTML) webwewant.fyi/wants/61/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/61/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Maps for HTML CG",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/c6979a9cf59de81a55c4e4b325b54751dd60d761a3865e8ffdd43854743ac2ab.jpg",
+        "url": "https://twitter.com/maps4html"
+      },
+      "url": "https://twitter.com/maps4html/status/1518979179995439105",
+      "published": "2022-04-26T15:43:52+00:00",
+      "wm-received": "2022-04-26T17:37:23Z",
+      "wm-id": 1387343,
+      "wm-source": "https://brid.gy/post/twitter/webwewantfyi/1518979179995439105",
+      "wm-target": "https://webwewant.fyi/wants/61/",
+      "content": {
+        "html": "Vote for native Web maps in the browser <a href=\"https://webwewant.fyi/wants/61/\">webwewant.fyi/wants/61/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "Vote for native Web maps in the browser webwewant.fyi/wants/61/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/61/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://adrianroselli.com/2020/08/source-order-viewer-in-canary.html",
+      "published": null,
+      "wm-received": "2022-04-02T20:23:15Z",
+      "wm-id": 1374463,
+      "wm-source": "https://adrianroselli.com/2020/08/source-order-viewer-in-canary.html",
+      "wm-target": "https://webwewant.fyi/wants/64/",
+      "mention-of": "https://webwewant.fyi/wants/64/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jeffrey Yasskin",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/161f913bb4d5fde0fdaacd39d45f043588516264bab7a1457448d572ecaa3864.jpg",
+        "url": "https://twitter.com/jyasskin"
+      },
+      "url": "https://twitter.com/jyasskin/status/1509893383556272130",
+      "published": "2022-04-01T14:00:09+00:00",
+      "wm-received": "2022-04-01T22:29:22Z",
+      "wm-id": 1373890,
+      "wm-source": "https://brid.gy/post/twitter/webwewantfyi/1509893383556272130",
+      "wm-target": "https://webwewant.fyi/",
+      "content": {
+        "html": "One quibble: I don't think we've been slow to add HTML elements because of Safari. We tried a couple years ago with &lt;toast&gt;, got burned, and gave up. I'm starting to see more appetite to try again. If you have ideas, <a href=\"https://webwewant.fyi/\">webwewant.fyi</a> is one way to suggest &amp; vote on them.",
+        "text": "One quibble: I don't think we've been slow to add HTML elements because of Safari. We tried a couple years ago with <toast>, got burned, and gave up. I'm starting to see more appetite to try again. If you have ideas, webwewant.fyi is one way to suggest & vote on them."
+      },
+      "mention-of": "https://webwewant.fyi/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "hindenbug",
+        "photo": "",
+        "url": "https://lobste.rs/u/hindenbug"
+      },
+      "url": "https://lobste.rs/s/ioljd5",
+      "published": null,
+      "wm-received": "2022-03-27T15:45:10Z",
+      "wm-id": 1370055,
+      "wm-source": "https://lobste.rs/s/ioljd5",
+      "wm-target": "https://webwewant.fyi/",
+      "repost-of": "https://webwewant.fyi/",
+      "wm-property": "repost-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Lisette Arocha",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/902ea8e540ab35cd37886e0f12091fd45ae963ec96ba5c4e76f7899c9c5318b8.png",
+        "url": "https://twitter.com/lisettemarocha"
+      },
+      "url": "https://twitter.com/lisettemarocha/status/1503818143843729410",
+      "published": "2022-03-15T19:39:19+00:00",
+      "wm-received": "2022-03-18T13:03:53Z",
+      "wm-id": 1365357,
+      "wm-source": "https://brid.gy/post/twitter/webwewantfyi/1503818143843729410",
+      "wm-target": "https://webwewant.fyi/wants/11/",
+      "content": {
+        "html": "I want browsers to throw accessibility errors <a href=\"https://webwewant.fyi/wants/11/\">webwewant.fyi/wants/11/</a> via <a href=\"https://twitter.com/webwewantfyi\">@webwewantfyi</a>",
+        "text": "I want browsers to throw accessibility errors webwewant.fyi/wants/11/ via @webwewantfyi"
+      },
+      "mention-of": "https://webwewant.fyi/wants/11/",
+      "wm-property": "mention-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Peter 🇨🇦🇺🇦 Rushforth",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/80d80cc5336f0b20f89039791b6566ace3571ca9871bef72d5603156afbd4f78.png",
+        "url": "https://twitter.com/prushforth"
+      },
+      "url": "https://twitter.com/prushforth/status/1499474004347953168",
+      "published": "2022-03-03T19:57:16+00:00",
+      "wm-received": "2022-03-03T22:49:56Z",
+      "wm-id": 1358425,
+      "wm-source": "https://brid.gy/comment/twitter/AaronGustafson/1498712630948610050/1499474004347953168",
+      "wm-target": "https://webwewant.fyi/wants/61/",
+      "content": {
+        "html": "Thanks this is great!\n<a class=\"u-mention\" href=\"https://twitter.com/AaronGustafson\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/bocoup\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mozhacks\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/seaotta\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/webwewantfyi\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/61/\"></a>\n<a class=\"u-mention\" href=\"https://www.aaron-gustafson.com/\"></a>",
+        "text": "Thanks this is great!"
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/61/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Stephanie Stimac 🔮 Web Witch",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/36f0170471475829413965d0cbaa461a00a0b4fc5c2544d11563e5106d16e5b1.jpg",
+        "url": "https://twitter.com/seaotta"
+      },
+      "url": "https://twitter.com/seaotta/status/1499470577190387718",
+      "published": "2022-03-03T19:43:39+00:00",
+      "wm-received": "2022-03-03T22:49:55Z",
+      "wm-id": 1358423,
+      "wm-source": "https://brid.gy/comment/twitter/AaronGustafson/1498712630948610050/1499470577190387718",
+      "wm-target": "https://webwewant.fyi/wants/61/",
+      "content": {
+        "html": "cc: <a href=\"https://twitter.com/prushforth\">@prushforth</a> who had submitted this want. \n\nI've also updated the WWW GitHub discussion with a link to the mozhacks tweet. <a href=\"https://github.com/WebWeWant/webwewant.fyi/discussions/108\">github.com/WebWeWant/webw…</a>\n\n<a class=\"u-mention\" href=\"https://twitter.com/AaronGustafson\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/bocoup\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mozhacks\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/webwewantfyi\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/61/\"></a>\n<a class=\"u-mention\" href=\"https://www.aaron-gustafson.com/\"></a>",
+        "text": "cc: @prushforth who had submitted this want. \n\nI've also updated the WWW GitHub discussion with a link to the mozhacks tweet. github.com/WebWeWant/webw…"
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/61/",
+      "wm-property": "in-reply-to",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Simon Pieters 💉💉💉",
+        "photo": "https://webmention.io/avatar/pbs.twimg.com/a62f77bba866a320c8fd5fd045e661f4455437d21d0784a6819b74d4c97c1b3d.jpg",
+        "url": "https://twitter.com/zcorpan"
+      },
+      "url": "https://twitter.com/zcorpan/status/1499505544801009669",
+      "published": "2022-03-03T22:02:36+00:00",
+      "wm-received": "2022-03-03T22:49:55Z",
+      "wm-id": 1358424,
+      "wm-source": "https://brid.gy/comment/twitter/AaronGustafson/1498712630948610050/1499505544801009669",
+      "wm-target": "https://webwewant.fyi/wants/61/",
+      "content": {
+        "html": "Thanks @seaotta!\n\ncc <a href=\"https://twitter.com/caseymmiller\">@caseymmiller</a>\n\n<a class=\"u-mention\" href=\"https://twitter.com/AaronGustafson\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/bocoup\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/mozhacks\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/prushforth\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/seaotta\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/webwewantfyi\"></a>\n<a class=\"u-mention\" href=\"https://webwewant.fyi/wants/61/\"></a>\n<a class=\"u-mention\" href=\"https://www.aaron-gustafson.com/\"></a>",
+        "text": "Thanks @seaotta!\n\ncc @caseymmiller"
+      },
+      "in-reply-to": "https://webwewant.fyi/wants/61/",
+      "wm-property": "in-reply-to",
       "wm-private": false
     }
   ]
