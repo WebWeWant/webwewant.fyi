@@ -10,3 +10,19 @@ includeInSitemap: true
 ---
 
 Here is a run-down of the {{ collections.wants.length }} "wants" submitted as part of this program. Check ’em out and if there’s something you want, [send it in](/#submit)!
+
+<div id="search">
+  <p>Search existing wants:</p>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+<script type="text/javascript">
+  algoliasearchNetlify({
+    appId: 'DHNCDDF8RA',
+    apiKey: 'b8b628b83ba4b077f0d1225dd553f18f',
+    siteId: '770267f7-c04f-4418-aca2-3a377b1059e0',
+    branch: 'main',
+    selector: 'div#search',
+  });
+</script>

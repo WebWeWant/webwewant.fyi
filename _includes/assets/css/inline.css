@@ -861,3 +861,17 @@ table.dashboard {
      font-weight: normal;
    }
  }
+
+
+ /* Algolia */
+#search {
+  border: 1px solid;
+  padding: 1rem;
+  background: rgba(255,255,255,.8);
+}
+.aa-InputWrapper {
+  margin-top: 0;
+}
+.aa-Input:focus {
+  background-color: transparent;
+}
