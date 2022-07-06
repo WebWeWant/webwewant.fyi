@@ -1,6 +1,6 @@
 const { DateTime } = require("luxon");
 const CleanCSS = require("clean-css");
-const UglifyJS = require("uglify-es");
+const UglifyJS = require("uglify-js");
 const sanitizeHTML = require('sanitize-html')
 const htmlmin = require("html-minifier");
 const widont = require("widont");
