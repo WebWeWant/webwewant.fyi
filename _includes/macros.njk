@@ -106,8 +106,8 @@
 
 {% macro paginate( what, pagination ) %}
   <nav class="pagination" aria-label="Pages">
-    <strong>{{ what }} {{ pagination.pageNumber + 1 }}&nbsp;of&nbsp;{{ pagination.hrefs.length }}</strong>
-    {% if pagination.previousPageHref %}<a href="{{ pagination.previousPageHref }}" rel="prev">← Previous {{ what }}</a>{% endif %}
-    {% if pagination.nextPageHref %}<a href="{{ pagination.nextPageHref }}" rel="next">Next {{ what }} →</a>{% endif %}
+    <strong>{{ what }} {{ (pagination.pageNumber + 1) }}&nbsp;of&nbsp;{{ pagination.hrefs.length }}</strong>
+    {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}" rel="prev">← Previous {{ what }}</a>{% endif %}
+    {% if pagination.href.next %}<a href="{{ pagination.href.next }}" rel="next">Next {{ what }} →</a>{% endif %}
   </nav>
 {% endmacro %}
