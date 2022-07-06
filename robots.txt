@@ -1,3 +1,5 @@
+# Algolia-Crawler-Verif: 554712B5782B65F1
+
 User-agent: *
 Disallow: /admin/
 
