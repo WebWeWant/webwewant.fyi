@@ -21,12 +21,13 @@ Two reasons. First, most developers do not have the time, knowledge, or money to
 
 ## Team
 
+* [Patrick Brosset](https://twitter.com/patrickbrosset) (Microsoft)
 * [Marcos Cáceres](https://twitter.com/marcosc) (Apple, W3C)
 * [Tantek Çelik](https://twitter.com/t) (Mozilla, W3C)
 * [Diego González](https://twitter.com/diekus) (Microsoft)
 * [Aaron Gustafson](https://twitter.com/aarongustafson) (Microsoft)
 * [Brian Kardell](https://twitter.com/briankardell) (Igalia)
-* [Patrick Brosset](https://twitter.com/patrickbrosset) (Microsoft)
+* [Eric Meyer](https://twitter.com/meyerweb) (Igalia)
 * [Stephanie Stimac](https://twitter.com/seaotta) (Rapid)
 * [Greg Whitworth](https://twitter.com/gregwhitworth) (Salesforce)
 * [Chris Wilson](https://twitter.com/cwilso) (Google, W3C)
