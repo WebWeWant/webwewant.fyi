@@ -23,7 +23,7 @@ Two reasons. First, most developers do not have the time, knowledge, or money to
 
 * [Patrick Brosset](https://twitter.com/patrickbrosset) (Microsoft)
 * [Marcos Cáceres](https://twitter.com/marcosc) (Apple, W3C)
-* [Tantek Çelik](https://twitter.com/t) (Mozilla, W3C)
+* [Tantek Çelik](https://tantek.com/) (Mozilla, W3C)
 * [Diego González](https://twitter.com/diekus) (Microsoft)
 * [Aaron Gustafson](https://twitter.com/aarongustafson) (Microsoft)
 * [Brian Kardell](https://twitter.com/briankardell) (Igalia)
