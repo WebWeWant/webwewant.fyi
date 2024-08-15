@@ -28,7 +28,7 @@ Two reasons. First, most developers do not have the time, knowledge, or money to
 * [Aaron Gustafson](https://twitter.com/aarongustafson) (Microsoft)
 * [Brian Kardell](https://twitter.com/briankardell) (Igalia)
 * [Eric Meyer](https://twitter.com/meyerweb) (Igalia)
-* [Stephanie Stimac](https://twitter.com/seaotta) (Rapid)
+* [Stephanie Stimac](https://twitter.com/seaotta) (Igalia)
 * [Greg Whitworth](https://twitter.com/gregwhitworth) (Salesforce)
 * [Chris Wilson](https://twitter.com/cwilso) (Google, W3C)
 
