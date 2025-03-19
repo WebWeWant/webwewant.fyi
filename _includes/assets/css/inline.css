@@ -391,7 +391,7 @@ button,
   border-radius: .5rem;
   font-size: 1rem;
   font-family: inherit;
-  padding: .5em 3em;
+  padding: .5em 1em;
   transform: translateX(0) translateY(0);
   box-shadow: none;
   transition: transform .25s, box-shadow .25s, background-color .5s;
