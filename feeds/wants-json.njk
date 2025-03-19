@@ -13,7 +13,7 @@ eleventyExcludeFromCollections: true
         "id": "{{ want.fileSlug }}",
         "title": "{{ want.data.title }}",
         "url": "{{ pkg.url }}{{ want.url }}",
-        "date_published": "{{ want.date.toISOString() }}",
+        "date_published": "{{ want.date_iso }}",
         "tags": [{% for tag in want.data.tags %}"{{ tag }}"{% if not loop.last %},{% endif %}{% endfor %}],
         {% if want.data.discussion %}"external_url": "{{ want.data.discussion }}",{% endif %}
         "content_text": "{{ want.data.rawMarkdown | replace("\\", "&#92;") | replace("\n", "\\n") | replace("\r", "") }}",

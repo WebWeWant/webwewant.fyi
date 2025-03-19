@@ -12,6 +12,7 @@ const md = require("markdown-it")({
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 
 module.exports = function(eleventyConfig) {
   const VOTE_TYPES = ['like-of', 'bookmark-of', 'mention-of'];
@@ -281,8 +282,10 @@ module.exports = function(eleventyConfig) {
              .filter( item => item.inputPath.match(/\/wants\/.*\.md/) !== null )
              .sort( (a, b) => b.date - a.date )
              // append the raw content
-             .map( item => {
-               item.data.rawMarkdown = item.template.frontMatter.content.trim() || "";
+             .map(async (item) => {
+               const template = await item.template.read();
+               item.data.rawMarkdown = template.content.trim() || "";
+               item.data.date_iso = template.data.date.toISOString();
                return item;
              } );
   });
@@ -525,7 +528,7 @@ module.exports = function(eleventyConfig) {
   
   eleventyConfig.addPlugin(pluginRss);
   
-  //eleventyConfig.addPlugin(inclusiveLangPlugin);
+  eleventyConfig.addPlugin(UpgradeHelper);
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],

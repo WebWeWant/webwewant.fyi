@@ -1,50 +1,50 @@
 {
-  "name": "webwewant-fyi",
-  "title": "The Web We Want",
-  "description": "A project to gather information about what you need to realize your vision for the web.",
-  "url": "https://webwewant.fyi",
-  "version": "1.0.0",
-  "scripts": {
-    "start": "npx eleventy --serve",
-    "build": "npx eleventy",
-    "watch": "npx eleventy --watch",
-    "debug": "DEBUG=* npx eleventy"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/WebWeWant/webwewant.fyi"
-  },
-  "author": {
-    "name": "Aaron Gustafson",
-    "email": "aaron@easy-designs.net",
-    "url": "https://www.aaron-gustafson.com/"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/aarongustafson/webwewant.fyi/issues"
-  },
-  "homepage": "https://webwewant.fyi",
-  "devDependencies": {
-    "@11ty/eleventy": "^1.0.1",
-    "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "dotenv": "^8.6.0",
-    "lodash": "^4.17.21",
-    "luxon": "^1.26.0",
-    "markdown-it": "^13.0.1",
-    "markdown-it-anchor": "^8.6.4",
-    "node-fetch": "^2.6.1",
-    "sanitize-html": "^2.3.3",
-    "widont": "^0.3.3"
-  },
-  "dependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
-    "@types/markdown-it": "^12.2.3",
-    "bufferutil": "^4.0.3",
-    "clean-css": "^4.2.3",
-    "html-minifier": "^4.0.0",
-    "striptags": "^3.1.1",
-    "uglify-js": "^3.16.2",
-    "utf-8-validate": "^5.0.5"
-  }
+	"name": "webwewant-fyi",
+	"title": "The Web We Want",
+	"description": "A project to gather information about what you need to realize your vision for the web.",
+	"url": "https://webwewant.fyi",
+	"version": "1.0.0",
+	"scripts": {
+		"start": "npx eleventy --serve",
+		"build": "npx eleventy",
+		"watch": "npx eleventy --watch",
+		"debug": "DEBUG=* npx eleventy"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/WebWeWant/webwewant.fyi"
+	},
+	"author": {
+		"name": "Aaron Gustafson",
+		"email": "aaron@easy-designs.net",
+		"url": "https://www.aaron-gustafson.com/"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/aarongustafson/webwewant.fyi/issues"
+	},
+	"homepage": "https://webwewant.fyi",
+	"devDependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
+		"@11ty/eleventy-plugin-rss": "^1.2.0",
+		"dotenv": "^8.6.0",
+		"lodash": "^4.17.21",
+		"luxon": "^1.26.0",
+		"markdown-it": "^13.0.1",
+		"markdown-it-anchor": "^8.6.4",
+		"node-fetch": "^2.6.1",
+		"sanitize-html": "^2.3.3",
+		"widont": "^0.3.3"
+	},
+	"dependencies": {
+		"@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+		"@types/markdown-it": "^12.2.3",
+		"bufferutil": "^4.0.3",
+		"clean-css": "^4.2.3",
+		"html-minifier": "^4.0.0",
+		"striptags": "^3.1.1",
+		"uglify-js": "^3.16.2",
+		"utf-8-validate": "^5.0.5"
+	}
 }
