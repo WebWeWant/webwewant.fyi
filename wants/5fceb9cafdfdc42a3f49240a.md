@@ -1,5 +1,5 @@
 ---
-title: HTTPS security on local devices (routers, cameras, printers, etc.)
+title: I want HTTPS security on local devices (routers, cameras, printers, etc.)
 date: 2020-12-07T23:24:58.845Z
 submitter: Anonymous
 number: 5fceb9cafdfdc42a3f49240a
