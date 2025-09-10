@@ -17,8 +17,8 @@ export default async (request, context) => {
     const formData = await request.json();
     console.log('Received form submission:', formData);
 
-    // Get GitHub token from environment using new Netlify.env API
-    const githubToken = Netlify.env.get('GITHUB_TOKEN');
+    // Get GitHub token from environment using process.env
+    const githubToken = process.env.GITHUB_TOKEN;
     if (!githubToken) {
       console.error('GITHUB_TOKEN environment variable not set');
       return new Response(JSON.stringify({ error: 'Server configuration error' }), {
