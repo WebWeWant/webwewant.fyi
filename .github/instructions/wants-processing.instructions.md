@@ -29,11 +29,19 @@ Web We Want focuses on **web platform evolution** including:
 - Links to commercial services unrelated to web standards
 - Excessive capitalization or suspicious formatting
 - Non-technical content or obvious bot submissions
+- Malicious links or potentially harmful content
+- Offensive language or inappropriate scenarios
 
 **If SPAM detected:**
-1. Add label: `spam`
-2. Close issue immediately
-3. Comment: "This submission has been automatically detected as spam and closed. If this was done in error, please contact the maintainers."
+1. **Edit the issue content** to remove harmful elements:
+   - Replace issue title with: "SPAM - Content Removed"
+   - Replace issue body with: "This submission was identified as spam. The original content has been removed to prevent potential harm. If this was done in error, please contact the maintainers."
+   - Remove all external links, promotional content, and offensive material
+2. Add label: `spam`
+3. Close issue immediately
+4. Comment: "This submission has been automatically detected as spam. The content has been sanitized and the issue closed. If this was done in error, please contact the maintainers."
+
+**Note:** Since GitHub Copilot cannot delete issues entirely, editing the content to remove harmful links and material is essential for security and preventing abuse.
 
 ### Step 2: Relevance Check 🎯
 
@@ -174,6 +182,7 @@ related:
 
 ## 📊 Example Processing
 
+### Example 1: Legitimate Want
 ```markdown
 ## Processing Want #123: "Better CSS Grid debugging"
 
@@ -190,10 +199,22 @@ related:
 - Referenced Firefox DevTools implementation
 ```
 
+### Example 2: Spam Handling
+```markdown
+## Processing Want #124: Originally contained promotional links
+
+❌ **Spam Check:** Generic promotional content with commercial links - IS SPAM
+🔧 **Content Sanitization:** 
+- Edited title to: "SPAM - Content Removed"
+- Replaced body with sanitization notice
+- Removed all external promotional links
+- Added spam label and closed issue
+```
+
 ## 🔧 Quality Checklist
 
 Before creating the want file, verify:
-- [ ] Spam detection completed
+- [ ] Spam detection completed (content sanitized if needed)
 - [ ] Relevance to web platform confirmed
 - [ ] Appropriate technology labels applied
 - [ ] Duplicate search conducted thoroughly
@@ -201,6 +222,13 @@ Before creating the want file, verify:
 - [ ] Related links added where applicable
 - [ ] Frontmatter properly formatted
 - [ ] File named with submission ID
+
+**For Spam Issues:**
+- [ ] Issue title changed to "SPAM - Content Removed"
+- [ ] Issue body replaced with sanitization notice
+- [ ] All external links and promotional content removed
+- [ ] Spam label applied
+- [ ] Issue closed with explanatory comment
 
 ## 🚀 Processing Tips
 
