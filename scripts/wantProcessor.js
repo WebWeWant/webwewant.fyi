@@ -42,7 +42,7 @@ function generateWantFile(wantData) {
     submitter: submitter,
     number: submissionId,
     tags: tags.length > 0 ? tags : ['uncategorized'],
-    discussion: `https://github.com/WebWeWant/webwewant.fyi/discussions/`,
+    discussion: `https://github.com/WebWeWant/webwewant.fyi/discussions/${submissionId}`,
     status: 'discussing'
   };
 
