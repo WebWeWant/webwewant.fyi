@@ -1,0 +1,21 @@
+{
+	"name": "webwewant-netlify-functions",
+	"version": "1.0.0",
+	"description": "Netlify Functions for Web We Want form processing",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"@netlify/functions": "^2.0.0"
+	},
+	"devDependencies": {},
+	"keywords": [
+		"netlify",
+		"functions",
+		"github",
+		"automation"
+	],
+	"author": "Web We Want",
+	"license": "MIT"
+}
