@@ -128,7 +128,7 @@ date: [ISO_DATE_STRING - use current date/time]
 submitter: [SUBMITTER_NAME or "Anonymous"]
 number: [USE_SUBMISSION_ID]
 tags: [ assigned-labels ]
-discussion: https://github.com/WebWeWant/webwewant.fyi/discussions/
+discussion: https://github.com/WebWeWant/webwewant.fyi/discussions/[USE_ISSUE_ID]
 status: discussing
 related:
   - title: [SPEC_OR_ARTICLE_TITLE]
@@ -243,3 +243,41 @@ Before creating the want file, verify:
 - Enhance without changing meaning
 - Add value through context and links
 - Maintain consistency with existing wants
+
+## 🔄 Post-Implementation: Issue to Discussion Conversion
+
+When a want PR is merged, you may be asked to convert the original issue to a discussion to keep community conversation going.
+
+### Direct Conversion Process:
+
+**Important**: Convert the issue DIRECTLY to a discussion (don't create a new one) to preserve the same ID. This ensures existing want markdown files continue to reference the correct discussion.
+
+1. **Clean the Issue Content First:**
+   - Edit the current issue to remove submission metadata (ID, timestamp, form fields)
+   - Remove processing instructions and JSON data blocks
+   - Remove "@github-copilot[bot]" mentions and processing comments
+   - Keep only the essential want description and clean title
+   - Ensure the content is well-formatted for a discussion
+
+2. **Convert Issue to Discussion:**
+   - Use the GitHub API to convert this issue directly to a discussion
+   - Choose "General" category (or "Wants" if available)
+   - The ID will remain the same after conversion
+
+3. **Add Implementation Context:**
+   - Comment on the newly created discussion
+   - Reference the implementing PR number
+   - Thank the submitter and community
+
+4. **Example Implementation Comment:**
+   ```
+   🎉 This want has been implemented in PR #XXX!
+   
+   Thank you @[submitter] for this valuable contribution to making the web better. 
+   The community can continue discussing this feature here.
+   ```
+
+**Key Benefits:**
+- Same ID preserved → want markdown files reference correct discussion
+- Clean discussion content without processing metadata
+- Continued community engagement on implemented features

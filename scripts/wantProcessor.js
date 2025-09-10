@@ -14,6 +14,7 @@ const crypto = require('crypto');
  * @param {string} wantData.description - The want description
  * @param {Array<string>} wantData.tags - Array of technology tags
  * @param {string} wantData.submissionId - Unique submission ID
+ * @param {number} wantData.issueId - GitHub issue ID (becomes discussion ID after conversion)
  * @param {Array<Object>} wantData.related - Related links (optional)
  * @returns {Object} Generated file data
  */
@@ -24,6 +25,7 @@ function generateWantFile(wantData) {
     description,
     tags = [],
     submissionId,
+    issueId,
     related = []
   } = wantData;
 
@@ -35,6 +37,9 @@ function generateWantFile(wantData) {
   // Generate current ISO date
   const currentDate = new Date().toISOString();
 
+  // Use issueId for discussion URL (will become discussion ID after conversion)
+  const discussionId = issueId || submissionId;
+
   // Create frontmatter
   const frontmatter = {
     title: formattedTitle,
@@ -42,7 +47,7 @@ function generateWantFile(wantData) {
     submitter: submitter,
     number: submissionId,
     tags: tags.length > 0 ? tags : ['uncategorized'],
-    discussion: `https://github.com/WebWeWant/webwewant.fyi/discussions/${submissionId}`,
+    discussion: `https://github.com/WebWeWant/webwewant.fyi/discussions/${discussionId}`,
     status: 'discussing'
   };
 
