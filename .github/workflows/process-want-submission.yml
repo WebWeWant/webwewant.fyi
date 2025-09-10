@@ -103,8 +103,7 @@ jobs:
               repo: context.repo.repo,
               title: `[Auto] New Want: ${title}`,
               body: issueBody,
-              labels: ['needs-review', 'auto-generated'],
-              assignees: ['github-copilot[bot]']
+              labels: ['needs-review', 'auto-generated']
             });
 
             return {
