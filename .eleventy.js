@@ -418,7 +418,15 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addPairedShortcode("getwant", (content, wants, id) => {
-    let want = wants.filter( item => item.fileSlug == id )[0];
+    // Convert id to string to ensure comparison works
+    let want = wants.filter( item => item.fileSlug == String(id) )[0];
+    
+    // Safety check for undefined want
+    if (!want) {
+      console.error(`Want with id ${id} not found`);
+      return `<!-- Want ${id} not found -->`;
+    }
+    
     return content
              .replace( "url", want.url )
              .replace( "data.title", md.render( want.data.title ) )
