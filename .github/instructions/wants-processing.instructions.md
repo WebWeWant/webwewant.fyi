@@ -78,6 +78,8 @@ Web We Want focuses on **web platform evolution** including:
 
 **Specialized Areas:**
 - `accessibility` - Screen readers, WCAG, inclusive design
+- `dom` - Document Object Model, including window, navigator, CSSOM, etc.
+- `api` - Web APIs
 - `devtools` - Browser developer tools, debugging, profiling
 - `browsers` - Browser behavior, implementation differences
 - `web-apps` - PWAs, app-like functionality, offline capabilities
