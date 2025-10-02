@@ -1,6 +1,6 @@
 # Want Processing Instructions for GitHub Copilot
 
-Follow these detailed instructions when processing want submissions for the Web We Want project.
+Follow these detailed instructions when processing Want submissions for the Web We Want project.
 
 ## 🎯 Mission & Scope
 
