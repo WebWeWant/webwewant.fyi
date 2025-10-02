@@ -4,7 +4,7 @@ This document summarizes the complete automated workflow implementation for proc
 
 ## 🎯 Overview
 
-The automated workflow replaces the manual Zapier integration with a comprehensive GitHub-based system that:
+The automated Want processing workflow is a comprehensive GitHub-based system that:
 
 1. **Receives** webhook submissions from Netlify Forms
 2. **Creates** GitHub issues automatically with structured data
