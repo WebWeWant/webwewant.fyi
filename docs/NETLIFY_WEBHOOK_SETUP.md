@@ -17,60 +17,78 @@ This document provides step-by-step instructions for configuring your Netlify fo
 
 ### Step 1: Create or Update Your Netlify Form
 
-Ensure your Netlify form includes the necessary fields for want processing:
+Ensure your Netlify form mirrors the production form used on the site:
 
 ```html
-<form name="problems" method="POST" data-netlify="true" action="/thanks">
-  <input type="hidden" name="form-name" value="problems" />
-  
-  <div>
-    <label for="name">Your Name (optional):</label>
-    <input type="text" id="name" name="name" />
-  </div>
-  
-  <div>
-    <label for="email">Email (optional, for follow-up):</label>
-    <input type="email" id="email" name="email" />
-  </div>
-  
-  <div>
-    <label for="events">Event attendance:</label>
-    <select id="events" name="events">
-      <option value="I'm not attending an event, but am open to my submission being shared at one">Not attending, but open to sharing</option>
-      <option value="I'm attending an event and would like this shared">Attending and want this shared</option>
-      <option value="I'm not attending and don't want this shared">Not attending, don't share</option>
-    </select>
-  </div>
-  
-  <div>
-    <label for="privacy">Privacy:</label>
-    <input type="checkbox" id="privacy" name="privacy" value="I agree to the privacy policy" required />
-    <label for="privacy">I agree to the privacy policy</label>
-  </div>
-  
-  <div>
-    <label for="title">Want Title:</label>
-    <input type="text" id="title" name="title" required 
-           placeholder="e.g., Flexbox sizing should factor in the width of wrapped text" />
-  </div>
-  
-  <div>
-    <label for="detail">Describe your want in detail:</label>
-    <textarea id="detail" name="detail" required rows="8"
-              placeholder="Explain what you want added to the web platform, why it would be useful, and provide examples or links to demonstrations..."></textarea>
-  </div>
-  
-  <button type="submit">Submit Want</button>
+<form name="problems" method="POST" data-netlify="true" action="/submitted/" netlify-honeypot="bot-field">
+   <input type="hidden" name="form-name" value="problems">
+
+   <ol class="questions">
+      <li class="question">
+         <label class="question__label" for="field-name">What’s your name?</label>
+         <input class="question__field" type="text" name="name" id="field-name" required
+                   placeholder="Katherine Johnson" autocomplete="name" autocorrect="off" autocapitalize="off">
+         <div class="question__addendum">
+            <label class="question--confirm" for="field-privacy">
+               <input class="question__field question__field--confirm" type="checkbox" name="privacy" id="field-privacy" value="1">
+               Please keep my full name private
+            </label>
+         </div>
+      </li>
+      <li class="question">
+         <label class="question__label" for="field-email">Where can we email you?</label>
+         <input class="question__field" type="email" name="email" id="field-email" required
+                   placeholder="katherine@johnson.tld" autocomplete="email"
+                   aria-describedby="description-email">
+         <em class="question__description" id="description-email">We will only use this information to contact you when your want is published and reach out if we select you to participate in an event. We will not retain your email address beyond that period of time.</em>
+      </li>
+      <li class="question">
+         <label class="question__label" for="field-github">Do you have a GitHub username?</label>
+         <input class="question__field" type="text" name="github" id="field-github"
+                   placeholder="your_handle" aria-describedby="description-github" autocapitalize="off">
+         <em class="question__description" id="description-github">We use GitHub for tracking and discussing Wants. A GitHub account isn’t required, but could be helpful if you’re interested in participating there.</em>
+      </li>
+      <li class="question">
+         <label class="question__label" for="field-events">If you are already attending one of the events we’ll be at, would you consider presenting your idea in person?</label>
+         <select id="field-events" name="events" required aria-describedby="description-events">
+            <option>I’m not attending an event, but am open to my submission being shared at one</option>
+            <option>I’m not interested in having my submission shared at an event</option>
+            <!-- Additional <option> elements are injected for each upcoming event -->
+         </select>
+         <em class="question__description" id="description-events">If you are not already planning to attend the event, it is unlikely we will be able to get you a ticket. That said, if you might qualify for an attendee scholarship, contact us and we will try to help you if we can.</em>
+      </li>
+      <li class="question">
+         <label class="question__label" for="field-title">What do you want?</label>
+         <input class="question__field" type="text" name="title" id="field-title" required
+                   placeholder="I want…" autocapitalize="sentences" spellcheck="true">
+      </li>
+      <li class="question">
+         <label class="question__label" for="field-detail">Now go into a little more detail. How is lack of this impacting your work? How do you currently work around this limitation?</label>
+         <textarea class="question__field" name="detail" id="field-detail" required rows="8"
+                        autocapitalize="sentences" spellcheck="true" aria-describedby="description-detail"></textarea>
+         <em class="question__description" id="description-detail">Please note that we may end up rewriting your problem before posting it to this site.</em>
+      </li>
+      <li hidden>
+         <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+      </li>
+   </ol>
+
+   <button type="submit">Send it in</button>
+   <p><em>Note: You can ask us to remove your personal information from this site or our form submission database at any time. We can also retroactively remove your full name from any submissions. Just <a href="/contact/">drop us a line</a>.</em></p>
 </form>
 ```
 
 **Important Field Names:**
-- `name` - Submitter's name
-- `email` - Contact email (optional)
-- `events` - Event attendance preference
-- `privacy` - Privacy policy agreement
-- `title` - Want title/summary
-- `detail` - Detailed want description (main content)
+- `name` (required) – Submitter’s name
+- `privacy` (optional) – Checkbox value `1` when the submitter wants their full name kept private
+- `email` (required) – Contact email for follow-up
+- `github` (optional) – GitHub username for discussion follow-up
+- `events` (required) – Event attendance preference (static options plus any upcoming events)
+- `title` (required) – Want title/summary
+- `detail` (required) – Detailed want description (main content)
+- `bot-field` – Honeypot field used by Netlify to reduce spam (should remain empty)
+
+JavaScript enhances the form to add a `save` checkbox that stores the contact fields locally for future submissions. If the submitter opts in, Netlify will include `save: 1` in the payload; you can ignore this flag within the webhook.
 
 ### Step 2: Set Up Netlify Function (Required)
 
