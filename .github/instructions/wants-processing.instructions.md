@@ -151,7 +151,8 @@ related:
 **Related Links to Consider:**
 - W3C specifications and working drafts
 - WHATWG living standards  
-- IETF RFCs  
+- IETF RFCs
+- Ecma International standards
 - Browser vendor documentation
 - Established developer resources
 - GitHub repositories for standards work
