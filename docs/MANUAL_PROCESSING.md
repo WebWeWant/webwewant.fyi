@@ -14,7 +14,11 @@ Use manual processing for:
 ### Method 1: Issue Comment Trigger
 
 1. Navigate to the GitHub issue you want to process
-2. Add a comment with the text `/process-want` or `/process`
+2. Add a comment with one of these trigger commands:
+   - `/process` - Simple slash command
+   - `/process-want` - Alternative slash command
+   - `@github-copilot` - Mention Copilot directly
+   - `@github-copilot[bot] please process this want` - Full mention with instruction
 3. The workflow will automatically trigger and process the issue
 
 ### Method 2: Repository Dispatch (for bulk processing)
@@ -87,8 +91,10 @@ The manual processing can result in several outcomes:
 
 ### Workflow Doesn't Trigger
 - Ensure you have proper repository permissions
-- Check that the comment contains a trigger phrase
+- Check that the comment contains a trigger phrase (e.g., `/process`, `@github-copilot`)
 - Verify the workflow file is present and valid
+- Check the Actions tab to see if the workflow was skipped and review the logs
+- Review `.github/workflows/README.md` for trigger requirements
 
 ### Processing Fails
 - Check the Actions tab for error details

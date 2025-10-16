@@ -20,9 +20,26 @@ jobs:
     if: |
       github.event_name == 'repository_dispatch' || 
       (github.event_name == 'issues' && startsWith(github.event.issue.title, '[Auto] New Want:')) ||
-      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@github-copilot[bot]') && contains(github.event.comment.body, 'process-want'))
+      (github.event_name == 'issue_comment' && (
+        contains(github.event.comment.body, '/process') ||
+        contains(github.event.comment.body, '@github-copilot') ||
+        (contains(github.event.comment.body, '@github-copilot[bot]') && contains(github.event.comment.body, 'process'))
+      ))
     runs-on: ubuntu-latest
     steps:
+      - name: Log workflow trigger
+        run: |
+          echo "=== Workflow Trigger Information ==="
+          echo "Event name: ${{ github.event_name }}"
+          echo "Triggered by: ${{ github.actor }}"
+          echo "Repository: ${{ github.repository }}"
+          if [ "${{ github.event_name }}" = "issue_comment" ]; then
+            echo "Comment author: ${{ github.event.comment.user.login }}"
+            echo "Issue number: ${{ github.event.issue.number }}"
+            echo "Issue title: ${{ github.event.issue.title }}"
+            echo "Comment body (first 200 chars): ${{ github.event.comment.body }}" | head -c 200
+          fi
+          echo "==================================="
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -121,15 +138,27 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const issue = github.event_name === 'issue_comment' 
-              ? context.payload.issue 
-              : context.payload.issue;
-
-            const issueBody = issue.body;
+            console.log('=== Processing existing issue/comment ===');
+            console.log(`Event name: ${context.eventName}`);
+            console.log(`Issue number: ${context.payload.issue.number}`);
+            
+            const issue = context.payload.issue;
+            const issueBody = issue.body || '';
+            
+            console.log(`Issue title: ${issue.title}`);
+            console.log(`Issue body length: ${issueBody.length}`);
+            
             const submissionIdMatch = issueBody.match(/\*\*Submission ID:\*\* (.+)/);
             const submissionId = submissionIdMatch ? submissionIdMatch[1] : `manual-${issue.number}-${Date.now()}`;
+            
+            console.log(`Submission ID: ${submissionId}`);
 
-            if (github.event_name === 'issue_comment') {
+            if (context.eventName === 'issue_comment') {
+              console.log('Processing as issue comment event');
+              const comment = context.payload.comment;
+              console.log(`Comment author: ${comment.user.login}`);
+              console.log(`Comment body: ${comment.body.substring(0, 200)}`);
+              
               const commentBody = [
                 '## Manual Processing Triggered',
                 '',
@@ -150,12 +179,14 @@ jobs:
                 `Body: ${issueBody.substring(0, 500)}${issueBody.length > 500 ? '...' : ''}`
               ].join('\n');
 
+              console.log('Creating processing trigger comment...');
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issue.number,
                 body: commentBody
               });
+              console.log('Processing trigger comment created successfully');
             }
 
             return {
@@ -168,9 +199,13 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            console.log('=== Assigning to Copilot ===');
+            console.log(`Event name: ${context.eventName}`);
+            
             // Get issue number from previous steps or current context
             let issueNumber;
-            if (github.event_name === 'repository_dispatch') {
+            if (context.eventName === 'repository_dispatch') {
+              console.log('Getting issue from repository_dispatch event');
               // For webhook events, we need to find the issue we just created
               // We'll use a simple approach and get the most recent issue
               const issues = await github.rest.issues.listForRepo({
@@ -183,16 +218,20 @@ jobs:
                 per_page: 1
               });
               issueNumber = issues.data[0]?.number;
+              console.log(`Found issue number: ${issueNumber}`);
             } else {
               // For issue events, use the issue from the event
               issueNumber = context.payload.issue.number;
+              console.log(`Using issue from event: ${issueNumber}`);
             }
 
             if (!issueNumber) {
-              console.log('Could not determine issue number');
+              console.log('ERROR: Could not determine issue number');
               return;
             }
 
+            console.log(`Creating Copilot trigger comment on issue #${issueNumber}`);
+            
             // Add comment to trigger Copilot processing
             await github.rest.issues.createComment({
               owner: context.repo.owner,
@@ -203,13 +242,22 @@ jobs:
               Follow the 5-step process: spam detection, relevance check, technology classification, duplicate detection, and want PR creation if approved.`
             });
 
-            console.log(`Issue ${issueNumber} has been assigned to Copilot for processing`);
+            console.log(`Successfully assigned issue ${issueNumber} to Copilot for processing`);
 
       - name: Log processing completion
         run: |
-          echo "Want submission processing workflow completed"
-          echo "Check GitHub Actions logs for issue details"
-          echo "Workflow triggered for submission processing"
+          echo "==================================="
+          echo "Want submission processing workflow completed successfully"
+          echo "Event: ${{ github.event_name }}"
+          echo "Triggered by: ${{ github.actor }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "==================================="
+          echo ""
+          echo "Next steps:"
+          echo "- Check the issue for Copilot's processing comments"
+          echo "- Review any PR created by Copilot"
+          echo "- Check GitHub Actions logs for detailed execution trace"
+          echo "==================================="
 
   convert-issue-to-discussion:
     if: github.event_name == 'pull_request' && github.event.pull_request.merged == true
