@@ -1,0 +1,308 @@
+name: Process Want Submission
+
+on:
+  repository_dispatch:
+    types: [netlify-form-submission]
+  issues:
+    types: [opened, edited, labeled]
+  issue_comment:
+    types: [created]
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  process-submission:
+    if: |
+      github.event_name == 'repository_dispatch' || 
+      (github.event_name == 'issues' && startsWith(github.event.issue.title, '[Auto] New Want:')) ||
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@github-copilot[bot]') && contains(github.event.comment.body, 'process-want'))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create issue from webhook (if from repository_dispatch)
+        if: github.event_name == 'repository_dispatch'
+        id: create-issue
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const payload = context.payload.client_payload;
+
+            // Extract form data from actual Netlify webhook structure
+            const submissionId = payload.submission_id || payload.id || Date.now().toString();
+            const timestamp = payload.timestamp || new Date().toISOString();
+            const formName = payload.form_name || 'problems';
+
+            // Map actual Netlify form fields to our expected structure
+            const name = payload.data_name || 'Anonymous';
+            const email = payload.data_email || 'Not provided';
+            const title = payload.data_title || 'No title provided';
+            const detail = payload.data_detail || 'No description provided';
+            const events = payload.data_events || 'Not specified';
+            const privacy = payload.data_privacy || 'Not specified';
+
+            // Create issue body with structured data for Copilot
+            const issueBody = `## Want Submission Details
+
+            **Submission ID:** ${submissionId}
+            **Submitted:** ${timestamp}
+            **Form Name:** ${formName}
+            **Origin Site:** ${payload.origin_site_url || 'https://webwewant.fyi'}
+
+            ### Submitter Information
+            **Name:** ${name}
+            **Email:** ${email}
+            **Event Attendance:** ${events}
+            **Privacy Preference:** ${privacy}
+
+            ### Want Details
+            **Title:** ${title}
+
+            **Description:**
+            ${detail}
+
+            ---
+
+            **Instructions for @github-copilot[bot]:**
+
+            Please process this want submission following the detailed instructions in `.github/instructions/wants-processing.instructions.md`.
+
+            **Summary of Processing Steps:**
+            1. **Spam Detection:** Analyze if this submission is spam or malicious content
+            2. **Relevance Check:** Determine if this relates to web platform evolution (HTML, CSS, JS, browsers)
+            3. **Technology Classification:** Add appropriate technology labels
+            4. **Duplicate Detection:** Check existing wants in /wants directory for similar requests
+            5. **Create Want PR:** Generate a pull request with properly formatted want file
+
+            Refer to the complete processing guide for detailed criteria and examples.
+
+            **Submission Data (JSON):**
+            \`\`\`json
+            ${JSON.stringify(payload, null, 2)}
+            \`\`\`
+            `;
+
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Auto] New Want: ${title}`,
+              body: issueBody,
+              labels: ['needs-review', 'auto-generated']
+            });
+
+            return {
+              issue_number: issue.data.number,
+              issue_url: issue.data.html_url,
+              submission_id: submissionId
+            };
+
+      - name: Process existing issue (if from issues/comment event)
+        if: github.event_name == 'issues' || github.event_name == 'issue_comment'
+        id: process-issue
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = github.event_name === 'issue_comment' 
+              ? context.payload.issue 
+              : context.payload.issue;
+
+            const issueBody = issue.body;
+            const submissionIdMatch = issueBody.match(/\*\*Submission ID:\*\* (.+)/);
+            const submissionId = submissionIdMatch ? submissionIdMatch[1] : `manual-${issue.number}-${Date.now()}`;
+
+            if (github.event_name === 'issue_comment') {
+              const commentBody = [
+                '## Manual Processing Triggered',
+                '',
+                `**Issue #${issue.number}** has been queued for automated processing.`,
+                '',
+                '**Instructions for @github-copilot[bot]:**',
+                'Please process this existing want submission following the detailed instructions in `.github/instructions/wants-processing.instructions.md`.',
+                '',
+                '**Summary of Processing Steps:**',
+                '1. **Spam Detection:** Analyze if this submission is spam or malicious content',
+                '2. **Relevance Check:** Determine if this relates to web platform evolution (HTML, CSS, JS, browsers)',
+                '3. **Technology Classification:** Add appropriate technology labels',
+                '4. **Duplicate Detection:** Check existing wants in /wants directory for similar requests',
+                '5. **Create Want PR:** Generate a pull request with properly formatted want file',
+                '',
+                '**Original Issue Content:**',
+                `Title: ${issue.title}`,
+                `Body: ${issueBody.substring(0, 500)}${issueBody.length > 500 ? '...' : ''}`
+              ].join('\n');
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: commentBody
+              });
+            }
+
+            return {
+              issue_number: issue.number,
+              submission_id: submissionId
+            };
+
+      - name: Assign to Copilot for processing
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            // Get issue number from previous steps or current context
+            let issueNumber;
+            if (github.event_name === 'repository_dispatch') {
+              // For webhook events, we need to find the issue we just created
+              // We'll use a simple approach and get the most recent issue
+              const issues = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                labels: 'auto-generated',
+                sort: 'created',
+                direction: 'desc',
+                per_page: 1
+              });
+              issueNumber = issues.data[0]?.number;
+            } else {
+              // For issue events, use the issue from the event
+              issueNumber = context.payload.issue.number;
+            }
+
+            if (!issueNumber) {
+              console.log('Could not determine issue number');
+              return;
+            }
+
+            // Add comment to trigger Copilot processing
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              body: `@github-copilot[bot] Please process this want submission according to the detailed instructions in \`.github/instructions/wants-processing.instructions.md\`.
+              
+              Follow the 5-step process: spam detection, relevance check, technology classification, duplicate detection, and want PR creation if approved.`
+            });
+
+            console.log(`Issue ${issueNumber} has been assigned to Copilot for processing`);
+
+      - name: Log processing completion
+        run: |
+          echo "Want submission processing workflow completed"
+          echo "Check GitHub Actions logs for issue details"
+          echo "Workflow triggered for submission processing"
+
+  convert-issue-to-discussion:
+    if: github.event_name == 'pull_request' && github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if this is a want PR
+        id: check-want-pr
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+            const prTitle = pr.title.toLowerCase();
+            const prBody = pr.body || '';
+
+            // Check if this looks like a want PR
+            const isWantPR = prTitle.includes('want') || 
+                           prBody.includes('want') || 
+                           pr.head.ref.includes('want') ||
+                           prTitle.includes('add:') ||
+                           prTitle.includes('new:');
+
+            if (!isWantPR) {
+              console.log('Not a want-related PR, skipping conversion');
+              return { skip: true };
+            }
+
+            // Look for related issue number in PR body
+            const issueMatch = prBody.match(/(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s+#(\d+)/i);
+            const issueNumber = issueMatch ? parseInt(issueMatch[1]) : null;
+
+            if (!issueNumber) {
+              console.log('No related issue found in PR body');
+              return { skip: true };
+            }
+
+            // Get the issue to verify it's a want submission
+            const issue = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber
+            });
+
+            const isWantIssue = issue.data.title.includes('[Auto] New Want:') || 
+                              issue.data.labels.some(label => label.name === 'auto-generated');
+
+            if (!isWantIssue) {
+              console.log('Related issue is not a want submission');
+              return { skip: true };
+            }
+
+            return {
+              skip: false,
+              issue_number: issueNumber,
+              issue_title: issue.data.title,
+              pr_number: pr.number
+            };
+
+      - name: Trigger issue to discussion conversion
+        if: fromJSON(steps.check-want-pr.outputs.result).skip != true
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const checkResult = JSON.parse('${{ steps.check-want-pr.outputs.result }}');
+
+            if (checkResult.skip) {
+              console.log('Skipping conversion as requested');
+              return;
+            }
+
+            const issueNumber = checkResult.issue_number;
+            const prNumber = checkResult.pr_number;
+
+            // Add comment to trigger Copilot for issue conversion
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              body: `@github-copilot[bot] This want has been implemented and merged in PR #${prNumber}! 
+              
+              Please convert this issue directly to a discussion following these steps:
+              1. **Clean the issue content**: Edit this issue to remove submission metadata, form fields, and processing instructions - keep only the core want description
+              2. **Convert to discussion**: Use the GitHub API to convert this issue directly to a discussion in the "Wants" category (this preserves the same ID)
+              3. **Add implementation note**: Comment on the new discussion referencing PR #${prNumber}
+              
+              **Important**: Convert the issue directly (don't create a new discussion) so the ID remains the same and existing want markdown files continue to reference the correct discussion.`
+            });
+
+            console.log(`Triggered issue #${issueNumber} conversion to discussion for merged PR #${prNumber}`);
+
+      - name: Log conversion trigger
+        if: fromJSON(steps.check-want-pr.outputs.result).skip != true
+        run: |
+          echo "Issue to discussion conversion triggered"
+          echo "Copilot will handle content cleanup and conversion"
