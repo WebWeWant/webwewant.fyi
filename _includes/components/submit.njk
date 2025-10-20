@@ -31,7 +31,10 @@
       {{ textarea( "detail", { required: true, autocapitalize: "sentences", spellcheck: "true", description: "Please note that we may end up rewriting your problem before posting it to this site." } ) }}
     </li>
     <li hidden>
-      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+    </li>
+    <li hidden>
+      <label>Website: <input name="website" /></label>
     </li>
   </ol>
   {{ button("Send it in") }}
