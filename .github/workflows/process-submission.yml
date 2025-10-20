@@ -49,7 +49,7 @@ jobs:
             }
             const commentBody = `🤖 Approved and ready for processing.
 
-            **Follow ALL instructions in \`.github/want-submission-triage.md\` section "Creating Approved Submissions" - this is your ONLY source of truth.**
+            **Follow ALL instructions in \`.github/instructions/wants-processing.instructions.md\` section "Step 5: Want File Creation" - this is your ONLY source of truth.**
 
             Key steps:
             1. Run \`npm run create-want\` to generate UUID and markdown template

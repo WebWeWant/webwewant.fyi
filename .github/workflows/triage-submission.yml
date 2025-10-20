@@ -72,7 +72,7 @@ jobs:
 
             const commentBody = `🤖 Ready for triage.
 
-            **Follow ALL instructions in \`.github/want-submission-triage.md\` - this is your ONLY source of truth.**
+            **Follow ALL instructions in \`.github/instructions/wants-processing.instructions.md\` - this is your ONLY source of truth.**
 
             Key steps:
             1. **Spam Detection** - Check for spam/abuse content, excessive links
@@ -81,7 +81,7 @@ jobs:
             4. **Classification** - Add appropriate technology labels
             5. **Processing** - If approved, run \`npm run create-want\` and create PR
 
-            Do not look at any other documentation files for triage guidance.`;
+            Do not look at any other documentation files for triage guidance. Follow the Quick Reference and Processing Workflow sections.`;
 
             // Add comment with instructions
             await github.rest.issues.createComment({

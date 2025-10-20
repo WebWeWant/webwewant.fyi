@@ -2,6 +2,38 @@
 
 Follow these detailed instructions when processing Want submissions for the Web We Want project.
 
+## Quick Reference
+
+### Required Markdown Fields
+- `title`: "I want [description]" format
+- `date`: ISO date string (current date/time)
+- `submitter`: Submitter's name or "Anonymous"
+- `number`: Submission ID from issue
+- `tags`: Array of relevant technology labels
+- `discussion`: GitHub discussions URL using issue ID
+- `status`: "discussing"
+
+### Optional Fields
+- `related`: Array of related specifications/articles with title, url, type
+
+### Essential Commands
+- `npm run create-want` - Generate UUID and markdown template
+- `npm run check-duplicate "Want Title"` - Check for potential duplicates (fuzzy matching)
+- `npm run validate-want wants/<ID>.md` - Validate markdown file
+
+### Triage Decision Tree
+1. **Spam/abuse/honeypot triggered?** → DELETE and close issue immediately
+2. **Links to commercial services (>2 links)?** → FLAG as potential spam, review carefully
+3. **Off-topic (not web platform)?** → REJECT with "off-topic" label, close issue
+4. **Missing required fields?** → REJECT with explanation, close issue  
+5. **Potential duplicate?** → Run `npm run check-duplicate`, flag for human review if similar
+6. **Passes all checks?** → CREATE markdown file and PR per "Creating Approved Submissions" section
+
+### Similarity Score Guidelines (for duplicate checking)
+- **90-100%** = Very likely duplicate → Flag for human review
+- **70-89%** = Possibly duplicate → Flag for human review
+- **<70%** = Probably unique → Proceed with processing
+
 ## 🎯 Mission & Scope
 
 Web We Want focuses on **web platform evolution** including:
@@ -16,51 +48,36 @@ Web We Want focuses on **web platform evolution** including:
 
 ### Step 1: Spam Detection ⚠️
 
-**Analyze submission for spam indicators:**
+**Immediately delete and close submissions that:**
+1. **Triggered honeypot** - "website" field is filled (automated spam)
+2. **Contain excessive links** - More than 2 external links (likely promotional)
+3. **Commercial promotion** - Advertising services, products, or companies
+4. **Abusive content** - Hateful, threatening, or inappropriate language
+5. **Non-English content** - Unless directly related to internationalization features
+6. **Obvious bot submissions** - Generic text, random characters, or template spam
 
-✅ **NOT Spam - Proceed to Step 2:**
-- Technical content about web technologies
-- Specific, actionable requests
-- Professional language and formatting
-- Demonstrates understanding of web development
-
-❌ **IS Spam - Take Action:**
-- Generic promotional content
-- Links to commercial services unrelated to web standards
-- Excessive capitalization or suspicious formatting
-- Non-technical content or obvious bot submissions
-- Malicious links or potentially harmful content
-- Offensive language or inappropriate scenarios
-
-**If SPAM detected:**
-1. **Edit the issue content** to remove harmful elements:
-   - Replace issue title with: "SPAM - Content Removed"
-   - Replace issue body with: "This submission was identified as spam. The original content has been removed to prevent potential harm. If this was done in error, please contact the maintainers."
-   - Remove all external links, promotional content, and offensive material
-2. Add label: `spam`
-3. Close issue immediately
-4. Comment: "This submission has been automatically detected as spam. The content has been sanitized and the issue closed. If this was done in error, please contact the maintainers."
+**When deleting spam:**
+- Close the issue immediately
+- Add comment: "This submission was automatically detected as spam and removed."
+- Do not engage with or provide detailed feedback on spam submissions
 
 **Note:** Since GitHub Copilot cannot delete issues entirely, editing the content to remove harmful links and material is essential for security and preventing abuse.
 
 ### Step 2: Relevance Check 🎯
 
-**Evaluate against Web We Want mission:**
+**Approve submissions that:**
+1. **Relate to web platform evolution** - HTML, CSS, JavaScript, browser APIs, developer tools
+2. **Include required information** - Clear title, detailed description, contact info
+3. **Are technically feasible** - Not requesting impossible or deprecated features
+4. **Show understanding** - Demonstrate knowledge of web development challenges
+5. **Are respectful** - Professional language and constructive tone
 
-✅ **RELEVANT - Proceed to Step 3:**
-- HTML/CSS/JavaScript improvements
-- Browser feature requests
-- Developer tools enhancements
-- Web accessibility features
-- Standards-related proposals
-- Cross-browser compatibility issues
-
-❌ **OFF-TOPIC - Take Action:**
-- Browser troubleshooting requests
-- Personal website help
-- Non-web technologies
-- General software complaints
-- Specific bug reports (not feature requests)
+**Common off-topic submissions (reject with "off-topic" label):**
+- Browser troubleshooting or bug reports for specific sites
+- Requests for help with personal projects
+- General software or non-web technology requests
+- Infrastructure or hosting questions
+- Questions about using existing APIs (rather than improving them)
 
 **If OFF-TOPIC:**
 1. Add label: `off-topic`
@@ -98,73 +115,68 @@ Web We Want focuses on **web platform evolution** including:
 
 ### Step 4: Duplicate Detection 🔍
 
-**Search existing wants for similar requests:**
+**Always check for duplicates using:**
+```bash
+npm run check-duplicate "Want Title From Issue"
+```
 
-**Search Strategy:**
-1. Use assigned technology labels to filter relevant wants
-2. Look for keyword matches in titles and descriptions
-3. Consider problem space overlap, not just solution similarity
-4. Check `/wants` directory systematically
-
-**Similarity Criteria:**
-- **High similarity (DUPLICATE):** Nearly identical problem and solution
-- **Medium similarity (RELATED):** Same problem, different approach  
-- **Low similarity (UNIQUE):** Different problem or use case
-
-**If DUPLICATE found:**
-1. Add label: `duplicate`
-2. Close issue
-3. Comment: "This want appears to be very similar to an existing submission: [Link to existing want]. Please add your support and additional details to that discussion instead."
+**If potential duplicates found (exit code 1):**
+1. Review the similarity scores and descriptions
+2. If 70%+ similarity, add "possible duplicate" label
+3. Comment with links to potential matches
+4. **Do not close** - flag for human review instead
+5. Humans will make final determination on true duplicates
 
 **If UNIQUE, proceed to Step 5**
 
 ### Step 5: Want File Creation 📄
 
-**Generate a pull request with new want file:**
+**For approved submissions, follow this process:**
 
-**File Structure:**
-```yaml
----
-title: I want [CLEAR, SPECIFIC TITLE]
-date: [ISO_DATE_STRING - use current date/time]
-submitter: [SUBMITTER_NAME or "Anonymous"]
-number: [USE_SUBMISSION_ID]
-tags: [ assigned-labels ]
-discussion: https://github.com/WebWeWant/webwewant.fyi/discussions/[USE_ISSUE_ID]
-status: discussing
-related:
-  - title: [SPEC_OR_ARTICLE_TITLE]
-    url: [URL]
-    type: [spec|draft|article|proposal|project]
----
+1. **Generate markdown template:**
+   ```bash
+   npm run create-want
+   ```
+   This creates `wants/<ID>.md` with proper structure
 
-[ENHANCED_CONTENT_HERE]
-```
+2. **Fill in the generated file** with data from the issue:
+   - `title`: Ensure starts with "I want" and is descriptive
+   - `date`: Current ISO date string
+   - `submitter`: Use provided name or "Anonymous" if privacy requested
+   - `number`: Use the generated UUID
+   - `tags`: Add 1-3 relevant technology labels (see tag list below)
+   - `discussion`: Use GitHub discussions URL with issue ID
+   - `status`: Set to "discussing"
+   - Content: Clean up and enhance the description for clarity
 
-**Content Enhancement Guidelines:**
-1. **Title:** Ensure starts with "I want" and is specific
-2. **Content:** Edit for clarity, fix grammar, add context
-3. **Examples:** Include code samples or use cases when helpful
-4. **Technical accuracy:** Verify terminology and concepts
-5. **Related links:** Add relevant specifications, proposals, articles
+3. **Add related links** if applicable:
+   ```yaml
+   related:
+     - title: HTML Standard
+       url: https://html.spec.whatwg.org/
+       type: spec
+   ```
 
-**Related Links to Consider:**
-- W3C specifications and working drafts
-- WHATWG living standards  
-- IETF RFCs
-- Ecma International standards
-- Browser vendor documentation
-- Established developer resources
-- GitHub repositories for standards work
-- MDN documentation for context
+4. **Validate the file:**
+   ```bash
+   npm run validate-want wants/<ID>.md
+   ```
 
-**PR Requirements:**
-- **File:** `/wants/{SUBMISSION_ID}.md`
-- **Title:** `Add want: [TITLE]`
-- **Description:** Reference original issue number
-- **Request review** from repository maintainers
+5. **Create pull request:**
+   - Branch: `submission/<descriptive-name>`
+   - Title: "Add want: [Want Title]"
+   - Include issue number in PR description
+   - Request review from maintainers
 
 ## 🎨 Content Quality Standards
+
+### Content Enhancement Guidelines
+
+1. **Title formatting:** Always start with "I want" and be specific
+2. **Content editing:** Improve grammar, add context, fix technical terminology
+3. **Examples:** Include code samples or use cases when helpful
+4. **Related links:** Add relevant specs, articles, or proposals when available
+5. **Technical accuracy:** Verify terminology and concepts are correct
 
 ### Writing Style:
 - Clear, professional language
@@ -183,6 +195,53 @@ related:
 - Include authoritative developer resources  
 - Verify links are current and accessible
 - Avoid linking to outdated/deprecated content
+
+**Related Links to Consider:**
+- W3C specifications and working drafts
+- WHATWG living standards  
+- IETF RFCs
+- Ecma International standards
+- Browser vendor documentation
+- Established developer resources
+- GitHub repositories for standards work
+- MDN documentation for context
+
+## 📋 Response Templates
+
+### For Spam/Abuse
+```
+This submission was automatically detected as spam and removed.
+```
+
+### For Off-Topic Submissions
+```
+Thank you for your submission. This request appears to be outside the scope of Web We Want, which focuses on improvements to web platform standards (HTML, CSS, JavaScript) and browser implementations. For support questions, please refer to appropriate community forums.
+```
+
+### For Missing Information
+```
+This submission is missing required information: [list missing fields]
+
+Please provide the missing information and resubmit through the form at https://webwewant.fyi/#submit
+
+Closing this issue.
+```
+
+### For Possible Duplicates
+```
+This submission may be a duplicate of existing want(s):
+
+[List potential matches with links]
+
+This issue has been flagged with the "possible duplicate" label for human review to determine if this is truly a duplicate or a different request with similar goals.
+```
+
+### For Approval
+```
+This submission has been approved and will be processed.
+
+Creating pull request with the want information.
+```
 
 ## 📊 Example Processing
 
@@ -218,23 +277,23 @@ related:
 ## 🔧 Quality Checklist
 
 Before creating the want file, verify:
-- [ ] Spam detection completed (content sanitized if needed)
-- [ ] Relevance to web platform confirmed
-- [ ] Appropriate technology labels applied
-- [ ] Duplicate search conducted thoroughly
+- [ ] Spam detection completed (deleted if spam)
+- [ ] Relevance to web platform confirmed  
+- [ ] Appropriate technology tags applied (1-3 tags)
+- [ ] Duplicate check performed using script
 - [ ] Content enhanced for clarity and completeness
 - [ ] Related links added where applicable
-- [ ] Frontmatter properly formatted
-- [ ] File named with submission ID
-
-**For Spam Issues:**
-- [ ] Issue title changed to "SPAM - Content Removed"
-- [ ] Issue body replaced with sanitization notice
-- [ ] All external links and promotional content removed
-- [ ] Spam label applied
-- [ ] Issue closed with explanatory comment
+- [ ] Markdown file validates successfully
+- [ ] Branch and PR created with proper naming
 
 ## 🚀 Processing Tips
+
+**Important Notes:**
+- **Single source of truth:** These instructions are your only guidance - don't reference other documentation
+- **Act decisively:** Process submissions quickly but thoroughly
+- **Maintain quality:** Enhance content for clarity while preserving submitter intent
+- **Preserve context:** Always reference the original issue number in PRs
+- **Human escalation:** When in doubt, flag for human review rather than rejecting
 
 **Efficiency:**
 - Process steps sequentially - don't skip ahead

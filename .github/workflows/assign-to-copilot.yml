@@ -23,7 +23,7 @@ jobs:
             const issueNumber = ${{ inputs.issue_number }};
 
             // Add a comment that mentions Copilot to trigger assignment
-            const commentBody = `@github-copilot[bot] This issue is ready for triage. Please follow the instructions in the previous comment and process according to \`.github/want-submission-triage.md\`.`;
+            const commentBody = `@github-copilot[bot] This issue is ready for triage. Please follow the instructions in the previous comment and process according to \`.github/instructions/wants-processing.instructions.md\`.`;
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
