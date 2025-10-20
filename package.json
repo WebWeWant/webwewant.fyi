@@ -8,7 +8,10 @@
 		"start": "npx eleventy --serve",
 		"build": "npx eleventy",
 		"watch": "npx eleventy --watch",
-		"debug": "DEBUG=* npx eleventy"
+		"debug": "DEBUG=* npx eleventy",
+		"create-want": "node scripts/create-want.mjs",
+		"check-duplicate": "node scripts/check-duplicate.mjs",
+		"validate-want": "node scripts/validate-want.mjs"
 	},
 	"repository": {
 		"type": "git",

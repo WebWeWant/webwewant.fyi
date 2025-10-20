@@ -1,0 +1,97 @@
+name: Want Submission
+description: Submit a web platform improvement request
+title: "New Want Submission: "
+labels: ["want"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a web platform improvement request! Please provide as much detail as possible about what you want to see improved in HTML, CSS, JavaScript, or browser functionality.
+
+  - type: input
+    id: submitter_name
+    attributes:
+      label: Your Name
+      description: How should we credit you?
+      placeholder: e.g., Katherine Johnson
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy Preference
+      description: How should we handle your name?
+      options:
+        - label: Please keep my full name private
+          required: false
+
+  - type: input
+    id: email
+    attributes:
+      label: Contact Email
+      description: Where can we reach you about your submission?
+      placeholder: e.g., katherine@johnson.tld
+    validations:
+      required: true
+
+  - type: input
+    id: github_username
+    attributes:
+      label: GitHub Username
+      description: Optional - helps with discussion participation
+      placeholder: e.g., your_handle
+    validations:
+      required: false
+
+  - type: dropdown
+    id: event_preference
+    attributes:
+      label: Event Participation
+      description: Would you consider presenting this idea at an event?
+      options:
+        - I'm not attending an event, but am open to my submission being shared at one
+        - I'm not interested in having my submission shared at an event
+        - Other (please specify in additional details)
+    validations:
+      required: true
+
+  - type: input
+    id: want_title
+    attributes:
+      label: What do you want?
+      description: Brief, clear title for your request
+      placeholder: e.g., I want better HTML forms validation
+    validations:
+      required: true
+
+  - type: textarea
+    id: want_detail
+    attributes:
+      label: Detailed Description
+      description: How is the lack of this feature impacting your work? How do you currently work around this limitation?
+      placeholder: Explain your use case, current workarounds, and why this would be valuable...
+    validations:
+      required: true
+
+  - type: input
+    id: source_url
+    attributes:
+      label: Related Sources
+      description: Optional - link to relevant specifications, discussions, or examples
+      placeholder: e.g., https://github.com/whatwg/html/issues/123
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      description: Please confirm the following
+      options:
+        - label: This request relates to web platform standards (HTML, CSS, JavaScript, browser APIs)
+          required: true
+        - label: I understand this submission will be reviewed before being published
+          required: true
+        - label: I agree to the terms of participation outlined on the website
+          required: true
