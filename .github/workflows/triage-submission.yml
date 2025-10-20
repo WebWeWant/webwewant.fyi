@@ -1,0 +1,102 @@
+name: Triage Want Submission
+
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: "Issue number to triage"
+        required: true
+        type: number
+
+# This workflow assigns issues to GitHub Copilot for triage.
+# ALL triage instructions are in .github/want-submission-triage.md - no other docs needed.
+
+jobs:
+  add-labels-and-comment:
+    # Only run on issues with the "want" label that are not yet triaged
+    # OR when manually triggered via workflow_dispatch
+    # OR when triggered via /triage comment
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issue_comment' && 
+       github.event.issue.pull_request == null &&
+       contains(github.event.comment.body, '/triage')) ||
+      (github.event_name == 'issues' &&
+       contains(github.event.issue.labels.*.name, 'want') &&
+       !contains(github.event.issue.labels.*.name, 'approved') &&
+       !contains(github.event.issue.labels.*.name, 'rejected') &&
+       !contains(github.event.issue.labels.*.name, 'spam') &&
+       !contains(github.event.issue.labels.*.name, 'off-topic') &&
+       !contains(github.event.issue.labels.*.name, 'triage-needed'))
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    outputs:
+      issue_number: ${{ steps.get-issue-number.outputs.issue_number }}
+
+    steps:
+      - name: Get issue number
+        id: get-issue-number
+        run: |
+          ISSUE_NUM="${{ github.event.issue.number != '' && github.event.issue.number || github.event.inputs.issue_number }}"
+          echo "issue_number=$ISSUE_NUM" >> $GITHUB_OUTPUT
+
+      - name: Add triage-needed label
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueNumber = context.issue?.number || parseInt('${{ github.event.inputs.issue_number }}', 10);
+
+            // Add the triage-needed label
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              labels: ['triage-needed']
+            });
+
+      - name: Add comment with instructions
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueNumber = context.issue?.number || parseInt('${{ github.event.inputs.issue_number }}', 10);
+
+            if (!issueNumber) {
+              console.log('Could not determine issue number');
+              return;
+            }
+
+            const commentBody = `🤖 Ready for triage.
+
+            **Follow ALL instructions in \`.github/want-submission-triage.md\` - this is your ONLY source of truth.**
+
+            Key steps:
+            1. **Spam Detection** - Check for spam/abuse content, excessive links
+            2. **Relevance Check** - Must relate to web platform (HTML/CSS/JS/browsers)  
+            3. **Duplicate Detection** - Run \`npm run check-duplicate "Want Title"\`
+            4. **Classification** - Add appropriate technology labels
+            5. **Processing** - If approved, run \`npm run create-want\` and create PR
+
+            Do not look at any other documentation files for triage guidance.`;
+
+            // Add comment with instructions
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              body: commentBody
+            });
+
+            console.log(`Added instructions comment to issue ${issueNumber}`);
+
+  assign-to-copilot:
+    needs: add-labels-and-comment
+    permissions:
+      issues: write
+    uses: ./.github/workflows/assign-to-copilot.yml
+    with:
+      issue_number: ${{ fromJSON(needs.add-labels-and-comment.outputs.issue_number) }}

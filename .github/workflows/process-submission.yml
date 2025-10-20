@@ -1,0 +1,76 @@
+name: Process Approved Submission
+
+on:
+  issues:
+    types: [labeled]
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: "Issue number to process"
+        required: true
+        type: number
+
+# This workflow assigns approved issues to GitHub Copilot for processing.
+# ALL processing instructions are in .github/want-submission-triage.md - no other docs needed.
+
+jobs:
+  add-comment:
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issue_comment' && 
+       github.event.issue.pull_request == null &&
+       contains(github.event.comment.body, '/process')) ||
+      (github.event_name == 'issues' && github.event.label.name == 'approved')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+      contents: write
+    outputs:
+      issue_number: ${{ steps.get-issue-number.outputs.issue_number }}
+
+    steps:
+      - name: Get issue number
+        id: get-issue-number
+        run: |
+          ISSUE_NUM="${{ github.event.issue.number != '' && github.event.issue.number || github.event.inputs.issue_number }}"
+          echo "issue_number=$ISSUE_NUM" >> $GITHUB_OUTPUT
+
+      - name: Add comment with processing instructions
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const raw = '${{ github.event.inputs.issue_number }}';
+            const issueNumber = context.issue?.number || (raw ? parseInt(raw, 10) : null);
+            if (!issueNumber || isNaN(issueNumber)) {
+              throw new Error('Issue number not provided or invalid');
+            }
+            const commentBody = `🤖 Approved and ready for processing.
+
+            **Follow ALL instructions in \`.github/want-submission-triage.md\` section "Creating Approved Submissions" - this is your ONLY source of truth.**
+
+            Key steps:
+            1. Run \`npm run create-want\` to generate UUID and markdown template
+            2. Fill in the markdown file with data from this issue  
+            3. Run \`npm run validate-want wants/<UUID>.md\` to validate
+            4. Create branch and PR with markdown file
+            5. Reference this issue number in the PR description
+
+            Do not look at any other documentation files for processing guidance.`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              body: commentBody
+            });
+
+  assign-to-copilot:
+    needs: add-comment
+    permissions:
+      issues: write
+    uses: ./.github/workflows/assign-to-copilot.yml
+    with:
+      issue_number: ${{ fromJSON(needs.add-comment.outputs.issue_number) }}
