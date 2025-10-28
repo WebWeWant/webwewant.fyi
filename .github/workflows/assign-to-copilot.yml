@@ -15,21 +15,8 @@ jobs:
       issues: write
 
     steps:
-      - name: Add Copilot mention comment
-        uses: actions/github-script@v7
+      - name: Assign issue to Copilot
+        uses: otto-de/assign_issue_toCopilot_action@v1.0.1
         with:
-          github-token: ${{ secrets.COPILOT_PAT }}
-          script: |
-            const issueNumber = ${{ inputs.issue_number }};
-
-            // Add a comment that mentions Copilot to trigger assignment
-            const commentBody = `@github-copilot[bot] This issue is ready for triage. Please follow the instructions in the previous comment and process according to \`.github/instructions/wants-processing.instructions.md\`.`;
-
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issueNumber,
-              body: commentBody
-            });
-
-            console.log(`Successfully assigned issue ${issueNumber} to Copilot via mention`);
+          issue_number: ${{ inputs.issue_number }}
+          github_token: ${{ secrets.COPILOT_PAT }}
