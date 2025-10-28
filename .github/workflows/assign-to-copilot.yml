@@ -19,4 +19,4 @@ jobs:
         uses: otto-de/assign_issue_toCopilot_action@v1.0.1
         with:
           issue_number: ${{ inputs.issue_number }}
-          github_token: ${{ secrets.COPILOT_PAT }}
+          github_token: ${{ secrets.copilot_pat }}
