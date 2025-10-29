@@ -36,7 +36,7 @@
 5. **Want creation:**
    - Run `npm run create-want` to scaffold `wants/<ID>.md`.
    - Populate fields from the issue, ensuring the `discussion` URL points to `https://github.com/WebWeWant/webwewant.fyi/discussions/<issue-number>`.
-   - Polish description, keeping the submitter’s intent intact.
+   - Polish description, keeping the submitter’s intent intact. Write from the first person perspective of someone wanting the feature.
    - Add `related` links when they improve context.
    - Update the original issue body to match the cleaned want content (no frontmatter or automation metadata) so it is ready for conversion to a discussion.
    - Validate via `npm run validate-want wants/<ID>.md`.

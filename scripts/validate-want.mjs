@@ -161,6 +161,11 @@ function validateDiscussion(discussion) {
   if (url.protocol !== 'http:' && url.protocol !== 'https:') {
     throw new ValidationError(`Invalid discussion URL protocol: ${url.protocol}. Only http:// and https:// are allowed.`);
   }
+
+  const discussionIdMatch = url.pathname.match(/\/discussions\/(\d+)\/?$/);
+  if (!discussionIdMatch) {
+    throw new ValidationError(`Discussion URL must end with a numeric discussion ID: ${discussion}`);
+  }
 }
 
 function validateStatus(status) {
