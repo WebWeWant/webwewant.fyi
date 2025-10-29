@@ -10,7 +10,7 @@ Follow these detailed instructions when processing Want submissions for the Web 
 - `submitter`: Submitter's name or "Anonymous"
 - `number`: Submission ID from issue
 - `tags`: Array of relevant technology labels
-- `discussion`: GitHub discussions URL using issue ID
+- `discussion`: GitHub discussions URL ending with the original issue number (e.g. `https://github.com/WebWeWant/webwewant.fyi/discussions/<issue-number>`)
 - `status`: "discussing"
 
 ### Optional Fields
@@ -145,7 +145,7 @@ npm run check-duplicate "Want Title From Issue"
    - `submitter`: Use provided name or "Anonymous" if privacy requested
    - `number`: Use the generated UUID
    - `tags`: Add 1-3 relevant technology labels (see tag list below)
-   - `discussion`: Use GitHub discussions URL with issue ID
+   - `discussion`: Use GitHub discussions URL whose trailing ID matches the original issue number
    - `status`: Set to "discussing"
    - Content: Clean up and enhance the description for clarity
 
@@ -157,12 +157,17 @@ npm run check-duplicate "Want Title From Issue"
        type: spec
    ```
 
-4. **Validate the file:**
+4. **Update the original issue body** to match the polished want content:
+   - Remove any frontmatter or submission metadata that came from the form
+   - Replace the issue description with the cleaned narrative used in the want markdown (no YAML blocks)
+   - Confirm the issue title remains accurate so conversion to a discussion keeps the right context
+
+5. **Validate the file:**
    ```bash
    npm run validate-want wants/<ID>.md
    ```
 
-5. **Create pull request:**
+6. **Create pull request:**
    - Branch: `submission/<descriptive-name>`
    - Title: "Add want: [Want Title]"
    - Include issue number in PR description
@@ -292,7 +297,7 @@ Before creating the want file, verify:
 - **Single source of truth:** These instructions are your only guidance - don't reference other documentation
 - **Act decisively:** Process submissions quickly but thoroughly
 - **Maintain quality:** Enhance content for clarity while preserving submitter intent
-- **Preserve context:** Always reference the original issue number in PRs
+- **Preserve context:** Always reference the original issue number in PRs and ensure discussion URLs end with that number
 - **Human escalation:** When in doubt, flag for human review rather than rejecting
 
 **Efficiency:**
