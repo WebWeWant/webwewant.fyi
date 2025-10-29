@@ -52,11 +52,12 @@ jobs:
             **Follow ALL instructions in \`.github/instructions/wants-processing.instructions.md\` section "Step 5: Want File Creation" - this is your ONLY source of truth.**
 
             Key steps:
-            1. Run \`npm run create-want\` to generate UUID and markdown template
-            2. Fill in the markdown file with data from this issue  
-            3. Run \`npm run validate-want wants/<UUID>.md\` to validate
-            4. Create branch and PR with markdown file
-            5. Reference this issue number in the PR description
+              1. Run \`npm run create-want\` to generate UUID and markdown template
+              2. Fill in the markdown file with data from this issue (ensure the discussion URL ends with this issue number)
+              3. Add any related links and update the original issue body to match the cleaned want content (no frontmatter)
+              4. Run \`npm run validate-want wants/<UUID>.md\` to validate
+              5. Create branch and PR with markdown file
+              6. Reference this issue number in the PR description
 
             Do not look at any other documentation files for processing guidance.`;
 
