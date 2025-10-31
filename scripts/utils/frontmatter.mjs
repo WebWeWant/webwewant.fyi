@@ -53,6 +53,20 @@ function parseYaml(yamlText) {
   let inMultilineString = false;
   let multilineValue = '';
   
+  // Pre-compile regex patterns for better performance
+  const indentedPropertyRegex = /^\s+\w+:/;
+  const objectPropertyRegex = /^(\w+):\s*(.+)$/;
+  
+  /**
+   * Initialize array for current key if not already initialized
+   */
+  const ensureArray = () => {
+    if (currentKey && !currentArray) {
+      result[currentKey] = [];
+      currentArray = result[currentKey];
+    }
+  };
+  
   for (let line of lines) {
     const originalLine = line;
     const trimmedLine = line.trim();
@@ -77,7 +91,7 @@ function parseYaml(yamlText) {
     }
     
     // Handle object properties within arrays (indented with spaces, not starting with -)
-    if (originalLine.match(/^\s+\w+:/) && !trimmedLine.startsWith('-') && currentObject) {
+    if (indentedPropertyRegex.test(originalLine) && !trimmedLine.startsWith('-') && currentObject) {
       const colonIndex = trimmedLine.indexOf(':');
       if (colonIndex > 0) {
         const key = trimmedLine.substring(0, colonIndex).trim();
@@ -95,14 +109,11 @@ function parseYaml(yamlText) {
       const value = line.substring(2).trim();
       
       // Initialize array if we have a currentKey but no array yet
-      if (currentKey && !currentArray) {
-        result[currentKey] = [];
-        currentArray = result[currentKey];
-      }
+      ensureArray();
       
       // Check if this is an object in an array (like related links)
       if (value.includes(':')) {
-        const objMatch = value.match(/^(\w+):\s*(.+)$/);
+        const objMatch = objectPropertyRegex.exec(value);
         if (objMatch) {
           const [, key, objValue] = objMatch;
           // Create a new object for this array item
