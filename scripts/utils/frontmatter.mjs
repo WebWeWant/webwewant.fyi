@@ -54,41 +54,61 @@ function parseYaml(yamlText) {
   let multilineValue = '';
   
   for (let line of lines) {
-    line = line.trim();
+    const originalLine = line;
+    const trimmedLine = line.trim();
     
     // Skip empty lines and comments
-    if (!line || line.startsWith('#')) {
+    if (!trimmedLine || trimmedLine.startsWith('#')) {
       continue;
     }
     
     // Handle multiline strings (for content after frontmatter)
     if (inMultilineString) {
-      if (line === '---' || line === '...') {
+      if (trimmedLine === '---' || trimmedLine === '...') {
         inMultilineString = false;
         if (currentKey) {
           result[currentKey] = multilineValue.trim();
         }
         multilineValue = '';
       } else {
-        multilineValue += line + '\n';
+        multilineValue += trimmedLine + '\n';
       }
       continue;
     }
     
+    // Handle object properties within arrays (indented with spaces, not starting with -)
+    if (originalLine.match(/^\s+\w+:/) && !trimmedLine.startsWith('-') && currentObject) {
+      const colonIndex = trimmedLine.indexOf(':');
+      if (colonIndex > 0) {
+        const key = trimmedLine.substring(0, colonIndex).trim();
+        const value = trimmedLine.substring(colonIndex + 1).trim();
+        currentObject[key] = parseValue(value);
+      }
+      continue;
+    }
+    
+    // Now work with trimmed line for the rest
+    line = trimmedLine;
+    
     // Handle array items
     if (line.startsWith('- ')) {
       const value = line.substring(2).trim();
+      
+      // Initialize array if we have a currentKey but no array yet
+      if (currentKey && !currentArray) {
+        result[currentKey] = [];
+        currentArray = result[currentKey];
+      }
       
       // Check if this is an object in an array (like related links)
       if (value.includes(':')) {
         const objMatch = value.match(/^(\w+):\s*(.+)$/);
         if (objMatch) {
           const [, key, objValue] = objMatch;
-          if (!currentObject) {
-            currentObject = {};
-            if (currentArray) {
-              currentArray.push(currentObject);
-            }
+          // Create a new object for this array item
+          currentObject = {};
+          if (currentArray) {
+            currentArray.push(currentObject);
           }
           currentObject[key] = parseValue(objValue);
         }
@@ -97,18 +117,8 @@ function parseYaml(yamlText) {
         if (currentArray) {
           currentArray.push(parseValue(value));
         }
-      }
-      continue;
-    }
-    
-    // Handle object properties within arrays (indented)
-    if (line.startsWith('  ') && currentObject) {
-      const objLine = line.substring(2);
-      const colonIndex = objLine.indexOf(':');
-      if (colonIndex > 0) {
-        const key = objLine.substring(0, colonIndex).trim();
-        const value = objLine.substring(colonIndex + 1).trim();
-        currentObject[key] = parseValue(value);
+        // Reset currentObject since this is not an object array item
+        currentObject = null;
       }
       continue;
     }
