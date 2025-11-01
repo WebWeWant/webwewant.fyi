@@ -26,7 +26,7 @@ const __dirname = path.dirname(__filename);
 const VALID_STATUSES = ['discussing', 'complete', 'in-progress'];
 const VALID_LINK_TYPES = ['spec', 'draft', 'article', 'proposal', 'project'];
 const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-const OBJECTID_REGEX = /^[0-9a-f]{24}$/i; // MongoDB ObjectId format for legacy submissions
+const OBJECTID_REGEX = /^[0-9a-f]{24}$/i; // MongoDB ObjectId hex string format (24 hex chars) for legacy submissions
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
 
 class ValidationError extends Error {
