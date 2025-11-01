@@ -26,6 +26,7 @@ const __dirname = path.dirname(__filename);
 const VALID_STATUSES = ['discussing', 'complete', 'in-progress'];
 const VALID_LINK_TYPES = ['spec', 'draft', 'article', 'proposal', 'project'];
 const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+const OBJECTID_REGEX = /^[0-9a-f]{24}$/i; // MongoDB ObjectId format for legacy submissions
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
 
 class ValidationError extends Error {
@@ -99,9 +100,12 @@ function validateNumber(number) {
   if (!number) {
     throw new ValidationError('Missing required field: number');
   }
-  // Can be either a UUID or a legacy numeric ID
+  // Can be either a UUID, MongoDB ObjectId, or a legacy numeric ID
   if (typeof number === 'string' && UUID_REGEX.test(number)) {
     return; // Valid UUID
+  }
+  if (typeof number === 'string' && OBJECTID_REGEX.test(number)) {
+    return; // Valid MongoDB ObjectId (legacy)
   }
   if (typeof number === 'number' && number > 0) {
     return; // Valid legacy numeric ID
@@ -109,7 +113,7 @@ function validateNumber(number) {
   if (typeof number === 'string' && /^\d+$/.test(number)) {
     return; // Valid numeric string
   }
-  throw new ValidationError(`Invalid number format: ${number}. Must be UUID or positive integer`);
+  throw new ValidationError(`Invalid number format: ${number}. Must be UUID, ObjectId, or positive integer`);
 }
 
 function validateTags(tags) {
