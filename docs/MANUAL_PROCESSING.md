@@ -41,7 +41,7 @@ When you trigger manual processing, the workflow will:
 
 1. **Detect the trigger**: Recognize that this is a manual processing request
 2. **Add processing comment**: Post a detailed comment explaining what will happen
-3. **Assign to Copilot**: Tag `@github-copilot[bot]` to begin automated processing
+3. **Assign to Copilot**: Use the workflow's Copilot assignment step to hand the issue off
 4. **Follow standard process**: Execute the same 5-step process as new submissions:
    - Spam detection
    - Relevance checking
@@ -54,7 +54,7 @@ When you trigger manual processing, the workflow will:
 After triggering manual processing:
 
 1. **Check the issue comments**: The workflow adds status updates as comments
-2. **Watch for Copilot assignment**: Look for the automated comment tagging Copilot
+2. **Watch for Copilot assignment**: Confirm the workflow run completed and the issue was assigned to Copilot
 3. **Monitor for PRs**: Successful processing will result in a new pull request
 4. **Review labels**: Appropriate technology labels will be added to the issue
 

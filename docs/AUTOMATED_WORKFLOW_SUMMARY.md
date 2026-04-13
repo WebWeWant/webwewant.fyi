@@ -106,7 +106,7 @@ All workflow files are already in place. Ensure:
 - GitHub Copilot has repository access
 - Repository allows workflows and issue creation
 
-### 2. Netlify Webhook Setup
+### 2. Netlify Submission Setup
 
 Follow the detailed guide in `docs/NETLIFY_WEBHOOK_SETUP.md`:
 
