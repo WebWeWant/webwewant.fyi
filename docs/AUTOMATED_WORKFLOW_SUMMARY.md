@@ -113,7 +113,7 @@ Follow the detailed guide in `docs/NETLIFY_WEBHOOK_SETUP.md`:
 1. **Deploy the Netlify function** at `/.netlify/functions/create-want-issue`
 2. **Set the `GITHUB_TOKEN` environment variable** in Netlify
 3. **Verify the public form posts directly to the function**
-4. **Test integration** with a real submission or direct function call
+4. **Test integration** with a real submission or a form-encoded function call
 
 ### 3. GitHub Secrets
 
@@ -146,20 +146,17 @@ Test the direct function integration:
 
 ```bash
 curl -X POST https://YOUR_NETLIFY_SITE.netlify.app/.netlify/functions/create-want-issue \
-  -H "Content-Type: application/json" \
-  -d '{
-    "id": "test-submission-001",
-    "created_at": "2026-04-13T12:00:00.000Z",
-    "form_name": "problems",
-    "data": {
-      "name": "Test User",
-      "email": "test@example.com",
-      "events": "I\'m not attending an event, but am open to my submission being shared at one",
-      "title": "I want better offline support",
-      "detail": "I want the site to behave more reliably when connectivity is limited so contributors can finish submissions without losing work."
-    }
-  }'
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  --data-urlencode "form-name=problems" \
+  --data-urlencode "name=Test User" \
+  --data-urlencode "email=test@example.com" \
+  --data-urlencode "github=test-user" \
+  --data-urlencode "events=I'm not attending an event, but am open to my submission being shared at one" \
+  --data-urlencode "title=I want better offline support" \
+  --data-urlencode "detail=I want the site to behave more reliably when connectivity is limited so contributors can finish submissions without losing work."
 ```
+
+The function rejects raw JSON requests so every created issue can be paired with a private Netlify contact record.
 
 ## 📊 Processing Results
 
