@@ -254,11 +254,7 @@ function getContactStatusMessage(contactRecord) {
     return '**Contact:** Maintainers can follow up using the private Netlify form submission.';
   }
 
-  if (contactRecord.attempted) {
-    return `**Contact:** Warning: private contact persistence failed, so no private follow-up record is available in Netlify. Reason: ${contactRecord.reason}`;
-  }
-
-  return `**Contact:** Warning: no private Netlify contact record was created for this submission. Reason: ${contactRecord.reason}`;
+  return `**Contact:** Warning: private contact persistence failed, so no private follow-up record is available in Netlify. Reason: ${contactRecord.reason}`;
 }
 
 function buildIssueBody(submission, spamFlags, contactRecord) {
