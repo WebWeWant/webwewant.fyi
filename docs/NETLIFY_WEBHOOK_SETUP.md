@@ -87,7 +87,7 @@ Ensure your Netlify form mirrors the production form used on the site:
 				type="text"
 				name="github"
 				id="field-github"
-				placeholder="your_handle"
+				placeholder="your-handle"
 				aria-describedby="description-github"
 				autocapitalize="off"
 			/>
@@ -223,29 +223,21 @@ What still matters in Netlify:
 
 #### Test the Netlify Function
 
-You can test the function directly using curl:
+You can test the function directly using a form-encoded request that matches the browser submission:
 
 ```bash
 curl -X POST https://YOUR_NETLIFY_SITE.netlify.app/.netlify/functions/create-want-issue \
-  -H "Content-Type: application/json" \
-  -d '{
-    "id": "test-submission-001",
-    "created_at": "2024-01-15T10:30:00Z",
-    "form_name": "problems",
-    "site_url": "https://webwewant.fyi",
-    "data": {
-      "name": "Test User",
-      "email": "test@example.com",
-      "events": "I'\''m not attending an event, but am open to my submission being shared at one",
-      "privacy": "I agree to the privacy policy",
-      "title": "Better CSS debugging tools",
-      "detail": "I want browser DevTools to provide better visual debugging for CSS Grid and Flexbox layouts, similar to Firefox but with more detailed information about spacing and alignment."
-    },
-    "ip": "127.0.0.1",
-    "user_agent": "Mozilla/5.0 (Test Browser)",
-    "referrer": "https://webwewant.fyi/"
-  }'
+	-H "Content-Type: application/x-www-form-urlencoded" \
+	--data-urlencode "form-name=problems" \
+	--data-urlencode "name=Test User" \
+	--data-urlencode "email=test@example.com" \
+	--data-urlencode "github=test-user" \
+	--data-urlencode "events=I'm not attending an event, but am open to my submission being shared at one" \
+	--data-urlencode "title=Better CSS debugging tools" \
+	--data-urlencode "detail=I want browser DevTools to provide better visual debugging for CSS Grid and Flexbox layouts, similar to Firefox but with more detailed information about spacing and alignment."
 ```
+
+JSON requests are intentionally rejected. The function only accepts browser-style form submissions so each GitHub issue has a corresponding private Netlify contact record.
 
 #### Form Submission Test
 
