@@ -217,42 +217,6 @@ What still matters in Netlify:
 2. The `create-want-issue` function must be deployed successfully.
 3. The `GITHUB_TOKEN` environment variable must be present for the function.
 
-4. **Configure Webhook Settings**
-
-   ```
-   Event to listen for: New form submission
-   URL to notify: https://YOUR_NETLIFY_SITE.netlify.app/.netlify/functions/create-want-issue
-   JWS secret token: (leave empty or use a random string for security)
-   Form: problems
-   ```
-
-   **Replace `YOUR_NETLIFY_SITE` with your actual Netlify site name**
-
-   For example: `https://webwewant.netlify.app/.netlify/functions/create-want-issue`
-
-### Step 3: GitHub Token Setup
-
-The GitHub token needs to be configured as an environment variable in Netlify, not as a JWS token.
-
-#### Configure in Netlify Dashboard
-
-1. **Add Environment Variable**
-   - Go to your Netlify site dashboard
-   - Navigate to **Site settings** → **Environment variables**
-   - Click **Add a variable**
-   - Set:
-     ```
-     Key: GITHUB_TOKEN
-     Value: [YOUR_GITHUB_TOKEN]
-     ```
-
-2. **Verify Token Permissions**
-   Your token should have these scopes:
-   - `repo` (to create issues)
-   - `write:discussion` (optional, for enhanced features)
-
-**Important**: The JWS secret token field in the Netlify webhook configuration is for webhook security validation, not for GitHub authentication. You can leave it empty or set any random string.
-
 ### Step 4: Test the Integration
 
 #### Test the Netlify Function
@@ -284,34 +248,9 @@ curl -X POST https://YOUR_NETLIFY_SITE.netlify.app/.netlify/functions/create-wan
 #### Form Submission Test
 
 1. Submit a test want through your Netlify form
-2. Check that the webhook fires in Netlify's form dashboard
-3. Verify that a new issue is created in your GitHub repository
+2. Verify that a new issue is created in your GitHub repository
+3. Confirm that the issue is labeled `want`
 4. Confirm that GitHub Copilot is assigned and begins processing
-
-## Webhook Payload Structure
-
-The webhook will send data in this format to GitHub (matching actual Netlify structure):
-
-```json
-{
-	"event_type": "netlify-form-submission",
-	"client_payload": {
-		"submission_id": "5e52722b13def22bf8bfd348",
-		"timestamp": "2020-02-23T12:38:03.929Z",
-		"form_name": "problems",
-		"origin_site_url": "https://webwewant.fyi",
-		"data_name": "Daniel Tonon",
-		"data_email": "daniel.tonon.503@gmail.com",
-		"data_events": "I'm not attending an event, but am open to my submission being shared at one",
-		"data_privacy": "I agree to the privacy policy",
-		"data_title": "Flexbox sizing should factor in the width of wrapped text",
-		"data_detail": "I've made this code pen to demonstrate and explain the issue more deeply:\n\nhttps://codepen.io/daniel-tonon/pen/VwLmqvb\n\nThe best work around that I can think of for this is to apply a fixed width container...",
-		"data_ip": "203.217.49.116",
-		"data_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0",
-		"data_referrer": "https://webwewant.fyi/"
-	}
-}
-```
 
 ## Troubleshooting
 
@@ -329,7 +268,6 @@ The webhook will send data in this format to GitHub (matching actual Netlify str
 
 3. **Issue not created**
    - Check Netlify function logs for errors
-   - Verify the webhook is firing in Netlify's form dashboard
    - Test the function directly using the curl command above
 
 4. **Copilot not responding**
@@ -355,13 +293,13 @@ The function uses:
 - **Native Fetch API**: No additional dependencies for HTTP requests
 - **Netlify.env API**: Modern environment variable access
 
-### Webhook Validation
+### Form Submission Validation
 
-Check webhook execution:
+Check form execution:
 
-1. Go to **Netlify Dashboard** → **Settings** → **Forms**
+1. Go to **Netlify Dashboard** → **Forms**
 2. Click on your form name
-3. Check **Submissions** and **Notifications** tabs for errors
+3. Check **Submissions** for new entries and any related errors
 
 ### GitHub Actions Logs
 
@@ -410,7 +348,7 @@ Monitor workflow execution:
 
 ## Support
 
-If you encounter issues with the webhook setup:
+If you encounter issues with the submission setup:
 
 1. Check the troubleshooting section above
 2. Review GitHub Actions logs for specific errors
