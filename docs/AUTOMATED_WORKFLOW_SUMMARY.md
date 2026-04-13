@@ -27,7 +27,9 @@ The automated Want processing workflow is a comprehensive GitHub-based system th
 ### Scripts & Utilities
 
 - **`scripts/wantProcessor.js`** - Core logic for want file generation and duplicate detection
-- **`scripts/testWorkflow.js`** - Testing script with multiple scenarios
+- **`scripts/check-duplicate.mjs`** - Utility script for duplicate checking
+- **`scripts/create-want.mjs`** - Utility script for want file creation
+- **`scripts/validate-want.mjs`** - Validator for generated want markdown
 
 ### Documentation
 
@@ -122,11 +124,12 @@ Follow the detailed guide in `docs/NETLIFY_WEBHOOK_SETUP.md`:
 
 ### Automated Tests
 
-Run the comprehensive test suite:
+There is no single end-to-end test runner in the repository today. Validate the core flow with the existing scripts:
 
 ```bash
-cd /path/to/webwewant.fyi
-node scripts/testWorkflow.js
+npm run check-duplicate "Example Want Title"
+npm run create-want
+npm run validate-want wants/<ID>.md
 ```
 
 Tests validate:
@@ -144,7 +147,18 @@ Test the direct function integration:
 ```bash
 curl -X POST https://YOUR_NETLIFY_SITE.netlify.app/.netlify/functions/create-want-issue \
   -H "Content-Type: application/json" \
-  -d '@scripts/test-output/sample-webhook-payload.json'
+  -d '{
+    "id": "test-submission-001",
+    "created_at": "2026-04-13T12:00:00.000Z",
+    "form_name": "problems",
+    "data": {
+      "name": "Test User",
+      "email": "test@example.com",
+      "events": "I\'m not attending an event, but am open to my submission being shared at one",
+      "title": "I want better offline support",
+      "detail": "I want the site to behave more reliably when connectivity is limited so contributors can finish submissions without losing work."
+    }
+  }'
 ```
 
 ## 📊 Processing Results
