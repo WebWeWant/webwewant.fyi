@@ -152,14 +152,20 @@ function validateDiscussion(discussion) {
     throw new ValidationError(`Invalid discussion URL: ${discussion}`);
   }
   
-  // Check if it's a GitHub discussions URL
-  if (!discussion.includes('github.com') || !discussion.includes('/discussions/')) {
-    throw new ValidationError(`Discussion URL must be a GitHub discussions URL: ${discussion}`);
-  }
-  
   // Restrict to http/https protocols only for security
   if (url.protocol !== 'http:' && url.protocol !== 'https:') {
     throw new ValidationError(`Invalid discussion URL protocol: ${url.protocol}. Only http:// and https:// are allowed.`);
+  }
+
+  if (url.hostname !== 'github.com') {
+    throw new ValidationError(`Discussion URL must use github.com: ${discussion}`);
+  }
+
+  const expectedPrefix = '/WebWeWant/webwewant.fyi/discussions/';
+  if (!url.pathname.startsWith(expectedPrefix)) {
+    throw new ValidationError(
+      `Discussion URL must point to /WebWeWant/webwewant.fyi/discussions/: ${discussion}`
+    );
   }
 
   const discussionIdMatch = url.pathname.match(/\/discussions\/(\d+)\/?$/);
