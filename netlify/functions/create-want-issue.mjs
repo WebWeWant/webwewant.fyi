@@ -129,11 +129,11 @@ function extractSubmission(rawPayload) {
 
   return {
     submissionId: normalizeText(rawPayload?.id || payload?.id, `netlify-${Date.now()}`),
-    title: normalizeText(payload?.title, 'New Want Submission'),
+    title: normalizeText(payload?.title),
     detail: normalizeText(payload?.detail),
-    name: normalizeText(payload?.name, 'Anonymous'),
+    name: normalizeText(payload?.name),
     email: normalizeText(payload?.email),
-    events: normalizeText(payload?.events, 'Not specified'),
+    events: normalizeText(payload?.events),
     privacy,
     github: privacy ? '' : normalizeText(payload?.github).replace(/^@+/, ''),
     website: normalizeText(payload?.website),
