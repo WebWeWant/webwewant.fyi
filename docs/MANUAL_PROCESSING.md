@@ -17,7 +17,6 @@ Use manual processing for:
 1. Navigate to the GitHub issue you want to process
 2. Add a comment with one of these trigger commands:
    - `/process` - Simple slash command
-   - `/process-want` - Alternative slash command
    - `@github-copilot` - Mention Copilot directly
    - `@github-copilot[bot] please process this want` - Full mention with instruction
 3. The workflow will automatically trigger and process the issue
@@ -130,7 +129,7 @@ async function processExistingIssues(issueNumbers) {
 				owner: "WebWeWant",
 				repo: "webwewant.fyi",
 				issue_number: issueNumber,
-				body: "/process-want - Manual bulk processing trigger",
+				body: "/process - Manual bulk processing trigger",
 			});
 
 			console.log(`Triggered processing for issue #${issueNumber}`);
@@ -159,6 +158,6 @@ async function processExistingIssues(issueNumbers) {
 If you encounter issues with manual processing:
 
 1. Check the [GitHub Actions logs](https://github.com/WebWeWant/webwewant.fyi/actions)
-2. Review the workflow file: `.github/workflows/process-want-submission.yml`
+2. Review the workflow files: `.github/workflows/triage-submission.yml` and `.github/workflows/process-submission.yml`
 3. Consult the processing instructions: `.github/instructions/wants-processing.instructions.md`
 4. Open an issue for technical problems with the automation itself
