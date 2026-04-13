@@ -24,8 +24,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const VALID_STATUSES = ['discussing', 'complete', 'in-progress'];
-const VALID_LINK_TYPES = ['spec', 'draft', 'article', 'proposal', 'project'];
+const VALID_LINK_TYPES = ['spec', 'draft', 'article', 'proposal', 'project', 'note', 'explainer', 'discussion', 'want', 'working-draft', 'prototype'];
 const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+const HEX_ID_REGEX = /^(?:[0-9a-f]{24}|[0-9a-f]{32}|[0-9a-f]{40})$/i; // legacy hex IDs: 24-char MongoDB ObjectId, 32-char MD5-like, 40-char SHA1-like
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
 
 class ValidationError extends Error {
@@ -99,9 +100,12 @@ function validateNumber(number) {
   if (!number) {
     throw new ValidationError('Missing required field: number');
   }
-  // Can be either a UUID or a legacy numeric ID
+  // Can be a UUID, a legacy hex ID (MongoDB ObjectID / SHA-like), or a numeric ID
   if (typeof number === 'string' && UUID_REGEX.test(number)) {
     return; // Valid UUID
+  }
+  if (typeof number === 'string' && HEX_ID_REGEX.test(number)) {
+    return; // Valid legacy hex ID (24-char MongoDB ObjectId, 32-char MD5-like, or 40-char SHA1-like)
   }
   if (typeof number === 'number' && number > 0) {
     return; // Valid legacy numeric ID
@@ -109,7 +113,7 @@ function validateNumber(number) {
   if (typeof number === 'string' && /^\d+$/.test(number)) {
     return; // Valid numeric string
   }
-  throw new ValidationError(`Invalid number format: ${number}. Must be UUID or positive integer`);
+  throw new ValidationError(`Invalid number format: ${number}. Must be a UUID, hex ID, or positive integer`);
 }
 
 function validateTags(tags) {
