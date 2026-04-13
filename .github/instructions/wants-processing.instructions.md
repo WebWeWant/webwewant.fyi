@@ -2,6 +2,8 @@
 
 Follow these detailed instructions when processing Want submissions for the Web We Want project.
 
+> **⚠️ CRITICAL RULE: A pull request created during wants processing must contain only one change — the addition of a new Markdown file under `wants/`. Modifying any other file (issue bodies, existing want files, workflows, configuration, or any other repository file) is strictly prohibited.**
+
 ## Quick Reference
 
 ### Required Markdown Fields
@@ -176,7 +178,7 @@ npm run check-duplicate "Want Title From Issue"
        type: spec
    ```
 
-4. **Update the original issue body** to match the polished want content:
+4. **Update the original issue body** directly via the GitHub API (this is a direct issue edit, NOT a file committed to the PR):
    - Remove any frontmatter or submission metadata that came from the form
    - Replace the issue description with the cleaned narrative used in the want markdown (no YAML blocks)
    - Confirm the issue title remains accurate so conversion to a discussion keeps the right context
@@ -192,6 +194,7 @@ npm run check-duplicate "Want Title From Issue"
    - Title: "Add want: [Want Title]"
    - Include issue number in PR description
    - Request review from maintainers
+   - **The PR must contain only the new `wants/<ID>.md` file. Modifying any other file is strictly prohibited.**
 
 ## 🎨 Content Quality Standards
 
@@ -322,13 +325,16 @@ Before creating the want file, verify:
 - [ ] Duplicate check performed using script
 - [ ] Content enhanced for clarity and completeness
 - [ ] Related links added where applicable
+- [ ] Original issue body updated directly via GitHub API with cleaned narrative (not via PR)
 - [ ] Markdown file validates successfully
 - [ ] Branch and PR created with proper naming
+- [ ] PR contains only the new `wants/<ID>.md` file — no other files modified
 
 ## 🚀 Processing Tips
 
 **Important Notes:**
 
+- **PR scope is strictly limited:** The only change a PR may contain is adding a new `wants/<ID>.md` file. No other files may be modified.
 - **Single source of truth:** These instructions are your only guidance - don't reference other documentation
 - **Act decisively:** Process submissions quickly but thoroughly
 - **Maintain quality:** Enhance content for clarity while preserving submitter intent
