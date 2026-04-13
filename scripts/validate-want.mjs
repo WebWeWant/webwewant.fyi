@@ -161,16 +161,15 @@ function validateDiscussion(discussion) {
     throw new ValidationError(`Discussion URL must use github.com: ${discussion}`);
   }
 
-  const expectedPrefix = '/WebWeWant/webwewant.fyi/discussions/';
-  if (!url.pathname.startsWith(expectedPrefix)) {
+  const discussionPathMatch = url.pathname.match(/^\/WebWeWant\/webwewant\.fyi\/(discussions|issues)\/(\d+)\/?$/);
+  if (!discussionPathMatch) {
     throw new ValidationError(
-      `Discussion URL must point to /WebWeWant/webwewant.fyi/discussions/: ${discussion}`
+      `Discussion URL must point to /WebWeWant/webwewant.fyi/discussions/<id> or legacy /issues/<id>: ${discussion}`
     );
   }
 
-  const discussionIdMatch = url.pathname.match(/\/discussions\/(\d+)\/?$/);
-  if (!discussionIdMatch) {
-    throw new ValidationError(`Discussion URL must end with a numeric discussion ID: ${discussion}`);
+  if (discussionPathMatch[1] === 'issues') {
+    console.warn(`⚠️  Warning: Legacy issue URL used for discussion field: ${discussion}`);
   }
 }
 
