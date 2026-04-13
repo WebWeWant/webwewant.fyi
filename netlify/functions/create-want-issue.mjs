@@ -185,7 +185,7 @@ async function parseSubmission(request) {
 
   if (!isBrowserForm) {
     throw new SubmissionValidationError(
-      'Direct API submissions are not supported. Submit through the browser form so the private contact record can be stored before creating a GitHub issue.'
+      'Only form-encoded submissions are supported. Submit the request as application/x-www-form-urlencoded or multipart/form-data so the private contact record can be stored before creating a GitHub issue.'
     );
   }
 
