@@ -15,7 +15,7 @@ labels: ["needs-review", "auto-generated"]
 ### Submitter Information
 
 **Name:**
-**Contact:** Maintainers can follow up using the private Netlify form submission.
+**Contact:**
 **Event Attendance:**
 **Privacy Preference:**
 
@@ -49,5 +49,20 @@ Please process this want submission following the detailed instructions in `.git
 **Submission Data (JSON):**
 
 ```json
-
+{
+	"submissionId": "<submission-id>",
+	"submitted": "<ISO-8601 timestamp>",
+	"formName": "problems",
+	"originSite": "<origin-site>",
+	"submitter": {
+		"name": "<submitter-name>",
+		"contact": "<contact-details-or-private-record>",
+		"eventAttendance": "<event-attendance>",
+		"privacyPreference": "<privacy-preference>"
+	},
+	"want": {
+		"title": "<want-title>",
+		"description": "<want-description>"
+	}
+}
 ```
