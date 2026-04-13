@@ -1,11 +1,20 @@
 ---
 layout: layouts/base.njk
+title: What We Want
+description: Here is a run-down of all of the "wants" submitted as part of this program.
+date: 2019-01-02T00:00:00.000Z
+permalink: /wants/
+navtitle: Wants
+tags:
+  - nav
+includeInSitemap: true
+section: wants
 ---
-{% from "macros.njk" import paginate %}
+{% from "macros.njk" import want %}
 
 <h1>{{ title | widont }}</h1>
 
-{{ content | safe }}
+<p>Here is a run-down of the {{ collections.wants.length }} "wants" submitted as part of this program. Check 'em out and if there's something you want, <a href="/#submit">send it in</a>!</p>
 
 <div id="search"><p>Search existing wants:</p></div>
 
@@ -21,13 +30,12 @@ layout: layouts/base.njk
   });
 </script>
 
-{% set wantsToShow = wants if wants else collections.wantsBySubmissionDate %}
-{% if wantsToShow.length > 0 %}
-  {% set wants = wantsToShow %}
-  {% include "components/wants.njk" %}
-  {% if pagination %}
-    {{ paginate( "Page", pagination ) }}
-  {% endif %}
+{% if collections.wants.length > 0 %}
+<ul class="wants">
+  {% for w in collections.wants %}
+    {{ want( 'li', '', w.url, 'h2', w.data.title, w.data.submitter ) }}
+  {% endfor %}
+</ul>
 {% else %}
   <p>No one has submitted a want yet. <a href="/#submit">Wanna be the first?</a></p>
 {% endif %}
