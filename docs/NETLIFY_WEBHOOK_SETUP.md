@@ -178,6 +178,7 @@ Ensure your Netlify form mirrors the production form used on the site:
 
 **Important Field Names:**
 
+- `form-name` (required hidden field) - Must be `problems` so Netlify recognizes the submission
 - `name` (required) – Submitter’s name
 - `privacy` (optional) – Checkbox value `1` when the submitter wants their full name kept private
 - `email` (required) – Contact email for follow-up
@@ -186,6 +187,7 @@ Ensure your Netlify form mirrors the production form used on the site:
 - `title` (required) – Want title/summary
 - `detail` (required) – Detailed want description (main content)
 - `bot-field` – Honeypot field used by Netlify to reduce spam (should remain empty)
+- `website` – Secondary honeypot field checked by the function (should remain empty)
 
 JavaScript enhances the form to add a `save` checkbox that stores the contact fields locally for future submissions. If the submitter opts in, Netlify will include `save: 1` in the payload; the function can ignore this flag.
 
@@ -291,7 +293,7 @@ The function uses:
 - **Modern Netlify Functions V2 API**: Request/Response objects instead of legacy event/context
 - **ES Modules**: `.mjs` extension with modern `import`/`export` syntax
 - **Native Fetch API**: No additional dependencies for HTTP requests
-- **Netlify.env API**: Modern environment variable access
+- **`process.env`**: Environment variable access for values such as `GITHUB_TOKEN`
 
 ### Form Submission Validation
 
@@ -307,7 +309,7 @@ Monitor workflow execution:
 
 1. Go to your repository
 2. Click **Actions** tab
-3. Look for "Process Want Submission" workflows
+3. Look for the triage and process-submission workflows
 4. Click on individual runs to see detailed logs
 
 ## Security Considerations
