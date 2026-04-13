@@ -226,7 +226,7 @@ What still matters in Netlify:
 You can test the function directly using a form-encoded request that matches the browser submission:
 
 ```bash
-curl -X POST https://YOUR_NETLIFY_SITE.netlify.app/.netlify/functions/create-want-issue \
+curl -i -X POST https://YOUR_NETLIFY_SITE.netlify.app/.netlify/functions/create-want-issue \
 	-H "Content-Type: application/x-www-form-urlencoded" \
 	--data-urlencode "form-name=problems" \
 	--data-urlencode "name=Test User" \
@@ -236,6 +236,8 @@ curl -X POST https://YOUR_NETLIFY_SITE.netlify.app/.netlify/functions/create-wan
 	--data-urlencode "title=Better CSS debugging tools" \
 	--data-urlencode "detail=I want browser DevTools to provide better visual debugging for CSS Grid and Flexbox layouts, similar to Firefox but with more detailed information about spacing and alignment."
 ```
+
+On success, curl will show `HTTP/2 303` with `Location: /submitted/`. Add `-L` if you want curl to follow the redirect and fetch the final page automatically.
 
 JSON requests are intentionally rejected. The function only accepts browser-style form submissions so each GitHub issue has a corresponding private Netlify contact record.
 

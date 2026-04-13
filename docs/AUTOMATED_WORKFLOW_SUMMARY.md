@@ -145,7 +145,7 @@ Tests validate:
 Test the direct function integration:
 
 ```bash
-curl -X POST https://YOUR_NETLIFY_SITE.netlify.app/.netlify/functions/create-want-issue \
+curl -i -X POST https://YOUR_NETLIFY_SITE.netlify.app/.netlify/functions/create-want-issue \
   -H "Content-Type: application/x-www-form-urlencoded" \
   --data-urlencode "form-name=problems" \
   --data-urlencode "name=Test User" \
@@ -155,6 +155,8 @@ curl -X POST https://YOUR_NETLIFY_SITE.netlify.app/.netlify/functions/create-wan
   --data-urlencode "title=I want better offline support" \
   --data-urlencode "detail=I want the site to behave more reliably when connectivity is limited so contributors can finish submissions without losing work."
 ```
+
+Successful browser-style submissions return `303 Location: /submitted/`. Add `-L` if you want curl to follow the redirect.
 
 The function rejects raw JSON requests so every created issue can be paired with a private Netlify contact record.
 
