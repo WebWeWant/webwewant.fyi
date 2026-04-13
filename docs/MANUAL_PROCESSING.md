@@ -5,6 +5,7 @@ This guide explains how to manually trigger the automated want processing workfl
 ## When to Use Manual Processing
 
 Use manual processing for:
+
 - Existing issues that were created before the automation was implemented
 - Issues that failed during automated processing and need to be retried
 - Issues that need re-evaluation due to updated criteria
@@ -63,22 +64,26 @@ After triggering manual processing:
 The manual processing can result in several outcomes:
 
 ### ✅ Successful Processing
+
 - Issue gets appropriate technology labels
 - New want file is created in `/wants/` directory
 - Pull request is opened for review
 - Issue remains open for discussion
 
 ### ⚠️ Spam Detection
+
 - Issue is labeled as `spam`
 - Issue is closed automatically
 - No want file is created
 
 ### ⚠️ Off-Topic Detection
+
 - Issue is labeled as `off-topic`
 - Issue is closed with explanation
 - No want file is created
 
 ### ⚠️ Duplicate Detection
+
 - Issue is labeled as `duplicate`
 - Issue is closed with reference to existing want
 - No new want file is created
@@ -86,6 +91,7 @@ The manual processing can result in several outcomes:
 ## Troubleshooting
 
 ### Workflow Doesn't Trigger
+
 - Ensure you have proper repository permissions
 - Check that the comment contains a trigger phrase (e.g., `/process`, `@github-copilot`)
 - Verify the workflow file is present and valid
@@ -93,11 +99,13 @@ The manual processing can result in several outcomes:
 - Review `.github/workflows/README.md` for trigger requirements
 
 ### Processing Fails
+
 - Check the Actions tab for error details
 - Ensure Copilot has access to the repository
 - Verify the issue format is compatible
 
 ### No PR is Created
+
 - Check if the want was marked as spam, off-topic, or duplicate
 - Review Copilot's processing comments for details
 - Ensure the `/wants/` directory is writable
@@ -108,31 +116,31 @@ For processing many existing issues at once, loop over the workflow-dispatch app
 
 ```javascript
 // scripts/bulkProcessExisting.js
-const { Octokit } = require('@octokit/rest');
+const { Octokit } = require("@octokit/rest");
 
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN
+	auth: process.env.GITHUB_TOKEN,
 });
 
 async function processExistingIssues(issueNumbers) {
-  for (const issueNumber of issueNumbers) {
-    try {
-      // Add trigger comment to each issue
-      await octokit.rest.issues.createComment({
-        owner: 'WebWeWant',
-        repo: 'webwewant.fyi',
-        issue_number: issueNumber,
-        body: '/process-want - Manual bulk processing trigger'
-      });
-      
-      console.log(`Triggered processing for issue #${issueNumber}`);
-      
-      // Add delay to avoid rate limiting
-      await new Promise(resolve => setTimeout(resolve, 1000));
-    } catch (error) {
-      console.error(`Failed to process issue #${issueNumber}:`, error);
-    }
-  }
+	for (const issueNumber of issueNumbers) {
+		try {
+			// Add trigger comment to each issue
+			await octokit.rest.issues.createComment({
+				owner: "WebWeWant",
+				repo: "webwewant.fyi",
+				issue_number: issueNumber,
+				body: "/process-want - Manual bulk processing trigger",
+			});
+
+			console.log(`Triggered processing for issue #${issueNumber}`);
+
+			// Add delay to avoid rate limiting
+			await new Promise((resolve) => setTimeout(resolve, 1000));
+		} catch (error) {
+			console.error(`Failed to process issue #${issueNumber}:`, error);
+		}
+	}
 }
 
 // Example usage:
