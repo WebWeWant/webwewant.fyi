@@ -6,7 +6,7 @@ This document summarizes the complete automated workflow implementation for proc
 
 The automated Want processing workflow is a comprehensive GitHub-based system that:
 
-1. **Receives** webhook submissions from Netlify Forms
+1. **Receives** direct submissions from Netlify Forms through a Netlify function
 2. **Creates** GitHub issues automatically with structured data
 3. **Processes** both new submissions and existing backlog issues
 4. **Assigns** issues to GitHub Copilot for intelligent processing
@@ -16,8 +16,11 @@ The automated Want processing workflow is a comprehensive GitHub-based system th
 ## 📁 Implementation Files
 
 ### Workflow & Automation
-- **`.github/workflows/process-want-submission.yml`** - Main GitHub Actions workflow
-- **`.github/ISSUE_TEMPLATE/automated-want-submission.md`** - Issue template for webhook-created issues
+- **`netlify/functions/create-want-issue.mjs`** - Netlify function that validates submissions and creates GitHub issues
+- **`.github/workflows/triage-submission.yml`** - Triage workflow for new want issues
+- **`.github/workflows/process-submission.yml`** - Processing workflow for approved want issues
+- **`.github/workflows/assign-to-copilot.yml`** - Reusable workflow for Copilot assignment
+- **`.github/ISSUE_TEMPLATE/automated-want-submission.md`** - Issue template for automated want issues
 - **`.github/instructions/wants-processing.instructions.md`** - Comprehensive processing instructions for GitHub Copilot
 
 ### Scripts & Utilities
@@ -25,26 +28,25 @@ The automated Want processing workflow is a comprehensive GitHub-based system th
 - **`scripts/testWorkflow.js`** - Testing script with multiple scenarios
 
 ### Documentation
-- **`docs/NETLIFY_WEBHOOK_SETUP.md`** - Complete webhook configuration guide
+- **`docs/NETLIFY_WEBHOOK_SETUP.md`** - Direct Netlify submission configuration guide
 - **`docs/MANUAL_PROCESSING.md`** - Guide for processing existing issues manually
 
 ## 🔄 Workflow Process
 
-### 1. New Submissions: Form Submission → Webhook
+### 1. New Submissions: Form Submission → Netlify Function
 - User submits want via Netlify form
-- Netlify triggers webhook to GitHub repository
-- Webhook payload includes all form data and metadata
+- The form posts to `/.netlify/functions/create-want-issue`
+- The Netlify function validates the request and creates the GitHub issue directly
 
 ### 2. Existing Issues: Manual Trigger
-- Comment `/process-want` on any existing issue
-- Workflow detects comment and triggers processing
-- Same analysis process as new submissions
+- Comment `/triage` on any existing want issue to re-run triage
+- Comment `/process` on an approved issue to re-run want processing
+- The same GitHub-based processing flow applies after issue creation
 
 ### 3. Issue Creation/Processing
-- GitHub Actions workflow receives trigger
-- Creates new issue (webhooks) or processes existing issue (comments)
-- Assigns issue to `@github-copilot[bot]`
-- Adds labels: `needs-review`, `auto-generated`
+- The Netlify function creates a new issue labeled `want`
+- `triage-submission.yml` adds `triage-needed` and the triage instructions comment
+- The reusable workflow assigns the issue to GitHub Copilot
 
 ### 4. Copilot Processing
 Copilot follows a 5-step analysis process:
@@ -58,8 +60,8 @@ Copilot follows a 5-step analysis process:
 #### Step 2: Relevance Check ✅
 - Determines if submission relates to web platform evolution
 - Validates against Web We Want mission (HTML, CSS, JS, browsers)
-- **If off-topic**: Labels "off-topic" and closes with explanation
-- **If relevant**: Adds "want" label and continues
+- **If off-topic**: Labels `off-topic` and closes with explanation
+- **If relevant**: Continues through the normal processing path
 
 #### Step 3: Technology Classification ✅
 - Assigns appropriate technology labels:
@@ -69,17 +71,16 @@ Copilot follows a 5-step analysis process:
   - `user-experience`, `urls`, `extensions`
 
 #### Step 4: Duplicate Detection ✅
-- Searches existing wants using tag filtering and content similarity
-- Uses intelligent scoring based on tag overlap and content analysis
-- **If duplicate**: Labels "duplicate" with link to existing want
-- **If unique**: Proceeds to want creation
+- Runs `npm run check-duplicate "Want Title"`
+- Flags matches with `possible duplicate` for human review
+- **If unique**: Proceeds to want creation after approval
 
 #### Step 5: Want File Creation ✅
 - Generates new file: `/wants/{submissionId}.md`
 - Creates proper frontmatter with all metadata
 - Enhances content for clarity and completeness
 - Adds related links to specifications and proposals
-- Creates pull request referencing original issue
+- Creates pull request referencing original issue after the `approved` label is applied
 
 ## 🛠️ Setup Instructions
 
@@ -92,16 +93,14 @@ All workflow files are already in place. Ensure:
 ### 2. Netlify Webhook Setup
 Follow the detailed guide in `docs/NETLIFY_WEBHOOK_SETUP.md`:
 
-1. **Configure webhook URL**: `https://api.github.com/repos/WebWeWant/webwewant.fyi/dispatches`
-2. **Add required headers** with GitHub token
-3. **Set up payload template** with form field mapping
-4. **Test integration** with sample submission
+1. **Deploy the Netlify function** at `/.netlify/functions/create-want-issue`
+2. **Set the `GITHUB_TOKEN` environment variable** in Netlify
+3. **Verify the public form posts directly to the function**
+4. **Test integration** with a real submission or direct function call
 
-### 3. GitHub Token (Optional)
-The workflow uses `GITHUB_TOKEN` by default. For enhanced permissions:
-- Create Personal Access Token with `repo` scope
-- Add as repository secret: `PROCESS_WANTS_TOKEN`
-- Update workflow to use custom token
+### 3. GitHub Secrets
+- Netlify requires `GITHUB_TOKEN` so the function can create issues.
+- GitHub Actions requires `COPILOT_PAT` so the reusable assignment workflow can assign issues to Copilot.
 
 ## 🧪 Testing
 
@@ -120,12 +119,10 @@ Tests validate:
 - ✅ Data validation
 
 ### Manual Testing
-Test the webhook integration:
+Test the direct function integration:
 ```bash
-curl -X POST \
-  -H "Authorization: token YOUR_GITHUB_TOKEN" \
-  -H "Accept: application/vnd.github.v3+json" \
-  https://api.github.com/repos/WebWeWant/webwewant.fyi/dispatches \
+curl -X POST https://YOUR_NETLIFY_SITE.netlify.app/.netlify/functions/create-want-issue \
+  -H "Content-Type: application/json" \
   -d '@scripts/test-output/sample-webhook-payload.json'
 ```
 
@@ -195,8 +192,8 @@ After implementation, the workflow provides:
 ## 🔧 Configuration Files
 
 ### Essential Configuration
-- **Form fields**: `name`, `email`, `title`, `description`
-- **Webhook endpoint**: GitHub repository dispatches API
+- **Form fields**: `name`, `email`, `events`, `title`, `detail`
+- **Submission endpoint**: `/.netlify/functions/create-want-issue`
 - **Labels**: Pre-defined technology and status labels
 - **Templates**: Structured for Copilot processing
 
@@ -217,7 +214,7 @@ The automated workflow is successful when:
 
 ## 🎉 Next Steps
 
-1. **Deploy** webhook configuration in Netlify
+1. **Deploy** the Netlify function and updated form
 2. **Test** with real form submissions
 3. **Monitor** initial processing results
 4. **Refine** based on accuracy metrics
