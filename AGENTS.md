@@ -39,6 +39,7 @@
    - Populate fields from the issue, ensuring the `discussion` URL points to `https://github.com/WebWeWant/webwewant.fyi/discussions/<issue-number>`.
    - Polish description, keeping the submitter’s intent intact. Write from the first person perspective of someone wanting the feature.
    - Add `related` links when they improve context.
+   - Update the original issue body directly via the GitHub API (a direct issue edit, NOT a file in the PR) to match the cleaned want content (no frontmatter or automation metadata) so it is ready for conversion to a discussion.
    - Validate via `npm run validate-want wants/<ID>.md`.
    - Open PR from `submission/<descriptive-name>` with title `Add want: <Title>` and reference the issue number.
    - **The PR must contain only the new `wants/<ID>.md` file. Do not modify any other files.**
@@ -67,6 +68,7 @@
 - [ ] Labels applied appropriately.
 - [ ] Duplicate script run; escalations tagged.
 - [ ] Want markdown polished; related links added as needed.
+- [ ] Original issue body updated directly via GitHub API with cleaned narrative (not via PR).
 - [ ] `npm run validate-want` passes.
 - [ ] Branch + PR follow naming guidelines and reference the issue.
 - [ ] PR contains only the new `wants/<ID>.md` file — no other files modified.

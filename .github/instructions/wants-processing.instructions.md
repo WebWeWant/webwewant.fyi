@@ -178,13 +178,18 @@ npm run check-duplicate "Want Title From Issue"
        type: spec
    ```
 
-4. **Validate the file:**
+4. **Update the original issue body** directly via the GitHub API (this is a direct issue edit, NOT a file committed to the PR):
+   - Remove any frontmatter or submission metadata that came from the form
+   - Replace the issue description with the cleaned narrative used in the want markdown (no YAML blocks)
+   - Confirm the issue title remains accurate so conversion to a discussion keeps the right context
+
+5. **Validate the file:**
 
    ```bash
    npm run validate-want wants/<ID>.md
    ```
 
-5. **Create pull request:**
+6. **Create pull request:**
    - Branch: `submission/<descriptive-name>`
    - Title: "Add want: [Want Title]"
    - Include issue number in PR description
@@ -320,6 +325,7 @@ Before creating the want file, verify:
 - [ ] Duplicate check performed using script
 - [ ] Content enhanced for clarity and completeness
 - [ ] Related links added where applicable
+- [ ] Original issue body updated directly via GitHub API with cleaned narrative (not via PR)
 - [ ] Markdown file validates successfully
 - [ ] Branch and PR created with proper naming
 - [ ] PR contains only the new `wants/<ID>.md` file — no other files modified
