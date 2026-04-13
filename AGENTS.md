@@ -15,6 +15,7 @@
 - Never revert user changes unless explicitly asked. When unexpected edits appear, pause and confirm before proceeding.
 - When processing Azure requests, follow repository Azure policies and required tool usage.
 - Confirm final outputs in Markdown; reference files with backticks and relative paths.
+- **A pull request created during wants processing MUST contain only one change: the addition of a new Markdown file under `wants/`. Modifying any other file — including the original issue body, existing want files, workflows, or any other repository file — is strictly prohibited.**
 
 ### Quick Reference Checks
 - Required frontmatter fields: `title`, `date`, `submitter`, `number`, `tags`, `discussion` (must end with the original issue number), `status` set to `discussing`.
@@ -38,15 +39,15 @@
    - Populate fields from the issue, ensuring the `discussion` URL points to `https://github.com/WebWeWant/webwewant.fyi/discussions/<issue-number>`.
    - Polish description, keeping the submitter’s intent intact. Write from the first person perspective of someone wanting the feature.
    - Add `related` links when they improve context.
-   - Update the original issue body to match the cleaned want content (no frontmatter or automation metadata) so it is ready for conversion to a discussion.
    - Validate via `npm run validate-want wants/<ID>.md`.
    - Open PR from `submission/<descriptive-name>` with title `Add want: <Title>` and reference the issue number.
+   - **The PR must contain only the new `wants/<ID>.md` file. Do not modify any other files.**
 
 ### Content Quality Expectations
 - Start every want title with "I want" and ensure clarity.
 - Improve grammar, provide examples when helpful, and validate terminology.
 - Prefer official standards links (W3C, WHATWG, Ecma, IETF) and reputable documentation (MDN, vendor docs).
-- Keep markdown clean; maintain single source of truth in the want file and mirrored issue body.
+- Keep markdown clean; the want file is the single source of truth.
 
 ### Communication Templates
 - **Spam:** `This submission was automatically detected as spam and removed.`
@@ -66,9 +67,9 @@
 - [ ] Labels applied appropriately.
 - [ ] Duplicate script run; escalations tagged.
 - [ ] Want markdown polished; related links added as needed.
-- [ ] Original issue body updated with cleaned narrative.
 - [ ] `npm run validate-want` passes.
 - [ ] Branch + PR follow naming guidelines and reference the issue.
+- [ ] PR contains only the new `wants/<ID>.md` file — no other files modified.
 
 ### Efficiency Tips
 - Process steps sequentially and document reasoning in issue comments.
