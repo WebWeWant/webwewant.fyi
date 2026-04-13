@@ -3,6 +3,8 @@
  * Uses modern Netlify Functions V2 API with Request/Response objects
  */
 
+import crypto from 'node:crypto';
+
 const SPAM_KEYWORDS = [
   'buy now',
   'click here',
@@ -74,6 +76,29 @@ function toRedirectResponse(location) {
   });
 }
 
+function toHtmlErrorResponse(title, message, status = 500) {
+  const html = `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${title}</title>
+  </head>
+  <body>
+    <main>
+      <h1>${title}</h1>
+      <p>${message}</p>
+      <p><a href="/">Return to the form</a></p>
+    </main>
+  </body>
+</html>`;
+
+  return new Response(html, {
+    status,
+    headers: { 'Content-Type': 'text/html; charset=utf-8' }
+  });
+}
+
 function validateLength(value, fieldName) {
   if (value.length > MAX_FIELD_LENGTHS[fieldName]) {
     throw new SubmissionValidationError(
@@ -127,7 +152,7 @@ function validateSubmission(submission) {
   }
 }
 
-function extractSubmission(rawPayload) {
+function extractSubmission(rawPayload, requestMetadata = {}) {
   const payload = rawPayload?.data ? rawPayload.data : rawPayload;
   const privacy = isChecked(payload?.privacy);
 
@@ -145,8 +170,11 @@ function extractSubmission(rawPayload) {
     timestamp: normalizeText(rawPayload?.created_at || payload?.created_at, new Date().toISOString()),
     formName: normalizeText(rawPayload?.form_name || payload?.['form-name'], 'problems'),
     siteUrl: normalizeText(rawPayload?.site_url || payload?.site_url),
-    referrer: normalizeText(rawPayload?.referrer || payload?.referrer, 'Direct'),
-    userAgent: normalizeText(rawPayload?.user_agent || payload?.user_agent, 'Unknown')
+    referrer: normalizeText(
+      rawPayload?.referrer || rawPayload?.referer || payload?.referrer || payload?.referer || requestMetadata.referrer,
+      'Direct'
+    ),
+    userAgent: normalizeText(rawPayload?.user_agent || payload?.user_agent || requestMetadata.userAgent, 'Unknown')
   };
 }
 
@@ -163,10 +191,15 @@ async function parseSubmission(request) {
 
   const formData = await request.formData();
   const rawPayload = Object.fromEntries(formData.entries());
+  const requestMetadata = {
+    referrer: request.headers.get('referer') || request.headers.get('referrer') || '',
+    userAgent: request.headers.get('user-agent') || ''
+  };
+
   return {
     isBrowserForm: true,
     rawPayload,
-    submission: extractSubmission(rawPayload)
+    submission: extractSubmission(rawPayload, requestMetadata)
   };
 }
 
@@ -303,7 +336,11 @@ export default async (request, context) => {
     if (!githubToken) {
       console.error('GITHUB_TOKEN environment variable not set');
       return isBrowserForm
-        ? toRedirectResponse('/submitted/?status=error')
+        ? toHtmlErrorResponse(
+            'Submission Error',
+            'The submission service is not configured correctly right now. Please try again later or contact the maintainers.',
+            500
+          )
         : toJsonResponse({ error: 'Server configuration error' }, 500);
     }
 
@@ -315,13 +352,6 @@ export default async (request, context) => {
         submissionId: submission.submissionId
       });
       // Return success to fool bots, but don't create issue
-      const payload = {
-        success: true,
-        message: 'Submission received',
-        submission_id: submission.submissionId,
-        issue_number: 0 // Fake issue number
-      };
-
       return toRedirectResponse('/submitted/');
     }
 
@@ -367,9 +397,6 @@ export default async (request, context) => {
 
     // Prepare labels
     const labels = ['want'];
-    if (spamFlags.length > 0) {
-      labels.push('potential-spam');
-    }
 
     // Create GitHub issue using modern fetch API
     const issueResponse = await fetch('https://api.github.com/repos/WebWeWant/webwewant.fyi/issues', {
@@ -391,6 +418,14 @@ export default async (request, context) => {
     if (!issueResponse.ok) {
       const errorText = await issueResponse.text();
       console.error('GitHub API error:', issueResponse.status, errorText);
+      if (isBrowserForm) {
+        return toHtmlErrorResponse(
+          'Submission Error',
+          'Your submission could not be saved to GitHub. Please try again later or contact the maintainers if the problem continues.',
+          502
+        );
+      }
+
       return toJsonResponse({ 
         error: 'Failed to create GitHub issue',
         status: issueResponse.status,
@@ -407,8 +442,16 @@ export default async (request, context) => {
     console.error('Error processing form submission:', error);
     if (error instanceof SubmissionValidationError) {
       return isBrowserForm
-        ? toRedirectResponse('/submitted/?status=invalid')
+        ? toHtmlErrorResponse('Invalid Submission', error.message, error.status)
         : toJsonResponse({ error: error.message }, error.status);
+    }
+
+    if (isBrowserForm) {
+      return toHtmlErrorResponse(
+        'Submission Error',
+        'Your submission could not be processed. Please try again later or contact the maintainers if the problem continues.',
+        500
+      );
     }
 
     return toJsonResponse({ 
