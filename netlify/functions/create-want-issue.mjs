@@ -22,6 +22,23 @@ const SPAM_KEYWORDS = [
   'business opportunity'
 ];
 
+const MAX_FIELD_LENGTHS = {
+  name: 100,
+  email: 254,
+  github: 39,
+  events: 200,
+  title: 200,
+  detail: 5000
+};
+
+class SubmissionValidationError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'SubmissionValidationError';
+    this.status = 400;
+  }
+}
+
 function normalizeText(value, fallback = '') {
   if (value === undefined || value === null) {
     return fallback;
@@ -51,6 +68,59 @@ function toRedirectResponse(location) {
     status: 303,
     headers: { Location: location }
   });
+}
+
+function validateLength(value, fieldName) {
+  if (value.length > MAX_FIELD_LENGTHS[fieldName]) {
+    throw new SubmissionValidationError(
+      `${fieldName} must be ${MAX_FIELD_LENGTHS[fieldName]} characters or less`
+    );
+  }
+}
+
+function validateSubmission(submission) {
+  if (!submission.name) {
+    throw new SubmissionValidationError('name is required');
+  }
+  validateLength(submission.name, 'name');
+
+  if (!submission.email) {
+    throw new SubmissionValidationError('email is required');
+  }
+  validateLength(submission.email, 'email');
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(submission.email)) {
+    throw new SubmissionValidationError('email must be a valid email address');
+  }
+
+  if (!submission.events) {
+    throw new SubmissionValidationError('events is required');
+  }
+  validateLength(submission.events, 'events');
+
+  if (!submission.title) {
+    throw new SubmissionValidationError('title is required');
+  }
+  if (submission.title.length < 5) {
+    throw new SubmissionValidationError('title must be at least 5 characters');
+  }
+  validateLength(submission.title, 'title');
+
+  if (!submission.detail) {
+    throw new SubmissionValidationError('detail is required');
+  }
+  if (submission.detail.length < 20) {
+    throw new SubmissionValidationError('detail must be at least 20 characters');
+  }
+  validateLength(submission.detail, 'detail');
+
+  if (submission.github) {
+    validateLength(submission.github, 'github');
+    if (!/^[A-Za-z0-9-]+$/.test(submission.github)) {
+      throw new SubmissionValidationError('github must contain only letters, numbers, and hyphens');
+    }
+  }
 }
 
 function extractSubmission(rawPayload) {
@@ -101,7 +171,11 @@ async function parseSubmission(request) {
 
 async function persistNetlifySubmission(request, submission) {
   if (!submission.email) {
-    return false;
+    return {
+      attempted: false,
+      persisted: false,
+      reason: 'No email address was provided.'
+    };
   }
 
   try {
@@ -127,17 +201,41 @@ async function persistNetlifySubmission(request, submission) {
 
     if (!response.ok) {
       console.warn('Unable to persist Netlify form submission:', response.status, response.statusText);
-      return false;
+      return {
+        attempted: true,
+        persisted: false,
+        reason: `Netlify returned ${response.status} ${response.statusText}`
+      };
     }
 
-    return true;
+    return {
+      attempted: true,
+      persisted: true,
+      reason: ''
+    };
   } catch (error) {
     console.warn('Unable to persist Netlify form submission:', error);
-    return false;
+    return {
+      attempted: true,
+      persisted: false,
+      reason: error.message
+    };
   }
 }
 
-function buildIssueBody(submission, spamFlags, hasPrivateContactRecord) {
+function getContactStatusMessage(contactRecord) {
+  if (contactRecord.persisted) {
+    return '**Contact:** Maintainers can follow up using the private Netlify form submission.';
+  }
+
+  if (contactRecord.attempted) {
+    return `**Contact:** Warning: private contact persistence failed, so no private follow-up record is available in Netlify. Reason: ${contactRecord.reason}`;
+  }
+
+  return `**Contact:** Warning: no private Netlify contact record was created for this submission. Reason: ${contactRecord.reason}`;
+}
+
+function buildIssueBody(submission, spamFlags, contactRecord) {
   const submitter = submission.privacy ? 'Anonymous' : submission.name;
   const details = [
     '## Want Submission',
@@ -148,9 +246,7 @@ function buildIssueBody(submission, spamFlags, hasPrivateContactRecord) {
     `**Privacy requested:** ${submission.privacy ? 'Yes' : 'No'}`,
     submission.github ? `**GitHub:** @${submission.github}` : '',
     `**Event Preference:** ${submission.events}`,
-    hasPrivateContactRecord
-      ? '**Contact:** Maintainers can follow up using the private Netlify form submission.'
-      : '**Contact:** An email address was provided privately to the form handler.',
+    getContactStatusMessage(contactRecord),
     '',
     '## Want Details',
     '',
@@ -188,8 +284,12 @@ export default async (request, context) => {
     return toJsonResponse({ error: 'Method not allowed' }, 405);
   }
 
+  let isBrowserForm = false;
+
   try {
-    const { isBrowserForm, submission } = await parseSubmission(request);
+    const parsedRequest = await parseSubmission(request);
+    isBrowserForm = parsedRequest.isBrowserForm;
+    const { submission } = parsedRequest;
     console.log('Received form submission:', {
       submissionId: submission.submissionId,
       title: submission.title,
@@ -223,6 +323,8 @@ export default async (request, context) => {
 
       return isBrowserForm ? toRedirectResponse('/submitted/') : toJsonResponse(payload);
     }
+
+    validateSubmission(submission);
 
     // SPAM DETECTION: Check for excessive links (likely promotional)
     const textToCheck = `${submission.title} ${submission.detail}`;
@@ -258,11 +360,15 @@ export default async (request, context) => {
       spamFlags.push(`⚠️ **Potential Spam**: Contains suspicious keywords`);
     }
 
-    const hasPrivateContactRecord = isBrowserForm
+    const contactRecord = isBrowserForm
       ? await persistNetlifySubmission(request, submission)
-      : false;
+      : {
+          attempted: false,
+          persisted: false,
+          reason: 'Submission was sent directly to the API instead of through the Netlify form.'
+        };
 
-    const issueBody = buildIssueBody(submission, spamFlags, hasPrivateContactRecord);
+    const issueBody = buildIssueBody(submission, spamFlags, contactRecord);
 
     // Prepare labels
     const labels = ['want'];
@@ -318,6 +424,12 @@ export default async (request, context) => {
 
   } catch (error) {
     console.error('Error processing form submission:', error);
+    if (error instanceof SubmissionValidationError) {
+      return isBrowserForm
+        ? toRedirectResponse('/submitted/?status=invalid')
+        : toJsonResponse({ error: error.message }, error.status);
+    }
+
     return toJsonResponse({ 
       error: 'Internal server error',
       message: error.message 
