@@ -56,6 +56,10 @@ function isChecked(value) {
   return ['1', 'true', 'yes', 'on'].includes(String(value).toLowerCase());
 }
 
+function createFallbackSubmissionId() {
+  return `netlify-${crypto.randomUUID()}`;
+}
+
 function toJsonResponse(payload, status = 200) {
   return new Response(JSON.stringify(payload), {
     status,
@@ -128,7 +132,7 @@ function extractSubmission(rawPayload) {
   const privacy = isChecked(payload?.privacy);
 
   return {
-    submissionId: normalizeText(rawPayload?.id || payload?.id, `netlify-${Date.now()}`),
+    submissionId: normalizeText(rawPayload?.id || payload?.id, createFallbackSubmissionId()),
     title: normalizeText(payload?.title),
     detail: normalizeText(payload?.detail),
     name: normalizeText(payload?.name),
@@ -151,19 +155,16 @@ async function parseSubmission(request) {
   const isBrowserForm = contentType.includes('application/x-www-form-urlencoded') ||
     contentType.includes('multipart/form-data');
 
-  if (isBrowserForm) {
-    const formData = await request.formData();
-    const payload = Object.fromEntries(formData.entries());
-    return {
-      isBrowserForm: true,
-      rawPayload: payload,
-      submission: extractSubmission(payload)
-    };
+  if (!isBrowserForm) {
+    throw new SubmissionValidationError(
+      'Direct API submissions are not supported. Submit through the browser form so the private contact record can be stored before creating a GitHub issue.'
+    );
   }
 
-  const rawPayload = await request.json();
+  const formData = await request.formData();
+  const rawPayload = Object.fromEntries(formData.entries());
   return {
-    isBrowserForm: false,
+    isBrowserForm: true,
     rawPayload,
     submission: extractSubmission(rawPayload)
   };
@@ -321,7 +322,7 @@ export default async (request, context) => {
         issue_number: 0 // Fake issue number
       };
 
-      return isBrowserForm ? toRedirectResponse('/submitted/') : toJsonResponse(payload);
+      return toRedirectResponse('/submitted/');
     }
 
     validateSubmission(submission);
@@ -360,13 +361,7 @@ export default async (request, context) => {
       spamFlags.push(`⚠️ **Potential Spam**: Contains suspicious keywords`);
     }
 
-    const contactRecord = isBrowserForm
-      ? await persistNetlifySubmission(request, submission)
-      : {
-          attempted: false,
-          persisted: false,
-          reason: 'Submission was sent directly to the API instead of through the Netlify form.'
-        };
+    const contactRecord = await persistNetlifySubmission(request, submission);
 
     const issueBody = buildIssueBody(submission, spamFlags, contactRecord);
 
@@ -396,10 +391,6 @@ export default async (request, context) => {
     if (!issueResponse.ok) {
       const errorText = await issueResponse.text();
       console.error('GitHub API error:', issueResponse.status, errorText);
-      if (isBrowserForm) {
-        return toRedirectResponse('/submitted/?status=error');
-      }
-
       return toJsonResponse({ 
         error: 'Failed to create GitHub issue',
         status: issueResponse.status,
@@ -410,17 +401,7 @@ export default async (request, context) => {
     const issue = await issueResponse.json();
     console.log('Successfully created GitHub issue:', issue.number);
 
-    if (isBrowserForm) {
-      return toRedirectResponse('/submitted/');
-    }
-
-    return toJsonResponse({ 
-      success: true, 
-      message: 'Want submission processed successfully',
-      submission_id: submission.submissionId,
-      issue_number: issue.number,
-      issue_url: issue.html_url
-    });
+    return toRedirectResponse('/submitted/');
 
   } catch (error) {
     console.error('Error processing form submission:', error);
