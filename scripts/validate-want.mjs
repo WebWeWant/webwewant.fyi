@@ -152,19 +152,24 @@ function validateDiscussion(discussion) {
     throw new ValidationError(`Invalid discussion URL: ${discussion}`);
   }
   
-  // Check if it's a GitHub discussions URL
-  if (!discussion.includes('github.com') || !discussion.includes('/discussions/')) {
-    throw new ValidationError(`Discussion URL must be a GitHub discussions URL: ${discussion}`);
-  }
-  
   // Restrict to http/https protocols only for security
   if (url.protocol !== 'http:' && url.protocol !== 'https:') {
     throw new ValidationError(`Invalid discussion URL protocol: ${url.protocol}. Only http:// and https:// are allowed.`);
   }
 
-  const discussionIdMatch = url.pathname.match(/\/discussions\/(\d+)\/?$/);
-  if (!discussionIdMatch) {
-    throw new ValidationError(`Discussion URL must end with a numeric discussion ID: ${discussion}`);
+  if (url.hostname !== 'github.com') {
+    throw new ValidationError(`Discussion URL must use github.com: ${discussion}`);
+  }
+
+  const discussionPathMatch = url.pathname.match(/^\/WebWeWant\/webwewant\.fyi\/(discussions|issues)\/(\d+)\/?$/);
+  if (!discussionPathMatch) {
+    throw new ValidationError(
+      `Discussion URL must point to /WebWeWant/webwewant.fyi/discussions/<id> or legacy /issues/<id>: ${discussion}`
+    );
+  }
+
+  if (discussionPathMatch[1] === 'issues') {
+    console.warn(`⚠️  Warning: Legacy issue URL used for discussion field: ${discussion}`);
   }
 }
 

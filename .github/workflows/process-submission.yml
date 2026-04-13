@@ -13,7 +13,7 @@ on:
         type: number
 
 # This workflow assigns approved issues to GitHub Copilot for processing.
-# ALL processing instructions are in .github/want-submission-triage.md - no other docs needed.
+# ALL processing instructions are in .github/instructions/wants-processing.instructions.md.
 
 jobs:
   add-comment:
@@ -77,3 +77,5 @@ jobs:
     uses: ./.github/workflows/assign-to-copilot.yml
     with:
       issue_number: ${{ fromJSON(needs.add-comment.outputs.issue_number) }}
+    secrets:
+      copilot_pat: ${{ secrets.COPILOT_PAT }}

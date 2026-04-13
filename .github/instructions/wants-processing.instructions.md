@@ -5,6 +5,7 @@ Follow these detailed instructions when processing Want submissions for the Web 
 ## Quick Reference
 
 ### Required Markdown Fields
+
 - `title`: "I want [description]" format
 - `date`: ISO date string (current date/time)
 - `submitter`: Submitter's name or "Anonymous"
@@ -14,22 +15,26 @@ Follow these detailed instructions when processing Want submissions for the Web 
 - `status`: "discussing"
 
 ### Optional Fields
+
 - `related`: Array of related specifications/articles with title, url, type
 
 ### Essential Commands
+
 - `npm run create-want` - Generate UUID and markdown template
 - `npm run check-duplicate "Want Title"` - Check for potential duplicates (fuzzy matching)
 - `npm run validate-want wants/<ID>.md` - Validate markdown file
 
 ### Triage Decision Tree
+
 1. **Spam/abuse/honeypot triggered?** → DELETE and close issue immediately
 2. **Links to commercial services (>2 links)?** → FLAG as potential spam, review carefully
 3. **Off-topic (not web platform)?** → REJECT with "off-topic" label, close issue
-4. **Missing required fields?** → REJECT with explanation, close issue  
+4. **Missing required fields?** → REJECT with explanation, close issue
 5. **Potential duplicate?** → Run `npm run check-duplicate`, flag for human review if similar
 6. **Passes all checks?** → CREATE markdown file and PR per "Creating Approved Submissions" section
 
 ### Similarity Score Guidelines (for duplicate checking)
+
 - **90-100%** = Very likely duplicate → Flag for human review
 - **70-89%** = Possibly duplicate → Flag for human review
 - **<70%** = Probably unique → Proceed with processing
@@ -37,8 +42,9 @@ Follow these detailed instructions when processing Want submissions for the Web 
 ## 🎯 Mission & Scope
 
 Web We Want focuses on **web platform evolution** including:
+
 - HTML elements and attributes
-- CSS properties and features  
+- CSS properties and features
 - JavaScript APIs and language features
 - Browser behavior and standards
 - Developer tools improvements
@@ -49,6 +55,7 @@ Web We Want focuses on **web platform evolution** including:
 ### Step 1: Spam Detection ⚠️
 
 **Immediately delete and close submissions that:**
+
 1. **Triggered honeypot** - "website" field is filled (automated spam)
 2. **Contain excessive links** - More than 2 external links (likely promotional)
 3. **Commercial promotion** - Advertising services, products, or companies
@@ -57,6 +64,7 @@ Web We Want focuses on **web platform evolution** including:
 6. **Obvious bot submissions** - Generic text, random characters, or template spam
 
 **When deleting spam:**
+
 - Close the issue immediately
 - Add comment: "This submission was automatically detected as spam and removed."
 - Do not engage with or provide detailed feedback on spam submissions
@@ -66,6 +74,7 @@ Web We Want focuses on **web platform evolution** including:
 ### Step 2: Relevance Check 🎯
 
 **Approve submissions that:**
+
 1. **Relate to web platform evolution** - HTML, CSS, JavaScript, browser APIs, developer tools
 2. **Include required information** - Clear title, detailed description, contact info
 3. **Are technically feasible** - Not requesting impossible or deprecated features
@@ -73,6 +82,7 @@ Web We Want focuses on **web platform evolution** including:
 5. **Are respectful** - Professional language and constructive tone
 
 **Common off-topic submissions (reject with "off-topic" label):**
+
 - Browser troubleshooting or bug reports for specific sites
 - Requests for help with personal projects
 - General software or non-web technology requests
@@ -80,6 +90,7 @@ Web We Want focuses on **web platform evolution** including:
 - Questions about using existing APIs (rather than improving them)
 
 **If OFF-TOPIC:**
+
 1. Add label: `off-topic`
 2. Close issue
 3. Comment: "Thank you for your submission. This request appears to be outside the scope of Web We Want, which focuses on improvements to web platform standards (HTML, CSS, JavaScript) and browser implementations. For support questions, please refer to appropriate community forums."
@@ -89,11 +100,13 @@ Web We Want focuses on **web platform evolution** including:
 **Apply appropriate labels (select 1-3 most relevant):**
 
 **Core Technologies:**
+
 - `html` - HTML elements, attributes, semantic markup
 - `css` - CSS properties, selectors, styling, layout
 - `javascript` - JS language features, Web APIs, ECMAScript
 
 **Specialized Areas:**
+
 - `accessibility` - Screen readers, WCAG, inclusive design
 - `dom` - Document Object Model, including window, navigator, CSSOM, etc.
 - `api` - Web APIs
@@ -108,6 +121,7 @@ Web We Want focuses on **web platform evolution** including:
 - `custom-elements` - Web components, shadow DOM
 
 **Classification Guidelines:**
+
 - Read the want description carefully
 - Identify primary and secondary technologies
 - Use specific labels over general ones
@@ -116,13 +130,15 @@ Web We Want focuses on **web platform evolution** including:
 ### Step 4: Duplicate Detection 🔍
 
 **Always check for duplicates using:**
+
 ```bash
 npm run check-duplicate "Want Title From Issue"
 ```
 
 **If potential duplicates found (exit code 1):**
+
 1. Review the similarity scores and descriptions
-2. If 70%+ similarity, add "possible duplicate" label
+2. If >= 70% similarity, add "possible duplicate" label
 3. Comment with links to potential matches
 4. **Do not close** - flag for human review instead
 5. Humans will make final determination on true duplicates
@@ -134,9 +150,11 @@ npm run check-duplicate "Want Title From Issue"
 **For approved submissions, follow this process:**
 
 1. **Generate markdown template:**
+
    ```bash
    npm run create-want
    ```
+
    This creates `wants/<ID>.md` with proper structure
 
 2. **Fill in the generated file** with data from the issue:
@@ -150,6 +168,7 @@ npm run check-duplicate "Want Title From Issue"
    - Content: Clean up and enhance the description for clarity
 
 3. **Add related links** if applicable:
+
    ```yaml
    related:
      - title: HTML Standard
@@ -163,6 +182,7 @@ npm run check-duplicate "Want Title From Issue"
    - Confirm the issue title remains accurate so conversion to a discussion keeps the right context
 
 5. **Validate the file:**
+
    ```bash
    npm run validate-want wants/<ID>.md
    ```
@@ -184,26 +204,30 @@ npm run check-duplicate "Want Title From Issue"
 5. **Technical accuracy:** Verify terminology and concepts are correct
 
 ### Writing Style:
+
 - Clear, professional language
 - Maintain submitter's intent while improving clarity
 - Use active voice where possible
 - Include concrete examples when beneficial
 
 ### Technical Standards:
+
 - Verify correct terminology usage
 - Ensure proposals are technically feasible
 - Consider backward compatibility implications
 - Reference existing standards when relevant
 
 ### Link Quality:
+
 - Prioritize official specifications
-- Include authoritative developer resources  
+- Include authoritative developer resources
 - Verify links are current and accessible
 - Avoid linking to outdated/deprecated content
 
 **Related Links to Consider:**
+
 - W3C specifications and working drafts
-- WHATWG living standards  
+- WHATWG living standards
 - IETF RFCs
 - Ecma International standards
 - Browser vendor documentation
@@ -214,16 +238,19 @@ npm run check-duplicate "Want Title From Issue"
 ## 📋 Response Templates
 
 ### For Spam/Abuse
+
 ```
 This submission was automatically detected as spam and removed.
 ```
 
 ### For Off-Topic Submissions
+
 ```
 Thank you for your submission. This request appears to be outside the scope of Web We Want, which focuses on improvements to web platform standards (HTML, CSS, JavaScript) and browser implementations. For support questions, please refer to appropriate community forums.
 ```
 
 ### For Missing Information
+
 ```
 This submission is missing required information: [list missing fields]
 
@@ -233,6 +260,7 @@ Closing this issue.
 ```
 
 ### For Possible Duplicates
+
 ```
 This submission may be a duplicate of existing want(s):
 
@@ -242,6 +270,7 @@ This issue has been flagged with the "possible duplicate" label for human review
 ```
 
 ### For Approval
+
 ```
 This submission has been approved and will be processed.
 
@@ -251,6 +280,7 @@ Creating pull request with the want information.
 ## 📊 Example Processing
 
 ### Example 1: Legitimate Want
+
 ```markdown
 ## Processing Want #123: "Better CSS Grid debugging"
 
@@ -261,6 +291,7 @@ Creating pull request with the want information.
 ✅ **Want Creation:** Generated /wants/123.md with enhanced content
 
 **Created PR #456** with:
+
 - Improved title clarity
 - Added technical context about current limitations
 - Included links to CSS Grid Level 1 spec
@@ -268,11 +299,13 @@ Creating pull request with the want information.
 ```
 
 ### Example 2: Spam Handling
+
 ```markdown
 ## Processing Want #124: Originally contained promotional links
 
 ❌ **Spam Check:** Generic promotional content with commercial links - IS SPAM
-🔧 **Content Sanitization:** 
+🔧 **Content Sanitization:**
+
 - Edited title to: "SPAM - Content Removed"
 - Replaced body with sanitization notice
 - Removed all external promotional links
@@ -282,8 +315,9 @@ Creating pull request with the want information.
 ## 🔧 Quality Checklist
 
 Before creating the want file, verify:
+
 - [ ] Spam detection completed (deleted if spam)
-- [ ] Relevance to web platform confirmed  
+- [ ] Relevance to web platform confirmed
 - [ ] Appropriate technology tags applied (1-3 tags)
 - [ ] Duplicate check performed using script
 - [ ] Content enhanced for clarity and completeness
@@ -294,6 +328,7 @@ Before creating the want file, verify:
 ## 🚀 Processing Tips
 
 **Important Notes:**
+
 - **Single source of truth:** These instructions are your only guidance - don't reference other documentation
 - **Act decisively:** Process submissions quickly but thoroughly
 - **Maintain quality:** Enhance content for clarity while preserving submitter intent
@@ -301,12 +336,14 @@ Before creating the want file, verify:
 - **Human escalation:** When in doubt, flag for human review rather than rejecting
 
 **Efficiency:**
+
 - Process steps sequentially - don't skip ahead
 - Document reasoning in issue comments
 - Be decisive but explain your logic
 - When in doubt, err on the side of inclusion
 
 **Quality:**
+
 - Focus on the submitter's core intent
 - Enhance without changing meaning
 - Add value through context and links
@@ -338,14 +375,16 @@ When a want PR is merged, you may be asked to convert the original issue to a di
    - Thank the submitter and community
 
 4. **Example Implementation Comment:**
+
    ```
    🎉 This want has been implemented in PR #XXX!
-   
-   Thank you @[submitter] for this valuable contribution to making the web better. 
+
+   Thank you @[submitter] for this valuable contribution to making the web better.
    The community can continue discussing this feature here.
    ```
 
 **Key Benefits:**
+
 - Same ID preserved → want markdown files reference correct discussion
 - Clean discussion content without processing metadata
 - Continued community engagement on implemented features

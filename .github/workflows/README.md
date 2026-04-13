@@ -2,69 +2,61 @@
 
 This directory contains automated workflows for the Web We Want project.
 
-## Process Want Submission Workflow
+## Want Submission Workflows
 
-The `process-want-submission.yml` workflow automates the processing of Want submissions.
+The current automation is split across two workflows:
+
+- `triage-submission.yml` handles new want issues created by the Netlify function.
+- `process-submission.yml` handles issues that have been approved for want-file creation.
 
 ### Triggers
 
-The workflow is triggered by:
+The current flow is triggered by:
 
-1. **Netlify Form Submission** (`repository_dispatch` event)
-   - Automatically creates an issue from form submissions
-   - No manual intervention required
+1. **Netlify Form Submission**
+   - The public form posts directly to `/.netlify/functions/create-want-issue`
+   - The function creates a GitHub issue labeled `want`
+   - `triage-submission.yml` picks up the newly opened issue automatically
 
-2. **New Want Issue Opened** (`issues` event)
-   - Automatically processes issues with title starting with `[Auto] New Want:`
-   
-3. **Manual Processing via Comment** (`issue_comment` event)
-   - Any of the following commands in an issue comment will trigger the workflow:
-     - `/process` - Simple slash command
-     - `@github-copilot` - Mention Copilot
-     - `@github-copilot[bot] process` - Full mention with process keyword
-
-4. **PR Merged** (`pull_request` event with `closed` and `merged=true`)
-   - Converts the related issue to a discussion after a want PR is merged
+2. **Issue Triage** (`issues.opened` or `/triage` comment)
+   - Adds `triage-needed`
+   - Adds the canonical processing instructions comment
+   - Assigns the issue to GitHub Copilot
+3. **Approved Submission Processing** (`issues.labeled` with `approved` or `/process` comment)
+   - Adds the processing instructions comment
+   - Assigns the issue to GitHub Copilot for want-file creation
 
 ### Manual Processing
 
-To manually trigger want processing on an existing issue, add a comment with any of these commands:
+To manually trigger triage on an existing want issue, add:
 
+```text
+/triage
 ```
+
+To manually trigger approved-processing on an existing want issue, add:
+
+```text
 /process
 ```
 
-or
-
-```
-@github-copilot please process this want
-```
-
-The workflow will:
-1. Log trigger information for debugging
-2. Create a processing trigger comment
-3. Assign the issue to GitHub Copilot
-4. Copilot will follow the instructions in `.github/instructions/wants-processing.instructions.md`
+The workflows will assign the issue to GitHub Copilot, which follows `.github/instructions/wants-processing.instructions.md`.
 
 ### Debugging
 
 If the workflow doesn't run as expected:
 
 1. Check the workflow run logs in the Actions tab
-2. Look for the "Log workflow trigger" step to see what event triggered the workflow
-3. Verify the issue title matches the expected pattern (for auto-generated issues)
-4. Ensure your comment contains one of the trigger keywords (for manual processing)
+2. Verify the issue was created with the `want` label
+3. Confirm the repository secret `COPILOT_PAT` is set
+4. Ensure your comment contains `/triage` or `/process` when using the manual path
 
-### Workflow Steps
+### Workflow Summary
 
-1. **Log workflow trigger** - Logs information about what triggered the workflow
-2. **Checkout repository** - Checks out the code
-3. **Setup Node.js** - Installs Node.js environment
-4. **Install dependencies** - Installs npm packages
-5. **Create issue from webhook** - For Netlify form submissions
-6. **Process existing issue** - For manual triggers via comments
-7. **Assign to Copilot** - Creates a comment to trigger Copilot processing
-8. **Log completion** - Logs completion status
+1. The Netlify function creates the GitHub issue directly.
+2. `triage-submission.yml` labels it and assigns it to Copilot.
+3. A maintainer approves or rejects the issue.
+4. `process-submission.yml` assigns approved issues back to Copilot for want-file creation.
 
 ### Processing Instructions
 
@@ -72,6 +64,7 @@ The detailed processing instructions for GitHub Copilot are located in:
 `.github/instructions/wants-processing.instructions.md`
 
 This includes:
+
 - Spam detection
 - Relevance checking
 - Technology classification
