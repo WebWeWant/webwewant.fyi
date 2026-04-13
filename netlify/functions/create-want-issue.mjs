@@ -204,14 +204,6 @@ async function parseSubmission(request) {
 }
 
 async function persistNetlifySubmission(request, submission) {
-  if (!submission.email) {
-    return {
-      attempted: false,
-      persisted: false,
-      reason: 'No email address was provided.'
-    };
-  }
-
   try {
     const origin = new URL(request.url).origin;
     const formPayload = new URLSearchParams({
