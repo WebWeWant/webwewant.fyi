@@ -1,30 +1,29 @@
 ---
 name: Automated Want Submission
 about: Template for automatically generated want submissions from Netlify forms
-title: '[Auto] New Want: '
-labels: ['needs-review', 'auto-generated']
-assignees: ['github-copilot[bot]']
-
+title: "[Auto] New Want: "
+labels: ["needs-review", "auto-generated"]
 ---
 
 ## Want Submission Details
 
-**Submission ID:** 
-**Submitted:** 
-**Form Name:** 
-**Origin Site:** 
+**Submission ID:**
+**Submitted:**
+**Form Name:**
+**Origin Site:**
 
 ### Submitter Information
-**Name:** 
-**Email:** 
-**Event Attendance:** 
-**Privacy Preference:** 
+
+**Name:**
+**Contact:** Maintainers can follow up using the private Netlify form submission.
+**Event Attendance:**
+**Privacy Preference:**
 
 ### Want Details
-**Title:** 
+
+**Title:**
 
 **Description:**
-
 
 ---
 
@@ -33,6 +32,7 @@ assignees: ['github-copilot[bot]']
 Please process this want submission following the detailed instructions in `.github/instructions/wants-processing.instructions.md`.
 
 **Summary of Processing Steps:**
+
 1. **Spam Detection:** Analyze if this submission is spam or malicious content
 2. **Relevance Check:** Determine if this relates to web platform evolution (HTML, CSS, JS, browsers)
 3. **Technology Classification:** Add appropriate technology labels
@@ -40,12 +40,14 @@ Please process this want submission following the detailed instructions in `.git
 5. **Create Want PR:** Generate a pull request with properly formatted want file
 
 **Processing Guidelines:**
+
 - Refer to `.github/instructions/wants-processing.instructions.md` for complete detailed instructions
 - Follow the established patterns in existing want files
 - Ensure quality and clarity in final want content
 - Add relevant links to specifications or proposals when applicable
 
 **Submission Data (JSON):**
+
 ```json
 
 ```

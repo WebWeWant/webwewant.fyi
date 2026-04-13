@@ -1,6 +1,7 @@
 {% from "macros.njk" import label, field, confirm, select, textarea, button %}
 
-<form name="problems" method="POST" data-netlify="true" action="/submitted/" netlify-honeypot="bot-field">
+<form name="problems" method="POST" data-netlify="true" action="/.netlify/functions/create-want-issue" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="problems">
   <ol class="questions">
     <li class="question">
       {{ label("What’s your name?", "name") }}

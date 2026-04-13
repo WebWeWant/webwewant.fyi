@@ -7,6 +7,10 @@ on:
         description: "Issue number to assign to Copilot"
         required: true
         type: number
+    secrets:
+      copilot_pat:
+        description: "Personal Access Token for Copilot assignment"
+        required: true
 
 jobs:
   assign:
@@ -18,6 +22,6 @@ jobs:
       - name: Assign issue to Copilot
         uses: otto-de/assign_issue_toCopilot_action@v1.0.1
         env:
-          GITHUB_TOKEN: ${{ secrets.COPILOT_PAT }}
+          GITHUB_TOKEN: ${{ secrets.copilot_pat }}
         with:
           issue_number: ${{ inputs.issue_number }}
