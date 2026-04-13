@@ -21,22 +21,18 @@ Use manual processing for:
    - `@github-copilot[bot] please process this want` - Full mention with instruction
 3. The workflow will automatically trigger and process the issue
 
-### Method 2: Repository Dispatch (for bulk processing)
+### Method 2: Workflow Dispatch
 
-For processing multiple issues at once, you can use the GitHub API:
+For manual processing without adding a comment, trigger the workflow directly from GitHub Actions for a single issue:
 
 ```bash
-curl -X POST \
-  https://api.github.com/repos/WebWeWant/webwewant.fyi/dispatches \
-  -H "Authorization: token YOUR_GITHUB_TOKEN" \
-  -H "Accept: application/vnd.github.v3+json" \
-  -d '{
-    "event_type": "manual-want-processing",
-    "client_payload": {
-      "issue_numbers": [123, 124, 125],
-      "reason": "Bulk processing of backlog items"
-    }
-  }'
+gh workflow run process-submission.yml -f issue_number=123
+```
+
+For triage on a single issue:
+
+```bash
+gh workflow run triage-submission.yml -f issue_number=123
 ```
 
 ## What Happens During Manual Processing
@@ -108,7 +104,7 @@ The manual processing can result in several outcomes:
 
 ## Bulk Processing Script
 
-For processing many existing issues at once, you can use the test script with modifications:
+For processing many existing issues at once, loop over the workflow-dispatch approach with a script like this:
 
 ```javascript
 // scripts/bulkProcessExisting.js
