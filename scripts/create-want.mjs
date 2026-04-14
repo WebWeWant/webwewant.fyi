@@ -16,7 +16,7 @@ if (issueNumber !== null && !/^[1-9]\d*$/.test(issueNumber)) {
 }
 
 const discussionUrl = issueNumber
-  ? `https://github.com/WebWeWant/webwewant.fyi/discussions/${issueNumber}`
+  ? `https://github.com/WebWeWant/webwewant.fyi/issues/${issueNumber}`
   : "";
 
 // Generate a unique ID for the want
@@ -51,7 +51,7 @@ fs.writeFileSync(markdownPath, markdownContent);
 console.log(`✓ Created new want markdown file: ${wantId}.md`);
 console.log(`✓ Want ID: ${wantId}`);
 if (issueNumber) {
-  console.log(`✓ Discussion URL pre-populated: ${discussionUrl}`);
+  console.log(`✓ Issue URL pre-populated as discussion placeholder: ${discussionUrl}`);
 } else {
   console.log(`⚠ No issue number provided — discussion URL is empty.`);
   console.log(`  Usage:   npm run create-want -- <issue-number>`);
@@ -65,7 +65,7 @@ console.log(`  - date: Current ISO date string`);
 console.log(`  - submitter: Submitter's name or "Anonymous"`);
 console.log(`  - tags: Array of 1-3 relevant technology labels`);
 if (!issueNumber) {
-  console.log(`  - discussion: GitHub discussions URL (https://github.com/WebWeWant/webwewant.fyi/discussions/<ISSUE_NUMBER>)`);
+  console.log(`  - discussion: GitHub issues URL as placeholder (https://github.com/WebWeWant/webwewant.fyi/issues/<ISSUE_NUMBER>)`);
 }
 console.log(`\nOptional fields:`);
 console.log(`  - related: Array of related links with title, url, type`);
