@@ -272,7 +272,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("wants", collection => {
     // get unsorted items
     return collection.getAll()
-             .filter( item => item.inputPath.match(/\/wants\/.*\.md/) !== null );
+             .filter( item => item.inputPath.match(/\/wants\/.*\.md/) !== null )
+             .sort( (a, b) => b.date - a.date );
   });
 
   eleventyConfig.addCollection("wantsBySubmissionDate", collection => {
