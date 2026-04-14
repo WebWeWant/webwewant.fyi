@@ -6,17 +6,17 @@ import crypto from "crypto";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Parse optional issue ID argument: npm run create-want -- <issue-id>
-// or: node scripts/create-want.mjs <issue-id>
-const issueId = process.argv[2] ? process.argv[2].trim() : null;
+// Parse optional issue number argument: npm run create-want -- <issue-number>
+// or: node scripts/create-want.mjs <issue-number>
+const issueNumber = process.argv[2] ? process.argv[2].trim() : null;
 
-if (issueId !== null && !/^[1-9]\d*$/.test(issueId)) {
-  console.error(`Error: issue ID must be a positive integer (e.g. 850). Got: "${issueId}"`);
+if (issueNumber !== null && !/^[1-9]\d*$/.test(issueNumber)) {
+  console.error(`Error: issue number must be a positive integer (e.g. 850). Got: "${issueNumber}"`);
   process.exit(1);
 }
 
-const discussionUrl = issueId
-  ? `https://github.com/WebWeWant/webwewant.fyi/discussions/${issueId}`
+const discussionUrl = issueNumber
+  ? `https://github.com/WebWeWant/webwewant.fyi/discussions/${issueNumber}`
   : "";
 
 // Generate a unique ID for the want
@@ -50,20 +50,22 @@ fs.writeFileSync(markdownPath, markdownContent);
 
 console.log(`✓ Created new want markdown file: ${wantId}.md`);
 console.log(`✓ Want ID: ${wantId}`);
-if (issueId) {
+if (issueNumber) {
   console.log(`✓ Discussion URL pre-populated: ${discussionUrl}`);
 } else {
-  console.log(`⚠ No issue ID provided — discussion URL is empty.`);
-  console.log(`  Usage: npm run create-want -- <issue-id>`);
+  console.log(`⚠ No issue number provided — discussion URL is empty.`);
+  console.log(`  Usage:   npm run create-want -- <issue-number>`);
+  console.log(`           node scripts/create-want.mjs <issue-number>`);
   console.log(`  Example: npm run create-want -- 850`);
+  console.log(`           node scripts/create-want.mjs 850`);
 }
 console.log(`\nPlease fill in the following REQUIRED fields:`);
 console.log(`  - title: "I want [description]"`);
 console.log(`  - date: Current ISO date string`);
 console.log(`  - submitter: Submitter's name or "Anonymous"`);
 console.log(`  - tags: Array of 1-3 relevant technology labels`);
-if (!issueId) {
-  console.log(`  - discussion: GitHub discussions URL (https://github.com/WebWeWant/webwewant.fyi/discussions/<ISSUE_ID>)`);
+if (!issueNumber) {
+  console.log(`  - discussion: GitHub discussions URL (https://github.com/WebWeWant/webwewant.fyi/discussions/<ISSUE_NUMBER>)`);
 }
 console.log(`\nOptional fields:`);
 console.log(`  - related: Array of related links with title, url, type`);
