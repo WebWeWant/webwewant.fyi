@@ -13,7 +13,7 @@ Follow these detailed instructions when processing Want submissions for the Web 
 - `submitter`: Submitter's name or "Anonymous"
 - `number`: Submission ID from issue
 - `tags`: Array of relevant technology labels
-- `discussion`: GitHub discussions URL ending with the original issue number (e.g. `https://github.com/WebWeWant/webwewant.fyi/discussions/<issue-number>`)
+- `discussion`: GitHub issues URL pointing to the source issue as a placeholder (e.g. `https://github.com/WebWeWant/webwewant.fyi/issues/<issue-number>`). This will be updated to the discussion URL after a maintainer converts the issue to a discussion.
 - `status`: "discussing"
 
 ### Optional Fields
@@ -157,7 +157,7 @@ npm run check-duplicate "Want Title From Issue"
    npm run create-want -- <issue-number>
    ```
 
-   Replace `<issue-number>` with the original GitHub issue number (e.g. `npm run create-want -- 850`). This creates `wants/<ID>.md` with the `discussion` URL already set to `https://github.com/WebWeWant/webwewant.fyi/discussions/<issue-number>`.
+   Replace `<issue-number>` with the original GitHub issue number (e.g. `npm run create-want -- 850`). This creates `wants/<ID>.md` with the `discussion` field pre-set to `https://github.com/WebWeWant/webwewant.fyi/issues/<issue-number>` as a placeholder. **Note:** GitHub no longer preserves the issue number when converting to a discussion — the discussion will receive a new net-new number. The issues URL works as a redirect after conversion, but will need to be updated to the real discussion URL once known.
 
 2. **Fill in the generated file** with data from the issue:
    - `title`: Ensure starts with "I want" and is descriptive
@@ -165,7 +165,7 @@ npm run check-duplicate "Want Title From Issue"
    - `submitter`: Use provided name or "Anonymous" if privacy requested
    - `number`: Use the generated UUID
    - `tags`: Add 1-3 relevant technology labels (see tag list below)
-   - `discussion`: Use GitHub discussions URL whose trailing ID matches the original issue number
+   - `discussion`: Use the source issue URL as a placeholder: `https://github.com/WebWeWant/webwewant.fyi/issues/<issue-number>`. GitHub redirects this to the correct discussion after conversion, but a maintainer will need to update it to the real `/discussions/<new-number>` URL once the issue is converted.
    - `status`: Set to "discussing"
    - Content: Clean up and enhance the description for clarity
 
@@ -189,12 +189,34 @@ npm run check-duplicate "Want Title From Issue"
    npm run validate-want wants/<ID>.md
    ```
 
+   A note about the `discussion` field using an issue URL placeholder is expected and can be ignored — it will be resolved after the maintainer converts the issue to a discussion.
+
 6. **Create pull request:**
    - Branch: `submission/<descriptive-name>`
    - Title: "Add want: [Want Title]"
    - Include issue number in PR description
    - Request review from maintainers
    - **The PR must contain only the new `wants/<ID>.md` file. Modifying any other file is strictly prohibited.**
+
+7. **Add a conversion reminder comment to the PR** immediately after opening it:
+   - Explain that the issue must be converted to a discussion after this PR is merged
+   - Provide the direct issue link
+   - Note that GitHub assigns a **new net-new discussion number** (not the same as the issue number)
+   - Ask the maintainer to post the new discussion URL as a comment on the PR so the `discussion` field in `wants/<ID>.md` can be updated
+
+   Use this template:
+
+   ```
+   ⚠️ **Action required after merging:** Convert the source issue to a discussion
+
+   Issue #<number> needs to be converted to a discussion after this PR is merged:
+
+   1. Go to https://github.com/WebWeWant/webwewant.fyi/issues/<number>
+   2. Click the three-dot menu (⋯) at the top-right of the issue and select **"Convert to discussion"**
+   3. Choose the **"Wants"** category (or "General" if Wants is unavailable)
+   4. GitHub will assign a **new discussion number** that differs from the issue number
+   5. Once converted, please reply to this PR with the new discussion URL (e.g. `https://github.com/WebWeWant/webwewant.fyi/discussions/<new-number>`) so that `wants/<ID>.md` can be updated accordingly
+   ```
 
 ## 🎨 Content Quality Standards
 
@@ -329,6 +351,7 @@ Before creating the want file, verify:
 - [ ] Markdown file validates successfully
 - [ ] Branch and PR created with proper naming
 - [ ] PR contains only the new `wants/<ID>.md` file — no other files modified
+- [ ] Conversion reminder comment posted on the PR with issue link and instructions
 
 ## 🚀 Processing Tips
 
@@ -338,7 +361,7 @@ Before creating the want file, verify:
 - **Single source of truth:** These instructions are your only guidance - don't reference other documentation
 - **Act decisively:** Process submissions quickly but thoroughly
 - **Maintain quality:** Enhance content for clarity while preserving submitter intent
-- **Preserve context:** Always reference the original issue number in PRs and ensure discussion URLs end with that number
+- **Preserve context:** Always reference the original issue number in PRs. Use the `/issues/<number>` URL as the `discussion` placeholder — it redirects after conversion, and a maintainer will update it to the real discussion URL once they know it.
 - **Human escalation:** When in doubt, flag for human review rather than rejecting
 
 **Efficiency:**
@@ -357,11 +380,11 @@ Before creating the want file, verify:
 
 ## 🔄 Post-Implementation: Issue to Discussion Conversion
 
-When a want PR is merged, you may be asked to convert the original issue to a discussion to keep community conversation going.
+When a want PR is merged, a maintainer must convert the original issue to a discussion and then update the want markdown file with the correct discussion URL.
 
-### Direct Conversion Process:
+> **Important:** GitHub no longer preserves the issue number when converting to a discussion. The new discussion receives a **net-new number** that differs from the original issue number. The want file is initially created with an `/issues/<number>` placeholder URL; this must be updated to the real `/discussions/<new-number>` URL after conversion.
 
-**Important**: Convert the issue DIRECTLY to a discussion (don't create a new one) to preserve the same ID. This ensures existing want markdown files continue to reference the correct discussion.
+### Conversion Steps for Maintainers
 
 1. **Clean the Issue Content First:**
    - Edit the current issue to remove submission metadata (ID, timestamp, form fields)
@@ -371,26 +394,24 @@ When a want PR is merged, you may be asked to convert the original issue to a di
    - Ensure the content is well-formatted for a discussion
 
 2. **Convert Issue to Discussion:**
-   - Use the GitHub API to convert this issue directly to a discussion
-   - Choose "General" category (or "Wants" if available)
-   - The ID will remain the same after conversion
+   - On the issue page, click the three-dot menu (⋯) at the top-right and select **"Convert to discussion"**
+   - Choose the **"Wants"** category (or "General" if Wants is unavailable)
+   - GitHub will create a new discussion with a **new number** — note this number
 
-3. **Add Implementation Context:**
-   - Comment on the newly created discussion
-   - Reference the implementing PR number
-   - Thank the submitter and community
+3. **Provide the New Discussion URL:**
+   - Post the new discussion URL (e.g. `https://github.com/WebWeWant/webwewant.fyi/discussions/<new-number>`) as a comment on the merged PR
+   - This allows the agent or a maintainer to update the want file
 
-4. **Example Implementation Comment:**
+4. **Update the Want Markdown File:**
+   - In `wants/<ID>.md`, change the `discussion` field from the `/issues/<old-number>` placeholder to the new `/discussions/<new-number>` URL
+   - Commit the change directly to `main` (or via a follow-up PR)
 
-   ```
-   🎉 This want has been implemented in PR #XXX!
+5. **Add Implementation Context (optional):**
+   - Comment on the newly created discussion to thank the submitter and reference the PR
 
-   Thank you @[submitter] for this valuable contribution to making the web better.
-   The community can continue discussing this feature here.
-   ```
+### If Asked to Do the Update
 
-**Key Benefits:**
-
-- Same ID preserved → want markdown files reference correct discussion
-- Clean discussion content without processing metadata
-- Continued community engagement on implemented features
+If a maintainer provides the new discussion URL in a PR comment and asks the agent to update the want file, the agent should:
+1. Edit `wants/<ID>.md` to replace the `discussion` URL with the new `/discussions/<new-number>` URL
+2. Commit the change with message: `Update discussion URL for want <ID>`
+3. Push directly to the branch or open a follow-up PR as appropriate

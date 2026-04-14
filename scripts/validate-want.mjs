@@ -173,7 +173,7 @@ function validateDiscussion(discussion) {
   }
 
   if (discussionPathMatch[1] === 'issues') {
-    console.warn(`⚠️  Warning: Legacy issue URL used for discussion field: ${discussion}`);
+    console.warn(`⚠️  Note: Issue URL used as discussion placeholder: ${discussion}. Update to the real /discussions/<id> URL after the issue is converted.`);
   }
 }
 
