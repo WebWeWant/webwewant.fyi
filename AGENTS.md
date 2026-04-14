@@ -40,7 +40,7 @@
    - Polish description, keeping the submitter’s intent intact. Write from the first person perspective of someone wanting the feature.
    - Add `related` links when they improve context.
    - Update the original issue body directly via the GitHub API (a direct issue edit, NOT a file in the PR) to match the cleaned want content (no frontmatter or automation metadata) so it is ready for conversion to a discussion.
-   - Validate via `npm run validate-want wants/<ID>.md`.
+   - Validate via `npm run validate-want wants/<ID>.md`. A note about the `discussion` field using an issue URL placeholder is expected and can be ignored — it will be resolved after the maintainer converts the issue to a discussion.
    - Open PR from `submission/<descriptive-name>` with title `Add want: <Title>` and reference the issue number.
    - **The PR must contain only the new `wants/<ID>.md` file. Do not modify any other files.**
    - **After opening the PR, post a comment** on the PR with conversion instructions for the maintainer (see template in `.github/instructions/wants-processing.instructions.md`).

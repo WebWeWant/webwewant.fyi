@@ -189,6 +189,8 @@ npm run check-duplicate "Want Title From Issue"
    npm run validate-want wants/<ID>.md
    ```
 
+   A note about the `discussion` field using an issue URL placeholder is expected and can be ignored — it will be resolved after the maintainer converts the issue to a discussion.
+
 6. **Create pull request:**
    - Branch: `submission/<descriptive-name>`
    - Title: "Add want: [Want Title]"
