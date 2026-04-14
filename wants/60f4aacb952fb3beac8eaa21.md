@@ -7,7 +7,7 @@ tags:
   - html
   - forms
   - ux
-discussion: https://github.com/WebWeWant/webwewant.fyi/discussions/425
+discussion: https://github.com/WebWeWant/webwewant.fyi/discussions/840
 status: discussing
 related:
   - title: "HTML Standard - Forms"
@@ -28,6 +28,7 @@ A native token field element would provide:
 - **Form integration** that works seamlessly with existing form submission and validation
 
 This would be particularly valuable for:
+
 - Email address entry (To, CC, BCC fields)
 - Tagging systems (blog tags, categories, labels)
 - Multi-select with custom values

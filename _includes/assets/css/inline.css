@@ -73,7 +73,8 @@ code {
   padding: 0 .25em;
   border: 1px solid #3D9558;
   border-radius: .15em;
-  font-size: 1.25em;
+  font-size: 1em;
+  font-weight: normal;
   color: #005e22;
 }
 

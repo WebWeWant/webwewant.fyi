@@ -18,7 +18,7 @@
 - **A pull request created during wants processing MUST contain only one change: the addition of a new Markdown file under `wants/`. Modifying any other file — including the original issue body, existing want files, workflows, or any other repository file — is strictly prohibited.**
 
 ### Quick Reference Checks
-- Required frontmatter fields: `title`, `date`, `submitter`, `number`, `tags`, `discussion` (must end with the original issue number), `status` set to `discussing`.
+- Required frontmatter fields: `title`, `date`, `submitter`, `number`, `tags`, `discussion` (issues URL as placeholder, e.g. `https://github.com/WebWeWant/webwewant.fyi/issues/<issue-number>`; updated to discussion URL by maintainer after conversion), `status` set to `discussing`.
 - Optional `related` entries include `title`, `url`, and `type`.
 - Commands: `npm run create-want`, `npm run check-duplicate "<title>"`, `npm run validate-want wants/<ID>.md`.
 
@@ -36,13 +36,14 @@
 4. **Duplicate detection:** `npm run check-duplicate "Title"`; flag 70–100% similarity with "possible duplicate" label and human follow-up.
 5. **Want creation:**
    - Run `npm run create-want` to scaffold `wants/<ID>.md`.
-   - Populate fields from the issue, ensuring the `discussion` URL points to `https://github.com/WebWeWant/webwewant.fyi/discussions/<issue-number>`.
+   - Populate fields from the issue, using `https://github.com/WebWeWant/webwewant.fyi/issues/<issue-number>` as the `discussion` placeholder. **GitHub now assigns a new net-new number when converting issues to discussions, so the issues URL is used as a placeholder that redirects after conversion.**
    - Polish description, keeping the submitter’s intent intact. Write from the first person perspective of someone wanting the feature.
    - Add `related` links when they improve context.
    - Update the original issue body directly via the GitHub API (a direct issue edit, NOT a file in the PR) to match the cleaned want content (no frontmatter or automation metadata) so it is ready for conversion to a discussion.
-   - Validate via `npm run validate-want wants/<ID>.md`.
+   - Validate via `npm run validate-want wants/<ID>.md`. A note about the `discussion` field using an issue URL placeholder is expected and can be ignored — it will be resolved after the maintainer converts the issue to a discussion.
    - Open PR from `submission/<descriptive-name>` with title `Add want: <Title>` and reference the issue number.
    - **The PR must contain only the new `wants/<ID>.md` file. Do not modify any other files.**
+   - **After opening the PR, post a comment** on the PR with conversion instructions for the maintainer (see template in `.github/instructions/wants-processing.instructions.md`).
 
 ### Content Quality Expectations
 - Start every want title with "I want" and ensure clarity.
@@ -58,8 +59,9 @@
 - **Approval:** Acknowledge approval and mention PR creation.
 
 ### Issue-to-Discussion Conversion (Post-Merge)
-- Clean issue content first (remove metadata, automation comments, and YAML blocks).
-- Convert issue directly to discussion to preserve the numeric ID.
+- **GitHub no longer preserves the issue number** when converting to a discussion; the discussion receives a new net-new number.
+- The want file is created with an `/issues/<number>` placeholder in the `discussion` field; a maintainer must update it to the real `/discussions/<new-number>` URL after conversion.
+- After the PR is merged, a maintainer should convert the issue to a discussion via the GitHub web UI, post the new discussion URL as a PR comment, and update `wants/<ID>.md` accordingly.
 - Comment in the discussion with implementation details and gratitude.
 
 ### Quality Checklist Before PR
@@ -72,6 +74,7 @@
 - [ ] `npm run validate-want` passes.
 - [ ] Branch + PR follow naming guidelines and reference the issue.
 - [ ] PR contains only the new `wants/<ID>.md` file — no other files modified.
+- [ ] Conversion reminder comment posted on the PR with issue link and instructions.
 
 ### Efficiency Tips
 - Process steps sequentially and document reasoning in issue comments.
