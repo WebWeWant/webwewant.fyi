@@ -19,17 +19,17 @@ related:
 
 Many products require two-dimensional size or variant selection where both dimensions must be chosen together and most combinations are valid. Clothing is a common example: jeans require a girth and a length, bras require a girth and a cup size, and shoes sometimes require a length and a width (as defined in EN 13402-2). The same pattern applies to many other multi-attribute selections in forms, such as shirt size plus color, date components (day plus month), or typography settings (weight plus style).
 
-Today, authors must implement this with two separate `<select>` elements and JavaScript to coordinate them, which is error-prone, inaccessible, and verbose. I want a native two-dimensional matrix select element that lets users pick a row and a column value simultaneously, clearly communicating the paired nature of the choice.
+Today, authors must implement this with two separate `<select>` elements and JavaScript to coordinate them, which is error-prone, inaccessible, and verbose. I want a native two-dimensional matrix mode for `<select>` that lets users pick a row and a column value simultaneously, clearly communicating the paired nature of the choice.
 
 ```html
-<select2d name="size">
-  <option2d row="XS" col="30">XS / 30</option2d>
-  <option2d row="XS" col="32">XS / 32</option2d>
-  <option2d row="S"  col="30">S / 30</option2d>
-  <option2d row="S"  col="32">S / 32</option2d>
-  <option2d row="M"  col="32">M / 32</option2d>
-  <option2d row="M"  col="34">M / 34</option2d>
-</select2d>
+<select type="matrix" name="size">
+  <option row="XS" col="30">XS / 30</option>
+  <option row="XS" col="32">XS / 32</option>
+  <option row="S"  col="30">S / 30</option>
+  <option row="S"  col="32">S / 32</option>
+  <option row="M"  col="32">M / 32</option>
+  <option row="M"  col="34">M / 34</option>
+</select>
 ```
 
 The submitted value could be the concatenation of both axes (e.g., `XS/30`) or a structured pair, while the UI would render as a matrix or grid so the user can clearly see which combinations are available. Unavailable combinations could be disabled or hidden. This would benefit accessibility by making the relationship between the two dimensions explicit to assistive technologies, and reduce the amount of JavaScript needed for common e-commerce and data-entry scenarios.
