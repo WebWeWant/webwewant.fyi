@@ -22,7 +22,7 @@ Follow these detailed instructions when processing Want submissions for the Web 
 
 ### Essential Commands
 
-- `npm run create-want` - Generate UUID and markdown template
+- `npm run create-want -- <issue-id>` - Generate UUID and markdown template with discussion URL pre-populated (e.g. `npm run create-want -- 850`)
 - `npm run check-duplicate "Want Title"` - Check for potential duplicates (fuzzy matching)
 - `npm run validate-want wants/<ID>.md` - Validate markdown file
 
@@ -154,10 +154,10 @@ npm run check-duplicate "Want Title From Issue"
 1. **Generate markdown template:**
 
    ```bash
-   npm run create-want
+   npm run create-want -- <issue-id>
    ```
 
-   This creates `wants/<ID>.md` with proper structure
+   Replace `<issue-id>` with the original GitHub issue number (e.g. `npm run create-want -- 850`). This creates `wants/<ID>.md` with the `discussion` URL already set to `https://github.com/WebWeWant/webwewant.fyi/discussions/<issue-id>`.
 
 2. **Fill in the generated file** with data from the issue:
    - `title`: Ensure starts with "I want" and is descriptive
