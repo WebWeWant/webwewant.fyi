@@ -30,9 +30,9 @@ section: wants
   });
 </script>
 
-{% if collections.wants.length > 0 %}
+{% if collections.wantsBySubmissionDate.length > 0 %}
 <ul class="wants">
-  {% for w in collections.wants %}
+  {% for w in collections.wantsBySubmissionDate %}
     {{ want( 'li', '', w.url, 'h2', w.data.title, w.data.submitter ) }}
   {% endfor %}
 </ul>
