@@ -1,7 +1,7 @@
 ---
 title: I want 2D matrix dropdown form inputs
 date: 2024-01-21T11:00:18.245Z
-submitter: Christoph Paper
+submitter: Christoph Päper
 number: 18b2eec2-49ad-410f-be86-c20aaac2dfe9
 tags:
   - html
