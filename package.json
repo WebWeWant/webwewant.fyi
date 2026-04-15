@@ -11,7 +11,8 @@
 		"debug": "DEBUG=* npx eleventy",
 		"create-want": "node scripts/create-want.mjs",
 		"check-duplicate": "node scripts/check-duplicate.mjs",
-		"validate-want": "node scripts/validate-want.mjs"
+		"validate-want": "node scripts/validate-want.mjs",
+		"convert-to-discussion": "node scripts/convert-to-discussion.mjs"
 	},
 	"repository": {
 		"type": "git",
