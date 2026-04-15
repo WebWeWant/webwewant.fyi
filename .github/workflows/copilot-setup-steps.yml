@@ -1,0 +1,39 @@
+name: "Copilot Setup Steps"
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+  pull_request:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+
+jobs:
+  # The job MUST be called `copilot-setup-steps` or it will not be picked up by Copilot.
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+
+    # Permissions needed by the Copilot agent when processing want submissions:
+    #   contents: write       — create branches and commit want markdown files
+    #   issues: write         — add labels, post comments, and edit issue bodies
+    #   pull-requests: write  — open pull requests with the new want file
+    #   discussions: write    — convert issues to discussions
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      discussions: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
