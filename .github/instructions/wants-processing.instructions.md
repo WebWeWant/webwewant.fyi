@@ -25,6 +25,7 @@ Follow these detailed instructions when processing Want submissions for the Web 
 - `npm run create-want -- <issue-number>` - Generate UUID and markdown template with discussion URL pre-populated (e.g. `npm run create-want -- 850`)
 - `npm run check-duplicate "Want Title"` - Check for potential duplicates (fuzzy matching)
 - `npm run validate-want wants/<ID>.md` - Validate markdown file
+- `npm run convert-to-discussion -- <issue-number> [category-name]` - Convert a GitHub issue to a discussion via the GraphQL API and print the new discussion URL (e.g. `npm run convert-to-discussion -- 850`)
 
 ### Triage Decision Tree
 
@@ -380,11 +381,26 @@ Before creating the want file, verify:
 
 ## 🔄 Post-Implementation: Issue to Discussion Conversion
 
-When a want PR is merged, a maintainer must convert the original issue to a discussion and then update the want markdown file with the correct discussion URL.
+When a want PR is merged, the source issue must be converted to a discussion and the want markdown file updated with the correct discussion URL.
 
 > **Important:** GitHub no longer preserves the issue number when converting to a discussion. The new discussion receives a **net-new number** that differs from the original issue number. The want file is initially created with an `/issues/<number>` placeholder URL; this must be updated to the real `/discussions/<new-number>` URL after conversion.
 
-### Conversion Steps for Maintainers
+### Agent-Assisted Conversion (preferred)
+
+The agent can perform the conversion directly using the CLI script:
+
+```bash
+npm run convert-to-discussion -- <issue-number>
+# e.g. npm run convert-to-discussion -- 850
+```
+
+This calls the GitHub GraphQL `convertIssueToDiscussion` mutation, targets the **"Wants"** category by default (falls back to "General", then the first available category), and prints the new discussion URL. Once the URL is known, update the want file:
+
+1. Edit `wants/<ID>.md` — change the `discussion` field from the `/issues/<old-number>` placeholder to the printed `/discussions/<new-number>` URL.
+2. Commit with message: `Update discussion URL for want <ID>`.
+3. Push directly to `main` (or open a follow-up PR).
+
+### Conversion Steps for Maintainers (manual fallback)
 
 1. **Clean the Issue Content First:**
    - Edit the current issue to remove submission metadata (ID, timestamp, form fields)

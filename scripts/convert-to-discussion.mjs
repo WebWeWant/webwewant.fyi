@@ -16,7 +16,9 @@
  *                  Falls back to "General" if the named category is not found.
  *
  * Environment:
- *   GITHUB_TOKEN   Required. A token with `issues: write` and `discussions: write` scopes.
+ *   GITHUB_TOKEN   Required. A fine-grained PAT with Issues and Discussions read/write
+ *                 access to this repo, or a workflow GITHUB_TOKEN whose job has
+ *                 `issues: write` and `discussions: write` permissions.
  *
  * Exit codes:
  *   0 - Conversion succeeded; prints the new discussion URL
@@ -50,7 +52,7 @@ const preferredCategory = categoryArg ? categoryArg.trim() : "Wants";
 const token = process.env.GITHUB_TOKEN;
 if (!token) {
   console.error("Error: GITHUB_TOKEN environment variable is not set.");
-  console.error("The token needs issues:write and discussions:write scopes.");
+  console.error("The token must have write access to Issues and Discussions for this repo.");
   process.exit(1);
 }
 
