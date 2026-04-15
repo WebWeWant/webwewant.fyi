@@ -20,7 +20,7 @@
  *
  * Exit codes:
  *   0 - Conversion succeeded; prints the new discussion URL
- *   1 - Error (missing args, missing token, API error, category not found)
+ *   1 - Error (missing args, missing token, API error)
  *
  * Examples:
  *   GITHUB_TOKEN=ghp_... node scripts/convert-to-discussion.mjs 850
