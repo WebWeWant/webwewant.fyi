@@ -35,7 +35,7 @@
 		"dotenv": "^8.6.0",
 		"lodash": "^4.18.1",
 		"luxon": "^1.26.0",
-		"markdown-it": "^13.0.1",
+		"markdown-it": "^14.3.0",
 		"markdown-it-anchor": "^8.6.4",
 		"node-fetch": "^2.6.1",
 		"sanitize-html": "^2.3.3",
