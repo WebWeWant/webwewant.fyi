@@ -300,10 +300,32 @@ function buildIssueBody(submission, spamFlags, contactRecord) {
   return details.join('\n');
 }
 
+function isTrustedRequestSource(request) {
+  const siteHost = new URL(request.url).host;
+  const sourceHeader = request.headers.get('origin') || request.headers.get('referer');
+
+  // No Origin/Referer at all typically means a same-origin browser form POST;
+  // only reject when the header is present and points at a different host,
+  // which blocks third-party sites from silently submitting this form.
+  if (!sourceHeader) {
+    return true;
+  }
+
+  try {
+    return new URL(sourceHeader).host === siteHost;
+  } catch {
+    return false;
+  }
+}
+
 export default async (request, context) => {
   // Only allow POST requests
   if (request.method !== 'POST') {
     return toJsonResponse({ error: 'Method not allowed' }, 405);
+  }
+
+  if (!isTrustedRequestSource(request)) {
+    return toJsonResponse({ error: 'Forbidden' }, 403);
   }
 
   let isBrowserForm = false;
